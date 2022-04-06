@@ -10,6 +10,9 @@ const lightTheme = createTheme({
     },
     primary: {
       light: "#1F43FF",
+      light100: "#D2D9FF",
+      light300: "#8FA1FF",
+      light400: "#6D85FF",
       main: "#0C2CD1",
       // dark: will be calculated from palette.primary.main,
       contrastText: "#FFF",
