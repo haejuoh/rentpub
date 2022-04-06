@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useContext } from "react";
-import { styled } from "@mui/styles";
-import { ThemeProvider } from "@mui/material/styles";
+// import { styled } from "@mui/styles";
+import { ThemeProvider, styled } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
 import { lightTheme, darkTheme } from "../src/assets/style/customTheme";
 import {
@@ -28,12 +28,17 @@ const MyButton = styled(Button)({
 //   color: gray[900],
 // });
 
+// const GuideTitle = styled(Typography)(
+//   ({ theme }) => `
+//   font-size: "1.5rem",
+//   font-weight: 600,
+//   color: ${theme.palette.primary.main};
+//   `
+// );
 const GuideTitle = styled(Typography)(
   ({ theme }) => `
-  font-size: "1.5rem",
-  font-weight: 600,
-  color: ${theme.palette.primary.main};
-  `
+  color: ${theme.palette.primary.light}
+`
 );
 
 const Wrap = styled(Paper)({
