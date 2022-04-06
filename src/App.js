@@ -1,17 +1,40 @@
 import React, { useState, useMemo, useContext } from "react";
 import { styled } from "@mui/styles";
 import { ThemeProvider } from "@mui/material/styles";
+import { CssBaseline } from "@mui/material";
 import { lightTheme, darkTheme } from "../src/assets/style/customTheme";
-import { Paper, Button, Typography, useMediaQuery } from "@mui/material";
-// import { ReactComponent as IconArrow } from "./assets/icons/chevron-down-sharp.svg";
+import {
+  Box,
+  Paper,
+  Button,
+  Typography,
+  useMediaQuery,
+  Tab,
+} from "@mui/material";
+import { TabContext, TabList, TabPanel } from "@mui/lab";
 import { ThemeContext } from "./context/themeContext";
 import MuiSelect from "./components/MuiSelect";
+import MuiTabs from "./components/MuiTab";
 
 const MyButton = styled(Button)({
   border: 0,
   borderRadius: 5,
   boxShadow: "none",
 });
+
+// const GuideTitle = styled(Typography)({
+//   fontSize: "1.5rem",
+//   fontWeight: 600,
+//   color: gray[900],
+// });
+
+const GuideTitle = styled(Typography)(
+  ({ theme }) => `
+  font-size: "1.5rem",
+  font-weight: 600,
+  color: ${theme.palette.primary.main};
+  `
+);
 
 const Wrap = styled(Paper)({
   width: "100%",
@@ -33,13 +56,49 @@ const SwitchTheme = () => {
     </MyButton>
   );
 };
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
-}));
+const ComponentTabs = () => {
+  const [value, setValue] = React.useState("1");
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+  return (
+    <Box sx={{ width: "100%", typography: "body1" }}>
+      <Typography variant="h1" mt={3}>
+        공통 가이드 컴포넌트
+      </Typography>
+      <TabContext value={value}>
+        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+          <TabList
+            onChange={handleChange}
+            aria-label="common compoenents guide tabs"
+          >
+            <Tab label="Typography" value="1" />
+            <Tab label="Button" value="2" />
+            <Tab label="Select" value="3" />
+          </TabList>
+        </Box>
+        <TabPanel value="1">
+          <GuideTitle>Typography</GuideTitle>
+        </TabPanel>
+        <TabPanel value="2">
+          <MyButton color="primary" variant="contained">
+            Button
+          </MyButton>
+          <MyButton color="secondary" variant="contained">
+            1234567
+          </MyButton>
+          <Button color="primary" variant="outlined">
+            Hello World
+          </Button>
+        </TabPanel>
+        <TabPanel value="3">
+          <MuiSelect />
+        </TabPanel>
+      </TabContext>
+    </Box>
+  );
+};
 
 function App() {
   const systemTheme = useMediaQuery("(prefers-color-scheme: dark)");
@@ -58,21 +117,10 @@ function App() {
     <>
       <ThemeContext.Provider value={stateTheme}>
         <ThemeProvider theme={themeMode}>
+          <CssBaseline />
           <Wrap>
             <SwitchTheme />
-            <Typography variant="h1">공통 가이드 컴포넌트</Typography>
-            <Typography variant="h2">Typography</Typography>
-
-            <MyButton color="primary" variant="contained">
-              Button
-            </MyButton>
-            <MyButton color="secondary" variant="contained">
-              1234567
-            </MyButton>
-            <Button color="primary" variant="outlined">
-              Hello World
-            </Button>
-            <MuiSelect />
+            <ComponentTabs />
           </Wrap>
           {/* <img src={iconArrow}/> */}
         </ThemeProvider>
