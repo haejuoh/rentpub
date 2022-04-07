@@ -10,36 +10,30 @@ const LySubTitle = styled(Box)({
   justifyContent: "space-between",
   alignItems: "center",
 });
-
-const subTit = styled(Box)(
-  ("&:before": {
-    content: "",
+const SubTit = styled(Box)(({ theme }) => ({
+  paddingLeft: "11px",
+  position: "relative",
+  "& :before": {
+    content: "''",
     display: "inline-block",
     width: "6px",
     height: "6px",
     clear: "both",
-    backgroundColor: "#f00",
-  })
-  //   ({ theme }) => `
-  //   "&:before": {
-  //     content: "",
-  //     display: inline-block,
-  //     width: 6px,
-  //     height: 6px,
-  //     clear: both,
-  //     backgroundColor: ${theme.palette.primary.light300},,
-
-  //   }
-  // `
-);
+    backgroundColor: `${theme.palette.primary.light300}`,
+    position: "absolute",
+    left: 0,
+    top: "50%",
+    transform: "translateY(-50%)",
+  },
+}));
 
 const SectionTitle = ({ type, title, btn }) => {
   if (type === "isButton") {
     return (
       <LySubTitle>
-        <subTit>
+        <SubTit>
           <Typography variant="st1">{title}</Typography>
-        </subTit>
+        </SubTit>
         <Button color={btn.color} variant={btn.style}>
           {btn.name}
         </Button>
@@ -48,9 +42,9 @@ const SectionTitle = ({ type, title, btn }) => {
   } else {
     return (
       <LySubTitle>
-        <subTit>
+        <SubTit>
           <Typography variant="st1">{title}</Typography>
-        </subTit>
+        </SubTit>
       </LySubTitle>
     );
   }

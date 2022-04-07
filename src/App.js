@@ -9,6 +9,8 @@ import {
   Typography,
   useMediaQuery,
   Tab,
+  Chip,
+  Stack,
 } from "@mui/material";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
 import { ThemeContext } from "./context/themeContext";
@@ -20,9 +22,6 @@ import SectionTitle from "./components/title/SectionTitle";
 import SubTitle from "./components/title/SubTitle";
 
 const MyButton = styled(Button)({
-  border: 0,
-  borderRadius: 5,
-
   boxShadow: "none",
 });
 
@@ -64,7 +63,7 @@ const ComponentTabs = () => {
   return (
     <Box sx={{ width: "100%", typography: "body1" }}>
       <Typography variant="h1" mt={3}>
-        공통 가이드 컴포넌트
+        공통 컴포넌트
       </Typography>
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
@@ -73,8 +72,9 @@ const ComponentTabs = () => {
             aria-label="common compoenents guide tabs"
           >
             <Tab label="Typography" value="1" />
-            <Tab label="Button" value="2" />
-            <Tab label="Select" value="3" />
+            <Tab label="Badge" value="2" />
+            <Tab label="Button" value="3" />
+            <Tab label="Select" value="4" />
           </TabList>
         </Box>
         <TabPanel value="1">
@@ -118,7 +118,7 @@ const ComponentTabs = () => {
             title="섹션별 타이틀"
             btn={{
               name: "버튼이름",
-              color: "primary",
+              color: "grey",
               style: "contained",
             }}
           />
@@ -135,6 +135,17 @@ const ComponentTabs = () => {
           />
         </TabPanel>
         <TabPanel value="2">
+          <Stack direction="row" spacing={1}>
+            <Chip label="Badge" variant="outlined" />
+            <Chip label="Badge" color="primary" />
+            <Chip label="Badge" color="ready" />
+            <Chip label="Badge" color="success" />
+            <Chip label="Badge" color="warning" />
+            <Chip label="Badge" color="error" />
+            <Chip label="Badge" color="info" />
+          </Stack>
+        </TabPanel>
+        <TabPanel value="3">
           <MyButton color="primary" variant="contained">
             Button
           </MyButton>
@@ -145,7 +156,7 @@ const ComponentTabs = () => {
             Hello World
           </Button>
         </TabPanel>
-        <TabPanel value="3">
+        <TabPanel value="4">
           <MuiSelect />
         </TabPanel>
       </TabContext>

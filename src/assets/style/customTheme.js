@@ -2,6 +2,9 @@ import { createTheme } from "@mui/material/styles";
 
 const lightTheme = createTheme({
   spacing: (value) => value * 5,
+  shape: {
+    borderRadius: 1,
+  },
   borderColor: "palette.grey.200",
   // https://mui.com/customization/palette/
   palette: {
@@ -179,6 +182,7 @@ const darkTheme = createTheme({
       contrastText: "#FFF",
     },
     grey: {
+      main: "#5D536B",
       0: "#29242F",
       100: "#29242F",
       200: "#322C3A",
