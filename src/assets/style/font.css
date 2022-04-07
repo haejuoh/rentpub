@@ -79,3 +79,7 @@
     url("../fonts/Pretendard-Thin.woff") format("woff"),
     url("../fonts/Pretendard-Thin.otf") format("otf");
 }
+body,
+html {
+  font-size: 14px;
+}

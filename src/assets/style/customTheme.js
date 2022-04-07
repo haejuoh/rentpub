@@ -68,32 +68,74 @@ const lightTheme = createTheme({
   typography: {
     fontFamily: ["Pretendard", "sans-serif"].join(","),
     h1: {
-      fontSize: "1.8125rem",
+      fontSize: "2.0714rem",
       fontWeight: 400,
     },
     h2: {
-      fontSize: "1.5rem",
+      fontSize: "1.714rem",
       fontWeight: 500,
     },
     h3: {
-      fontSize: "1.25rem",
+      fontSize: "1.428rem",
       fontWeight: 400,
     },
     h4: {
+      fontSize: "1.142rem",
+      fontWeight: 500,
+    },
+    st1: {
+      fontSize: "1.142rem",
+      fontWeight: 400,
+    },
+    st2: {
+      fontSize: "1rem",
+      fontWeight: 600,
+    },
+    b1: {
+      fontSize: "1rem",
+      fontWeight: 400,
+    },
+    sb1: {
       fontSize: "1rem",
       fontWeight: 500,
     },
-    subtitle1: {
-      fontSize: "1rem",
+    b2: {
+      fontSize: "0.857rem",
       fontWeight: 400,
     },
-    subtitle2: {
-      fontSize: "1rem",
-      fontWeight: 400,
+    sb2: {
+      fontSize: "0.857rem",
+      fontWeight: 600,
     },
-    button: {
-      fontWeight: 400,
+    ct: {
       fontSize: "0.875rem",
+      fontWeight: 300,
+    },
+    bt: {
+      fontSize: "1rem",
+      fontWeight: 500,
+    },
+    ht: {
+      fontSize: "0.857rem",
+      fontWeight: 500,
+    },
+  },
+  components: {
+    MuiTypography: {
+      defaultProps: {
+        variantMapping: {
+          h1: "h1",
+          h2: "h2",
+          h3: "h3",
+          h4: "h4",
+          st1: "h3",
+          st2: "h3",
+          b1: "div",
+          b2: "div",
+          sb1: "div",
+          sb2: "div",
+        },
+      },
     },
   },
 });
@@ -162,33 +204,74 @@ const darkTheme = createTheme({
   typography: {
     fontFamily: ["Pretendard", "sans-serif"].join(","),
     h1: {
-      fontSize: "1.8125rem",
+      fontSize: "2.0714rem",
       fontWeight: 400,
     },
     h2: {
-      fontSize: "1.5rem",
+      fontSize: "1.714rem",
       fontWeight: 500,
     },
     h3: {
-      fontSize: "1.25rem",
+      fontSize: "1.428rem",
       fontWeight: 400,
     },
     h4: {
+      fontSize: "1.142rem",
+      fontWeight: 500,
+    },
+    st1: {
+      fontSize: "1.142rem",
+      fontWeight: 400,
+    },
+    st2: {
+      fontSize: "1rem",
+      fontWeight: 600,
+    },
+    b1: {
+      fontSize: "1rem",
+      fontWeight: 400,
+    },
+    sb1: {
       fontSize: "1rem",
       fontWeight: 500,
     },
-    subtitle1: {
-      fontSize: "1rem",
+    b2: {
+      fontSize: "0.857rem",
       fontWeight: 400,
     },
-    subtitle2: {
-      fontSize: "1rem",
-      fontWeight: 400,
+    sb2: {
+      fontSize: "0.857rem",
+      fontWeight: 600,
     },
-    button: {
-      // fontFamily: '"NotoSansKR",sans-serif',
-      fontWeight: 400,
+    ct: {
       fontSize: "0.875rem",
+      fontWeight: 300,
+    },
+    bt: {
+      fontSize: "1rem",
+      fontWeight: 500,
+    },
+    ht: {
+      fontSize: "0.857rem",
+      fontWeight: 500,
+    },
+  },
+  components: {
+    MuiTypography: {
+      defaultProps: {
+        variantMapping: {
+          h1: "h1",
+          h2: "h2",
+          h3: "h3",
+          h4: "h4",
+          st1: "h3",
+          st2: "h3",
+          b1: "div",
+          b2: "div",
+          sb1: "div",
+          sb2: "div",
+        },
+      },
     },
   },
 });
