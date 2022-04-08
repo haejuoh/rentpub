@@ -63,7 +63,7 @@ const SectionTit = () => {
             title="섹션별 타이틀"
             btn={{
               name: "버튼이름",
-              color: "primary",
+              color: "grey",
               style: "contained",
             }}
           />
@@ -76,7 +76,7 @@ const SectionTit = () => {
               <br />
               &nbsp;title="섹션별 타이틀"
               <br />
-              &nbsp;btn=&#123;&#123; name: "버튼이름", color: "primary", style:
+              &nbsp;btn=&#123;&#123; name: "버튼이름", color: "grey", style:
               "contained"
             </b>
             &#125;&#125;
@@ -96,7 +96,7 @@ const SectionTit = () => {
             caption="(계약번호: 111111111111)"
             btn={{
               name: "버튼이름",
-              color: "primary",
+              color: "grey",
               style: "outlined",
             }}
           />
@@ -111,7 +111,7 @@ const SectionTit = () => {
               <br />
               &nbsp;caption="(계약번호: 111111111111)"
               <br />
-              &nbsp;btn=&#123;&#123; name: "버튼이름", color: "primary", style:
+              &nbsp;btn=&#123;&#123; name: "버튼이름", color: "grey", style:
               "outlined"
             </b>
             &#125;&#125;

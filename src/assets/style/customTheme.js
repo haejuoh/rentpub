@@ -46,6 +46,7 @@ const lightTheme = createTheme({
       contrastText: "#FFF",
     },
     grey: {
+      main: "#565863",
       0: "#FFF",
       100: "#F9FBFF",
       200: "#F1F2F5",
@@ -55,6 +56,7 @@ const lightTheme = createTheme({
       600: "#757781",
       700: "#565863",
       900: "#2C2E38",
+      contrastText: "#FFF",
     },
     text: {
       primary: "#2C2E38",
@@ -188,6 +190,7 @@ const darkTheme = createTheme({
       contrastText: "#FFF",
     },
     grey: {
+      main: "#DCD8E1",
       0: "#29242F",
       100: "#29242F",
       200: "#322C3A",
@@ -197,6 +200,7 @@ const darkTheme = createTheme({
       600: "#8E8996",
       700: "#DCD8E1",
       900: "#FFF",
+      contrastText: "#29242F",
     },
     text: {
       primary: "#FFF",
