@@ -17,9 +17,11 @@ import { ThemeContext } from "./context/themeContext";
 import MuiSelect from "./components/MuiSelect";
 import MuiTabs from "./components/MuiTab";
 import Typo from "./guide/Typo";
-import PageTitle from "./components/title/PageTitle";
-import SectionTitle from "./components/title/SectionTitle";
-import SubTitle from "./components/title/SubTitle";
+import PageTit from "./guide/PageTit";
+import SubTit from "./guide/SubTit";
+import SectionTit from "./guide/SectionTit";
+
+// import { ReactComponent as IconLight } from "./assets/images/icons/sunny.svg";
 
 const MyButton = styled(Button)({
   boxShadow: "none",
@@ -81,58 +83,11 @@ const ComponentTabs = () => {
           <GuideTitle>Typography</GuideTitle>
           <Typo />
           <GuideTitle mt={5}>Page Title</GuideTitle>
-          <PageTitle
-            title="페이지 타이틀"
-            breadCrumbs={{
-              depth1: "Breadcrumb",
-              depth2: "Breadcrumb",
-              depth3: "Breadcrumb",
-            }}
-          />
+          <PageTit />
           <GuideTitle mt={5}>Sub Title</GuideTitle>
-          {/* 기본 */}
-          <SubTitle title="서브타이틀 (Default)" />
-          {/* 제목에 버튼이 있는 경우 */}
-          <SubTitle
-            type="isButton"
-            title="서브타이틀 (isButton)"
-            btn={{
-              name: "버튼이름",
-              color: "primary",
-              style: "outlined",
-            }}
-          />
-
+          <SubTit />
           <GuideTitle mt={5}>Section Title</GuideTitle>
-          {/* 기본 */}
-          <SectionTitle title="섹션별 타이틀" />
-          {/* 제목에 부가적인 설명이 있는 경우 */}
-          <SectionTitle
-            type="isCaption"
-            title="섹션별 타이틀"
-            caption="(계약번호: 111111111111)"
-          />
-          {/* 제목에 버튼이 있는 경우 */}
-          <SectionTitle
-            type="isButton"
-            title="섹션별 타이틀"
-            btn={{
-              name: "버튼이름",
-              color: "grey",
-              style: "contained",
-            }}
-          />
-          {/* 제목에 버튼이 있는 경우 */}
-          <SectionTitle
-            type="isAll"
-            title="섹션별 타이틀"
-            caption="(계약번호: 111111111111)"
-            btn={{
-              name: "버튼이름",
-              color: "info",
-              style: "outlined",
-            }}
-          />
+          <SectionTit />
         </TabPanel>
         <TabPanel value="2">
           <Stack direction="row" spacing={1}>

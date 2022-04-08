@@ -144,6 +144,9 @@ const lightTheme = createTheme({
 });
 const darkTheme = createTheme({
   spacing: (value) => value * 5,
+  shape: {
+    borderRadius: 1,
+  },
   borderColor: "palette.grey.200",
   // https://mui.com/customization/palette/
   palette: {
@@ -152,6 +155,9 @@ const darkTheme = createTheme({
     },
     primary: {
       light: "#FF833D",
+      light100: "#FFE6D8",
+      light300: "#FFCDB1",
+      light400: "#FFA877",
       main: "#F67025",
       // dark: will be calculated from palette.primary.main,
       contrastText: "#FFF",
@@ -182,7 +188,6 @@ const darkTheme = createTheme({
       contrastText: "#FFF",
     },
     grey: {
-      main: "#5D536B",
       0: "#29242F",
       100: "#29242F",
       200: "#322C3A",
