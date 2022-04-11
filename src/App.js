@@ -15,11 +15,13 @@ import {
 import { TabContext, TabList, TabPanel } from "@mui/lab";
 import { ThemeContext } from "./context/themeContext";
 import MuiSelect from "./components/MuiSelect";
+import MuiList from "./components/MuiList";
 import MuiTabs from "./components/MuiTab";
 import Typo from "./guide/Typo";
 import PageTit from "./guide/PageTit";
 import SubTit from "./guide/SubTit";
 import SectionTit from "./guide/SectionTit";
+import List from "./guide/List";
 
 // import { ReactComponent as IconLight } from "./assets/images/icons/sunny.svg";
 
@@ -77,6 +79,7 @@ const ComponentTabs = () => {
             <Tab label="Badge" value="2" />
             <Tab label="Button" value="3" />
             <Tab label="Select" value="4" />
+            <Tab label="List" value="5" />
           </TabList>
         </Box>
         <TabPanel value="1">
@@ -113,6 +116,10 @@ const ComponentTabs = () => {
         </TabPanel>
         <TabPanel value="4">
           <MuiSelect />
+        </TabPanel>
+        <TabPanel value="5">
+          <MuiList />
+          {/* <List /> */}
         </TabPanel>
       </TabContext>
     </Box>
