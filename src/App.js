@@ -15,7 +15,6 @@ import {
 import { TabContext, TabList, TabPanel } from "@mui/lab";
 import { ThemeContext } from "./context/themeContext";
 import MuiSelect from "./components/MuiSelect";
-import MuiList from "./components/MuiList";
 import MuiTabs from "./components/MuiTab";
 import Typo from "./guide/Typo";
 import PageTit from "./guide/PageTit";
@@ -118,8 +117,7 @@ const ComponentTabs = () => {
           <MuiSelect />
         </TabPanel>
         <TabPanel value="5">
-          <MuiList />
-          {/* <List /> */}
+          <List />
         </TabPanel>
       </TabContext>
     </Box>
