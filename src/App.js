@@ -22,6 +22,7 @@ import PageTit from "./guide/PageTit";
 import SubTit from "./guide/SubTit";
 import SectionTit from "./guide/SectionTit";
 import List from "./guide/List";
+import { Bookmark } from "react-ionicons";
 
 // import { ReactComponent as IconLight } from "./assets/images/icons/sunny.svg";
 
@@ -42,6 +43,11 @@ const Wrap = styled(Paper)({
   minHeight: "100vh",
   padding: "20px",
 });
+const CustomBookmark = styled(Bookmark)(({ theme }) => ({
+  "& path": {
+    fill: `${theme.palette.primary.light}`,
+  },
+}));
 
 const SwitchTheme = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -66,6 +72,7 @@ const ComponentTabs = () => {
   };
   return (
     <Box sx={{ width: "100%", typography: "body1" }}>
+      <CustomBookmark />
       <Typography variant="h1" mt={3}>
         공통 컴포넌트
       </Typography>
@@ -118,8 +125,7 @@ const ComponentTabs = () => {
           <MuiSelect />
         </TabPanel>
         <TabPanel value="5">
-          <MuiList />
-          {/* <List /> */}
+          <List />
         </TabPanel>
       </TabContext>
     </Box>
@@ -146,6 +152,7 @@ function App() {
           <CssBaseline />
           <Wrap>
             <SwitchTheme />
+            {/* <Bookmark color={theme.palette.primary.light} /> */}
             <ComponentTabs />
           </Wrap>
           {/* <img src={iconArrow}/> */}
