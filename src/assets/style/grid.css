@@ -1,0 +1,27 @@
+/* ag-grid box border */
+.ag-theme-alpine .ag-root-wrapper {
+  border: none;
+}
+/* thead */
+.ag-theme-alpine .ag-header-cell-resize::after {
+  display: none;
+}
+.ag-header-group-cell-label,
+.ag-header-cell-label {
+  justify-content: center;
+}
+/* tbody */
+.ag-cell-wrapper {
+  justify-content: center;
+  position: relative;
+  padding-left: 16px;
+}
+.ag-theme-alpine .ag-cell-wrapper .ag-checkbox-input-wrapper {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.ag-theme-alpine .ag-ltr .ag-cell {
+  text-align: center;
+}

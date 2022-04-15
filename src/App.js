@@ -22,6 +22,8 @@ import SubTit from "./guide/SubTit";
 import SectionTit from "./guide/SectionTit";
 import List from "./guide/List";
 import { Bookmark } from "react-ionicons";
+import GridExample from "./components/table/AgGrid";
+import MuiGrid from "./components/table/MuiGrid";
 
 // import { ReactComponent as IconLight } from "./assets/images/icons/sunny.svg";
 
@@ -86,6 +88,7 @@ const ComponentTabs = () => {
             <Tab label="Button" value="3" />
             <Tab label="Select" value="4" />
             <Tab label="List" value="5" />
+            <Tab label="DataGrid" value="6" />
           </TabList>
         </Box>
         <TabPanel value="1">
@@ -125,6 +128,10 @@ const ComponentTabs = () => {
         </TabPanel>
         <TabPanel value="5">
           <List />
+        </TabPanel>
+        <TabPanel value="6">
+          <GridExample />
+          <MuiGrid mt={2} />
         </TabPanel>
       </TabContext>
     </Box>

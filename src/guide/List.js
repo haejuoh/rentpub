@@ -32,7 +32,7 @@ const List = () => {
         </Grid>
         <Grid item xs={4}>
           <CodeBox>
-            //data 선언 <br />
+            // data 선언 <br />
             const data = [&#123;
             <br />
             &nbsp;type: "bookmark",
