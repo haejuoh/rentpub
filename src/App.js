@@ -24,6 +24,7 @@ import List from "./guide/List";
 import { Bookmark } from "react-ionicons";
 import GridExample from "./components/table/AgGrid";
 import MuiGrid from "./components/table/MuiGrid";
+import { Btn } from "./components/Button";
 
 // import { ReactComponent as IconLight } from "./assets/images/icons/sunny.svg";
 
@@ -122,6 +123,7 @@ const ComponentTabs = () => {
           <Button color="primary" variant="outlined">
             Hello World
           </Button>
+          <Btn color="primary">Hihbih</Btn>
         </TabPanel>
         <TabPanel value="4">
           <MuiSelect />
