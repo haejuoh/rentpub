@@ -29,7 +29,7 @@ const colors = {
   },
   primary: {
     b900: "#07857F",
-    b700: "#009A93", //main
+    b700: "#009A93", //main**
     b500: "#32AEA9",
     b300: "#5ABCB8",
     b200: "#81C8C5",
@@ -38,17 +38,17 @@ const colors = {
   },
   secondary: {
     b900: "#FCCB1C",
-    b600: "#FFD954",
+    b700: "#FFD954", //main**
     b500: "#FFE91F",
-    b050: "#FFFAEA",
+    b300: "#FFFAEA",
   },
   bg: {
-    default: "#F2F5F5",
-    lightTeal: "#F5FCFB",
-    white: "#FFFFFF",
+    b700: "#F2F5F5", //default**
+    b500: "#FFFFFF", //white
+    b300: "#F5FCFB", //light teal
   },
   gray: {
-    b900: "#434C4C", //high
+    b900: "#434C4C", //high**
     b700: "#677272", //medium
     b600: "#8C9695", //low
     b400: "#B0BABA", //placeholder
@@ -56,10 +56,10 @@ const colors = {
     b000: "#FFFFFF",
   },
   border: {
-    section: "#C4CECC",
-    lightGreen: "#EDF9F8",
-    light: "#F1F5F4",
-    default: "#DCE6E5",
+    b700: "#DCE6E5", //default**
+    b500: "#C4CECC", //section
+    b300: "#F1F5F4", //light
+    b100: "#EDF9F8", //light green
   },
   shadow: {
     drop: "0px 0px 15px rgba(0, 0, 0, 0.15)",
@@ -67,7 +67,7 @@ const colors = {
   },
 };
 
-const lightTheme = createTheme({
+const Theme = createTheme({
   spacing: (value) => value * 5,
   shape: {
     borderRadius: 1,
@@ -80,10 +80,11 @@ const lightTheme = createTheme({
     },
     primary: {
       main: colors.primary.b700,
+      dark: colors.primary.b900,
     },
     secondary: {
       light: "#FFE91F",
-      main: "#FCCB1C",
+      main: colors.secondary.b700,
       contrastText: "#1D1F29",
     },
     error: {
@@ -181,153 +182,17 @@ const lightTheme = createTheme({
       fontSize: "1rem",
       fontWeight: 500,
     },
-    ht: {
-      fontSize: "0.857rem",
-      fontWeight: 500,
-    },
-  },
-  components: {
-    MuiTypography: {
-      defaultProps: {
-        variantMapping: {
-          h1: "h1",
-          h2: "h2",
-          h3: "h3",
-          h4: "h4",
-          st1: "h3",
-          st2: "h3",
-          b1: "div",
-          b2: "div",
-          sb1: "div",
-          sb2: "div",
-        },
-      },
-    },
-  },
-});
-const darkTheme = createTheme({
-  spacing: (value) => value * 5,
-  shape: {
-    borderRadius: 1,
-  },
-  borderColor: "palette.grey.200",
-  // https://mui.com/customization/palette/
-  palette: {
-    common: {
-      white: "#FFF",
-    },
-    primary: {
-      light: "#FF833D",
-      light100: "#FFE6D8",
-      light300: "#FFCDB1",
-      light400: "#FFA877",
-      main: "#F67025",
-      // dark: will be calculated from palette.primary.main,
-      contrastText: "#FFF",
-    },
-    secondary: {
-      light: "#9D53FF",
-      main: "#7219E9",
-      contrastText: "#FFF",
-    },
-    error: {
-      main: "#F65858",
-      contrastText: "#FFF",
-    },
-    ready: {
-      main: "#F9AD3A",
-      contrastText: "#FFF",
-    },
-    warning: {
-      main: "#FFE91F",
-      contrastText: "#565863",
-    },
-    info: {
-      main: "#C4C5CE",
-      contrastText: "#FFF",
-    },
-    success: {
-      main: "#67C23A",
-      contrastText: "#FFF",
-    },
-    grey: {
-      main: "#DCD8E1",
-      0: "#29242F",
-      100: "#29242F",
-      200: "#322C3A",
-      300: "#584F66",
-      400: "#6E6080",
-      500: "#5D536B",
-      600: "#8E8996",
-      700: "#DCD8E1",
-      900: "#FFF",
-      contrastText: "#29242F",
-    },
-    text: {
-      primary: "#FFF",
-      secondary: "#DCD8E1",
-    },
-    action: {
-      disabled: "pallete.grey.500",
-    },
-    background: {
-      paper: "#29242F",
-      default: "#322C3A",
-    },
-  },
-  typography: {
-    fontFamily: ["Pretendard", "sans-serif"].join(","),
-    h1: {
-      fontSize: "2.0714rem",
-      fontWeight: 400,
-    },
-    h2: {
-      fontSize: "1.714rem",
-      fontWeight: 500,
-    },
-    h3: {
-      fontSize: "1.428rem",
-      fontWeight: 400,
-    },
-    h4: {
-      fontSize: "1.142rem",
-      fontWeight: 500,
-    },
-    st1: {
+    bt_large: {
       fontSize: "1.142rem",
       fontWeight: 400,
     },
-    st2: {
-      fontSize: "1rem",
-      fontWeight: 600,
-    },
-    b1: {
-      fontSize: "1rem",
-      fontWeight: 400,
-    },
-    sb1: {
-      fontSize: "1rem",
-      fontWeight: 500,
-    },
-    b2: {
-      fontSize: "0.857rem",
-      fontWeight: 400,
-    },
-    sb2: {
-      fontSize: "0.857rem",
-      fontWeight: 600,
-    },
-    ct: {
-      fontSize: "0.875rem",
-      fontWeight: 300,
-    },
-    bt: {
-      fontSize: "1rem",
-      fontWeight: 500,
-    },
     ht: {
+      fontSize: "0.625rem",
+      fontWeight: 400,
+    },
+    label: {
       fontSize: "0.857rem",
-      fontWeight: 500,
+      fontWeight: 400,
     },
   },
   components: {
@@ -350,4 +215,4 @@ const darkTheme = createTheme({
   },
 });
 
-export { lightTheme, darkTheme };
+export { Theme };

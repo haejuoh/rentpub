@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useContext } from "react";
 import { ThemeProvider, styled } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
-import { lightTheme, darkTheme } from "../src/assets/style/customTheme";
+import { Theme } from "../src/assets/style/customTheme";
 import {
   Box,
   Paper,
@@ -51,21 +51,6 @@ const CustomBookmark = styled(Bookmark)(({ theme }) => ({
   },
 }));
 
-const SwitchTheme = () => {
-  const { theme, setTheme } = useContext(ThemeContext);
-
-  return (
-    <MyButton
-      color="primary"
-      variant="contained"
-      onClick={() => {
-        theme === "dark" ? setTheme("light") : setTheme("dark");
-      }}
-    >
-      Switch Theme
-    </MyButton>
-  );
-};
 const ComponentTabs = () => {
   const [value, setValue] = React.useState("1");
 
@@ -141,31 +126,18 @@ const ComponentTabs = () => {
 };
 
 function App() {
-  const systemTheme = useMediaQuery("(prefers-color-scheme: dark)");
-  const [theme, setTheme] = useState("light");
-  const stateTheme = useMemo(() => ({ theme, setTheme }));
-
-  let themeMode;
-  if (theme === "dark" || systemTheme) {
-    themeMode = darkTheme;
-  } else {
-    themeMode = lightTheme;
-  }
   // console.log(themeMode);
 
   return (
     <>
-      <ThemeContext.Provider value={stateTheme}>
-        <ThemeProvider theme={themeMode}>
-          <CssBaseline />
-          <Wrap>
-            <SwitchTheme />
-            {/* <Bookmark color={theme.palette.primary.light} /> */}
-            <ComponentTabs />
-          </Wrap>
-          {/* <img src={iconArrow}/> */}
-        </ThemeProvider>
-      </ThemeContext.Provider>
+      <ThemeProvider theme={Theme}>
+        <CssBaseline />
+        <Wrap>
+          {/* <Bookmark color={theme.palette.primary.light} /> */}
+          <ComponentTabs />
+        </Wrap>
+        {/* <img src={iconArrow}/> */}
+      </ThemeProvider>
     </>
   );
 }
