@@ -1,4 +1,6 @@
 import { createTheme } from "@mui/material";
+import { grey } from "@mui/material/colors";
+import { color } from "@mui/system";
 const colors = {
   ci: {
     red: "#EA002C",
@@ -47,7 +49,7 @@ const colors = {
     b500: "#FFFFFF", //white
     b300: "#F5FCFB", //light teal
   },
-  gray: {
+  grey: {
     b900: "#434C4C", //high**
     b700: "#677272", //medium
     b600: "#8C9695", //low
@@ -70,7 +72,7 @@ const colors = {
 const Theme = createTheme({
   spacing: (value) => value * 5,
   shape: {
-    borderRadius: 1,
+    borderRadius: 2,
   },
   borderColor: "palette.grey.200",
   // https://mui.com/customization/palette/
@@ -81,6 +83,15 @@ const Theme = createTheme({
     primary: {
       main: colors.primary.b700,
       dark: colors.primary.b900,
+    },
+    default: {
+      main: colors.grey.b700,
+      dark: colors.grey.b900,
+    },
+    disabled: {
+      main: colors.fn.cancel.default,
+      dark: colors.fn.cancel.hover,
+      contrastText: "#FFF",
     },
     secondary: {
       light: "#FFE91F",
@@ -108,17 +119,14 @@ const Theme = createTheme({
       contrastText: "#FFF",
     },
     grey: {
-      main: "#565863",
-      0: "#FFF",
-      100: "#F9FBFF",
-      200: "#F1F2F5",
-      300: "#DCDDE5",
-      400: "#C4C5CE",
-      500: "#8F919A",
-      600: "#757781",
-      700: "#565863",
-      900: "#2C2E38",
-      contrastText: "#FFF",
+      // main: "#565863",
+      0: colors.grey.b000,
+      300: colors.grey.b300,
+      400: colors.grey.b400,
+      600: colors.grey.b600,
+      700: colors.grey.b700,
+      900: colors.grey.b900,
+      contrastText: colors.grey.b000,
     },
     text: {
       primary: "#2C2E38",
@@ -211,6 +219,37 @@ const Theme = createTheme({
           sb2: "div",
         },
       },
+    },
+    MuiButton: {
+      variants: [
+        {
+          props: { size: "small" },
+          style: {
+            fontSize: "1rem",
+            padding: "2px 6px",
+            boxSizing: "border-box",
+            boxShadow: "none",
+          },
+        },
+        {
+          props: { size: "medium" },
+          style: {
+            fontSize: "1rem",
+            padding: "7px 12px",
+            boxSizing: "border-box",
+            boxShadow: "none",
+          },
+        },
+        {
+          props: { size: "large" },
+          style: {
+            fontSize: "1.142rem",
+            padding: "10px 18px",
+            boxSizing: "border-box",
+            boxShadow: "none",
+          },
+        },
+      ],
     },
   },
 });

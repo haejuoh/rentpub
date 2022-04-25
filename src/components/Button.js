@@ -1,16 +1,17 @@
 import PropTypes from "prop-types";
 import { styled } from "@mui/material/styles";
+import { Button } from "@mui/material";
 
-const ButtonCustom = styled("span")(
+const ButtonCustom = styled(Button)(
   ({ theme }) => `
-      background-color: ${theme.palette.grey[700]};
-      padding: ${theme.spacing(3)};
+      background-color: ${theme.palette.primary};
+      padding: 7px 12px;
       font-size: ${theme.typography.bt};
       border-radius: ${theme.shape.borderRadius};
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      max-height: ${theme.spacing(3)};
+      max-height: 34px;
       
       &.MuiLabel {
         &-primary {

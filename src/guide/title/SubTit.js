@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
 import { Grid, Box, Typography } from "@mui/material";
-import SubTitle from "../components/title/SubTitle";
+import SubTitle from "../../components/title/SubTitle";
 
 const CodeBox = styled(Box)(({ theme }) => ({
   backgroundColor: `${theme.palette.grey[700]}`,

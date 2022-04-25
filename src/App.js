@@ -13,20 +13,18 @@ import {
   Stack,
 } from "@mui/material";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
-import { ThemeContext } from "./context/themeContext";
 import MuiSelect from "./components/MuiSelect";
 import MuiTabs from "./components/MuiTab";
-import Typo from "./guide/Typo";
-import PageTit from "./guide/PageTit";
-import SubTit from "./guide/SubTit";
-import SectionTit from "./guide/SectionTit";
-import List from "./guide/List";
 import { Bookmark } from "react-ionicons";
 import GridExample from "./components/table/AgGrid";
 import MuiGrid from "./components/table/MuiGrid";
-import { Btn } from "./components/Button";
-
-// import { ReactComponent as IconLight } from "./assets/images/icons/sunny.svg";
+//guide
+import Typo from "./guide/Typo";
+import PageTit from "./guide/title/PageTit";
+import SubTit from "./guide/title/SubTit";
+import SectionTit from "./guide/title/SectionTit";
+import List from "./guide/List";
+import { BtnSize, BtnColor } from "./guide/Btn";
 
 const MyButton = styled(Button)({
   boxShadow: "none",
@@ -52,7 +50,7 @@ const CustomBookmark = styled(Bookmark)(({ theme }) => ({
 }));
 
 const ComponentTabs = () => {
-  const [value, setValue] = React.useState("1");
+  const [value, setValue] = React.useState("3");
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -99,16 +97,10 @@ const ComponentTabs = () => {
           </Stack>
         </TabPanel>
         <TabPanel value="3">
-          <MyButton color="primary" variant="contained">
-            Button
-          </MyButton>
-          <MyButton color="secondary" variant="contained">
-            1234567
-          </MyButton>
-          <Button color="primary" variant="outlined">
-            Hello World
-          </Button>
-          <Btn color="primary">Hihbih</Btn>
+          <GuideTitle>Button Size</GuideTitle>
+          <BtnSize />
+          <GuideTitle mt={4}>Button Color</GuideTitle>
+          <BtnColor />
         </TabPanel>
         <TabPanel value="4">
           <MuiSelect />
