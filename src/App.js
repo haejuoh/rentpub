@@ -24,7 +24,7 @@ import PageTit from "./guide/title/PageTit";
 import SubTit from "./guide/title/SubTit";
 import SectionTit from "./guide/title/SectionTit";
 import List from "./guide/List";
-import { BtnSize, BtnColor } from "./guide/Btn";
+import { BtnSize, BtnIcon, BtnColor, BtnDisabled } from "./guide/Btn";
 
 const MyButton = styled(Button)({
   boxShadow: "none",
@@ -33,8 +33,15 @@ const MyButton = styled(Button)({
 const GuideTitle = styled(Typography)(
   ({ theme }) => `
   font-size: 1.8125rem;
-  font-weight: 700;
-  color: ${theme.palette.primary.light}
+  font-weight: 600;
+  color: ${theme.palette.grey[900]}
+`
+);
+const GuideSubTitle = styled(Typography)(
+  ({ theme }) => `
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: ${theme.palette.grey[700]}
 `
 );
 
@@ -99,8 +106,14 @@ const ComponentTabs = () => {
         <TabPanel value="3">
           <GuideTitle>Button Size</GuideTitle>
           <BtnSize />
-          <GuideTitle mt={4}>Button Color</GuideTitle>
+          <GuideTitle>Button Icon </GuideTitle>
+          <GuideSubTitle>단일 아이콘 버튼, 마크업 유의 바람</GuideSubTitle>
+          <BtnIcon />
+          <GuideTitle mt={4}>Button Variants</GuideTitle>
           <BtnColor />
+          <GuideTitle mt={4}>Button Disabled</GuideTitle>
+          <GuideSubTitle>disabled porperty로 제어 유의 바람</GuideSubTitle>
+          <BtnDisabled />
         </TabPanel>
         <TabPanel value="4">
           <MuiSelect />

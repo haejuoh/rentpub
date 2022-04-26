@@ -1,6 +1,6 @@
-import { createTheme } from "@mui/material";
+import { createTheme, experimental_sx as sx } from "@mui/material";
 import { grey } from "@mui/material/colors";
-import { color } from "@mui/system";
+import { color, shape } from "@mui/system";
 const colors = {
   ci: {
     red: "#EA002C",
@@ -85,20 +85,42 @@ const Theme = createTheme({
       main: colors.primary.b700,
       dark: colors.primary.b900,
     },
+    primaryLine: {
+      main: colors.primary.b700,
+      dark: colors.primary.b900,
+    },
     default: {
       main: colors.grey.b700,
       dark: colors.grey.b900,
       contrastText: colors.white,
     },
-    disabled: {
-      main: colors.fn.cancel.default,
-      dark: colors.fn.cancel.hover,
-      contrastText: colors.white,
+    sub: {
+      main: colors.white,
+      dark: colors.primary.b050,
+      contrastText: colors.primary.b700,
     },
     secondary: {
-      light: "#FFE91F",
-      main: colors.secondary.b700,
-      contrastText: "#1D1F29",
+      main: colors.secondary.b500,
+      dark: colors.secondary.b700,
+      contrastText: colors.grey.b700,
+    },
+    function: {
+      main: colors.white,
+      dark: colors.bg.b300,
+      contrastText: colors.grey.b900,
+    },
+    excel: {
+      main: colors.fn.excel.default,
+      dark: colors.fn.excel.hover,
+      contrastText: colors.white,
+    },
+    delete: {
+      main: colors.fn.delete.default,
+      contrastText: colors.fn.delete.default,
+    },
+    cancel: {
+      main: colors.fn.cancel.default,
+      contrastText: colors.primary.b200,
     },
     error: {
       main: "#F65858",
@@ -135,7 +157,9 @@ const Theme = createTheme({
       secondary: "#868E96",
     },
     action: {
-      disabled: "pallete.grey.500",
+      disabled: colors.white,
+      disabledBackground: colors.fn.cancel.default,
+      disabledOpacity: 1,
     },
     background: {
       paper: "#F1F2F5",
@@ -228,13 +252,17 @@ const Theme = createTheme({
           props: { size: "small" },
           style: {
             minWidth: "auto",
+            height: "24px",
             fontSize: "1rem",
-            padding: "2px 6px",
+            padding: "0 6px",
             boxSizing: "border-box",
             boxShadow: "none",
             textTransform: "capitalize",
-            "&:hover": {
+            "&:hover, &:active": {
               boxShadow: "none",
+            },
+            ".MuiButton-endIcon": {
+              marginLeft: "2px",
             },
           },
         },
@@ -242,33 +270,281 @@ const Theme = createTheme({
           props: { size: "medium" },
           style: {
             minWidth: "auto",
+            height: "34px",
             fontSize: "1rem",
-            padding: "7px 12px",
+            padding: "0 12px",
             boxSizing: "border-box",
             boxShadow: "none",
             textTransform: "capitalize",
+            "&:hover, &:active": {
+              boxShadow: "none",
+            },
+            ".MuiButton-endIcon": {
+              marginLeft: "5px",
+            },
           },
         },
         {
           props: { size: "large" },
           style: {
             minWidth: "auto",
+            height: "42px",
             fontSize: "1.142rem",
-            padding: "10px 18px",
+            padding: "0 18px",
             boxSizing: "border-box",
             boxShadow: "none",
             textTransform: "capitalize",
+            "&:hover, &:active": {
+              boxShadow: "none",
+            },
+            ".MuiButton-endIcon": {
+              marginLeft: "5px",
+            },
+          },
+        },
+        {
+          props: { color: "primary", variant: "outlined" },
+          style: {
+            backgroundColor: colors.white,
+            borderColor: colors.primary.b700,
+            "&:hover, &:active": {
+              backgroundColor: colors.bg.b300,
+              borderColor: colors.primary.b700,
+            },
+            svg: {
+              "& path": {
+                fill: colors.primary.b700,
+              },
+            },
+          },
+        },
+        {
+          props: { color: "default", variant: "outlined" },
+          style: {
+            backgroundColor: colors.white,
+            borderColor: colors.grey.b700,
+            "&:hover, &:active": {
+              backgroundColor: colors.bg.b700,
+              borderColor: colors.grey.b700,
+            },
+            svg: {
+              "& path": {
+                fill: colors.grey.b700,
+              },
+            },
+          },
+        },
+        {
+          props: { color: "delete", variant: "outlined" },
+          style: {
+            backgroundColor: colors.white,
+            borderColor: colors.fn.delete.default,
+            "&:hover, &:active": {
+              backgroundColor: colors.fn.delete.hover,
+              borderColor: colors.fn.delete.default,
+            },
+            svg: {
+              "& path": {
+                fill: colors.fn.delete.default,
+              },
+            },
+          },
+        },
+        {
+          props: { color: "secondary", variant: "contained" },
+          style: {
+            svg: {
+              "& path": {
+                fill: colors.grey.b700,
+              },
+            },
+          },
+        },
+        {
+          props: { color: "sub", variant: "contained" },
+          style: {
+            svg: {
+              "& path": {
+                fill: colors.primary.b700,
+              },
+            },
+          },
+        },
+        {
+          props: { color: "secondary", variant: "outlined" },
+          style: {
+            backgroundColor: colors.white,
+            borderColor: colors.secondary.b500,
+            "&:hover, &:active": {
+              backgroundColor: colors.secondary.b300,
+              borderColor: colors.secondary.b500,
+            },
+            svg: {
+              "& path": {
+                fill: colors.secondary.b500,
+              },
+            },
+          },
+        },
+        {
+          props: { color: "function", variant: "outlined" },
+          style: {
+            backgroundColor: colors.white,
+            borderColor: colors.grey.b900,
+            color: colors.grey.b900,
+            "&:hover, &:active": {
+              backgroundColor: colors.bg.b300,
+              borderColor: colors.grey.b900,
+            },
+            svg: {
+              "& path": {
+                fill: colors.grey.b900,
+              },
+            },
+          },
+        },
+        {
+          props: { color: "cancel", variant: "outlined" },
+          style: {
+            backgroundColor: colors.white,
+            borderColor: colors.fn.cancel.default,
+            color: colors.primary.b200,
+            "&:hover, &:active": {
+              backgroundColor: colors.bg.b700,
+              borderColor: colors.fn.cancel.default,
+            },
+            svg: {
+              "& path": {
+                fill: colors.primary.b200,
+              },
+            },
+          },
+        },
+        {
+          props: { disabled: true },
+          style: {
+            "&:hover, &:active": {
+              backgroundColor: colors.fn.cancel.hover,
+            },
+            svg: {
+              "& path": {
+                fill: colors.white,
+              },
+            },
+          },
+        },
+        {
+          props: { disabled: true, variant: "outlined" },
+          style: {
+            backgroundColor: colors.fn.cancel.default,
+            "&:hover, &:active": {
+              backgroundColor: colors.fn.cancel.hover,
+            },
+            svg: {
+              "& path": {
+                fill: colors.white,
+              },
+            },
           },
         },
       ],
+      styleOverrides: {
+        // root: sx({
+        //   ".Mui-disabled": {
+        //     svg: {
+        //       "& path": {
+        //         fill: colors.white,
+        //       },
+        //     },
+        //   },
+        // }),
+        // label: {
+        //   padding: "initial",
+        // },
+
+        //text and icon spacing
+        // icon: sx({
+        //   mr: 0,
+        //   ml: "2px",
+        // }),
+        //icon size
+        iconSizeSmall: {
+          "& > *:first-of-type": {
+            width: "12px",
+            height: "12px",
+          },
+        },
+        iconSizeMedium: {
+          "& > *:first-of-type": {
+            width: "18px",
+            height: "18px",
+          },
+        },
+        iconSizeLarge: {
+          "& > *:first-of-type": {
+            width: "18px",
+            height: "18px",
+          },
+        },
+      },
     },
-    MuiIcon: {
+
+    MuiIconButton: {
       variants: [
         {
-          props: { size: "small" },
+          props: { color: "primary" },
           style: {
-            width: "14px",
-            height: "14px",
+            borderRadius: shape.borderRadius,
+            backgroundColor: colors.primary.b700,
+            "&:hover,&:active": {
+              backgroundColor: colors.primary.b900,
+            },
+          },
+        },
+        {
+          props: { color: "primary", variant: "outlined" },
+          style: {
+            borderRadius: shape.borderRadius,
+            backgroundColor: colors.white,
+            border: "1px solid",
+            borderColor: colors.primary.b700,
+            "&:hover, &:active": {
+              backgroundColor: colors.bg.b300,
+              borderColor: colors.primary.b700,
+            },
+            svg: {
+              "& path": {
+                fill: colors.primary.b700,
+              },
+            },
+          },
+        },
+        {
+          props: { color: "default" },
+          style: {
+            borderRadius: shape.borderRadius,
+            backgroundColor: colors.grey.b700,
+            "&:hover,&:active": {
+              backgroundColor: colors.grey.b900,
+            },
+          },
+        },
+        {
+          props: { color: "default", variant: "outlined" },
+          style: {
+            borderRadius: shape.borderRadius,
+            backgroundColor: colors.white,
+            border: "1px solid",
+            borderColor: colors.grey.b700,
+            "&:hover, &:active": {
+              backgroundColor: colors.bg.b700,
+              borderColor: colors.grey.b700,
+            },
+            svg: {
+              "& path": {
+                fill: colors.grey.b700,
+              },
+            },
           },
         },
       ],
