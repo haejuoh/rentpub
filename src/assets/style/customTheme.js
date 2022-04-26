@@ -1,7 +1,7 @@
 import { createTheme, experimental_sx as sx } from "@mui/material";
 import { grey } from "@mui/material/colors";
 import { color, shape } from "@mui/system";
-const colors = {
+const colorSystem = {
   ci: {
     red: "#EA002C",
     orange: "#F47725",
@@ -16,10 +16,7 @@ const colors = {
     done: "#178CF8",
   },
   fn: {
-    cancel: {
-      default: "#C4C5CE",
-      hover: "#B4B5BE",
-    },
+    disabled: "#C4C5CE",
     excel: {
       default: "#0F8953",
       hover: "#13784B",
@@ -69,6 +66,70 @@ const colors = {
   },
   white: "#FFFFFF",
 };
+const fontSystem = {
+  h1: {
+    fontSize: "2.0714rem",
+    fontWeight: 400,
+  },
+  h2: {
+    fontSize: "1.714rem",
+    fontWeight: 500,
+  },
+  h3: {
+    fontSize: "1.428rem",
+    fontWeight: 400,
+  },
+  h4: {
+    fontSize: "1.142rem",
+    fontWeight: 500,
+  },
+  st1: {
+    fontSize: "1.142rem",
+    fontWeight: 400,
+  },
+  st2: {
+    fontSize: "1rem",
+    fontWeight: 600,
+  },
+  b1: {
+    fontSize: "1rem",
+    fontWeight: 400,
+  },
+  sb1: {
+    fontSize: "1rem",
+    fontWeight: 500,
+  },
+  b2: {
+    fontSize: "0.857rem",
+    fontWeight: 400,
+  },
+  sb2: {
+    fontSize: "0.857rem",
+    fontWeight: 600,
+  },
+  ct: {
+    fontSize: "0.875rem",
+    fontWeight: 300,
+  },
+  bt: {
+    default: {
+      fontSize: "1rem",
+      fontWeight: 500,
+    },
+    large: {
+      fontSize: "1.142rem",
+      fontWeight: 400,
+    },
+  },
+  ht: {
+    fontSize: "0.625rem",
+    fontWeight: 400,
+  },
+  label: {
+    fontSize: "0.857rem",
+    fontWeight: 400,
+  },
+};
 
 const Theme = createTheme({
   spacing: (value) => value * 5,
@@ -79,56 +140,56 @@ const Theme = createTheme({
   // https://mui.com/customization/palette/
   palette: {
     common: {
-      white: colors.white,
+      white: colorSystem.white,
     },
     primary: {
-      main: colors.primary.b700,
-      dark: colors.primary.b900,
+      main: colorSystem.primary.b700,
+      dark: colorSystem.primary.b900,
     },
     primaryLine: {
-      main: colors.primary.b700,
-      dark: colors.primary.b900,
+      main: colorSystem.primary.b700,
+      dark: colorSystem.primary.b900,
     },
     default: {
-      main: colors.grey.b700,
-      dark: colors.grey.b900,
-      contrastText: colors.white,
+      main: colorSystem.grey.b700,
+      dark: colorSystem.grey.b900,
+      contrastText: colorSystem.white,
     },
     sub: {
-      main: colors.white,
-      dark: colors.primary.b050,
-      contrastText: colors.primary.b700,
+      main: colorSystem.white,
+      dark: colorSystem.primary.b050,
+      contrastText: colorSystem.primary.b700,
     },
     secondary: {
-      main: colors.secondary.b500,
-      dark: colors.secondary.b700,
-      contrastText: colors.grey.b700,
+      main: colorSystem.secondary.b500,
+      dark: colorSystem.secondary.b700,
+      contrastText: colorSystem.grey.b700,
     },
     function: {
-      main: colors.white,
-      dark: colors.bg.b300,
-      contrastText: colors.grey.b900,
+      main: colorSystem.white,
+      dark: colorSystem.bg.b300,
+      contrastText: colorSystem.grey.b900,
     },
     excel: {
-      main: colors.fn.excel.default,
-      dark: colors.fn.excel.hover,
-      contrastText: colors.white,
+      main: colorSystem.fn.excel.default,
+      dark: colorSystem.fn.excel.hover,
+      contrastText: colorSystem.white,
     },
     delete: {
-      main: colors.fn.delete.default,
-      contrastText: colors.fn.delete.default,
+      main: colorSystem.fn.delete.default,
+      contrastText: colorSystem.fn.delete.default,
     },
     cancel: {
-      main: colors.fn.cancel.default,
-      contrastText: colors.primary.b200,
+      main: colorSystem.fn.disabled,
+      contrastText: colorSystem.primary.b200,
     },
     error: {
       main: "#F65858",
-      contrastText: colors.white,
+      contrastText: colorSystem.white,
     },
     ready: {
       main: "#F9AD3A",
-      contrastText: colors.white,
+      contrastText: colorSystem.white,
     },
     warning: {
       main: "#FFE91F",
@@ -136,29 +197,29 @@ const Theme = createTheme({
     },
     info: {
       main: "#C4C5CE",
-      contrastText: colors.white,
+      contrastText: colorSystem.white,
     },
     success: {
       main: "#67C23A",
-      contrastText: colors.white,
+      contrastText: colorSystem.white,
     },
     grey: {
       // main: "#565863",
-      0: colors.grey.b000,
-      300: colors.grey.b300,
-      400: colors.grey.b400,
-      600: colors.grey.b600,
-      700: colors.grey.b700,
-      900: colors.grey.b900,
-      contrastText: colors.grey.b000,
+      0: colorSystem.grey.b000,
+      300: colorSystem.grey.b300,
+      400: colorSystem.grey.b400,
+      600: colorSystem.grey.b600,
+      700: colorSystem.grey.b700,
+      900: colorSystem.grey.b900,
+      contrastText: colorSystem.grey.b000,
     },
     text: {
       primary: "#2C2E38",
       secondary: "#868E96",
     },
     action: {
-      disabled: colors.white,
-      disabledBackground: colors.fn.cancel.default,
+      disabled: colorSystem.white,
+      disabledBackground: colorSystem.fn.disabled,
       disabledOpacity: 1,
     },
     background: {
@@ -167,67 +228,23 @@ const Theme = createTheme({
     },
   },
   typography: {
+    htmlFontSize: 14,
     fontFamily: ["Pretendard", "sans-serif"].join(","),
-    h1: {
-      fontSize: "2.0714rem",
-      fontWeight: 400,
-    },
-    h2: {
-      fontSize: "1.714rem",
-      fontWeight: 500,
-    },
-    h3: {
-      fontSize: "1.428rem",
-      fontWeight: 400,
-    },
-    h4: {
-      fontSize: "1.142rem",
-      fontWeight: 500,
-    },
-    st1: {
-      fontSize: "1.142rem",
-      fontWeight: 400,
-    },
-    st2: {
-      fontSize: "1rem",
-      fontWeight: 600,
-    },
-    b1: {
-      fontSize: "1rem",
-      fontWeight: 400,
-    },
-    sb1: {
-      fontSize: "1rem",
-      fontWeight: 500,
-    },
-    b2: {
-      fontSize: "0.857rem",
-      fontWeight: 400,
-    },
-    sb2: {
-      fontSize: "0.857rem",
-      fontWeight: 600,
-    },
-    ct: {
-      fontSize: "0.875rem",
-      fontWeight: 300,
-    },
-    bt: {
-      fontSize: "1rem",
-      fontWeight: 500,
-    },
-    bt_large: {
-      fontSize: "1.142rem",
-      fontWeight: 400,
-    },
-    ht: {
-      fontSize: "0.625rem",
-      fontWeight: 400,
-    },
-    label: {
-      fontSize: "0.857rem",
-      fontWeight: 400,
-    },
+    h1: fontSystem.h1,
+    h2: fontSystem.h2,
+    h3: fontSystem.h3,
+    h4: fontSystem.h4,
+    st1: fontSystem.st1,
+    st2: fontSystem.st2,
+    b1: fontSystem.b1,
+    sb1: fontSystem.sb1,
+    b2: fontSystem.b2,
+    sb2: fontSystem.sb2,
+    ct: fontSystem.ct,
+    bt: fontSystem.bt.default,
+    bt_large: fontSystem.bt.large,
+    ht: fontSystem.ht,
+    label: fontSystem.label,
   },
   components: {
     MuiTypography: {
@@ -253,14 +270,8 @@ const Theme = createTheme({
           style: {
             minWidth: "auto",
             height: "24px",
-            fontSize: "1rem",
+            fontSize: fontSystem.bt.default,
             padding: "0 6px",
-            boxSizing: "border-box",
-            boxShadow: "none",
-            textTransform: "capitalize",
-            "&:hover, &:active": {
-              boxShadow: "none",
-            },
             ".MuiButton-endIcon": {
               marginLeft: "2px",
             },
@@ -271,14 +282,8 @@ const Theme = createTheme({
           style: {
             minWidth: "auto",
             height: "34px",
-            fontSize: "1rem",
+            fontSize: fontSystem.bt.default,
             padding: "0 12px",
-            boxSizing: "border-box",
-            boxShadow: "none",
-            textTransform: "capitalize",
-            "&:hover, &:active": {
-              boxShadow: "none",
-            },
             ".MuiButton-endIcon": {
               marginLeft: "5px",
             },
@@ -289,31 +294,45 @@ const Theme = createTheme({
           style: {
             minWidth: "auto",
             height: "42px",
-            fontSize: "1.142rem",
+            fontSize: fontSystem.bt.large,
             padding: "0 18px",
-            boxSizing: "border-box",
-            boxShadow: "none",
-            textTransform: "capitalize",
-            "&:hover, &:active": {
-              boxShadow: "none",
-            },
             ".MuiButton-endIcon": {
               marginLeft: "5px",
             },
           },
         },
         {
+          props: { color: "primary" },
+          style: {
+            svg: {
+              "& path": {
+                fill: colorSystem.white,
+              },
+            },
+          },
+        },
+        {
           props: { color: "primary", variant: "outlined" },
           style: {
-            backgroundColor: colors.white,
-            borderColor: colors.primary.b700,
+            backgroundColor: colorSystem.white,
+            borderColor: colorSystem.primary.b700,
             "&:hover, &:active": {
-              backgroundColor: colors.bg.b300,
-              borderColor: colors.primary.b700,
+              backgroundColor: colorSystem.bg.b300,
+              borderColor: colorSystem.primary.b700,
             },
             svg: {
               "& path": {
-                fill: colors.primary.b700,
+                fill: colorSystem.primary.b700,
+              },
+            },
+          },
+        },
+        {
+          props: { color: "default" },
+          style: {
+            svg: {
+              "& path": {
+                fill: colorSystem.white,
               },
             },
           },
@@ -321,41 +340,15 @@ const Theme = createTheme({
         {
           props: { color: "default", variant: "outlined" },
           style: {
-            backgroundColor: colors.white,
-            borderColor: colors.grey.b700,
+            backgroundColor: colorSystem.white,
+            borderColor: colorSystem.grey.b700,
             "&:hover, &:active": {
-              backgroundColor: colors.bg.b700,
-              borderColor: colors.grey.b700,
+              backgroundColor: colorSystem.bg.b700,
+              borderColor: colorSystem.grey.b700,
             },
             svg: {
               "& path": {
-                fill: colors.grey.b700,
-              },
-            },
-          },
-        },
-        {
-          props: { color: "delete", variant: "outlined" },
-          style: {
-            backgroundColor: colors.white,
-            borderColor: colors.fn.delete.default,
-            "&:hover, &:active": {
-              backgroundColor: colors.fn.delete.hover,
-              borderColor: colors.fn.delete.default,
-            },
-            svg: {
-              "& path": {
-                fill: colors.fn.delete.default,
-              },
-            },
-          },
-        },
-        {
-          props: { color: "secondary", variant: "contained" },
-          style: {
-            svg: {
-              "& path": {
-                fill: colors.grey.b700,
+                fill: colorSystem.grey.b700,
               },
             },
           },
@@ -365,23 +358,35 @@ const Theme = createTheme({
           style: {
             svg: {
               "& path": {
-                fill: colors.primary.b700,
+                fill: colorSystem.primary.b700,
               },
             },
           },
         },
+
+        {
+          props: { color: "secondary", variant: "contained" },
+          style: {
+            svg: {
+              "& path": {
+                fill: colorSystem.grey.b700,
+              },
+            },
+          },
+        },
+
         {
           props: { color: "secondary", variant: "outlined" },
           style: {
-            backgroundColor: colors.white,
-            borderColor: colors.secondary.b500,
+            backgroundColor: colorSystem.white,
+            borderColor: colorSystem.secondary.b500,
             "&:hover, &:active": {
-              backgroundColor: colors.secondary.b300,
-              borderColor: colors.secondary.b500,
+              backgroundColor: colorSystem.secondary.b300,
+              borderColor: colorSystem.secondary.b500,
             },
             svg: {
               "& path": {
-                fill: colors.secondary.b500,
+                fill: colorSystem.secondary.b500,
               },
             },
           },
@@ -389,16 +394,32 @@ const Theme = createTheme({
         {
           props: { color: "function", variant: "outlined" },
           style: {
-            backgroundColor: colors.white,
-            borderColor: colors.grey.b900,
-            color: colors.grey.b900,
+            backgroundColor: colorSystem.white,
+            borderColor: colorSystem.grey.b900,
+            color: colorSystem.grey.b900,
             "&:hover, &:active": {
-              backgroundColor: colors.bg.b300,
-              borderColor: colors.grey.b900,
+              backgroundColor: colorSystem.bg.b300,
+              borderColor: colorSystem.grey.b900,
             },
             svg: {
               "& path": {
-                fill: colors.grey.b900,
+                fill: colorSystem.grey.b900,
+              },
+            },
+          },
+        },
+        {
+          props: { color: "delete", variant: "outlined" },
+          style: {
+            backgroundColor: colorSystem.white,
+            borderColor: colorSystem.fn.delete.default,
+            "&:hover, &:active": {
+              backgroundColor: colorSystem.fn.delete.hover,
+              borderColor: colorSystem.fn.delete.default,
+            },
+            svg: {
+              "& path": {
+                fill: colorSystem.fn.delete.default,
               },
             },
           },
@@ -406,16 +427,16 @@ const Theme = createTheme({
         {
           props: { color: "cancel", variant: "outlined" },
           style: {
-            backgroundColor: colors.white,
-            borderColor: colors.fn.cancel.default,
-            color: colors.primary.b200,
+            backgroundColor: colorSystem.white,
+            borderColor: colorSystem.fn.disabled,
+            color: colorSystem.primary.b200,
             "&:hover, &:active": {
-              backgroundColor: colors.bg.b700,
-              borderColor: colors.fn.cancel.default,
+              backgroundColor: colorSystem.bg.b700,
+              borderColor: colorSystem.fn.disabled,
             },
             svg: {
               "& path": {
-                fill: colors.primary.b200,
+                fill: colorSystem.primary.b200,
               },
             },
           },
@@ -423,12 +444,9 @@ const Theme = createTheme({
         {
           props: { disabled: true },
           style: {
-            "&:hover, &:active": {
-              backgroundColor: colors.fn.cancel.hover,
-            },
             svg: {
               "& path": {
-                fill: colors.white,
+                fill: colorSystem.white,
               },
             },
           },
@@ -436,28 +454,24 @@ const Theme = createTheme({
         {
           props: { disabled: true, variant: "outlined" },
           style: {
-            backgroundColor: colors.fn.cancel.default,
-            "&:hover, &:active": {
-              backgroundColor: colors.fn.cancel.hover,
-            },
+            backgroundColor: colorSystem.fn.disabled,
             svg: {
               "& path": {
-                fill: colors.white,
+                fill: colorSystem.white,
               },
             },
           },
         },
       ],
       styleOverrides: {
-        // root: sx({
-        //   ".Mui-disabled": {
-        //     svg: {
-        //       "& path": {
-        //         fill: colors.white,
-        //       },
-        //     },
-        //   },
-        // }),
+        root: sx({
+          boxSizing: "border-box",
+          boxShadow: "none",
+          textTransform: "capitalize",
+          "&:hover, &:active": {
+            boxShadow: "none",
+          },
+        }),
         // label: {
         //   padding: "initial",
         // },
@@ -492,29 +506,58 @@ const Theme = createTheme({
     MuiIconButton: {
       variants: [
         {
+          props: { variant: "outlined" },
+          style: {
+            border: "1px solid",
+          },
+        },
+        {
+          props: { size: "small" },
+          style: {
+            width: "24px",
+            height: "24px",
+          },
+        },
+        {
+          props: { size: "medium" },
+          style: {
+            width: "34px",
+            height: "34px",
+          },
+        },
+        {
+          props: { size: "large" },
+          style: {
+            width: "42px",
+            height: "42px",
+          },
+        },
+        {
           props: { color: "primary" },
           style: {
-            borderRadius: shape.borderRadius,
-            backgroundColor: colors.primary.b700,
+            backgroundColor: colorSystem.primary.b700,
             "&:hover,&:active": {
-              backgroundColor: colors.primary.b900,
+              backgroundColor: colorSystem.primary.b900,
+            },
+            svg: {
+              "& path": {
+                fill: colorSystem.white,
+              },
             },
           },
         },
         {
           props: { color: "primary", variant: "outlined" },
           style: {
-            borderRadius: shape.borderRadius,
-            backgroundColor: colors.white,
-            border: "1px solid",
-            borderColor: colors.primary.b700,
+            backgroundColor: colorSystem.white,
+            borderColor: colorSystem.primary.b700,
             "&:hover, &:active": {
-              backgroundColor: colors.bg.b300,
-              borderColor: colors.primary.b700,
+              backgroundColor: colorSystem.bg.b300,
+              borderColor: colorSystem.primary.b700,
             },
             svg: {
               "& path": {
-                fill: colors.primary.b700,
+                fill: colorSystem.primary.b700,
               },
             },
           },
@@ -522,32 +565,153 @@ const Theme = createTheme({
         {
           props: { color: "default" },
           style: {
-            borderRadius: shape.borderRadius,
-            backgroundColor: colors.grey.b700,
+            backgroundColor: colorSystem.grey.b700,
             "&:hover,&:active": {
-              backgroundColor: colors.grey.b900,
+              backgroundColor: colorSystem.grey.b900,
+            },
+            svg: {
+              "& path": {
+                fill: colorSystem.white,
+              },
             },
           },
         },
         {
           props: { color: "default", variant: "outlined" },
           style: {
-            borderRadius: shape.borderRadius,
-            backgroundColor: colors.white,
-            border: "1px solid",
-            borderColor: colors.grey.b700,
+            backgroundColor: colorSystem.white,
+
+            borderColor: colorSystem.grey.b700,
             "&:hover, &:active": {
-              backgroundColor: colors.bg.b700,
-              borderColor: colors.grey.b700,
+              backgroundColor: colorSystem.bg.b700,
+              borderColor: colorSystem.grey.b700,
             },
             svg: {
               "& path": {
-                fill: colors.grey.b700,
+                fill: colorSystem.grey.b700,
+              },
+            },
+          },
+        },
+        {
+          props: { color: "sub" },
+          style: {
+            backgroundColor: colorSystem.white,
+            "&:hover,&:active": {
+              backgroundColor: colorSystem.primary.b050,
+            },
+            svg: {
+              "& path": {
+                fill: colorSystem.primary.b700,
+              },
+            },
+          },
+        },
+        {
+          props: { color: "secondary" },
+          style: {
+            borderRadius: 2,
+            backgroundColor: colorSystem.secondary.b500,
+            "&:hover,&:active": {
+              backgroundColor: colorSystem.secondary.b700,
+            },
+            svg: {
+              "& path": {
+                fill: colorSystem.grey.b700,
+              },
+            },
+          },
+        },
+        {
+          props: { color: "secondary", variant: "outlined" },
+          style: {
+            backgroundColor: colorSystem.white,
+            borderColor: colorSystem.secondary.b500,
+            "&:hover, &:active": {
+              backgroundColor: colorSystem.secondary.b300,
+              borderColor: colorSystem.secondary.b500,
+            },
+            svg: {
+              "& path": {
+                fill: colorSystem.secondary.b500,
+              },
+            },
+          },
+        },
+        {
+          props: { color: "function" },
+          style: {
+            backgroundColor: colorSystem.white,
+            "&:hover,&:active": {
+              backgroundColor: colorSystem.bg.b300,
+            },
+            svg: {
+              "& path": {
+                fill: colorSystem.grey.b900,
+              },
+            },
+          },
+        },
+        {
+          props: { color: "function", variant: "outlined" },
+          style: {
+            backgroundColor: colorSystem.white,
+            borderColor: colorSystem.grey.b900,
+            "&:hover,&:active": {
+              backgroundColor: colorSystem.bg.b300,
+            },
+            svg: {
+              "& path": {
+                fill: colorSystem.grey.b900,
+              },
+            },
+          },
+        },
+        {
+          props: { color: "delete", variant: "outlined" },
+          style: {
+            backgroundColor: colorSystem.white,
+            borderColor: colorSystem.fn.delete.default,
+            "&:hover,&:active": {
+              backgroundColor: colorSystem.fn.delete.hover,
+            },
+            svg: {
+              "& path": {
+                fill: colorSystem.fn.delete.default,
+              },
+            },
+          },
+        },
+        {
+          props: { color: "cancel", variant: "outlined" },
+          style: {
+            backgroundColor: colorSystem.white,
+            borderColor: colorSystem.fn.disabled,
+            "&:hover,&:active": {
+              backgroundColor: colorSystem.bg.b700,
+            },
+            svg: {
+              "& path": {
+                fill: colorSystem.primary.b200,
               },
             },
           },
         },
       ],
+      styleOverrides: {
+        root: sx({
+          borderRadius: "2px",
+          boxSizing: "border-box",
+          "&:disabled": {
+            backgroundColor: colorSystem.fn.disabled,
+            svg: {
+              "& path": {
+                fill: colorSystem.white,
+              },
+            },
+          },
+        }),
+      },
     },
   },
 });

@@ -24,7 +24,7 @@ import PageTit from "./guide/title/PageTit";
 import SubTit from "./guide/title/SubTit";
 import SectionTit from "./guide/title/SectionTit";
 import List from "./guide/List";
-import { BtnSize, BtnIcon, BtnColor, BtnDisabled } from "./guide/Btn";
+import { BtnSize, BtnIcon, BtnVariation, BtnDisabled } from "./guide/Btn";
 
 const MyButton = styled(Button)({
   boxShadow: "none",
@@ -110,7 +110,7 @@ const ComponentTabs = () => {
           <GuideSubTitle>단일 아이콘 버튼, 마크업 유의 바람</GuideSubTitle>
           <BtnIcon />
           <GuideTitle mt={4}>Button Variants</GuideTitle>
-          <BtnColor />
+          <BtnVariation />
           <GuideTitle mt={4}>Button Disabled</GuideTitle>
           <GuideSubTitle>disabled porperty로 제어 유의 바람</GuideSubTitle>
           <BtnDisabled />
