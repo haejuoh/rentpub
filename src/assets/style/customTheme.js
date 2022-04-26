@@ -67,6 +67,7 @@ const colors = {
     drop: "0px 0px 15px rgba(0, 0, 0, 0.15)",
     section: "0px 0px 15px rgba(196, 197, 206, 0.15)",
   },
+  white: "#FFFFFF",
 };
 
 const Theme = createTheme({
@@ -78,7 +79,7 @@ const Theme = createTheme({
   // https://mui.com/customization/palette/
   palette: {
     common: {
-      white: "#FFF",
+      white: colors.white,
     },
     primary: {
       main: colors.primary.b700,
@@ -87,11 +88,12 @@ const Theme = createTheme({
     default: {
       main: colors.grey.b700,
       dark: colors.grey.b900,
+      contrastText: colors.white,
     },
     disabled: {
       main: colors.fn.cancel.default,
       dark: colors.fn.cancel.hover,
-      contrastText: "#FFF",
+      contrastText: colors.white,
     },
     secondary: {
       light: "#FFE91F",
@@ -100,11 +102,11 @@ const Theme = createTheme({
     },
     error: {
       main: "#F65858",
-      contrastText: "#FFF",
+      contrastText: colors.white,
     },
     ready: {
       main: "#F9AD3A",
-      contrastText: "#FFF",
+      contrastText: colors.white,
     },
     warning: {
       main: "#FFE91F",
@@ -112,11 +114,11 @@ const Theme = createTheme({
     },
     info: {
       main: "#C4C5CE",
-      contrastText: "#FFF",
+      contrastText: colors.white,
     },
     success: {
       main: "#67C23A",
-      contrastText: "#FFF",
+      contrastText: colors.white,
     },
     grey: {
       // main: "#565863",
@@ -225,28 +227,48 @@ const Theme = createTheme({
         {
           props: { size: "small" },
           style: {
+            minWidth: "auto",
             fontSize: "1rem",
             padding: "2px 6px",
             boxSizing: "border-box",
             boxShadow: "none",
+            textTransform: "capitalize",
+            "&:hover": {
+              boxShadow: "none",
+            },
           },
         },
         {
           props: { size: "medium" },
           style: {
+            minWidth: "auto",
             fontSize: "1rem",
             padding: "7px 12px",
             boxSizing: "border-box",
             boxShadow: "none",
+            textTransform: "capitalize",
           },
         },
         {
           props: { size: "large" },
           style: {
+            minWidth: "auto",
             fontSize: "1.142rem",
             padding: "10px 18px",
             boxSizing: "border-box",
             boxShadow: "none",
+            textTransform: "capitalize",
+          },
+        },
+      ],
+    },
+    MuiIcon: {
+      variants: [
+        {
+          props: { size: "small" },
+          style: {
+            width: "14px",
+            height: "14px",
           },
         },
       ],

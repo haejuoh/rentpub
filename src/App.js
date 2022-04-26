@@ -50,7 +50,7 @@ const CustomBookmark = styled(Bookmark)(({ theme }) => ({
 }));
 
 const ComponentTabs = () => {
-  const [value, setValue] = React.useState("3");
+  const [value, setValue] = React.useState("1");
 
   const handleChange = (event, newValue) => {
     setValue(newValue);

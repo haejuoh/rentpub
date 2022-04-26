@@ -1,6 +1,8 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
 import { Grid, Box, Button, Typography } from "@mui/material";
+import { PencilOutline } from "react-ionicons";
+import { ReactComponent as IconPencil } from "../assets/images/icons/pencil.svg";
 
 const CodeBox = styled(Box)(({ theme }) => ({
   backgroundColor: `${theme.palette.grey[700]}`,
@@ -15,7 +17,14 @@ const ConditionTitle = styled(Typography)(
   color: ${theme.palette.primary.light400}
 `
 );
+// let IconElemSm;
 
+// IconElemSm = styled(elIcon)(({ theme }) => ({
+//   // "& path": {
+//   //   fill: theme.palette.iconColor.light,
+//   // },
+//   marginLeft: "2px",
+// }));
 export const BtnSize = () => {
   return (
     <>
@@ -23,6 +32,14 @@ export const BtnSize = () => {
         <Grid item xs={6}>
           <ConditionTitle>Small</ConditionTitle>
           <Button color="primary" size="small" variant="contained">
+            Button
+          </Button>
+          <Button
+            color="primary"
+            size="small"
+            variant="contained"
+            endIcon={<IconPencil size="small" />}
+          >
             Button
           </Button>
         </Grid>
