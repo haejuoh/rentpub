@@ -248,6 +248,7 @@ const Theme = createTheme({
     bt_large: fontSystem.bt.large,
     ht: fontSystem.ht,
     label: fontSystem.label,
+    body1: fontSystem.b1,
   },
   components: {
     //Typography
@@ -950,6 +951,16 @@ const Theme = createTheme({
           color: colorSystem.status.success,
           "&.Mui-error": {
             color: colorSystem.status.danger,
+          },
+        }),
+      },
+    },
+    MuiInputAdornment: {
+      styleOverrides: {
+        root: sx({
+          marginRight: "12px",
+          "& .MuiTypography-root": {
+            color: colorSystem.grey.b700,
           },
         }),
       },
