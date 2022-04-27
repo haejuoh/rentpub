@@ -803,7 +803,7 @@ export const BtnVariation = () => {
 export const BtnDisabled = () => {
   return (
     <>
-      <Grid container spacing={5} mt={5}>
+      <Grid container spacing={5}>
         <Grid item xs={6}>
           <Typography variant="h4" pb={1}>
             Disabled
@@ -1036,18 +1036,22 @@ export const GroupBtn = () => {
           <CodeBox>
             // default
             <br />
-            &lt;ButtonGroup variant="outlined" /&gt;
+            &lt;ButtonGroup variant="outlined" /&gt;input Button components
+            &lt;ButtonGroup&gt;
             <br />
-            &lt;ButtonGroup variant="outlined" color="primary" /&gt;
+            &lt;ButtonGroup variant="outlined" color="primary" /&gt;input Button
+            components &lt;ButtonGroup&gt;
             <br />
             <br />
             // disabled
             <br />
-            // disabled활성시 disableElevation, disabled porperty로 제어
-            유의바람
+            // disabled활성시 disableElevation, disabled porperty
             <br />
             &lt;ButtonGroup variant="outlined" color="primary" disableElevation
             disabled /&gt;
+            <br />
+            &nbsp;&nbsp;input Button components
+            <br /> &lt;ButtonGroup&gt;
             <br />
           </CodeBox>
         </Grid>

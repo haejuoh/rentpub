@@ -83,7 +83,7 @@ const ComponentTabs = () => {
             <Tab label="Typography" value="1" />
             <Tab label="Badge" value="2" />
             <Tab label="Button" value="3" />
-            <Tab label="Select" value="4" />
+            <Tab label="Form" value="4" />
             <Tab label="List" value="5" />
             <Tab label="DataGrid" value="6" />
           </TabList>
@@ -113,14 +113,19 @@ const ComponentTabs = () => {
           <GuideTitle>Button Size</GuideTitle>
           <BtnSize />
           <GuideTitle>Button Icon </GuideTitle>
-          <GuideSubTitle>단일 아이콘 버튼, 마크업 유의 바람</GuideSubTitle>
+          <GuideSubTitle pb={8}>
+            단일 아이콘 버튼, 마크업 유의 바람
+          </GuideSubTitle>
           <BtnIcon />
           <GuideTitle mt={4}>Button Variants</GuideTitle>
           <BtnVariation />
           <GuideTitle mt={4}>Button Disabled</GuideTitle>
-          <GuideSubTitle>disabled porperty로 제어 유의 바람</GuideSubTitle>
+          <GuideSubTitle pb={8}>
+            disabled porperty로 제어 유의 바람
+          </GuideSubTitle>
           <BtnDisabled />
           <GuideTitle>Button Group</GuideTitle>
+          <GuideSubTitle pb={8}>마크업 상이 유의 바람</GuideSubTitle>
           <GroupBtn />
         </TabPanel>
         <TabPanel value="4">
