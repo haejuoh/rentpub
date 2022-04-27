@@ -132,7 +132,7 @@ const fontSystem = {
 };
 
 const Theme = createTheme({
-  spacing: (value) => value * 5,
+  spacing: (value) => value * 1,
   shape: {
     borderRadius: 2,
   },
@@ -143,10 +143,6 @@ const Theme = createTheme({
       white: colorSystem.white,
     },
     primary: {
-      main: colorSystem.primary.b700,
-      dark: colorSystem.primary.b900,
-    },
-    primaryLine: {
       main: colorSystem.primary.b700,
       dark: colorSystem.primary.b900,
     },
@@ -451,17 +447,6 @@ const Theme = createTheme({
             },
           },
         },
-        {
-          props: { disabled: true, variant: "outlined" },
-          style: {
-            backgroundColor: colorSystem.fn.disabled,
-            svg: {
-              "& path": {
-                fill: colorSystem.white,
-              },
-            },
-          },
-        },
       ],
       styleOverrides: {
         root: sx({
@@ -471,16 +456,16 @@ const Theme = createTheme({
           "&:hover, &:active": {
             boxShadow: "none",
           },
+          "&:disabled": {
+            backgroundColor: colorSystem.fn.disabled,
+            svg: {
+              "& path": {
+                fill: colorSystem.white,
+              },
+            },
+          },
         }),
-        // label: {
-        //   padding: "initial",
-        // },
 
-        //text and icon spacing
-        // icon: sx({
-        //   mr: 0,
-        //   ml: "2px",
-        // }),
         //icon size
         iconSizeSmall: {
           "& > *:first-of-type": {
@@ -710,6 +695,135 @@ const Theme = createTheme({
               },
             },
           },
+        }),
+      },
+    },
+    MuiButtonGroup: {
+      variants: [
+        {
+          props: { color: "primary" },
+          style: {
+            borderColor: colorSystem.primary.b700,
+          },
+        },
+        {
+          props: { color: "default" },
+          style: {
+            borderColor: colorSystem.grey.b700,
+          },
+        },
+        {
+          props: { color: "secondary" },
+          style: {
+            borderColor: colorSystem.secondary.b500,
+          },
+        },
+        {
+          props: { color: "function" },
+          style: {
+            borderColor: colorSystem.grey.b900,
+          },
+        },
+        {
+          props: { color: "delete" },
+          style: {
+            borderColor: colorSystem.fn.delete.default,
+          },
+        },
+        {
+          props: { color: "cancel" },
+          style: {
+            borderColor: colorSystem.fn.disabled,
+          },
+        },
+      ],
+      styleOverrides: {
+        root: sx({
+          boxSizing: "border-box",
+          border: "1px solid",
+          borderRadius: 2,
+          overflow: "hidden",
+          button: {
+            border: "none",
+            position: "relative",
+            "&:hover, &:active": {
+              border: "none",
+            },
+            "&:not(:first-of-type)": {
+              "&:before": {
+                content: '""',
+                display: "inline-block",
+                width: "1px",
+                height: "calc(50% - 3px)",
+                // backgroundColor: "#ff0",
+                clear: "both",
+                position: "absolute",
+                left: -1,
+                top: "50%",
+                transform: "translateY(-50%)",
+              },
+            },
+            "&:disabled": {
+              border: "none",
+              "&:not(:first-of-type)": {
+                "&:before": {
+                  backgroundColor: colorSystem.white,
+                },
+              },
+            },
+          },
+        }),
+        groupedOutlinedPrimary: sx({
+          "&:not(:first-of-type)": {
+            "&:before": {
+              backgroundColor: colorSystem.primary.b200,
+            },
+          },
+        }),
+        groupedOutlinedDefault: sx({
+          "&:not(:first-of-type)": {
+            "&:before": {
+              backgroundColor: colorSystem.grey.b300,
+            },
+          },
+        }),
+        groupedOutlinedSecondary: sx({
+          "&:not(:first-of-type)": {
+            "&:before": {
+              backgroundColor: colorSystem.secondary.b500,
+            },
+          },
+        }),
+        groupedOutlinedSecondary: sx({
+          "&:not(:first-of-type)": {
+            "&:before": {
+              backgroundColor: colorSystem.secondary.b500,
+            },
+          },
+        }),
+        groupedOutlinedFunction: sx({
+          "&:not(:first-of-type)": {
+            "&:before": {
+              backgroundColor: colorSystem.grey.b900,
+            },
+          },
+        }),
+        groupedOutlinedDelete: sx({
+          "&:not(:first-of-type)": {
+            "&:before": {
+              backgroundColor: colorSystem.fn.delete.default,
+            },
+          },
+        }),
+        groupedOutlinedCancel: sx({
+          "&:not(:first-of-type)": {
+            "&:before": {
+              backgroundColor: colorSystem.fn.disabled,
+            },
+          },
+        }),
+        disableElevation: sx({
+          border: "none",
         }),
       },
     },

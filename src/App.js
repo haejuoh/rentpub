@@ -24,7 +24,13 @@ import PageTit from "./guide/title/PageTit";
 import SubTit from "./guide/title/SubTit";
 import SectionTit from "./guide/title/SectionTit";
 import List from "./guide/List";
-import { BtnSize, BtnIcon, BtnVariation, BtnDisabled } from "./guide/Btn";
+import {
+  BtnSize,
+  BtnIcon,
+  BtnVariation,
+  BtnDisabled,
+  GroupBtn,
+} from "./guide/Btn";
 
 const MyButton = styled(Button)({
   boxShadow: "none",
@@ -114,6 +120,8 @@ const ComponentTabs = () => {
           <GuideTitle mt={4}>Button Disabled</GuideTitle>
           <GuideSubTitle>disabled porperty로 제어 유의 바람</GuideSubTitle>
           <BtnDisabled />
+          <GuideTitle>Button Group</GuideTitle>
+          <GroupBtn />
         </TabPanel>
         <TabPanel value="4">
           <MuiSelect />

@@ -8,6 +8,7 @@ import {
   IconButton,
   Typography,
   Stack,
+  ButtonGroup,
 } from "@mui/material";
 import { PencilOutline } from "react-ionicons";
 import { ReactComponent as IconPencil } from "../assets/images/icons/pencil.svg";
@@ -23,7 +24,7 @@ const CodeBox = styled(Box)(({ theme }) => ({
 export const BtnSize = () => {
   return (
     <>
-      <Grid container spacing={2}>
+      <Grid container spacing={5}>
         <Grid item xs={6}>
           <Stack spacing={3}>
             <div>
@@ -81,12 +82,12 @@ export const BtnSize = () => {
 export const BtnIcon = () => {
   return (
     <>
-      <Grid container spacing={2}>
+      <Grid container spacing={5}>
         <Grid item xs={6}>
           <Typography variant="h4" pb={1}>
             Only Icon
           </Typography>
-          <Stack direction="row" spacing={2}>
+          <Stack direction="row" spacing={5}>
             <IconButton color="primary">
               <IconPencil />
             </IconButton>
@@ -99,7 +100,7 @@ export const BtnIcon = () => {
           </CodeBox>
         </Grid>
       </Grid>
-      <Grid container spacing={2} mt={2}>
+      <Grid container spacing={5} mt={5}>
         <Grid item xs={6}>
           <Typography variant="h4" pb={1}>
             Button With endIcon
@@ -120,12 +121,12 @@ export const BtnIcon = () => {
 export const BtnVariation = () => {
   return (
     <>
-      <Grid container spacing={2}>
+      <Grid container spacing={5}>
         <Grid item xs={6}>
           <Typography variant="h4" pb={1}>
             Primary
           </Typography>
-          <Stack direction="row" spacing={2}>
+          <Stack direction="row" spacing={5}>
             <IconButton color="primary" size="small">
               <IconPencil />
             </IconButton>
@@ -145,7 +146,7 @@ export const BtnVariation = () => {
               <IconPencil />
             </IconButton>
           </Stack>
-          <Stack direction="row" spacing={2} mt={2}>
+          <Stack direction="row" spacing={5} mt={5}>
             <Button color="primary" size="small" variant="contained">
               Button
             </Button>
@@ -169,7 +170,7 @@ export const BtnVariation = () => {
               Button
             </Button>
           </Stack>
-          <Stack direction="row" spacing={2} mt={2}>
+          <Stack direction="row" spacing={5} mt={5}>
             <Button color="primary" variant="contained">
               Button
             </Button>
@@ -187,7 +188,7 @@ export const BtnVariation = () => {
               Button
             </Button>
           </Stack>
-          <Stack direction="row" spacing={2} mt={2}>
+          <Stack direction="row" spacing={5} mt={5}>
             <Button color="primary" size="large" variant="contained">
               Button
             </Button>
@@ -237,12 +238,12 @@ export const BtnVariation = () => {
           </CodeBox>
         </Grid>
       </Grid>
-      <Grid container spacing={2} mt={2}>
+      <Grid container spacing={5} mt={5}>
         <Grid item xs={6}>
           <Typography variant="h4" pb={1}>
             Default
           </Typography>
-          <Stack direction="row" spacing={2}>
+          <Stack direction="row" spacing={5}>
             <IconButton color="default" size="small">
               <IconPencil />
             </IconButton>
@@ -262,7 +263,7 @@ export const BtnVariation = () => {
               <IconPencil />
             </IconButton>
           </Stack>
-          <Stack direction="row" spacing={2} mt={2}>
+          <Stack direction="row" spacing={5} mt={5}>
             <Button color="default" size="small" variant="contained">
               Button
             </Button>
@@ -286,7 +287,7 @@ export const BtnVariation = () => {
               Button
             </Button>
           </Stack>
-          <Stack direction="row" spacing={2} mt={2}>
+          <Stack direction="row" spacing={5} mt={5}>
             <Button color="default" variant="contained">
               Button
             </Button>
@@ -304,7 +305,7 @@ export const BtnVariation = () => {
               Button
             </Button>
           </Stack>
-          <Stack direction="row" spacing={2} mt={2}>
+          <Stack direction="row" spacing={5} mt={5}>
             <Button color="default" size="large" variant="contained">
               Button
             </Button>
@@ -354,12 +355,12 @@ export const BtnVariation = () => {
           </CodeBox>
         </Grid>
       </Grid>
-      <Grid container spacing={2} mt={2}>
+      <Grid container spacing={5} mt={5}>
         <Grid item xs={6}>
           <Typography variant="h4" pb={1}>
             Sub
           </Typography>
-          <Stack direction="row" spacing={2}>
+          <Stack direction="row" spacing={5}>
             <IconButton color="sub" size="small">
               <IconPencil />
             </IconButton>
@@ -370,7 +371,7 @@ export const BtnVariation = () => {
               <IconPencil />
             </IconButton>
           </Stack>
-          <Stack direction="row" spacing={2} mt={2}>
+          <Stack direction="row" spacing={5} mt={5}>
             <Button color="sub" size="small" variant="contained">
               Button
             </Button>
@@ -383,7 +384,7 @@ export const BtnVariation = () => {
               Button
             </Button>
           </Stack>
-          <Stack direction="row" spacing={2} mt={2}>
+          <Stack direction="row" spacing={5} mt={5}>
             <Button color="sub" variant="contained">
               Button
             </Button>
@@ -391,7 +392,7 @@ export const BtnVariation = () => {
               Button
             </Button>
           </Stack>
-          <Stack direction="row" spacing={2} mt={2}>
+          <Stack direction="row" spacing={5} mt={5}>
             <Button color="sub" size="large" variant="contained">
               Button
             </Button>
@@ -422,12 +423,12 @@ export const BtnVariation = () => {
           </CodeBox>
         </Grid>
       </Grid>
-      <Grid container spacing={2} mt={2}>
+      <Grid container spacing={5} mt={5}>
         <Grid item xs={6}>
           <Typography variant="h4" pb={1}>
             Secondary
           </Typography>
-          <Stack direction="row" spacing={2}>
+          <Stack direction="row" spacing={5}>
             <IconButton color="secondary" size="small">
               <IconPencil />
             </IconButton>
@@ -447,7 +448,7 @@ export const BtnVariation = () => {
               <IconPencil />
             </IconButton>
           </Stack>
-          <Stack direction="row" spacing={2} mt={2}>
+          <Stack direction="row" spacing={5} mt={5}>
             <Button color="secondary" size="small" variant="contained">
               Button
             </Button>
@@ -471,7 +472,7 @@ export const BtnVariation = () => {
               Button
             </Button>
           </Stack>
-          <Stack direction="row" spacing={2} mt={2}>
+          <Stack direction="row" spacing={5} mt={5}>
             <Button color="secondary" variant="contained">
               Button
             </Button>
@@ -493,7 +494,7 @@ export const BtnVariation = () => {
               Button
             </Button>
           </Stack>
-          <Stack direction="row" spacing={2} mt={2}>
+          <Stack direction="row" spacing={5} mt={5}>
             <Button color="secondary" size="large" variant="contained">
               Button
             </Button>
@@ -543,12 +544,12 @@ export const BtnVariation = () => {
           </CodeBox>
         </Grid>
       </Grid>
-      <Grid container spacing={2} mt={2}>
+      <Grid container spacing={5} mt={5}>
         <Grid item xs={6}>
           <Typography variant="h4" pb={1}>
             Function
           </Typography>
-          <Stack direction="row" spacing={2}>
+          <Stack direction="row" spacing={5}>
             <IconButton color="function" size="small">
               <IconPencil />
             </IconButton>
@@ -568,7 +569,7 @@ export const BtnVariation = () => {
               <IconPencil />
             </IconButton>
           </Stack>
-          <Stack direction="row" spacing={2} mt={2}>
+          <Stack direction="row" spacing={5} mt={5}>
             <Button color="function" size="small" variant="outlined">
               Button
             </Button>
@@ -581,7 +582,7 @@ export const BtnVariation = () => {
               Button
             </Button>
           </Stack>
-          <Stack direction="row" spacing={2} mt={2}>
+          <Stack direction="row" spacing={5} mt={5}>
             <Button color="function" variant="outlined">
               Button
             </Button>
@@ -593,7 +594,7 @@ export const BtnVariation = () => {
               Button
             </Button>
           </Stack>
-          <Stack direction="row" spacing={2} mt={2}>
+          <Stack direction="row" spacing={5} mt={5}>
             <Button color="function" size="large" variant="outlined">
               Button
             </Button>
@@ -627,12 +628,12 @@ export const BtnVariation = () => {
           </CodeBox>
         </Grid>
       </Grid>
-      <Grid container spacing={2} mt={2}>
+      <Grid container spacing={5} mt={5}>
         <Grid item xs={6}>
           <Typography variant="h4" pb={1}>
             Excel
           </Typography>
-          <Stack direction="row" spacing={2}>
+          <Stack direction="row" spacing={5}>
             <Button
               color="excel"
               size="small"
@@ -660,12 +661,12 @@ export const BtnVariation = () => {
           </CodeBox>
         </Grid>
       </Grid>
-      <Grid container spacing={2} mt={2}>
+      <Grid container spacing={5} mt={5}>
         <Grid item xs={6}>
           <Typography variant="h4" pb={1}>
             Delete
           </Typography>
-          <Stack direction="row" spacing={2}>
+          <Stack direction="row" spacing={5}>
             <IconButton color="delete" variant="outlined" size="small">
               <IconPencil />
             </IconButton>
@@ -676,7 +677,7 @@ export const BtnVariation = () => {
               <IconPencil />
             </IconButton>
           </Stack>
-          <Stack direction="row" spacing={2} mt={2}>
+          <Stack direction="row" spacing={5} mt={5}>
             <Button color="delete" size="small" variant="outlined">
               Button
             </Button>
@@ -689,7 +690,7 @@ export const BtnVariation = () => {
               Button
             </Button>
           </Stack>
-          <Stack direction="row" spacing={2} mt={2}>
+          <Stack direction="row" spacing={5} mt={5}>
             <Button color="delete" variant="outlined">
               Button
             </Button>
@@ -697,7 +698,7 @@ export const BtnVariation = () => {
               Button
             </Button>
           </Stack>
-          <Stack direction="row" spacing={2} mt={2}>
+          <Stack direction="row" spacing={5} mt={5}>
             <Button color="delete" size="large" variant="outlined">
               Button
             </Button>
@@ -728,12 +729,12 @@ export const BtnVariation = () => {
           </CodeBox>
         </Grid>
       </Grid>
-      <Grid container spacing={2} mt={2}>
+      <Grid container spacing={5} mt={5}>
         <Grid item xs={6}>
           <Typography variant="h4" pb={1}>
             cancel
           </Typography>
-          <Stack direction="row" spacing={2}>
+          <Stack direction="row" spacing={5}>
             <IconButton color="cancel" variant="outlined" size="small">
               <IconPencil />
             </IconButton>
@@ -744,7 +745,7 @@ export const BtnVariation = () => {
               <IconPencil />
             </IconButton>
           </Stack>
-          <Stack direction="row" spacing={2} mt={2}>
+          <Stack direction="row" spacing={5} mt={5}>
             <Button color="cancel" size="small" variant="outlined">
               Button
             </Button>
@@ -757,7 +758,7 @@ export const BtnVariation = () => {
               Button
             </Button>
           </Stack>
-          <Stack direction="row" spacing={2} mt={2}>
+          <Stack direction="row" spacing={5} mt={5}>
             <Button color="cancel" variant="outlined">
               Button
             </Button>
@@ -765,7 +766,7 @@ export const BtnVariation = () => {
               Button
             </Button>
           </Stack>
-          <Stack direction="row" spacing={2} mt={2}>
+          <Stack direction="row" spacing={5} mt={5}>
             <Button color="cancel" size="large" variant="outlined">
               Button
             </Button>
@@ -802,12 +803,12 @@ export const BtnVariation = () => {
 export const BtnDisabled = () => {
   return (
     <>
-      <Grid container spacing={2} mt={2}>
+      <Grid container spacing={5} mt={5}>
         <Grid item xs={6}>
           <Typography variant="h4" pb={1}>
             Disabled
           </Typography>
-          <Stack direction="row" spacing={2}>
+          <Stack direction="row" spacing={5}>
             <IconButton color="primary" size="small" disabled>
               <IconPencil />
             </IconButton>
@@ -818,7 +819,7 @@ export const BtnDisabled = () => {
               <IconPencil />
             </IconButton>
           </Stack>
-          <Stack direction="row" spacing={2} mt={2}>
+          <Stack direction="row" spacing={5} mt={5}>
             <Button size="small" variant="contained" disabled>
               Button
             </Button>
@@ -831,7 +832,7 @@ export const BtnDisabled = () => {
               Button
             </Button>
           </Stack>
-          <Stack direction="row" spacing={2} mt={2}>
+          <Stack direction="row" spacing={5} mt={5}>
             <Button variant="outlined" disabled>
               Button
             </Button>
@@ -839,7 +840,7 @@ export const BtnDisabled = () => {
               Button
             </Button>
           </Stack>
-          <Stack direction="row" spacing={2} mt={2}>
+          <Stack direction="row" spacing={5} mt={5}>
             <Button color="primary" size="large" variant="contained" disabled>
               Button
             </Button>
@@ -868,6 +869,186 @@ export const BtnDisabled = () => {
             <br />
             &lt;Button&nbsp; color="sub" variant="contained"
             endIcon=&#123;&lt;IconPencil /&gt;&#125;&nbsp; disabled &nbsp; /&gt;
+          </CodeBox>
+        </Grid>
+      </Grid>
+    </>
+  );
+};
+const buttons = [
+  <Button key="one">Button</Button>,
+  <Button key="two">Button</Button>,
+];
+
+export const GroupBtn = () => {
+  return (
+    <>
+      <Grid container spacing={5}>
+        <Grid item xs={6}>
+          <Typography variant="h4" pb={1}>
+            Stack Spacing
+          </Typography>
+          <Box mt={10}>
+            <Stack direction="row" spacing={5}>
+              <Button color="primary" variant="contained" size="small">
+                Button
+              </Button>
+              <Button color="primary" variant="contained" size="small">
+                Button
+              </Button>
+              <Button color="primary" variant="contained" size="small">
+                Button
+              </Button>
+              <Button color="primary" variant="contained" size="small">
+                Button
+              </Button>
+              <Button color="primary" variant="contained" size="small">
+                Button
+              </Button>
+            </Stack>
+          </Box>
+          <Box mt={20}>
+            <Stack direction="row" spacing={8}>
+              <Button color="primary" variant="contained">
+                Button
+              </Button>
+              <Button color="primary" variant="contained">
+                Button
+              </Button>
+              <Button color="primary" variant="contained">
+                Button
+              </Button>
+              <Button color="primary" variant="contained">
+                Button
+              </Button>
+              <Button color="primary" variant="contained">
+                Button
+              </Button>
+            </Stack>
+          </Box>
+          <Box mt={20}>
+            <Stack direction="row" spacing={10}>
+              <Button color="primary" variant="contained" size="large">
+                Button
+              </Button>
+              <Button color="primary" variant="contained" size="large">
+                Button
+              </Button>
+              <Button color="primary" variant="contained" size="large">
+                Button
+              </Button>
+              <Button color="primary" variant="contained" size="large">
+                Button
+              </Button>
+              <Button color="primary" variant="contained" size="large">
+                Button
+              </Button>
+            </Stack>
+          </Box>
+        </Grid>
+        <Grid item xs={6}>
+          <CodeBox>
+            // small _ spacing 5px
+            <br />
+            &lt;Stack direction="row" spacing=&#123;5&#125;&gt; input Button
+            components &lt;Stack&gt;
+            <br />
+            <br />
+            // medium _ spacing 8px
+            <br />
+            &lt;Stack direction="row" spacing=&#123;8&#125;&gt; input Button
+            components &lt;Stack&gt;
+            <br />
+            <br />
+            // large _ spacing 10px
+            <br />
+            &lt;Stack direction="row" spacing=&#123;10&#125;&gt; input Button
+            components &lt;Stack&gt;
+            <br />
+            <br />
+          </CodeBox>
+        </Grid>
+      </Grid>
+      <Grid container spacing={5} mt={5}>
+        <Grid item xs={6}>
+          <Typography variant="h4" pb={1}>
+            Button Group
+          </Typography>
+          <Stack direction="row" spacing={5}>
+            <ButtonGroup variant="outlined" color="primary" size="small">
+              {buttons}
+            </ButtonGroup>
+            <ButtonGroup
+              variant="outlined"
+              color="primary"
+              size="small"
+              disableElevation
+              disabled
+            >
+              {buttons}
+            </ButtonGroup>
+          </Stack>
+          <Stack direction="row" spacing={5} mt={5}>
+            <ButtonGroup variant="outlined" color="primary">
+              {buttons}
+            </ButtonGroup>
+            <ButtonGroup
+              variant="outlined"
+              color="primary"
+              disableElevation
+              disabled
+            >
+              {buttons}
+            </ButtonGroup>
+          </Stack>
+          <Stack direction="row" spacing={5} mt={5}>
+            <ButtonGroup variant="outlined" color="primary" size="large">
+              {buttons}
+            </ButtonGroup>
+            <ButtonGroup
+              variant="outlined"
+              color="primary"
+              size="large"
+              disableElevation
+              disabled
+            >
+              {buttons}
+            </ButtonGroup>
+          </Stack>
+
+          {/* <ButtonGroup variant="outlined" color="default">
+            {buttons}
+          </ButtonGroup>
+          <ButtonGroup variant="outlined" color="secondary">
+            {buttons}
+          </ButtonGroup>
+          <ButtonGroup variant="outlined" color="function">
+            {buttons}
+          </ButtonGroup>
+          <ButtonGroup variant="outlined" color="delete">
+            {buttons}
+          </ButtonGroup>
+          <ButtonGroup variant="outlined" color="cancel">
+            {buttons}
+          </ButtonGroup> */}
+        </Grid>
+        <Grid item xs={6}>
+          <CodeBox>
+            // default
+            <br />
+            &lt;ButtonGroup variant="outlined" /&gt;
+            <br />
+            &lt;ButtonGroup variant="outlined" color="primary" /&gt;
+            <br />
+            <br />
+            // disabled
+            <br />
+            // disabled활성시 disableElevation, disabled porperty로 제어
+            유의바람
+            <br />
+            &lt;ButtonGroup variant="outlined" color="primary" disableElevation
+            disabled /&gt;
+            <br />
           </CodeBox>
         </Grid>
       </Grid>
