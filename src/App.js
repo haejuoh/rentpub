@@ -31,6 +31,7 @@ import {
   BtnDisabled,
   GroupBtn,
 } from "./guide/Btn";
+import { Inp } from "./guide/Form";
 
 const MyButton = styled(Button)({
   boxShadow: "none",
@@ -55,6 +56,7 @@ const Wrap = styled(Paper)({
   width: "100%",
   minHeight: "100vh",
   padding: "20px",
+  backgroundColor: "#FFF",
 });
 const CustomBookmark = styled(Bookmark)(({ theme }) => ({
   "& path": {
@@ -129,7 +131,9 @@ const ComponentTabs = () => {
           <GroupBtn />
         </TabPanel>
         <TabPanel value="4">
-          <MuiSelect />
+          <GuideTitle>Input</GuideTitle>
+          <Inp />
+          {/* <MuiSelect /> */}
         </TabPanel>
         <TabPanel value="5">
           <List />

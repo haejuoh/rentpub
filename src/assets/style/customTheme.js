@@ -55,10 +55,10 @@ const colorSystem = {
     b000: "#FFFFFF",
   },
   border: {
-    b700: "#DCE6E5", //default**
-    b500: "#C4CECC", //section
+    b700: "#F3F4F4", //default**
+    b500: "#DDEBE9", //section
     b300: "#F1F5F4", //light
-    b100: "#EDF9F8", //light green
+    b100: "#EEF7F4", //light green
   },
   shadow: {
     drop: "0px 0px 15px rgba(0, 0, 0, 0.15)",
@@ -217,10 +217,17 @@ const Theme = createTheme({
       disabled: colorSystem.white,
       disabledBackground: colorSystem.fn.disabled,
       disabledOpacity: 1,
+      hoverOpacity: 1,
     },
     background: {
       paper: "#F1F2F5",
       default: "#FFF",
+    },
+    border: {
+      700: colorSystem.border.b700,
+      500: colorSystem.border.b500,
+      300: colorSystem.border.b300,
+      100: colorSystem.border.b100,
     },
   },
   typography: {
@@ -243,6 +250,7 @@ const Theme = createTheme({
     label: fontSystem.label,
   },
   components: {
+    //Typography
     MuiTypography: {
       defaultProps: {
         variantMapping: {
@@ -259,6 +267,7 @@ const Theme = createTheme({
         },
       },
     },
+    //Button
     MuiButton: {
       variants: [
         {
@@ -487,7 +496,6 @@ const Theme = createTheme({
         },
       },
     },
-
     MuiIconButton: {
       variants: [
         {
@@ -741,7 +749,7 @@ const Theme = createTheme({
         root: sx({
           boxSizing: "border-box",
           border: "1px solid",
-          borderRadius: 2,
+          borderRadius: 1,
           overflow: "hidden",
           button: {
             border: "none",
@@ -824,6 +832,125 @@ const Theme = createTheme({
         }),
         disableElevation: sx({
           border: "none",
+        }),
+      },
+    },
+    //Input
+    MuiInput: {
+      // defaultProps: {
+      //   margin: "none",
+      // },
+      styleOverrides: {
+        root: sx({
+          // marginTop: "0px !important",
+          "& input": {
+            padding: "9px 12px 10px",
+            color: colorSystem.grey.b700,
+            lineHeight: "100%",
+            fontSize: "1rem",
+            fontWeight: 400,
+            "&::placeholder": {
+              opacity: "1 !important",
+              color: colorSystem.grey.b400,
+            },
+          },
+
+          "&.Mui-focused": {
+            backgroundColor: colorSystem.bg.b300,
+          },
+          "&:hover:not(.Mui-disabled):before": {
+            borderBottomWidth: "1px",
+            borderBottomColor: colorSystem.primary.b700,
+          },
+          "&:hover:not(.Mui-disabled)": {
+            backgroundColor: colorSystem.bg.b300,
+          },
+
+          "&.Mui-disabled": {
+            color: colorSystem.grey.b400,
+          },
+        }),
+      },
+    },
+    MuiTextField: {
+      defaultProps: {
+        variant: "standard",
+      },
+      variants: [
+        {
+          props: { focused: true },
+          style: {
+            borderColor: colorSystem.border.b700,
+          },
+        },
+        {
+          props: { success: true },
+          style: {
+            "& .MuiInput-underline:before, & .MuiInput-underline:after": {
+              borderBottomColor: colorSystem.status.success,
+            },
+            "& .MuiFormHelperText": {
+              color: colorSystem.status.success,
+            },
+          },
+        },
+      ],
+      styleOverrides: {
+        root: sx({
+          "& label": {
+            color: colorSystem.grey.b900,
+            position: "static",
+            transform: "none",
+            // transform: " translate(0, -1.5px) scale(0.65)",
+            fontSize: fontSystem.label.fontSize,
+            fontWeight: fontSystem.label.fontWeight,
+            "& + .MuiInput-root": {
+              marginTop: 0,
+            },
+            "&:hover": {
+              color: colorSystem.grey.b700,
+              zIndex: 1,
+            },
+            "&.Mui-focused": {
+              color: colorSystem.grey.b700,
+            },
+
+            "& .MuiInputLabel-asterisk, & .MuiFormLabel-asterisk": {
+              color: colorSystem.status.danger,
+            },
+            "& + .MuiInputBase-formControl .css-15e8ec1-MuiInputBase-input-MuiInput-input::-webkit-input-placeholder":
+              {
+                opacity: "1 !important",
+              },
+            // "& + input:placeHolder": {
+            //   opacity: 1,
+            // },
+          },
+          "& label.Mui-focused,& label.Mui-error,& label.Mui-success ": {
+            color: colorSystem.grey.b700,
+          },
+          "& .MuiInput-underline:before": {
+            borderBottomWidth: "1px",
+            borderBottomColor: colorSystem.border.b700,
+          },
+          "& .MuiInput-underline:after": {
+            borderBottomWidth: "1px",
+            borderBottomColor: colorSystem.primary.b700,
+          },
+          "& .Mui-error:after": {
+            borderBottomColor: colorSystem.status.danger,
+          },
+        }),
+      },
+    },
+    MuiFormHelperText: {
+      styleOverrides: {
+        root: sx({
+          fontSize: "0.625rem",
+          color: colorSystem.status.success,
+          "&.Mui-error": {
+            color: colorSystem.status.danger,
+          },
         }),
       },
     },
