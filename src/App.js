@@ -31,7 +31,7 @@ import {
   BtnDisabled,
   GroupBtn,
 } from "./guide/Btn";
-import { Inp } from "./guide/Form";
+import { LabelPositionTop, LabelPositionLeft, HiddenLabel } from "./guide/Form";
 
 const MyButton = styled(Button)({
   boxShadow: "none",
@@ -46,9 +46,16 @@ const GuideTitle = styled(Typography)(
 );
 const GuideSubTitle = styled(Typography)(
   ({ theme }) => `
-  font-size: 1.125rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 600;
   color: ${theme.palette.grey[700]}
+`
+);
+const GuideKeyword = styled(Typography)(
+  ({ theme }) => `
+  font-size: 1rem;
+  font-weight: 600;
+  color: ${theme.palette.error.main}
 `
 );
 
@@ -132,7 +139,17 @@ const ComponentTabs = () => {
         </TabPanel>
         <TabPanel value="4">
           <GuideTitle>Input</GuideTitle>
-          <Inp />
+          <GuideSubTitle pb={8}>Label Position : Top</GuideSubTitle>
+          <LabelPositionTop />
+          <GuideSubTitle mt={40}>Label Position : Left</GuideSubTitle>
+          <GuideKeyword pb={20}>
+            styledComponents : DefaultTextField
+          </GuideKeyword>
+          <LabelPositionLeft />
+          <GuideSubTitle pb={8} mt={40}>
+            Label Hidden
+          </GuideSubTitle>
+          <HiddenLabel />
           {/* <MuiSelect /> */}
         </TabPanel>
         <TabPanel value="5">

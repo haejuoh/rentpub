@@ -14,12 +14,7 @@ import { PencilOutline } from "react-ionicons";
 import { ReactComponent as IconPencil } from "../assets/images/icons/pencil.svg";
 import { ReactComponent as IconExcel } from "../assets/images/icons/excel.svg";
 
-const CodeBox = styled(Box)(({ theme }) => ({
-  backgroundColor: `${theme.palette.grey[900]}`,
-  color: `${theme.palette.grey[0]}`,
-  padding: "10px",
-  borderRadius: "4px",
-}));
+import { CodeBox, FlexBox } from "../assets/style/guideStyle";
 
 export const BtnSize = () => {
   return (
