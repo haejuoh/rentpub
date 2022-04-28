@@ -31,7 +31,14 @@ import {
   BtnDisabled,
   GroupBtn,
 } from "./guide/Btn";
-import { LabelPositionTop, LabelPositionLeft, HiddenLabel } from "./guide/Form";
+import {
+  InputLabelPositionTop,
+  InputLabelPositionLeft,
+  InputHiddenLabel,
+  SelectLabelPositionTop,
+  MultipleSelectPlaceholder,
+  SimpleSelect,
+} from "./guide/Form";
 
 const MyButton = styled(Button)({
   boxShadow: "none",
@@ -138,18 +145,21 @@ const ComponentTabs = () => {
           <GroupBtn />
         </TabPanel>
         <TabPanel value="4">
+          <GuideTitle>Select</GuideTitle>
+          <GuideSubTitle pb={8}>Label Position : Top</GuideSubTitle>
+          <SelectLabelPositionTop />
           <GuideTitle>Input</GuideTitle>
           <GuideSubTitle pb={8}>Label Position : Top</GuideSubTitle>
-          <LabelPositionTop />
+          <InputLabelPositionTop />
           <GuideSubTitle mt={40}>Label Position : Left</GuideSubTitle>
           <GuideKeyword pb={20}>
             styledComponents : DefaultTextField
           </GuideKeyword>
-          <LabelPositionLeft />
+          <InputLabelPositionLeft />
           <GuideSubTitle pb={8} mt={40}>
             Label Hidden
           </GuideSubTitle>
-          <HiddenLabel />
+          <InputHiddenLabel />
           {/* <MuiSelect /> */}
         </TabPanel>
         <TabPanel value="5">

@@ -854,6 +854,9 @@ const Theme = createTheme({
     MuiInput: {
       styleOverrides: {
         root: sx({
+          "&:before": {
+            borderBottomColor: colorSystem.bg.b700,
+          },
           // height: "33px",
           "& input": {
             padding: "4px 12px 6px",
