@@ -756,7 +756,7 @@ export const SelectLabelPositionTop = () => {
               <Typography variant="st2" pb={12}>
                 Default
               </Typography>
-              <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
+              <FormControl variant="standard" sx={{ display: "flex" }}>
                 <InputLabel id="sample">Label Text</InputLabel>
 
                 <Select

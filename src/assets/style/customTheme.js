@@ -844,13 +844,17 @@ const Theme = createTheme({
       },
       styleOverrides: {
         root: sx({
+          color: colorSystem.grey.b900,
           "&.Mui-disabled": {
+            color: colorSystem.grey.b900,
+          },
+          "&.Mui-focused": {
             color: colorSystem.grey.b900,
           },
         }),
       },
     },
-    //Input
+    //input
     MuiInput: {
       styleOverrides: {
         root: sx({
@@ -953,8 +957,8 @@ const Theme = createTheme({
               color: colorSystem.status.danger,
             },
           },
-          "& label.Mui-focused,& label.Mui-error,& label.Mui-success ": {
-            color: colorSystem.grey.b700,
+          "& label.Mui-error,& label.Mui-success ": {
+            color: colorSystem.grey.b900,
           },
           "& .MuiInput-underline:before": {
             borderBottomWidth: "1px",
@@ -1006,6 +1010,26 @@ const Theme = createTheme({
             height: "14px",
             margin: "4.5px 0",
           },
+        }),
+      },
+    },
+    //select
+    MuiSelect: {
+      defaultProps: {
+        autoWidth: true,
+      },
+      styleOverrides: {
+        root: sx({
+          svg: {
+            width: "14px",
+            height: "14px",
+            marginRight: "12px",
+          },
+          // "&. Mui-focused": {
+          //   svg: {
+          //     transform: "scaleY(-1)",
+          //   },
+          // },
         }),
       },
     },
