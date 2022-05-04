@@ -1,6 +1,6 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
-import { Grid, Box } from "@mui/material";
+import { Grid, Box, Stack, Button } from "@mui/material";
 import { PageTitle } from "../../components/Title";
 
 const CodeBox = styled(Box)(({ theme }) => ({
@@ -24,30 +24,24 @@ const titleData = [
     active: true,
   },
 ];
-// const titleData = {
-//   path: [
-//     {
-//       menu: "BreadCrumb",
-//       link: "/",
-//     },
-//     {
-//       menu: "BreadCrumb",
-//       link: "/",
-//     },
-//     {
-//       menu: "BreadCrumb",
-//       link: "/",
-//     },
-//   ],
-//   bookMark: true,
-// };
-// console.log(titleData.path);
 const PageTit = () => {
   return (
     <>
       <Grid container spacing={2} mt={2}>
         <Grid item xs={8}>
-          <PageTitle titleData={titleData} />
+          <PageTitle titleData={titleData}>
+            <Stack direction="row" spacing={8}>
+              <Button color="primary" variant="contained">
+                Button
+              </Button>
+              <Button color="primary" variant="contained">
+                Button
+              </Button>
+              <Button color="primary" variant="contained">
+                Button
+              </Button>
+            </Stack>
+          </PageTitle>
         </Grid>
         <Grid item xs={4}>
           <CodeBox>
