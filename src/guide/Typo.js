@@ -14,7 +14,7 @@ const Typo = () => {
     <>
       <Grid container spacing={2} mt={2}>
         <Grid item xs={8} sx={{ display: "flex", alignItems: "center" }}>
-          <Typography variant="h1">H1/Pretendard/Regular/29px</Typography>
+          <Typography variant="h1">H1/Pretendard/Regular/24px</Typography>
         </Grid>
         <Grid item xs={4}>
           <CodeBox>
@@ -22,7 +22,7 @@ const Typo = () => {
           </CodeBox>
         </Grid>
         <Grid item xs={8} sx={{ display: "flex", alignItems: "center" }}>
-          <Typography variant="h2">H2/Pretendard/Medium/24px</Typography>
+          <Typography variant="h2">H2/Pretendard/Semibold/18px</Typography>
         </Grid>
         <Grid item xs={4}>
           <CodeBox>
@@ -30,7 +30,7 @@ const Typo = () => {
           </CodeBox>
         </Grid>
         <Grid item xs={8} sx={{ display: "flex", alignItems: "center" }}>
-          <Typography variant="h3">H3/Pretendard/Regular/20px</Typography>
+          <Typography variant="h3">H3/Pretendard/Medium/18px</Typography>
         </Grid>
         <Grid item xs={4}>
           <CodeBox>
@@ -46,7 +46,7 @@ const Typo = () => {
           </CodeBox>
         </Grid>
         <Grid item xs={8} sx={{ display: "flex", alignItems: "center" }}>
-          <Typography variant="st1">ST1/Pretendard/Regular/16px</Typography>
+          <Typography variant="st1">ST1/Pretendard/Semibold/16px</Typography>
         </Grid>
         <Grid item xs={4}>
           <CodeBox>
@@ -110,11 +110,19 @@ const Typo = () => {
           </CodeBox>
         </Grid>
         <Grid item xs={8} sx={{ display: "flex", alignItems: "center" }}>
-          <Typography variant="ht">HT/Pretendard/Medium/12px</Typography>
+          <Typography variant="ht">HT/Pretendard/Medium/10px</Typography>
         </Grid>
         <Grid item xs={4}>
           <CodeBox>
             &lt;Typography <b>variant="ht"</b>&gt;&lt;/Typography&gt;
+          </CodeBox>
+        </Grid>
+        <Grid item xs={8} sx={{ display: "flex", alignItems: "center" }}>
+          <Typography variant="label">HT/Pretendard/Medium/12px</Typography>
+        </Grid>
+        <Grid item xs={4}>
+          <CodeBox>
+            &lt;Typography <b>variant="label"</b>&gt;&lt;/Typography&gt;
           </CodeBox>
         </Grid>
       </Grid>

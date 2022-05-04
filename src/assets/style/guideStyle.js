@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
-import { Theme } from "./customTheme";
-import { Box } from "@mui/material";
+import { theme } from "./customTheme";
+import { Box, Typography } from "@mui/material";
 const CodeBox = styled(Box)(({ theme }) => ({
   backgroundColor: `${theme.palette.grey[900]}`,
   color: `${theme.palette.grey[0]}`,
@@ -12,5 +12,26 @@ const CodeBox = styled(Box)(({ theme }) => ({
 const FlexBox = styled(Box)(({ theme }) => ({
   flex: 1,
 }));
+const GuideTitle = styled(Typography)(
+  ({ theme }) => `
+  font-size: 1.8125rem;
+  font-weight: 600;
+  color: ${theme.palette.grey[900]}
+`
+);
+const GuideSubTitle = styled(Typography)(
+  ({ theme }) => `
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: ${theme.palette.grey[700]}
+`
+);
+const GuideKeyword = styled(Typography)(
+  ({ theme }) => `
+  font-size: 1rem;
+  font-weight: 600;
+  color: ${theme.palette.error.main}
+`
+);
 
-export { CodeBox, FlexBox };
+export { CodeBox, FlexBox, GuideTitle, GuideSubTitle, GuideKeyword };

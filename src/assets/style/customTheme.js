@@ -1,6 +1,18 @@
 import { createTheme, experimental_sx as sx } from "@mui/material";
 import { grey } from "@mui/material/colors";
-import { color, shape } from "@mui/system";
+import { color, fontSize, shape } from "@mui/system";
+import { makeStyles } from "@mui/material/styles";
+import DefaultCheckBox from "../images/icons/checkBox-default.svg";
+import DefaultThCheckBox from "../images/icons/checkBox-defaultTh.svg";
+import HoverCheckBox from "../images/icons/checkBox-hover.svg";
+import DisabledCheckBox from "../images/icons/checkBox-disabled.svg";
+import CheckedCheckBox from "../images/icons/checkBox-checked.svg";
+import CheckedDisabledCheckBox from "../images/icons/checkBox-checkedDisabled.svg";
+import DefaultRadio from "../images/icons/radio-default.svg";
+import HoverRadio from "../images/icons/radio-hover.svg";
+import DisabledRadio from "../images/icons/radio-disabled.svg";
+import CheckedRadio from "../images/icons/radio-selected.svg";
+import CheckedDisabledRadio from "../images/icons/radio-selectedDisabled.svg";
 const colorSystem = {
   ci: {
     red: "#EA002C",
@@ -59,6 +71,7 @@ const colorSystem = {
     b500: "#DDEBE9", //section
     b300: "#F1F5F4", //light
     b100: "#EEF7F4", //light green
+    grid: "#D8DDDD", //grid th
   },
   shadow: {
     drop: "0px 0px 15px rgba(0, 0, 0, 0.15)",
@@ -68,81 +81,82 @@ const colorSystem = {
 };
 const fontSystem = {
   h1: {
-    fontSize: "2.0714rem",
+    fontSize: "1.5rem",
     fontWeight: 400,
   },
   h2: {
-    fontSize: "1.714rem",
-    fontWeight: 500,
+    fontSize: "1.125rem",
+    fontWeight: 600,
   },
   h3: {
-    fontSize: "1.428rem",
-    fontWeight: 400,
+    fontSize: "1.125rem",
+    fontWeight: 500,
   },
   h4: {
-    fontSize: "1.142rem",
+    fontSize: "1rem",
     fontWeight: 500,
   },
   st1: {
-    fontSize: "1.142rem",
+    fontSize: "1rem",
     fontWeight: 400,
   },
   st2: {
-    fontSize: "1rem",
+    fontSize: "0.875rem",
     fontWeight: 600,
   },
   b1: {
-    fontSize: "1rem",
+    fontSize: "0.875rem",
     fontWeight: 400,
   },
   sb1: {
-    fontSize: "1rem",
+    fontSize: "0.875rem",
     fontWeight: 500,
   },
   b2: {
-    fontSize: "0.857rem",
+    fontSize: "0.75rem",
     fontWeight: 400,
   },
   sb2: {
-    fontSize: "0.857rem",
+    fontSize: "0.75rem",
     fontWeight: 600,
   },
   ct: {
-    fontSize: "0.875rem",
-    fontWeight: 300,
+    fontSize: "0.75rem",
+    fontWeight: 400,
   },
   bt: {
     default: {
-      fontSize: "1rem",
+      fontSize: "0.875rem",
       fontWeight: 500,
     },
     large: {
-      fontSize: "1.142rem",
-      fontWeight: 400,
+      fontSize: "1rem",
+      fontWeight: 500,
     },
   },
   ht: {
     fontSize: "0.625rem",
-    fontWeight: 400,
+    fontWeight: 500,
   },
   label: {
-    fontSize: "0.857rem",
-    fontWeight: 400,
+    fontSize: "0.75rem",
+    fontWeight: 500,
   },
 };
 
-const Theme = createTheme({
+const theme = createTheme({
   spacing: (value) => value * 1,
   shape: {
     borderRadius: 2,
   },
-  borderColor: "palette.grey.200",
+  borderColor: colorSystem.border.b700,
   // https://mui.com/customization/palette/
   palette: {
     common: {
       white: colorSystem.white,
     },
     primary: {
+      light: colorSystem.primary.b500,
       main: colorSystem.primary.b700,
       dark: colorSystem.primary.b900,
     },
@@ -220,8 +234,11 @@ const Theme = createTheme({
       hoverOpacity: 1,
     },
     background: {
-      paper: "#F1F2F5",
-      default: "#FFF",
+      paper: colorSystem.white,
+      default: colorSystem.white,
+      700: colorSystem.bg.b700,
+      500: colorSystem.bg.b500,
+      300: colorSystem.bg.b300,
     },
     border: {
       700: colorSystem.border.b700,
@@ -250,6 +267,11 @@ const Theme = createTheme({
     label: fontSystem.label,
     body1: fontSystem.b1,
   },
+  shadows: {
+    1: colorSystem.shadow.drop,
+    2: colorSystem.shadow.section,
+  },
+
   components: {
     //Typography
     MuiTypography: {
@@ -691,6 +713,20 @@ const Theme = createTheme({
             },
           },
         },
+        {
+          props: { color: "mdi" },
+          style: {
+            backgroundColor: colorSystem.primary.b700,
+            "&:hover,&:active": {
+              backgroundColor: colorSystem.primary.b900,
+            },
+            svg: {
+              "& path": {
+                fill: colorSystem.white,
+              },
+            },
+          },
+        },
       ],
       styleOverrides: {
         root: sx({
@@ -844,12 +880,19 @@ const Theme = createTheme({
       },
       styleOverrides: {
         root: sx({
+          fontSize: fontSystem.label.fontSize,
+          fontWeight: fontSystem.label.fontWeight,
           color: colorSystem.grey.b900,
+          transform: "none",
+          position: "static",
           "&.Mui-disabled": {
             color: colorSystem.grey.b900,
           },
           "&.Mui-focused": {
             color: colorSystem.grey.b900,
+          },
+          "& + .MuiInput-root": {
+            marginTop: 0,
           },
         }),
       },
@@ -942,9 +985,7 @@ const Theme = createTheme({
             transform: "none",
             fontSize: fontSystem.label.fontSize,
             fontWeight: fontSystem.label.fontWeight,
-            "& + .MuiInput-root": {
-              marginTop: 0,
-            },
+
             "&:hover": {
               color: colorSystem.grey.b900,
               zIndex: 1,
@@ -997,8 +1038,6 @@ const Theme = createTheme({
       styleOverrides: {
         root: sx({
           padding: "4px 12px 6px 10px",
-          // paddingLeft: "10px",
-          // paddingRight: "12px",
           margin: "0",
           height: "100%",
           maxHeight: "100%",
@@ -1020,20 +1059,352 @@ const Theme = createTheme({
       },
       styleOverrides: {
         root: sx({
+          height: "33px",
+          padding: "9px 0",
           svg: {
             width: "14px",
             height: "14px",
             marginRight: "12px",
           },
-          // "&. Mui-focused": {
-          //   svg: {
-          //     transform: "scaleY(-1)",
-          //   },
-          // },
+          "&.Mui-focused": {
+            svg: {
+              transform: "scaleY(-1)",
+            },
+          },
+          "&.Mui-disabled": {
+            backgroundColor: colorSystem.bg.b700,
+            opacity: 1,
+            ".makeStyles-placeholder": {
+              color: colorSystem.grey.b400,
+            },
+          },
+          "&.MuiNativeSelect-nativeInput": {
+            "&:disabled": {
+              backgroundColor: colorSystem.bg.b700,
+            },
+          },
+          "& .MuiSelect-select": {
+            padding: "0px 10px 0px 12px !important",
+            display: "flex",
+            alignItems: "center",
+            "&:focus": {
+              backgroundColor: "transparent",
+            },
+            ".MuiListItemIcon-root": {
+              minWidth: "14px",
+              svg: {
+                marginRight: "5px",
+                "& path": {
+                  fill: colorSystem.primary.b700,
+                },
+              },
+            },
+          },
         }),
+      },
+    },
+    //select option list
+    MuiPaper: {
+      styleOverrides: {
+        root: sx({
+          boxShadow: "none",
+          border: `1px solid ${colorSystem.border.b700}`,
+          borderRadius: 2,
+          marginTop: "5px",
+          padding: "5px",
+          marginLeft: "8px",
+          height: "160px",
+          overflow: "hidden",
+          overflowY: "auto",
+        }),
+      },
+    },
+    MuiList: {
+      styleOverrides: {
+        root: sx({
+          padding: 0,
+        }),
+      },
+    },
+    //Checkbox
+    MuiCheckbox: {
+      styleOverrides: {
+        root: sx({
+          padding: 0,
+
+          "&:after": {
+            content: "''",
+            display: "inline-block",
+            width: "24px",
+            height: "24px",
+            clear: "both",
+            background: `url(${DefaultCheckBox}) no-repeat 50%/contain`,
+            marginRight: 1,
+          },
+          "&:hover": {
+            backgroundColor: "transparent",
+            "&:after": {
+              background: `url(${HoverCheckBox}) no-repeat 50%/contain`,
+            },
+          },
+          "&.Mui-checked": {
+            "&:after": {
+              background: `url(${CheckedCheckBox}) no-repeat 50%/contain`,
+            },
+            "&.Mui-disabled": {
+              "&:after": {
+                background: `url(${CheckedDisabledCheckBox}) no-repeat 50%/contain`,
+              },
+            },
+          },
+          "&.Mui-disabled": {
+            "&:after": {
+              background: `url(${DisabledCheckBox}) no-repeat 50%/contain`,
+            },
+          },
+          svg: {
+            display: "none",
+          },
+        }),
+      },
+    },
+    //Checkbox label
+    MuiFormControlLabel: {
+      styleOverrides: {
+        root: sx({
+          margin: 0,
+          "& .MuiFormControlLabel-label": {
+            color: colorSystem.grey.b900,
+            fontSize: fontSystem.label.fontSize,
+            fontWeight: fontSystem.label.fontWeight,
+            paddingRight: 4,
+            "&.Mui-disabled": {
+              color: colorSystem.grey.b900,
+              opacity: 0.5,
+            },
+          },
+        }),
+      },
+    },
+    //Radio
+    MuiRadio: {
+      styleOverrides: {
+        root: sx({
+          padding: 0,
+
+          "&:after": {
+            content: "''",
+            display: "inline-block",
+            width: "24px",
+            height: "24px",
+            clear: "both",
+            background: `url(${DefaultRadio}) no-repeat 50%/contain`,
+            marginRight: 1,
+          },
+          "&:hover": {
+            backgroundColor: "transparent",
+            "&:after": {
+              background: `url(${HoverRadio}) no-repeat 50%/contain`,
+            },
+          },
+          "&.Mui-checked": {
+            "&:after": {
+              background: `url(${CheckedRadio}) no-repeat 50%/contain`,
+            },
+            "&.Mui-disabled": {
+              "&:after": {
+                background: `url(${CheckedDisabledRadio}) no-repeat 50%/contain`,
+              },
+            },
+          },
+          "&.Mui-disabled": {
+            "&:after": {
+              background: `url(${DisabledRadio}) no-repeat 50%/contain`,
+            },
+          },
+          svg: {
+            display: "none",
+          },
+        }),
+      },
+    },
+    //Group check, select
+    MuiFormGroup: {
+      styleOverrides: {
+        root: sx({
+          flexDirection: "row",
+          gap: "10px",
+        }),
+      },
+    },
+    //Data grid
+    // MuiTabPanel: {
+    //   styleOverrides: {
+    //     root: sx({
+    //       padding: 0,
+    //     }),
+    //   },
+    // },
+    MuiDataGrid: {
+      styleOverrides: {
+        root: sx({
+          border: "none",
+        }),
+        columnHeaders: {
+          borderColor: colorSystem.border.b700,
+        },
+        columnHeader: {
+          padding: "0 8px",
+          flex: "1 1 104px",
+          "&:focus-within": {
+            outline: "none",
+          },
+          "&:after": {
+            content: "''",
+            display: "inline-block",
+            width: "1px",
+            height: "14px",
+            backgroundColor: colorSystem.border.grid,
+            clear: "both",
+            transform: "translateX(8px)",
+          },
+          "&:last-child": {
+            "&:after": {
+              display: "none",
+            },
+          },
+          "&:focus": {
+            outline: "none",
+          },
+        },
+        columnHeaderTitle: {
+          color: colorSystem.grey.b600,
+          fontSize: fontSystem.sb1.fontSize,
+          fontWeight: fontSystem.sb1.fontWeight,
+          gap: "5px",
+        },
+        columnHeaderTitleContainer: {
+          display: "inline-flex",
+          gap: "5px",
+          "& .MuiCheckbox-root": {
+            "&:after": {
+              backgroundImage: `url(${DefaultThCheckBox})`,
+            },
+            "&.Mui-checked": {
+              "&:after": {
+                background: `url(${CheckedCheckBox}) no-repeat 50%/contain`,
+              },
+            },
+          },
+        },
+        columnHeaderTitleContainerContent: {
+          display: "none",
+          "& .MuiCheckbox-root": {
+            "&:after": {
+              backgroundImage: `url(${DefaultThCheckBox})`,
+            },
+          },
+        },
+        columnSeparator: {
+          svg: {
+            display: "none",
+          },
+        },
+        iconButtonContainer: {
+          ".MuiButtonBase-root": {
+            width: "18px",
+            height: "18px",
+            padding: 0,
+            backgroundColor: "transparent",
+            svg: {
+              "& path": {
+                fill: colorSystem.grey.b600,
+              },
+            },
+          },
+          "&:hover": {
+            ".MuiButtonBase-root": {
+              backgroundColor: "transparent",
+              svg: {
+                "& path": {
+                  fill: colorSystem.grey.b600,
+                },
+              },
+            },
+          },
+        },
+        menuIcon: {
+          marginRight: 0,
+          ".MuiButtonBase-root": {
+            width: "18px",
+            height: "18px",
+            padding: 0,
+            backgroundColor: "transparent",
+            svg: {
+              "& path": {
+                fill: colorSystem.grey.b600,
+              },
+            },
+          },
+        },
+        sortIcon: {
+          "& path": {
+            fill: colorSystem.grey.b600,
+          },
+        },
+        ColumnMenuIcon: {
+          svg: {
+            "& path": {
+              fill: colorSystem.grey.b600,
+            },
+          },
+        },
+        row: {
+          "&.Mui-selected": {
+            backgroundColor: colorSystem.bg.b300,
+            "&:hover": {
+              backgroundColor: colorSystem.bg.b300,
+            },
+          },
+          "&:hover": {
+            backgroundColor: colorSystem.bg.b300,
+          },
+        },
+        cell: {
+          borderColor: colorSystem.border.b700,
+          "&:focus": {
+            outline: "none",
+          },
+        },
+        footerContainer: {
+          borderColor: colorSystem.border.b500,
+        },
+      },
+    },
+    MuiContainer: {
+      defaultProps: {
+        maxWidth: false,
+      },
+      styleOverrides: {
+        root: sx({
+          minWidth: "1440px",
+          margin: 0,
+          padding: "0 !important",
+          display: "flex",
+          flexDirection: "column",
+          height: "100vh",
+        }),
+      },
+    },
+    MuiBreadcrumbs: {
+      styleOverrides: {
+        separator: {
+          marginLeft: 2,
+          marginRight: 2,
+        },
       },
     },
   },
 });
 
-export { Theme };
+export { theme };

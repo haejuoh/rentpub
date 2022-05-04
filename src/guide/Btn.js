@@ -1,15 +1,7 @@
 import React from "react";
 // import { styled, makeStyles } from "@mui/material/styles";
 import { styled } from "@mui/material/styles";
-import {
-  Grid,
-  Box,
-  Button,
-  IconButton,
-  Typography,
-  Stack,
-  ButtonGroup,
-} from "@mui/material";
+import { Grid, Box, Button, IconButton, Typography, Stack, ButtonGroup } from "@mui/material";
 import { PencilOutline } from "react-ionicons";
 import { ReactComponent as IconPencil } from "../assets/images/icons/pencil.svg";
 import { ReactComponent as IconExcel } from "../assets/images/icons/excel.svg";
@@ -50,24 +42,14 @@ export const BtnSize = () => {
         </Grid>
         <Grid item xs={6}>
           <CodeBox>
-            // small
-            <br />
-            &lt;Button color="primary" variant="contained" &nbsp;size="small"
-            /&gt;
-            <br />
-            <br />
-            // meduim
-            <br />
-            // default porperty로 size 생략해도 medium 적용됨
-            <br />
-            &lt;Button color="primary" variant="contained" &nbsp;size="medium"
-            /&gt;
-            <br /> &lt;Button color="primary" variant="contained" /&gt;
-            <br />
-            <br />
-            // large
-            <br /> &lt;Button color="primary" variant="contained"
-            &nbsp;size="large" /&gt;
+            <pre>{`// small
+<Button color="primary" variant="contained" size="small">Button</Button>
+// medium
+// default porperty로 size 생략해도 medium 적용됨
+<Button color="primary" variant="contained" size="medium">Button</Button>
+<Button color="primary" variant="contained">Button</Button>
+//large
+<Button color="primary" variant="contained" size="large">Button</Button>`}</pre>
           </CodeBox>
         </Grid>
       </Grid>
@@ -90,8 +72,7 @@ export const BtnIcon = () => {
         </Grid>
         <Grid item xs={6}>
           <CodeBox>
-            &lt;IconButton color="primary"&gt; &lt;IconPencil /&gt;
-            &lt;/IconButton&gt;
+            <pre>{`<IconButton color="primary"><IconPencil /></IconButton>`}</pre>
           </CodeBox>
         </Grid>
       </Grid>
@@ -106,7 +87,7 @@ export const BtnIcon = () => {
         </Grid>
         <Grid item xs={6}>
           <CodeBox>
-            &lt;Button color="primary" variant="contained" /&gt;
+            <pre>{`<Button color="primary" variant="contained" endIcon={<IconPencil />}>Button</Button>`}</pre>
           </CodeBox>
         </Grid>
       </Grid>
@@ -145,23 +126,13 @@ export const BtnVariation = () => {
             <Button color="primary" size="small" variant="contained">
               Button
             </Button>
-            <Button
-              color="primary"
-              variant="contained"
-              size="small"
-              endIcon={<IconPencil />}
-            >
+            <Button color="primary" variant="contained" size="small" endIcon={<IconPencil />}>
               Button
             </Button>
             <Button color="primary" size="small" variant="outlined">
               Button
             </Button>
-            <Button
-              color="primary"
-              variant="outlined"
-              size="small"
-              endIcon={<IconPencil />}
-            >
+            <Button color="primary" variant="outlined" size="small" endIcon={<IconPencil />}>
               Button
             </Button>
           </Stack>
@@ -169,11 +140,7 @@ export const BtnVariation = () => {
             <Button color="primary" variant="contained">
               Button
             </Button>
-            <Button
-              color="primary"
-              variant="contained"
-              endIcon={<IconPencil />}
-            >
+            <Button color="primary" variant="contained" endIcon={<IconPencil />}>
               Button
             </Button>
             <Button color="primary" variant="outlined">
@@ -187,49 +154,28 @@ export const BtnVariation = () => {
             <Button color="primary" size="large" variant="contained">
               Button
             </Button>
-            <Button
-              color="primary"
-              variant="contained"
-              size="large"
-              endIcon={<IconPencil />}
-            >
+            <Button color="primary" variant="contained" size="large" endIcon={<IconPencil />}>
               Button
             </Button>
             <Button color="primary" size="large" variant="outlined">
               Button
             </Button>
-            <Button
-              size="large"
-              color="primary"
-              variant="outlined"
-              endIcon={<IconPencil />}
-            >
+            <Button size="large" color="primary" variant="outlined" endIcon={<IconPencil />}>
               Button
             </Button>
           </Stack>
         </Grid>
         <Grid item xs={6}>
           <CodeBox>
-            // primary
-            <br />
-            &lt;IconButton color="primary"&gt; &lt;IconPencil /&gt;
-            &lt;/IconButton&gt;
-            <br />
-            &lt;IconButton color="primary" variant="outlined"&gt; &lt;IconPencil
-            /&gt; &lt;/IconButton&gt;
-            <br />
-            &lt;Button color="primary" variant="contained" /&gt;
-            <br />
-            &lt;Button color="primary" variant="outlined" /&gt;
-            <br />
-            <br />
-            // primary , icon
-            <br />
-            &lt;Button&nbsp; color="primary" variant="contained"
-            endIcon=&#123;&lt;IconPencil /&gt;&#125; &nbsp; /&gt;
-            <br />
-            &lt;Button&nbsp; color="primary" variant="outlined"
-            endIcon=&#123;&lt;IconPencil /&gt;&#125; &nbsp; /&gt;
+            <pre>{`// primary
+<IconButton color="primary" size="small"><IconPencil /></IconButton>
+<IconButton color="primary" variant="outlined" size="small"><IconPencil /></IconButton>
+<Button color="primary" variant="contained" size="small">Button</Button>
+<Button color="primary" variant="outlined" size="small">Button</Button>
+
+// primary , icon
+<Button color="primary" variant="contained" size="small" endIcon={<IconPencil />}>Button</Button>
+<Button color="primary" variant="outlined" size="small" endIcon={<IconPencil />}>Button</Button>`}</pre>
           </CodeBox>
         </Grid>
       </Grid>
@@ -262,23 +208,13 @@ export const BtnVariation = () => {
             <Button color="default" size="small" variant="contained">
               Button
             </Button>
-            <Button
-              color="default"
-              variant="contained"
-              size="small"
-              endIcon={<IconPencil />}
-            >
+            <Button color="default" variant="contained" size="small" endIcon={<IconPencil />}>
               Button
             </Button>
             <Button color="default" size="small" variant="outlined">
               Button
             </Button>
-            <Button
-              color="default"
-              variant="outlined"
-              size="small"
-              endIcon={<IconPencil />}
-            >
+            <Button color="default" variant="outlined" size="small" endIcon={<IconPencil />}>
               Button
             </Button>
           </Stack>
@@ -286,11 +222,7 @@ export const BtnVariation = () => {
             <Button color="default" variant="contained">
               Button
             </Button>
-            <Button
-              color="default"
-              variant="contained"
-              endIcon={<IconPencil />}
-            >
+            <Button color="default" variant="contained" endIcon={<IconPencil />}>
               Button
             </Button>
             <Button color="default" variant="outlined">
@@ -304,49 +236,28 @@ export const BtnVariation = () => {
             <Button color="default" size="large" variant="contained">
               Button
             </Button>
-            <Button
-              color="default"
-              variant="contained"
-              size="large"
-              endIcon={<IconPencil />}
-            >
+            <Button color="default" variant="contained" size="large" endIcon={<IconPencil />}>
               Button
             </Button>
             <Button color="default" size="large" variant="outlined">
               Button
             </Button>
-            <Button
-              size="large"
-              color="default"
-              variant="outlined"
-              endIcon={<IconPencil />}
-            >
+            <Button size="large" color="default" variant="outlined" endIcon={<IconPencil />}>
               Button
             </Button>
           </Stack>
         </Grid>
         <Grid item xs={6}>
           <CodeBox>
-            // default
-            <br />
-            &lt;IconButton color="default"&gt; &lt;IconPencil /&gt;
-            &lt;/IconButton&gt;
-            <br />
-            &lt;IconButton color="default" variant="outlined"&gt; &lt;IconPencil
-            /&gt; &lt;/IconButton&gt;
-            <br />
-            &lt;Button color="default" variant="contained" /&gt;
-            <br />
-            &lt;Button color="default" variant="outlined" /&gt;
-            <br />
-            <br />
-            // default , icon
-            <br />
-            &lt;Button&nbsp; color="default" variant="contained"
-            endIcon=&#123;&lt;IconPencil /&gt;&#125; &nbsp; /&gt;
-            <br />
-            &lt;Button&nbsp; color="default" variant="outlined"
-            endIcon=&#123;&lt;IconPencil /&gt;&#125; &nbsp; /&gt;
+            <pre>{`// default
+<IconButton color="default" size="small"><IconPencil /></IconButton>
+<IconButton color="default" variant="outlined" size="small"><IconPencil /></IconButton>
+<Button color="default" variant="contained" size="small">Button</Button>
+<Button color="default" variant="outlined" size="small">Button</Button>
+
+// default , icon
+<Button color="default" variant="contained" size="small" endIcon={<IconPencil />}>Button</Button>
+<Button color="default" variant="outlined" size="small" endIcon={<IconPencil />}>Button</Button>`}</pre>
           </CodeBox>
         </Grid>
       </Grid>
@@ -370,12 +281,7 @@ export const BtnVariation = () => {
             <Button color="sub" size="small" variant="contained">
               Button
             </Button>
-            <Button
-              color="sub"
-              variant="contained"
-              size="small"
-              endIcon={<IconPencil />}
-            >
+            <Button color="sub" variant="contained" size="small" endIcon={<IconPencil />}>
               Button
             </Button>
           </Stack>
@@ -391,30 +297,20 @@ export const BtnVariation = () => {
             <Button color="sub" size="large" variant="contained">
               Button
             </Button>
-            <Button
-              color="sub"
-              variant="contained"
-              size="large"
-              endIcon={<IconPencil />}
-            >
+            <Button color="sub" variant="contained" size="large" endIcon={<IconPencil />}>
               Button
             </Button>
           </Stack>
         </Grid>
         <Grid item xs={6}>
           <CodeBox>
-            // sub
-            <br />
-            &lt;IconButton color="sub"&gt; &lt;IconPencil /&gt;
-            &lt;/IconButton&gt;
-            <br />
-            &lt;Button color="sub" variant="contained" /&gt;
-            <br />
-            <br />
-            // sub , icon
-            <br />
-            &lt;Button&nbsp; color="sub" variant="contained"
-            endIcon=&#123;&lt;IconPencil / &gt;&#125; &nbsp; /&gt;
+            <pre>{`// sub
+<IconButton color="sub" size="small"><IconPencil /></IconButton>
+<Button color="sub" variant="contained" size="small">Button</Button>
+
+// sub , icon
+<Button color="sub" variant="contained" size="small" endIcon={<IconPencil />}>Button</Button>
+`}</pre>
           </CodeBox>
         </Grid>
       </Grid>
@@ -447,23 +343,13 @@ export const BtnVariation = () => {
             <Button color="secondary" size="small" variant="contained">
               Button
             </Button>
-            <Button
-              color="secondary"
-              variant="contained"
-              size="small"
-              endIcon={<IconPencil />}
-            >
+            <Button color="secondary" variant="contained" size="small" endIcon={<IconPencil />}>
               Button
             </Button>
             <Button color="secondary" size="small" variant="outlined">
               Button
             </Button>
-            <Button
-              color="secondary"
-              variant="outlined"
-              size="small"
-              endIcon={<IconPencil />}
-            >
+            <Button color="secondary" variant="outlined" size="small" endIcon={<IconPencil />}>
               Button
             </Button>
           </Stack>
@@ -471,21 +357,13 @@ export const BtnVariation = () => {
             <Button color="secondary" variant="contained">
               Button
             </Button>
-            <Button
-              color="secondary"
-              variant="contained"
-              endIcon={<IconPencil />}
-            >
+            <Button color="secondary" variant="contained" endIcon={<IconPencil />}>
               Button
             </Button>
             <Button color="secondary" variant="outlined">
               Button
             </Button>
-            <Button
-              color="secondary"
-              variant="outlined"
-              endIcon={<IconPencil />}
-            >
+            <Button color="secondary" variant="outlined" endIcon={<IconPencil />}>
               Button
             </Button>
           </Stack>
@@ -493,49 +371,28 @@ export const BtnVariation = () => {
             <Button color="secondary" size="large" variant="contained">
               Button
             </Button>
-            <Button
-              color="secondary"
-              variant="contained"
-              size="large"
-              endIcon={<IconPencil />}
-            >
+            <Button color="secondary" variant="contained" size="large" endIcon={<IconPencil />}>
               Button
             </Button>
             <Button color="secondary" size="large" variant="outlined">
               Button
             </Button>
-            <Button
-              size="large"
-              color="secondary"
-              variant="outlined"
-              endIcon={<IconPencil />}
-            >
+            <Button size="large" color="secondary" variant="outlined" endIcon={<IconPencil />}>
               Button
             </Button>
           </Stack>
         </Grid>
         <Grid item xs={6}>
           <CodeBox>
-            // secondary
-            <br />
-            &lt;IconButton color="secondary"&gt; &lt;IconPencil /&gt;
-            &lt;/IconButton&gt;
-            <br />
-            &lt;IconButton color="secondary" variant="outlined"&gt;
-            &lt;IconPencil /&gt; &lt;/IconButton&gt;
-            <br />
-            &lt;Button color="secondary" variant="contained" /&gt;
-            <br />
-            &lt;Button color="secondary" variant="outlined" /&gt;
-            <br />
-            <br />
-            // secondary , icon
-            <br />
-            &lt;Button&nbsp; color="secondary" variant="contained"
-            endIcon=&#123;&lt;IconPencil /&gt;&#125; &nbsp; /&gt;
-            <br />
-            &lt;Button&nbsp; color="secondary" variant="outlined"
-            endIcon=&#123;&lt;IconPencil /&gt;&#125; &nbsp; /&gt;
+            <pre>{`// secondary
+<IconButton color="secondary" size="small"><IconPencil /></IconButton>
+<IconButton color="secondary" variant="outlined" size="small"><IconPencil /></IconButton>
+<Button color="secondary" variant="contained" size="small">Button</Button>
+<Button color="secondary" variant="outlined" size="small">Button</Button>
+
+// secondary , icon
+<Button color="secondary" variant="contained" size="small" endIcon={<IconPencil />}>Button</Button>
+<Button color="secondary" variant="outlined" size="small" endIcon={<IconPencil />}>Button</Button>`}</pre>
           </CodeBox>
         </Grid>
       </Grid>
@@ -568,12 +425,7 @@ export const BtnVariation = () => {
             <Button color="function" size="small" variant="outlined">
               Button
             </Button>
-            <Button
-              color="function"
-              variant="outlined"
-              size="small"
-              endIcon={<IconPencil />}
-            >
+            <Button color="function" variant="outlined" size="small" endIcon={<IconPencil />}>
               Button
             </Button>
           </Stack>
@@ -581,11 +433,7 @@ export const BtnVariation = () => {
             <Button color="function" variant="outlined">
               Button
             </Button>
-            <Button
-              color="function"
-              variant="outlined"
-              endIcon={<IconPencil />}
-            >
+            <Button color="function" variant="outlined" endIcon={<IconPencil />}>
               Button
             </Button>
           </Stack>
@@ -593,33 +441,20 @@ export const BtnVariation = () => {
             <Button color="function" size="large" variant="outlined">
               Button
             </Button>
-            <Button
-              size="large"
-              color="function"
-              variant="outlined"
-              endIcon={<IconPencil />}
-            >
+            <Button size="large" color="function" variant="outlined" endIcon={<IconPencil />}>
               Button
             </Button>
           </Stack>
         </Grid>
         <Grid item xs={6}>
           <CodeBox>
-            // function
-            <br />
-            &lt;IconButton color="function"&gt; &lt;IconPencil /&gt;
-            &lt;/IconButton&gt;
-            <br />
-            &lt;IconButton color="function" variant="outlined"&gt;
-            &lt;IconPencil /&gt; &lt;/IconButton&gt;
-            <br />
-            &lt;Button color="function" variant="outlined" /&gt;
-            <br />
-            <br />
-            // function , icon
-            <br />
-            &lt;Button&nbsp; color="function" variant="outlined"
-            endIcon=&#123;&lt;IconPencil /&gt;&#125; &nbsp; /&gt;
+            <pre>{`// function
+<IconButton color="function" size="small"><IconPencil /></IconButton>
+<IconButton color="function" variant="outlined" size="small"><IconPencil /></IconButton>
+<Button color="function" variant="outlined" size="small">Button</Button>
+
+// function , icon
+<Button color="function" variant="outlined" size="small" endIcon={<IconPencil />}>Button</Button>`}</pre>
           </CodeBox>
         </Grid>
       </Grid>
@@ -629,12 +464,8 @@ export const BtnVariation = () => {
             Excel
           </Typography>
           <Stack direction="row" spacing={5}>
-            <Button
-              color="excel"
-              size="small"
-              variant="contained"
-              endIcon={<IconExcel />}
-            >
+            <Button color="excel" variant="contained" />
+            <Button color="excel" size="small" variant="contained" endIcon={<IconExcel />}>
               Button
             </Button>
             <Button color="excel" variant="contained" endIcon={<IconExcel />}>
@@ -644,15 +475,11 @@ export const BtnVariation = () => {
         </Grid>
         <Grid item xs={6}>
           <CodeBox>
-            // excel
-            <br />
-            &lt;Button color="excel" variant="contained" /&gt;
-            <br />
-            <br />
-            // excel , icon
-            <br />
-            &lt;Button&nbsp; color="excel" variant="contained"
-            endIcon=&#123;&lt;IconExcel /&gt;&#125; &nbsp; /&gt;
+            <pre>{`// excel
+<Button color="excel" variant="contained" />
+// excel , icon
+<Button color="excel" variant="contained" size="small" endIcon={<IconExcel />}>Button</Button>
+<Button color="excel" variant="contained" endIcon={<IconExcel />}>Button</Button>`}</pre>
           </CodeBox>
         </Grid>
       </Grid>
@@ -676,12 +503,7 @@ export const BtnVariation = () => {
             <Button color="delete" size="small" variant="outlined">
               Button
             </Button>
-            <Button
-              color="delete"
-              variant="outlined"
-              size="small"
-              endIcon={<IconPencil />}
-            >
+            <Button color="delete" variant="outlined" size="small" endIcon={<IconPencil />}>
               Button
             </Button>
           </Stack>
@@ -697,30 +519,19 @@ export const BtnVariation = () => {
             <Button color="delete" size="large" variant="outlined">
               Button
             </Button>
-            <Button
-              size="large"
-              color="delete"
-              variant="outlined"
-              endIcon={<IconPencil />}
-            >
+            <Button size="large" color="delete" variant="outlined" endIcon={<IconPencil />}>
               Button
             </Button>
           </Stack>
         </Grid>
         <Grid item xs={6}>
           <CodeBox>
-            // delete
-            <br />
-            &lt;IconButton color="delete" variant="outlined"&gt; &lt;IconPencil
-            /&gt; &lt;/IconButton&gt;
-            <br />
-            &lt;Button color="delete" variant="outlined" /&gt;
-            <br />
-            <br />
-            // delete , icon
-            <br />
-            &lt;Button&nbsp; color="delete" variant="outlined"
-            endIcon=&#123;&lt;IconPencil /&gt;&#125; &nbsp; /&gt;
+            <pre>{`// delete
+<IconButton color="delete" variant="outlined" size="small"><IconPencil /></IconButton>
+<Button color="delete" variant="outlined" size="small">Button</Button>
+
+// delete , icon
+<Button color="delete" variant="outlined" size="small" endIcon={<IconPencil />}>Button</Button>`}</pre>
           </CodeBox>
         </Grid>
       </Grid>
@@ -744,12 +555,7 @@ export const BtnVariation = () => {
             <Button color="cancel" size="small" variant="outlined">
               Button
             </Button>
-            <Button
-              color="cancel"
-              variant="outlined"
-              size="small"
-              endIcon={<IconPencil />}
-            >
+            <Button color="cancel" variant="outlined" size="small" endIcon={<IconPencil />}>
               Button
             </Button>
           </Stack>
@@ -765,30 +571,19 @@ export const BtnVariation = () => {
             <Button color="cancel" size="large" variant="outlined">
               Button
             </Button>
-            <Button
-              size="large"
-              color="cancel"
-              variant="outlined"
-              endIcon={<IconPencil />}
-            >
+            <Button size="large" color="cancel" variant="outlined" endIcon={<IconPencil />}>
               Button
             </Button>
           </Stack>
         </Grid>
         <Grid item xs={6}>
           <CodeBox>
-            // cancel
-            <br />
-            &lt;IconButton color="cancel" variant="outlined"&gt; &lt;IconPencil
-            /&gt; &lt;/IconButton&gt;
-            <br />
-            &lt;Button color="cancel" variant="outlined" /&gt;
-            <br />
-            <br />
-            // cancel , icon
-            <br />
-            &lt;Button&nbsp; color="cancel" variant="outlined"
-            endIcon=&#123;&lt;IconPencil /&gt;&#125; &nbsp; /&gt;
+            <pre>{`// cancel
+<IconButton color="cancel" variant="outlined" size="small"><IconPencil /></IconButton>
+<Button color="cancel" variant="outlined" size="small">Button</Button>
+
+// cancel , icon
+<Button color="cancel" variant="outlined" size="small" endIcon={<IconPencil />}>Button</Button>`}</pre>
           </CodeBox>
         </Grid>
       </Grid>
@@ -818,12 +613,7 @@ export const BtnDisabled = () => {
             <Button size="small" variant="contained" disabled>
               Button
             </Button>
-            <Button
-              variant="contained"
-              size="small"
-              endIcon={<IconPencil />}
-              disabled
-            >
+            <Button variant="contained" size="small" endIcon={<IconPencil />} disabled>
               Button
             </Button>
           </Stack>
@@ -839,41 +629,26 @@ export const BtnDisabled = () => {
             <Button color="primary" size="large" variant="contained" disabled>
               Button
             </Button>
-            <Button
-              color="sub"
-              variant="contained"
-              size="large"
-              endIcon={<IconPencil />}
-              disabled
-            >
+            <Button color="sub" variant="contained" size="large" endIcon={<IconPencil />} disabled>
               Button
             </Button>
           </Stack>
         </Grid>
         <Grid item xs={6}>
           <CodeBox>
-            // disabled
-            <br />
-            &lt;IconButton color="delete" variant="outlined" disabled&gt;
-            &lt;IconPencil /&gt; &lt;/IconButton&gt;
-            <br />
-            &lt;Button color="sub" variant="contained" disabled /&gt;
-            <br />
-            <br />
-            // disabled , icon
-            <br />
-            &lt;Button&nbsp; color="sub" variant="contained"
-            endIcon=&#123;&lt;IconPencil /&gt;&#125;&nbsp; disabled &nbsp; /&gt;
+            <pre>{`// disabled
+<IconButton color="primary" size="small" disabled><IconPencil /></IconButton>
+<Button color="primary" variant="contained" size="small" disabled>Button</Button>
+
+// disabled , icon
+<Button color="primary" variant="contained" size="small" endIcon={<IconPencil />} disabled>Button</Button>`}</pre>
           </CodeBox>
         </Grid>
       </Grid>
     </>
   );
 };
-const buttons = [
-  <Button key="one">Button</Button>,
-  <Button key="two">Button</Button>,
-];
+const buttons = [<Button key="one">Button</Button>, <Button key="two">Button</Button>];
 
 export const GroupBtn = () => {
   return (
@@ -943,24 +718,21 @@ export const GroupBtn = () => {
         </Grid>
         <Grid item xs={6}>
           <CodeBox>
-            // small _ spacing 5px
-            <br />
-            &lt;Stack direction="row" spacing=&#123;5&#125;&gt; input Button
-            components &lt;Stack&gt;
-            <br />
-            <br />
-            // medium _ spacing 8px
-            <br />
-            &lt;Stack direction="row" spacing=&#123;8&#125;&gt; input Button
-            components &lt;Stack&gt;
-            <br />
-            <br />
-            // large _ spacing 10px
-            <br />
-            &lt;Stack direction="row" spacing=&#123;10&#125;&gt; input Button
-            components &lt;Stack&gt;
-            <br />
-            <br />
+            <pre>{`// small _ spacing 5px
+<Stack direction="row" spacing={5}>
+  <Button color="primary" variant="contained" size="small">Button</Button>
+</Stack>
+
+// medium _ spacing 8px
+<Stack direction="row" spacing={8}>
+  <Button color="primary" variant="contained">Button</Button>
+</Stack>
+
+// large _ spacing 10px
+<Stack direction="row" spacing={10}>
+  <Button color="primary" variant="contained" size="large">Button</Button>
+</Stack>
+`}</pre>
           </CodeBox>
         </Grid>
       </Grid>
@@ -973,13 +745,7 @@ export const GroupBtn = () => {
             <ButtonGroup variant="outlined" color="primary" size="small">
               {buttons}
             </ButtonGroup>
-            <ButtonGroup
-              variant="outlined"
-              color="primary"
-              size="small"
-              disableElevation
-              disabled
-            >
+            <ButtonGroup variant="outlined" color="primary" size="small" disableElevation disabled>
               {buttons}
             </ButtonGroup>
           </Stack>
@@ -987,12 +753,7 @@ export const GroupBtn = () => {
             <ButtonGroup variant="outlined" color="primary">
               {buttons}
             </ButtonGroup>
-            <ButtonGroup
-              variant="outlined"
-              color="primary"
-              disableElevation
-              disabled
-            >
+            <ButtonGroup variant="outlined" color="primary" disableElevation disabled>
               {buttons}
             </ButtonGroup>
           </Stack>
@@ -1000,13 +761,7 @@ export const GroupBtn = () => {
             <ButtonGroup variant="outlined" color="primary" size="large">
               {buttons}
             </ButtonGroup>
-            <ButtonGroup
-              variant="outlined"
-              color="primary"
-              size="large"
-              disableElevation
-              disabled
-            >
+            <ButtonGroup variant="outlined" color="primary" size="large" disableElevation disabled>
               {buttons}
             </ButtonGroup>
           </Stack>
@@ -1029,25 +784,19 @@ export const GroupBtn = () => {
         </Grid>
         <Grid item xs={6}>
           <CodeBox>
-            // default
-            <br />
-            &lt;ButtonGroup variant="outlined" /&gt;input Button components
-            &lt;ButtonGroup&gt;
-            <br />
-            &lt;ButtonGroup variant="outlined" color="primary" /&gt;input Button
-            components &lt;ButtonGroup&gt;
-            <br />
-            <br />
-            // disabled
-            <br />
-            // disabled활성시 disableElevation, disabled porperty
-            <br />
-            &lt;ButtonGroup variant="outlined" color="primary" disableElevation
-            disabled /&gt;
-            <br />
-            &nbsp;&nbsp;input Button components
-            <br /> &lt;ButtonGroup&gt;
-            <br />
+            <pre>{`// default
+<ButtonGroup variant="outlined" size="small">
+  <Button>Button</Button>
+  <Button>Button</Button>
+</ButtonGroup>
+<ButtonGroup color="primary" variant="outlined" size="small">
+  input Button components
+</ButtonGroup>
+
+// disabled (disabled 활성시 disableElevation, disabled porperty)
+<ButtonGroup color="primary" variant="outlined" size="small" disableElevation disabled>
+  input Button components
+</ButtonGroup>`}</pre>
           </CodeBox>
         </Grid>
       </Grid>
