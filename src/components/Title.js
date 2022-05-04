@@ -58,7 +58,7 @@ export const PageTitle = ({ titleData }) => {
               break;
             default:
               return (
-                <Link to={title.path} className>
+                <Link to={title.path} key={idx}>
                   <Typography variant="h3" color="grey.600">
                     {title.menu}
                   </Typography>
