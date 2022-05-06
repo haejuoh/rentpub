@@ -1,7 +1,15 @@
 import React from "react";
 // import { styled, makeStyles } from "@mui/material/styles";
 import { styled } from "@mui/material/styles";
-import { Grid, Box, Button, IconButton, Typography, Stack, ButtonGroup } from "@mui/material";
+import {
+  Grid,
+  Box,
+  Button,
+  IconButton,
+  Typography,
+  Stack,
+  ButtonGroup,
+} from "@mui/material";
 import { PencilOutline } from "react-ionicons";
 import { ReactComponent as IconPencil } from "../assets/images/icons/pencil.svg";
 import { ReactComponent as IconExcel } from "../assets/images/icons/excel.svg";
@@ -126,13 +134,23 @@ export const BtnVariation = () => {
             <Button color="primary" size="small" variant="contained">
               Button
             </Button>
-            <Button color="primary" variant="contained" size="small" endIcon={<IconPencil />}>
+            <Button
+              color="primary"
+              variant="contained"
+              size="small"
+              endIcon={<IconPencil />}
+            >
               Button
             </Button>
             <Button color="primary" size="small" variant="outlined">
               Button
             </Button>
-            <Button color="primary" variant="outlined" size="small" endIcon={<IconPencil />}>
+            <Button
+              color="primary"
+              variant="outlined"
+              size="small"
+              endIcon={<IconPencil />}
+            >
               Button
             </Button>
           </Stack>
@@ -140,7 +158,11 @@ export const BtnVariation = () => {
             <Button color="primary" variant="contained">
               Button
             </Button>
-            <Button color="primary" variant="contained" endIcon={<IconPencil />}>
+            <Button
+              color="primary"
+              variant="contained"
+              endIcon={<IconPencil />}
+            >
               Button
             </Button>
             <Button color="primary" variant="outlined">
@@ -154,13 +176,23 @@ export const BtnVariation = () => {
             <Button color="primary" size="large" variant="contained">
               Button
             </Button>
-            <Button color="primary" variant="contained" size="large" endIcon={<IconPencil />}>
+            <Button
+              color="primary"
+              variant="contained"
+              size="large"
+              endIcon={<IconPencil />}
+            >
               Button
             </Button>
             <Button color="primary" size="large" variant="outlined">
               Button
             </Button>
-            <Button size="large" color="primary" variant="outlined" endIcon={<IconPencil />}>
+            <Button
+              size="large"
+              color="primary"
+              variant="outlined"
+              endIcon={<IconPencil />}
+            >
               Button
             </Button>
           </Stack>
@@ -208,13 +240,23 @@ export const BtnVariation = () => {
             <Button color="default" size="small" variant="contained">
               Button
             </Button>
-            <Button color="default" variant="contained" size="small" endIcon={<IconPencil />}>
+            <Button
+              color="default"
+              variant="contained"
+              size="small"
+              endIcon={<IconPencil />}
+            >
               Button
             </Button>
             <Button color="default" size="small" variant="outlined">
               Button
             </Button>
-            <Button color="default" variant="outlined" size="small" endIcon={<IconPencil />}>
+            <Button
+              color="default"
+              variant="outlined"
+              size="small"
+              endIcon={<IconPencil />}
+            >
               Button
             </Button>
           </Stack>
@@ -222,7 +264,11 @@ export const BtnVariation = () => {
             <Button color="default" variant="contained">
               Button
             </Button>
-            <Button color="default" variant="contained" endIcon={<IconPencil />}>
+            <Button
+              color="default"
+              variant="contained"
+              endIcon={<IconPencil />}
+            >
               Button
             </Button>
             <Button color="default" variant="outlined">
@@ -236,13 +282,23 @@ export const BtnVariation = () => {
             <Button color="default" size="large" variant="contained">
               Button
             </Button>
-            <Button color="default" variant="contained" size="large" endIcon={<IconPencil />}>
+            <Button
+              color="default"
+              variant="contained"
+              size="large"
+              endIcon={<IconPencil />}
+            >
               Button
             </Button>
             <Button color="default" size="large" variant="outlined">
               Button
             </Button>
-            <Button size="large" color="default" variant="outlined" endIcon={<IconPencil />}>
+            <Button
+              size="large"
+              color="default"
+              variant="outlined"
+              endIcon={<IconPencil />}
+            >
               Button
             </Button>
           </Stack>
@@ -281,7 +337,12 @@ export const BtnVariation = () => {
             <Button color="sub" size="small" variant="contained">
               Button
             </Button>
-            <Button color="sub" variant="contained" size="small" endIcon={<IconPencil />}>
+            <Button
+              color="sub"
+              variant="contained"
+              size="small"
+              endIcon={<IconPencil />}
+            >
               Button
             </Button>
           </Stack>
@@ -297,7 +358,12 @@ export const BtnVariation = () => {
             <Button color="sub" size="large" variant="contained">
               Button
             </Button>
-            <Button color="sub" variant="contained" size="large" endIcon={<IconPencil />}>
+            <Button
+              color="sub"
+              variant="contained"
+              size="large"
+              endIcon={<IconPencil />}
+            >
               Button
             </Button>
           </Stack>
@@ -343,13 +409,23 @@ export const BtnVariation = () => {
             <Button color="secondary" size="small" variant="contained">
               Button
             </Button>
-            <Button color="secondary" variant="contained" size="small" endIcon={<IconPencil />}>
+            <Button
+              color="secondary"
+              variant="contained"
+              size="small"
+              endIcon={<IconPencil />}
+            >
               Button
             </Button>
             <Button color="secondary" size="small" variant="outlined">
               Button
             </Button>
-            <Button color="secondary" variant="outlined" size="small" endIcon={<IconPencil />}>
+            <Button
+              color="secondary"
+              variant="outlined"
+              size="small"
+              endIcon={<IconPencil />}
+            >
               Button
             </Button>
           </Stack>
@@ -357,13 +433,21 @@ export const BtnVariation = () => {
             <Button color="secondary" variant="contained">
               Button
             </Button>
-            <Button color="secondary" variant="contained" endIcon={<IconPencil />}>
+            <Button
+              color="secondary"
+              variant="contained"
+              endIcon={<IconPencil />}
+            >
               Button
             </Button>
             <Button color="secondary" variant="outlined">
               Button
             </Button>
-            <Button color="secondary" variant="outlined" endIcon={<IconPencil />}>
+            <Button
+              color="secondary"
+              variant="outlined"
+              endIcon={<IconPencil />}
+            >
               Button
             </Button>
           </Stack>
@@ -371,13 +455,23 @@ export const BtnVariation = () => {
             <Button color="secondary" size="large" variant="contained">
               Button
             </Button>
-            <Button color="secondary" variant="contained" size="large" endIcon={<IconPencil />}>
+            <Button
+              color="secondary"
+              variant="contained"
+              size="large"
+              endIcon={<IconPencil />}
+            >
               Button
             </Button>
             <Button color="secondary" size="large" variant="outlined">
               Button
             </Button>
-            <Button size="large" color="secondary" variant="outlined" endIcon={<IconPencil />}>
+            <Button
+              size="large"
+              color="secondary"
+              variant="outlined"
+              endIcon={<IconPencil />}
+            >
               Button
             </Button>
           </Stack>
@@ -425,7 +519,12 @@ export const BtnVariation = () => {
             <Button color="function" size="small" variant="outlined">
               Button
             </Button>
-            <Button color="function" variant="outlined" size="small" endIcon={<IconPencil />}>
+            <Button
+              color="function"
+              variant="outlined"
+              size="small"
+              endIcon={<IconPencil />}
+            >
               Button
             </Button>
           </Stack>
@@ -433,7 +532,11 @@ export const BtnVariation = () => {
             <Button color="function" variant="outlined">
               Button
             </Button>
-            <Button color="function" variant="outlined" endIcon={<IconPencil />}>
+            <Button
+              color="function"
+              variant="outlined"
+              endIcon={<IconPencil />}
+            >
               Button
             </Button>
           </Stack>
@@ -441,7 +544,12 @@ export const BtnVariation = () => {
             <Button color="function" size="large" variant="outlined">
               Button
             </Button>
-            <Button size="large" color="function" variant="outlined" endIcon={<IconPencil />}>
+            <Button
+              size="large"
+              color="function"
+              variant="outlined"
+              endIcon={<IconPencil />}
+            >
               Button
             </Button>
           </Stack>
@@ -464,10 +572,15 @@ export const BtnVariation = () => {
             Excel
           </Typography>
           <Stack direction="row" spacing={5}>
-            <Button color="excel" variant="contained" />
-            <Button color="excel" size="small" variant="contained" endIcon={<IconExcel />}>
+            <Button
+              color="excel"
+              size="small"
+              variant="contained"
+              endIcon={<IconExcel />}
+            >
               Button
             </Button>
+
             <Button color="excel" variant="contained" endIcon={<IconExcel />}>
               Button
             </Button>
@@ -503,7 +616,12 @@ export const BtnVariation = () => {
             <Button color="delete" size="small" variant="outlined">
               Button
             </Button>
-            <Button color="delete" variant="outlined" size="small" endIcon={<IconPencil />}>
+            <Button
+              color="delete"
+              variant="outlined"
+              size="small"
+              endIcon={<IconPencil />}
+            >
               Button
             </Button>
           </Stack>
@@ -519,7 +637,12 @@ export const BtnVariation = () => {
             <Button color="delete" size="large" variant="outlined">
               Button
             </Button>
-            <Button size="large" color="delete" variant="outlined" endIcon={<IconPencil />}>
+            <Button
+              size="large"
+              color="delete"
+              variant="outlined"
+              endIcon={<IconPencil />}
+            >
               Button
             </Button>
           </Stack>
@@ -555,7 +678,12 @@ export const BtnVariation = () => {
             <Button color="cancel" size="small" variant="outlined">
               Button
             </Button>
-            <Button color="cancel" variant="outlined" size="small" endIcon={<IconPencil />}>
+            <Button
+              color="cancel"
+              variant="outlined"
+              size="small"
+              endIcon={<IconPencil />}
+            >
               Button
             </Button>
           </Stack>
@@ -571,7 +699,12 @@ export const BtnVariation = () => {
             <Button color="cancel" size="large" variant="outlined">
               Button
             </Button>
-            <Button size="large" color="cancel" variant="outlined" endIcon={<IconPencil />}>
+            <Button
+              size="large"
+              color="cancel"
+              variant="outlined"
+              endIcon={<IconPencil />}
+            >
               Button
             </Button>
           </Stack>
@@ -613,7 +746,12 @@ export const BtnDisabled = () => {
             <Button size="small" variant="contained" disabled>
               Button
             </Button>
-            <Button variant="contained" size="small" endIcon={<IconPencil />} disabled>
+            <Button
+              variant="contained"
+              size="small"
+              endIcon={<IconPencil />}
+              disabled
+            >
               Button
             </Button>
           </Stack>
@@ -629,7 +767,13 @@ export const BtnDisabled = () => {
             <Button color="primary" size="large" variant="contained" disabled>
               Button
             </Button>
-            <Button color="sub" variant="contained" size="large" endIcon={<IconPencil />} disabled>
+            <Button
+              color="sub"
+              variant="contained"
+              size="large"
+              endIcon={<IconPencil />}
+              disabled
+            >
               Button
             </Button>
           </Stack>
@@ -648,7 +792,10 @@ export const BtnDisabled = () => {
     </>
   );
 };
-const buttons = [<Button key="one">Button</Button>, <Button key="two">Button</Button>];
+const buttons = [
+  <Button key="one">Button</Button>,
+  <Button key="two">Button</Button>,
+];
 
 export const GroupBtn = () => {
   return (
@@ -745,7 +892,13 @@ export const GroupBtn = () => {
             <ButtonGroup variant="outlined" color="primary" size="small">
               {buttons}
             </ButtonGroup>
-            <ButtonGroup variant="outlined" color="primary" size="small" disableElevation disabled>
+            <ButtonGroup
+              variant="outlined"
+              color="primary"
+              size="small"
+              disableElevation
+              disabled
+            >
               {buttons}
             </ButtonGroup>
           </Stack>
@@ -753,7 +906,12 @@ export const GroupBtn = () => {
             <ButtonGroup variant="outlined" color="primary">
               {buttons}
             </ButtonGroup>
-            <ButtonGroup variant="outlined" color="primary" disableElevation disabled>
+            <ButtonGroup
+              variant="outlined"
+              color="primary"
+              disableElevation
+              disabled
+            >
               {buttons}
             </ButtonGroup>
           </Stack>
@@ -761,7 +919,13 @@ export const GroupBtn = () => {
             <ButtonGroup variant="outlined" color="primary" size="large">
               {buttons}
             </ButtonGroup>
-            <ButtonGroup variant="outlined" color="primary" size="large" disableElevation disabled>
+            <ButtonGroup
+              variant="outlined"
+              color="primary"
+              size="large"
+              disableElevation
+              disabled
+            >
               {buttons}
             </ButtonGroup>
           </Stack>

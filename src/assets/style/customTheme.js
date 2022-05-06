@@ -156,6 +156,7 @@ const theme = createTheme({
       white: colorSystem.white,
     },
     primary: {
+      bright: colorSystem.primary.b300,
       light: colorSystem.primary.b500,
       main: colorSystem.primary.b700,
       dark: colorSystem.primary.b900,
@@ -744,6 +745,9 @@ const theme = createTheme({
       },
     },
     MuiButtonGroup: {
+      defaultProps: {
+        color: "primary",
+      },
       variants: [
         {
           props: { color: "primary" },
@@ -788,6 +792,10 @@ const theme = createTheme({
           border: "1px solid",
           borderRadius: 1,
           overflow: "hidden",
+          height: "34px",
+          "& .MuiIconButton-root": {
+            height: "32px",
+          },
           button: {
             border: "none",
             position: "relative",
@@ -801,6 +809,7 @@ const theme = createTheme({
                 width: "1px",
                 height: "calc(50% - 3px)",
                 // backgroundColor: "#ff0",
+                backgroundColor: colorSystem.primary.b200,
                 clear: "both",
                 position: "absolute",
                 left: -1,
@@ -869,6 +878,35 @@ const theme = createTheme({
         }),
         disableElevation: sx({
           border: "none",
+        }),
+      },
+    },
+    //toggle
+    MuiToggleButton: {
+      defaultProps: {
+        color: "primary",
+      },
+      styleOverrides: {
+        root: sx({
+          padding: "7px",
+          boxSizing: "border-box",
+          borderColor: colorSystem.primary.b700,
+          svg: {
+            width: "18px",
+            height: "18px",
+            "& path": {
+              fill: colorSystem.primary.b700,
+            },
+          },
+          "&:hover": {
+            backgroundColor: colorSystem.bg.b300,
+          },
+          "&.Mui-selected": {
+            color: colorSystem.bg.b300,
+            "&:hover": {
+              backgroundColor: colorSystem.bg.b300,
+            },
+          },
         }),
       },
     },

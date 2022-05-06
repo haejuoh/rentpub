@@ -17,6 +17,7 @@ import MuiGrid from "../components/table/MuiGrid";
 import Typo from "../guide/Typo";
 import PageTit from "../guide/title/PageTit";
 import SubTit from "../guide/title/SubTit";
+import TableTit from "../guide/title/TableTit";
 import SectionTit from "../guide/title/SectionTit";
 import List from "../guide/List";
 import {
@@ -78,6 +79,8 @@ const Guide = () => {
           <PageTit />
           <GuideTitle mt={5}>Sub Title</GuideTitle>
           <SubTit />
+          <GuideTitle mt={5}>Table Title</GuideTitle>
+          <TableTit />
           <GuideTitle mt={5}>Section Title</GuideTitle>
           <SectionTit />
         </TabPanel>
