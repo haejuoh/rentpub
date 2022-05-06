@@ -5,7 +5,7 @@ import { TableTitle } from "../../components/Title";
 import { CodeBox } from "../../assets/style/guideStyle";
 import { ReactComponent as IconExcel } from "../../assets/images/icons/excel.svg";
 
-const TitleData = {
+const tableTitleData = {
   title: "고객정보",
   desc: {
     isShow: true,
@@ -18,7 +18,7 @@ const TableTit = () => {
     <>
       <Grid container spacing={2}>
         <Grid item xs={8}>
-          <TableTitle titleData={TitleData}>
+          <TableTitle titleData={tableTitleData}>
             <Button color="excel" variant="contained" endIcon={<IconExcel />}>
               엑셀다운로드
             </Button>
@@ -26,14 +26,14 @@ const TableTit = () => {
         </Grid>
         <Grid item xs={4}>
           <CodeBox>
-            <pre>{`const TitleData = {
+            <pre>{`const tableTitleData = {
   title: "고객정보",
   desc: {
     isShow: true,
     content: "12,340",
   },
 };
-<TableTitle titleData={TitleData}>
+<TableTitle titleData={tableTitleData}>
   <Button color="excel" variant="contained" endIcon={<IconExcel />}>엑셀다운로드</Button>
 </TableTitle>`}</pre>
           </CodeBox>
