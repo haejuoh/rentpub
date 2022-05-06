@@ -1,12 +1,23 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
 import { theme } from "../../assets/style/customTheme";
-import { DataGrid, GridRowsProp, GridColDef, gridPageCountSelector, gridPageSelector, useGridApiContext, useGridSelector } from "@mui/x-data-grid";
+import {
+  DataGrid,
+  GridActionsCellItem,
+  GridRowsProp,
+  GridColDef,
+  gridPageCountSelector,
+  gridPageSelector,
+  useGridApiContext,
+  useGridSelector,
+} from "@mui/x-data-grid";
 import { useDemoData } from "@mui/x-data-grid-generator";
-import { Pagination, TablePagination, Typography } from "@mui/material";
+import { Pagination, TablePagination, Typography, Chip } from "@mui/material";
 import { ReactComponent as IconArrowUp } from "../../assets/images/icons/arrow-up.svg";
 import { ReactComponent as IconArrowDown } from "../../assets/images/icons/arrow-down.svg";
 import { ReactComponent as IconFilter } from "../../assets/images/icons/filter.svg";
+import { ReactComponent as IconDelete } from "../../assets/images/icons/trash.svg";
+import { ReactComponent as IconCheck } from "../../assets/images/icons/checkmark-circle.svg";
 import { SelectLabelHidden } from "../../components/Select";
 
 const FooterStyle = makeStyles((theme) => ({
@@ -32,6 +43,7 @@ const FooterStyle = makeStyles((theme) => ({
     color: ` ${theme.palette.primary.main}`,
   },
 }));
+
 const rows: GridRowsProp = [
   {
     id: 1,
@@ -72,6 +84,15 @@ const columns: GridColDef[] = [
   { field: "col6", headerName: "Header", flex: 1 },
   { field: "col7", headerName: "Header", flex: 1 },
   { field: "col8", headerName: "Header", flex: 1 },
+  {
+    field: "actions",
+    type: "actions",
+    width: 40,
+    getActions: (params) => [
+      <GridActionsCellItem icon={<IconCheck />} label="사용함" showInMenu />,
+      <GridActionsCellItem icon={<IconDelete />} label="삭제" showInMenu />,
+    ],
+  },
 ];
 
 function CustomPagination() {
@@ -102,7 +123,15 @@ function CustomPagination() {
         <div className={footer.select}>
           <SelectLabelHidden selectData={selectRowsPer} />
         </div>
-        <Pagination color="primary" count={pageCount} page={page + 1} onChange={(event, value) => apiRef.current.setPage(value - 1)} showFirstButton showLastButton size="small" />
+        <Pagination
+          color="primary"
+          count={pageCount}
+          page={page + 1}
+          onChange={(event, value) => apiRef.current.setPage(value - 1)}
+          showFirstButton
+          showLastButton
+          size="small"
+        />
       </div>
     </div>
   );

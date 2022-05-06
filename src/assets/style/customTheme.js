@@ -195,23 +195,27 @@ const theme = createTheme({
       contrastText: colorSystem.primary.b200,
     },
     error: {
-      main: "#F65858",
+      main: colorSystem.status.danger,
+      contrastText: colorSystem.white,
+    },
+    danger: {
+      main: colorSystem.status.danger,
       contrastText: colorSystem.white,
     },
     ready: {
-      main: "#F9AD3A",
+      main: colorSystem.status.ready,
       contrastText: colorSystem.white,
     },
     warning: {
-      main: "#FFE91F",
-      contrastText: "#565863",
+      main: colorSystem.status.warning,
+      contrastText: colorSystem.white,
     },
-    info: {
-      main: "#C4C5CE",
+    done: {
+      main: colorSystem.status.done,
       contrastText: colorSystem.white,
     },
     success: {
-      main: "#67C23A",
+      main: colorSystem.status.success,
       contrastText: colorSystem.white,
     },
     grey: {
@@ -1150,7 +1154,7 @@ const theme = createTheme({
           borderRadius: 2,
           marginTop: "5px",
           padding: "5px",
-          marginLeft: "8px",
+          // marginLeft: "8px",
           height: "160px",
           overflow: "hidden",
           overflowY: "auto",
@@ -1291,6 +1295,7 @@ const theme = createTheme({
         columnHeaders: {
           borderColor: colorSystem.border.b700,
         },
+
         columnHeader: {
           padding: "0 8px",
           flex: "1 1 104px",
@@ -1413,6 +1418,25 @@ const theme = createTheme({
           "&:focus": {
             outline: "none",
           },
+          "& .MuiDataGrid-actionsCell": {
+            "& .MuiIconButton-root": {
+              width: "18px",
+              height: "18px",
+              padding: 0,
+              backgroundColor: "transparent",
+              svg: {
+                "& path": {
+                  fill: colorSystem.grey.b600,
+                },
+              },
+            },
+          },
+        },
+        menu: {
+          "& .MuiPaper-root": {
+            height: "auto",
+            width: "160px",
+          },
         },
         footerContainer: {
           borderColor: colorSystem.border.b500,
@@ -1445,20 +1469,89 @@ const theme = createTheme({
     //chip
     MuiChip: {
       variants: [
-        // {
-        //   props: { focused: true },
-        //   style: {
-        //     borderColor: colorSystem.border.b700,
-        //   },
-        // },
+        {
+          props: { color: "default" },
+          style: {
+            borderColor: colorSystem.border.b500,
+            color: colorSystem.grey.b600,
+          },
+        },
+        {
+          props: { color: "done" },
+          style: {
+            backgroundColor: colorSystem.status.done,
+            color: colorSystem.white,
+          },
+        },
+        {
+          props: { color: "danger" },
+          style: {
+            backgroundColor: colorSystem.status.danger,
+            color: colorSystem.white,
+          },
+        },
+        {
+          props: { color: "success" },
+          style: {
+            backgroundColor: colorSystem.status.success,
+            color: colorSystem.white,
+          },
+        },
+        {
+          props: { color: "primary" },
+          style: {
+            backgroundColor: colorSystem.primary.b700,
+            color: colorSystem.white,
+          },
+        },
+        {
+          props: { color: "ready" },
+          style: {
+            backgroundColor: colorSystem.status.ready,
+            color: colorSystem.white,
+          },
+        },
+        {
+          props: { color: "warning" },
+          style: {
+            backgroundColor: colorSystem.status.warning,
+            color: colorSystem.grey.b700,
+          },
+        },
+        {
+          props: { color: "danger" },
+          style: {
+            backgroundColor: colorSystem.status.danger,
+            color: colorSystem.white,
+          },
+        },
+        {
+          props: { color: "cancel" },
+          style: {
+            backgroundColor: colorSystem.status.cancel,
+            color: colorSystem.white,
+          },
+        },
+        {
+          props: { size: "large" },
+          style: {
+            height: "34px",
+            borderRadius: "17px",
+            fontSize: fontSystem.b1.fontSize,
+            fontWeight: fontSystem.b1.fontWeight,
+            ".MuiChip-label": {
+              paddingLeft: "14px",
+              paddingRight: "14px",
+            },
+          },
+        },
       ],
       styleOverrides: {
         root: sx({
           height: "19px",
-
+          borderRadius: "8px",
           boxSizing: "border-box",
-          borderColor: colorSystem.border.b500,
-          color: colorSystem.grey.b600,
+
           fontSize: fontSystem.ht.fontSize,
           fontWeight: fontSystem.ht.fontWeight,
         }),
