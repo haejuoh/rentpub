@@ -89,7 +89,19 @@ const SubTit = () => {
           <SubTitle titleData={TitleDefault} />
         </Grid>
         <Grid item xs={4}>
-          <CodeBox>// 가이드 명시</CodeBox>
+          <CodeBox>
+            <pre>{`const TitleDefault = {
+  title: "고객정보",
+  desc: {
+    isShow: false,
+    content: "",
+  },
+  toggle: false,
+  tooltip: false,
+};
+<SubTitle titleData={TitleDefault} />
+`}</pre>
+          </CodeBox>
         </Grid>
       </Grid>
       <Typography variant="h3" pb={12}>
@@ -101,7 +113,19 @@ const SubTit = () => {
           <SubTitle titleData={TitleToggle} />
         </Grid>
         <Grid item xs={4}>
-          <CodeBox>// 가이드 명시</CodeBox>
+          <CodeBox>
+            <pre>{`const TitleToggle = {
+  title: "고객정보",
+  desc: {
+    isShow: false,
+    content: "",
+  },
+  toggle: true,
+  tooltip: false,
+};
+<SubTitle titleData={TitleToggle} />
+`}</pre>
+          </CodeBox>
         </Grid>
       </Grid>
       <Typography variant="h3" pb={12}>
@@ -113,7 +137,19 @@ const SubTit = () => {
           <SubTitle titleData={TitleTooltip} />
         </Grid>
         <Grid item xs={4}>
-          <CodeBox>// 가이드 명시</CodeBox>
+          <CodeBox>
+            <pre>{`const TitleTooltip = {
+  title: "고객정보",
+  desc: {
+    isShow: false,
+    content: "",
+  },
+  toggle: false,
+  tooltip: true,
+};
+<SubTitle titleData={TitleTooltip} />
+`}</pre>
+          </CodeBox>
         </Grid>
       </Grid>
       <Typography variant="h3" pb={12}>
@@ -125,7 +161,19 @@ const SubTit = () => {
           <SubTitle titleData={TitleOption} />
         </Grid>
         <Grid item xs={4}>
-          <CodeBox>// 가이드 명시</CodeBox>
+          <CodeBox>
+            <pre>{`const TitleOption = {
+  title: "고객정보",
+  desc: {
+    isShow: false,
+    content: "",
+  },
+  toggle: true,
+  tooltip: true,
+};
+<SubTitle titleData={TitleOption} />
+`}</pre>
+          </CodeBox>
         </Grid>
       </Grid>
       <Typography variant="h3" pb={12}>
@@ -148,7 +196,15 @@ const SubTit = () => {
           </Stack>
         </Grid>
         <Grid item xs={4}>
-          <CodeBox>// 가이드 명시</CodeBox>
+          <CodeBox>
+            <pre>{`<SubTitle titleData={TitleToggle}>
+  <Button color="primary" variant="outlined">Button</Button>
+</SubTitle>
+
+<SubTitle titleData={TitleOption}>
+  <Button color="primary" variant="outlined">Button</Button>
+</SubTitle>`}</pre>
+          </CodeBox>
         </Grid>
       </Grid>
       <Typography variant="h3" pb={12}>
@@ -159,7 +215,6 @@ const SubTit = () => {
         <Grid item xs={8}>
           <Stack spacing={20}>
             <SubTitle titleData={TitleDesc} />
-
             <SubTitle titleData={TitleToggleDesc} />
             <SubTitle titleData={TitleTooltipDesc} />
             <SubTitle titleData={TitleOptionDesc} />
@@ -176,7 +231,18 @@ const SubTit = () => {
           </Stack>
         </Grid>
         <Grid item xs={4}>
-          <CodeBox>// 가이드 명시</CodeBox>
+          <CodeBox>
+            <pre>{`<SubTitle titleData={TitleDesc} />
+<SubTitle titleData={TitleToggleDesc} />
+<SubTitle titleData={TitleTooltipDesc} />
+<SubTitle titleData={TitleOptionDesc} />
+<SubTitle titleData={TitleDesc}>
+  <Button color="primary" variant="outlined">Button</Button>
+</SubTitle>
+<SubTitle titleData={TitleToggleDesc}>
+  <Button color="primary" variant="outlined">Button</Button>
+</SubTitle>`}</pre>
+          </CodeBox>
         </Grid>
       </Grid>
     </>

@@ -129,7 +129,7 @@ table {
 }
 pre {
   margin: 0;
-  white-space: pre-line;
+  white-space: pre-wrap;
   font-family: "Pretendard, sans-serif";
 }
 a {

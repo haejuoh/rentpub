@@ -25,7 +25,18 @@ const TableTit = () => {
           </TableTitle>
         </Grid>
         <Grid item xs={4}>
-          <CodeBox>// 가이드 명시</CodeBox>
+          <CodeBox>
+            <pre>{`const TitleData = {
+  title: "고객정보",
+  desc: {
+    isShow: true,
+    content: "12,340",
+  },
+};
+<TableTitle titleData={TitleData}>
+  <Button color="excel" variant="contained" endIcon={<IconExcel />}>엑셀다운로드</Button>
+</TableTitle>`}</pre>
+          </CodeBox>
         </Grid>
       </Grid>
     </>
