@@ -46,6 +46,7 @@ import {
   GuideKeyword,
 } from "../assets/style/guideStyle";
 import SelectVariants from "../components/SelectDemo";
+import Badge from "./../guide/Badge";
 
 const Guide = () => {
   const [value, setValue] = React.useState("1");
@@ -85,15 +86,7 @@ const Guide = () => {
           <SectionTit />
         </TabPanel>
         <TabPanel value="2">
-          <Stack direction="row" spacing={1}>
-            <Chip label="Badge" variant="outlined" />
-            <Chip label="Badge" color="primary" />
-            <Chip label="Badge" color="ready" />
-            <Chip label="Badge" color="success" />
-            <Chip label="Badge" color="warning" />
-            <Chip label="Badge" color="error" />
-            <Chip label="Badge" color="info" />
-          </Stack>
+          <Badge />
         </TabPanel>
         <TabPanel value="3">
           <GuideTitle>Button Size</GuideTitle>
