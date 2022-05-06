@@ -1442,6 +1442,99 @@ const theme = createTheme({
         },
       },
     },
+    //chip
+    MuiChip: {
+      variants: [
+        // {
+        //   props: { focused: true },
+        //   style: {
+        //     borderColor: colorSystem.border.b700,
+        //   },
+        // },
+      ],
+      styleOverrides: {
+        root: sx({
+          height: "19px",
+          padding: "0 8px",
+          boxSizing: "border-box",
+          borderColor: colorSystem.border.b500,
+          color: colorSystem.grey.b600,
+          fontSize: fontSystem.ht.fontSize,
+          fontWeight: fontSystem.ht.fontWeight,
+          padding: 0,
+        }),
+      },
+    },
+    MuiDivider: {
+      variants: [
+        //section
+        {
+          props: { type: "section15" },
+          style: {
+            backgroundColor: colorSystem.bordder.b700,
+            margin: "15px 0",
+          },
+        },
+        {
+          props: { type: "section20" },
+          style: {
+            backgroundColor: colorSystem.bordder.b700,
+            margin: "20px 0",
+          },
+        },
+        {
+          props: { type: "section30" },
+          style: {
+            backgroundColor: colorSystem.bordder.b700,
+            margin: "30px 0",
+          },
+        },
+        //Function
+        {
+          props: { type: "function15" },
+          style: {
+            backgroundColor: colorSystem.bordder.b100,
+            margin: "15px 0",
+          },
+        },
+        {
+          props: { type: "function20" },
+          style: {
+            backgroundColor: colorSystem.bordder.b100,
+            margin: "20px 0",
+          },
+        },
+        {
+          props: { type: "function30" },
+          style: {
+            backgroundColor: colorSystem.bordder.b100,
+            margin: "30px 0",
+          },
+        },
+        //Item
+        {
+          props: { type: "item15" },
+          style: {
+            backgroundColor: colorSystem.bordder.b300,
+            margin: "15px 0",
+          },
+        },
+        {
+          props: { type: "item20" },
+          style: {
+            backgroundColor: colorSystem.bordder.b300,
+            margin: "20px 0",
+          },
+        },
+        {
+          props: { type: "item30" },
+          style: {
+            backgroundColor: colorSystem.bordder.b300,
+            margin: "30px 0",
+          },
+        },
+      ],
+    },
   },
 });
 
