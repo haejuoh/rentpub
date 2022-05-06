@@ -14,9 +14,9 @@ const SectionTitle = ({ type, title, btn, caption }) => {
   if (type === "isCaption") {
     return (
       <LySectionTitle>
-        <Typography variant="h4">
+        <Typography variant="h4" color="grey.900">
           {title}
-          <Typography variant="ct" pl={1}>
+          <Typography variant="b1" color="grey.600" pl={1}>
             {caption}
           </Typography>
         </Typography>
@@ -25,7 +25,9 @@ const SectionTitle = ({ type, title, btn, caption }) => {
   } else if (type === "isButton") {
     return (
       <LySectionTitle>
-        <Typography variant="h4">{title}</Typography>
+        <Typography variant="h4" color="grey.900">
+          {title}
+        </Typography>
         <Button color={btn.color} variant={btn.style}>
           {btn.name}
         </Button>
@@ -34,9 +36,9 @@ const SectionTitle = ({ type, title, btn, caption }) => {
   } else if (type === "isAll") {
     return (
       <LySectionTitle>
-        <Typography variant="h4">
+        <Typography variant="h4" color="grey.900">
           {title}
-          <Typography variant="ct" pl={1}>
+          <Typography variant="b1" color="grey.600" pl={1}>
             {caption}
           </Typography>
         </Typography>
@@ -48,7 +50,9 @@ const SectionTitle = ({ type, title, btn, caption }) => {
   } else {
     return (
       <LySectionTitle>
-        <Typography variant="h4">{title}</Typography>
+        <Typography variant="h4" color="grey.900">
+          {title}
+        </Typography>
       </LySectionTitle>
     );
   }

@@ -1,25 +1,8 @@
 import PropTypes from "prop-types";
 import { styled } from "@mui/material/styles";
-import { Paper } from "@mui/material";
+import { Paper, IconButton, Grid } from "@mui/material";
+import { ReactComponent as IconSearch } from "../assets/images/icons/search.svg";
 
-// const SectionStyle = styled(Paper)(
-//   ({ theme }) => `
-//     min-Height: 400px;
-//     padding: 30px;
-//     margin: 0;
-//     border: none;
-//     border-radius: ${theme.shape.borderRadius}px;
-//     box-shadow: ${theme.shadows[2]};
-//     &.section {
-//       &-default {
-//         padding:30px;
-//       }
-//       &-search {
-//         padding:20px 30px;
-//       }
-//     }
-// `
-// );
 const SectionStyle = styled(Paper)(({ theme }) => ({
   position: "relative",
   height: "auto",
@@ -32,18 +15,30 @@ const SectionStyle = styled(Paper)(({ theme }) => ({
     "&-default": {
       padding: "30px",
     },
-    "&-search": {
-      padding: "20px 30px",
-    },
   },
 }));
 
-export const Section = ({ className = "", variant = "default", children, ...rest }) => {
-  return (
-    <SectionStyle className={"section-" + variant} {...rest}>
-      {children}
-    </SectionStyle>
-  );
+export const Section = ({ className = "", variant, children, ...rest }) => {
+  if (variant === "search") {
+    return (
+      <SectionStyle className={"section-" + variant} {...rest}>
+        {children}
+        <Grid container justifyContent="flex-end" pt={18}>
+          <Grid item>
+            <IconButton color="primary">
+              <IconSearch />
+            </IconButton>
+          </Grid>
+        </Grid>
+      </SectionStyle>
+    );
+  } else {
+    return (
+      <SectionStyle className={"section-" + variant} {...rest}>
+        {children}
+      </SectionStyle>
+    );
+  }
 };
 
 Section.propTypes = {

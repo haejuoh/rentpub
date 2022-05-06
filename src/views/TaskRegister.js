@@ -5,8 +5,8 @@ import { makeStyles } from "@mui/styles";
 import { Grid, TextField, IconButton, Box, Stack } from "@mui/material";
 import { Section } from "../components/Section";
 import { DefaultTextField } from "../assets/style/common";
-// import { ReactComponent as IconChevronForward } from "../assets/images/icons/chevron-forward.svg";
-// import { ReactComponent as IconChevronBack } from "../assets/images/icons/chevron-back.svg";
+import { ReactComponent as IconChevronForward } from "../assets/images/icons/chevron-forward.svg";
+import { ReactComponent as IconChevronBack } from "../assets/images/icons/chevron-back.svg";
 import { theme } from "../assets/style/customTheme";
 
 const tabData = [
@@ -64,8 +64,10 @@ const TaskRegister = () => {
               </Grid>
               <Box className={transfer.btn}>
                 <IconButton color="function" variant="outlined" size="small">
-                  {/* <IconChevronForward />
-                  <IconChevronBack /> */}
+                  <IconChevronForward />
+                </IconButton>
+                <IconButton color="function" variant="outlined" size="small">
+                  <IconChevronBack />
                 </IconButton>
               </Box>
             </Box>

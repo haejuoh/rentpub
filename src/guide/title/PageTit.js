@@ -45,16 +45,13 @@ const PageTit = () => {
         </Grid>
         <Grid item xs={4}>
           <CodeBox>
-            &lt;PageTitle <br />
-            <b>
-              &nbsp;title="페이지 타이틀"
-              <br />
-              &nbsp;breadCrumbs=&#123;&#123; depth1: "Breadcrumb", depth2:
-              "Breadcrumb", depth3: "Breadcrumb"
-            </b>
-            &#125;&#125;
-            <br />
-            /&gt;
+            <pre>{`<PageTitle titleData={titleData}>
+  <Stack direction="row" spacing={8}>
+    <Button color="primary" variant="contained">Button</Button>
+    <Button color="primary" variant="contained">Button</Button>
+  </Stack>
+</PageTitle>
+`}</pre>
           </CodeBox>
         </Grid>
       </Grid>
