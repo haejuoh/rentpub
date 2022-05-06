@@ -1,21 +1,29 @@
 import React from "react";
+import { makeStyles } from "@mui/styles";
+import { Grid, TextField, Stack, Button } from "@mui/material";
 import Mdi from "../components/Mdi";
 import { LayoutStyle } from "../assets/style/common";
-import { makeStyles } from "@mui/styles";
-import { theme } from "../assets/style/customTheme";
-import { Grid, TextField } from "@mui/material";
+import { PageTitle } from "../components/Title";
 import { Section } from "../components/Section";
 import { SelectField } from "../components/Select";
+import { ReactComponent as IconPencil } from "../assets/images/icons/pencil.svg";
+import { ReactComponent as IconExcel } from "../assets/images/icons/excel.svg";
 
 const tabData = [
   { type: "home", label: "Home", active: false },
   { label: "사용자조회", active: true },
 ];
-const LayoutStyles = makeStyles((theme) => ({
-  pager: {
-    // backgroundColor: ""
+const titleData = [
+  {
+    path: "/",
+    menu: "사용자",
   },
-}));
+  {
+    type: "bookmark",
+    menu: "사용자조회",
+    active: true,
+  },
+];
 const defaultData = {
   label: "사용자구분",
   // select combo box 너비 지정
@@ -31,6 +39,13 @@ const UserInquiry = () => {
     <>
       <Mdi tabData={tabData} />
       <div className={layout.page}>
+        <PageTitle titleData={titleData}>
+          <Stack direction="row" spacing={8}>
+            <Button color="primary" variant="contained" endIcon={<IconPencil />}>
+              등록
+            </Button>
+          </Stack>
+        </PageTitle>
         <Section variant="search">
           <Grid container spacing={20}>
             <Grid item xs="3">

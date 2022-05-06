@@ -15,6 +15,9 @@ const SectionStyle = styled(Paper)(({ theme }) => ({
     "&-default": {
       padding: "30px",
     },
+    "&-data": {
+      padding: "30px 30px 25px 30px",
+    },
   },
 }));
 
@@ -44,5 +47,5 @@ export const Section = ({ className = "", variant, children, ...rest }) => {
 Section.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-  variant: PropTypes.oneOf(["default", "search"]),
+  variant: PropTypes.oneOf(["default", "search", "data"]),
 };
