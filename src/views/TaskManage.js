@@ -19,14 +19,6 @@ const tabData = [
   { type: "home", label: "Home", active: false },
   { label: "직무관리", active: true },
 ];
-const defaultData = {
-  label: "사용여부",
-  // select combo box 너비 지정
-  style: { PaperProps: { style: { minWidth: 290, maxHeight: 160, height: "auto" } } },
-  option: ["전체"],
-  disabled: false,
-  isIcon: false,
-};
 const titleData = [
   {
     path: "/",
@@ -38,6 +30,14 @@ const titleData = [
     active: true,
   },
 ];
+const defaultData = {
+  label: "사용여부",
+  // select combo box 너비 지정
+  style: { PaperProps: { style: { minWidth: 290, maxHeight: 160, height: "auto" } } },
+  option: ["전체"],
+  disabled: false,
+  isIcon: false,
+};
 const tableTitleData = {
   title: "직무조회 목록",
   desc: {
@@ -131,7 +131,6 @@ const rows = [
     col7: "btn",
   },
 ];
-
 const columns = [
   { field: "col1", headerName: "직무ID", width: 140, headerAlign: "center", align: "center" },
   { field: "col2", headerName: "직무명", width: 176, headerAlign: "center", align: "center" },
@@ -142,7 +141,6 @@ const columns = [
   { field: "col7", headerName: " ", width: 40, headerAlign: "center", align: "center" },
   // { field: "col7", headerName: "", flex: 1 },
 ];
-
 function CustomPagination() {
   const footer = FooterStyle();
   const selectRowsPer = {
@@ -226,7 +224,7 @@ const TaskManage = () => {
               </Grid>
             </Grid>
           </Section>
-          <Section variant="data">
+          <Section variant="default">
             <Box pb={10}>
               <TableTitle titleData={tableTitleData}>
                 <Button color="primary" variant="contained">
@@ -234,9 +232,7 @@ const TaskManage = () => {
                 </Button>
               </TableTitle>
             </Box>
-            <Box pt={15} pb={15}>
-              <Divider pt={30} />
-            </Box>
+            <Divider type="section15" />
             <Grid container>
               <Grid item xs={12}>
                 <MuiGridTable />

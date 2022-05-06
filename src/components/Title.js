@@ -42,7 +42,6 @@ const SubTitleStyle = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    padding: "0 20px",
   },
   title: {
     display: "flex",
