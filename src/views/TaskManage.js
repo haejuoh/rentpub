@@ -1,17 +1,18 @@
 import React from "react";
 import { makeStyles, styled } from "@mui/styles";
-import { Grid, TextField, Stack, Divider, Typography, Pagination, Box } from "@mui/material";
+import { Grid, TextField, Stack, Divider, Typography, Pagination, Box, Button } from "@mui/material";
 import Mdi from "../components/Mdi";
 import { LayoutStyle } from "../assets/style/common";
 import { PageTitle } from "../components/Title";
-import SectionTitle from "../components/title/SectionTitle";
 import { Section } from "../components/Section";
+import { TableTitle } from "../components/Title";
 import { SelectField } from "../components/Select";
 import { DataGrid, gridPageCountSelector, gridPageSelector, useGridApiContext, useGridSelector } from "@mui/x-data-grid";
 import { SelectLabelHidden } from "../components/Select";
 import { ReactComponent as IconArrowUp } from "../assets/images/icons/arrow-up.svg";
 import { ReactComponent as IconArrowDown } from "../assets/images/icons/arrow-down.svg";
 import { ReactComponent as IconFilter } from "../assets/images/icons/filter.svg";
+import { ReactComponent as IconExcel } from "../assets/images/icons/excel.svg";
 import { theme } from "../assets/style/customTheme";
 
 const tabData = [
@@ -37,6 +38,13 @@ const titleData = [
     active: true,
   },
 ];
+const tableTitleData = {
+  title: "직무조회 목록",
+  desc: {
+    isShow: true,
+    content: "12,340",
+  },
+};
 
 const FooterStyle = makeStyles((theme) => ({
   wrap: {
@@ -219,8 +227,16 @@ const TaskManage = () => {
             </Grid>
           </Section>
           <Section variant="data">
-            <SectionTitle type="isAll" title="직무조회 목록" caption="12,340건" btn={{ name: "직무등록", color: "primary", style: "contained" }} />
-            <Divider />
+            <Box pb={10}>
+              <TableTitle titleData={tableTitleData}>
+                <Button color="primary" variant="contained">
+                  직무등록
+                </Button>
+              </TableTitle>
+            </Box>
+            <Box pt={15} pb={15}>
+              <Divider pt={30} />
+            </Box>
             <Grid container>
               <Grid item xs={12}>
                 <MuiGridTable />

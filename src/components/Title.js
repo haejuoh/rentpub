@@ -2,15 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { styled, makeStyles } from "@mui/styles";
 import { theme } from "../assets/style/customTheme";
-import {
-  Box,
-  Typography,
-  Breadcrumbs,
-  IconButton,
-  ToggleButton,
-  ButtonGroup,
-  Stack,
-} from "@mui/material";
+import { Box, Typography, Breadcrumbs, IconButton, ToggleButton, ButtonGroup, Stack } from "@mui/material";
 import { ReactComponent as IconBookmark } from "../assets/images/icons/bookmark.svg";
 import { ReactComponent as IconChevron } from "../assets/images/icons/chevron-forward.svg";
 import { ReactComponent as IconChevronDown } from "../assets/images/icons/chevron-down.svg";
@@ -32,7 +24,7 @@ const PageTitleStyle = makeStyles((theme) => ({
       width: "20px",
       height: "20px",
       padding: 1,
-      backgroundColor: `${theme.palette.common.white}`,
+      backgroundColor: "transparent",
       cursor: "pointer",
     },
   },
@@ -110,9 +102,7 @@ export const PageTitle = ({ titleData, children, ...rest }) => {
                   <Typography variant="h2" color="grey.900">
                     {title.menu}
                   </Typography>
-                  <button
-                    className={title.active === true ? pageTit.active : ""}
-                  >
+                  <button className={title.active === true ? pageTit.active : ""}>
                     <IconBookmark />
                   </button>
                 </div>
