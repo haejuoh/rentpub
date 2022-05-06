@@ -1567,21 +1567,21 @@ const theme = createTheme({
         {
           props: { type: "section15" },
           style: {
-            backgroundColor: colorSystem.border.b700,
+            borderColor: colorSystem.border.b700,
             margin: "15px 0",
           },
         },
         {
           props: { type: "section20" },
           style: {
-            backgroundColor: colorSystem.border.b700,
+            borderColor: colorSystem.border.b700,
             margin: "20px 0",
           },
         },
         {
           props: { type: "section30" },
           style: {
-            backgroundColor: colorSystem.border.b700,
+            borderColor: colorSystem.border.b700,
             margin: "30px 0",
           },
         },
@@ -1589,21 +1589,21 @@ const theme = createTheme({
         {
           props: { type: "function15" },
           style: {
-            backgroundColor: colorSystem.border.b100,
+            borderColor: colorSystem.border.b100,
             margin: "15px 0",
           },
         },
         {
           props: { type: "function20" },
           style: {
-            backgroundColor: colorSystem.border.b100,
+            borderColor: colorSystem.border.b100,
             margin: "20px 0",
           },
         },
         {
           props: { type: "function30" },
           style: {
-            backgroundColor: colorSystem.border.b100,
+            borderColor: colorSystem.border.b100,
             margin: "30px 0",
           },
         },
@@ -1611,21 +1611,21 @@ const theme = createTheme({
         {
           props: { type: "item15" },
           style: {
-            backgroundColor: colorSystem.border.b300,
+            borderColor: colorSystem.border.b300,
             margin: "15px 0",
           },
         },
         {
           props: { type: "item20" },
           style: {
-            backgroundColor: colorSystem.border.b300,
+            borderColor: colorSystem.border.b300,
             margin: "20px 0",
           },
         },
         {
           props: { type: "item30" },
           style: {
-            backgroundColor: colorSystem.border.b300,
+            borderColor: colorSystem.border.b300,
             margin: "30px 0",
           },
         },

@@ -5,6 +5,7 @@ import Mdi from "../components/Mdi";
 import { LayoutStyle } from "../assets/style/common";
 import { PageTitle } from "../components/Title";
 import { Section } from "../components/Section";
+import { TableTitle } from "../components/Title";
 import { SelectField } from "../components/Select";
 import { ReactComponent as IconPencil } from "../assets/images/icons/pencil.svg";
 import { ReactComponent as IconExcel } from "../assets/images/icons/excel.svg";
@@ -24,6 +25,13 @@ const titleData = [
     active: true,
   },
 ];
+const tableTitleData = {
+  title: "고객정보",
+  desc: {
+    isShow: true,
+    content: "12,340",
+  },
+};
 const defaultData = {
   label: "사용자구분",
   // select combo box 너비 지정
@@ -61,6 +69,13 @@ const UserInquiry = () => {
               <SelectField selectData={defaultData} />
             </Grid>
           </Grid>
+        </Section>
+        <Section variant="data">
+          <TableTitle titleData={tableTitleData}>
+            <Button color="excel" variant="contained" endIcon={<IconExcel />}>
+              엑셀다운로드
+            </Button>
+          </TableTitle>
         </Section>
       </div>
     </>

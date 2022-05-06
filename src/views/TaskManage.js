@@ -1,31 +1,24 @@
 import React from "react";
 import { makeStyles, styled } from "@mui/styles";
-import { Grid, TextField, Stack, Divider, Typography, Pagination, Box } from "@mui/material";
+import { Grid, TextField, Stack, Divider, Typography, Pagination, Box, Button } from "@mui/material";
 import Mdi from "../components/Mdi";
 import { LayoutStyle } from "../assets/style/common";
 import { PageTitle } from "../components/Title";
-import SectionTitle from "../components/title/SectionTitle";
 import { Section } from "../components/Section";
+import { TableTitle } from "../components/Title";
 import { SelectField } from "../components/Select";
 import { DataGrid, gridPageCountSelector, gridPageSelector, useGridApiContext, useGridSelector } from "@mui/x-data-grid";
 import { SelectLabelHidden } from "../components/Select";
 import { ReactComponent as IconArrowUp } from "../assets/images/icons/arrow-up.svg";
 import { ReactComponent as IconArrowDown } from "../assets/images/icons/arrow-down.svg";
 import { ReactComponent as IconFilter } from "../assets/images/icons/filter.svg";
+import { ReactComponent as IconExcel } from "../assets/images/icons/excel.svg";
 import { theme } from "../assets/style/customTheme";
 
 const tabData = [
   { type: "home", label: "Home", active: false },
   { label: "직무관리", active: true },
 ];
-const defaultData = {
-  label: "사용여부",
-  // select combo box 너비 지정
-  style: { PaperProps: { style: { minWidth: 290, maxHeight: 160, height: "auto" } } },
-  option: ["전체"],
-  disabled: false,
-  isIcon: false,
-};
 const titleData = [
   {
     path: "/",
@@ -37,6 +30,21 @@ const titleData = [
     active: true,
   },
 ];
+const defaultData = {
+  label: "사용여부",
+  // select combo box 너비 지정
+  style: { PaperProps: { style: { minWidth: 290, maxHeight: 160, height: "auto" } } },
+  option: ["전체"],
+  disabled: false,
+  isIcon: false,
+};
+const tableTitleData = {
+  title: "직무조회 목록",
+  desc: {
+    isShow: true,
+    content: "12,340",
+  },
+};
 
 const FooterStyle = makeStyles((theme) => ({
   wrap: {
@@ -123,7 +131,6 @@ const rows = [
     col7: "btn",
   },
 ];
-
 const columns = [
   { field: "col1", headerName: "직무ID", width: 140, headerAlign: "center", align: "center" },
   { field: "col2", headerName: "직무명", width: 176, headerAlign: "center", align: "center" },
@@ -134,7 +141,6 @@ const columns = [
   { field: "col7", headerName: " ", width: 40, headerAlign: "center", align: "center" },
   // { field: "col7", headerName: "", flex: 1 },
 ];
-
 function CustomPagination() {
   const footer = FooterStyle();
   const selectRowsPer = {
@@ -218,9 +224,15 @@ const TaskManage = () => {
               </Grid>
             </Grid>
           </Section>
-          <Section variant="data">
-            <SectionTitle type="isAll" title="직무조회 목록" caption="12,340건" btn={{ name: "직무등록", color: "primary", style: "contained" }} />
-            <Divider />
+          <Section variant="default">
+            <Box pb={10}>
+              <TableTitle titleData={tableTitleData}>
+                <Button color="primary" variant="contained">
+                  직무등록
+                </Button>
+              </TableTitle>
+            </Box>
+            <Divider type="section15" />
             <Grid container>
               <Grid item xs={12}>
                 <MuiGridTable />
