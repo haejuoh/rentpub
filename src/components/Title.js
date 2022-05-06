@@ -2,11 +2,20 @@ import React from "react";
 import PropTypes from "prop-types";
 import { styled, makeStyles } from "@mui/styles";
 import { theme } from "../assets/style/customTheme";
-import { Box, Typography, Breadcrumbs, IconButton } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Breadcrumbs,
+  IconButton,
+  ToggleButton,
+  ButtonGroup,
+  Stack,
+} from "@mui/material";
 import { ReactComponent as IconBookmark } from "../assets/images/icons/bookmark.svg";
-import { ReactComponent as IconChevron } from "../assets/images/icons/chevron-forward.svg";
+import { ReactComponent as IconChevron } from "../assets/images/icons/chevron-down.svg";
+import { ReactComponent as IconInfo } from "../assets/images/icons/information-circle.svg";
 import { Link } from "react-router-dom";
-const TitleStyle = makeStyles((theme) => ({
+const PageTitleStyle = makeStyles((theme) => ({
   wrap: {
     display: "flex",
     alignItems: "center",
@@ -35,8 +44,36 @@ const TitleStyle = makeStyles((theme) => ({
     },
   },
 }));
+const SubTitleStyle = makeStyles((theme) => ({
+  wrap: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    padding: "0 20px",
+  },
+  title: {
+    display: "flex",
+    alignItems: "center",
+    gap: "5px",
+    "&:before": {
+      content: "''",
+      display: "inline-block",
+      width: "6px",
+      height: "6px",
+      clear: "both",
+      backgroundColor: `${theme.palette.primary.bright}`,
+      borderRadius: 1,
+    },
+  },
+  desc: {
+    color: `${theme.palette.grey[600]}`,
+  },
+  toggle: {
+    transform: "scaleY(-1)",
+  },
+}));
 export const PageTitle = ({ titleData, children, ...rest }) => {
-  const pageTit = TitleStyle();
+  const pageTit = PageTitleStyle();
   return (
     <div className={pageTit.wrap}>
       <Breadcrumbs separator={<IconChevron />} aria-label="breadcrumb">
@@ -81,7 +118,78 @@ export const PageTitle = ({ titleData, children, ...rest }) => {
     </div>
   );
 };
+
+export const SubTitle = ({ titleData, children, ...rest }) => {
+  const subTit = SubTitleStyle();
+  const [selected, setSelected] = React.useState(false);
+
+  let Desc;
+
+  if (titleData.desc.isShow) {
+    Desc = (
+      <Typography variant="b1" className={subTit.desc}>
+        {titleData.desc.content}
+      </Typography>
+    );
+  }
+  let ButtonOption;
+  if (titleData.toggle && !titleData.tooltip) {
+    ButtonOption = (
+      <ToggleButton
+        value="check"
+        selected={selected}
+        onChange={() => {
+          setSelected(!selected);
+        }}
+      >
+        <IconChevron className={!selected ? null : subTit.toggle} />
+      </ToggleButton>
+    );
+  } else if (!titleData.toggle && titleData.tooltip) {
+    ButtonOption = (
+      <IconButton color="primary" variant="outlined">
+        <IconInfo />
+      </IconButton>
+    );
+  } else if (titleData.toggle && titleData.tooltip) {
+    ButtonOption = (
+      <ButtonGroup variant="outlined" size="small">
+        <IconButton color="sub">
+          <IconInfo />
+        </IconButton>
+        <ToggleButton
+          value="check"
+          selected={selected}
+          onChange={() => {
+            setSelected(!selected);
+          }}
+        >
+          <IconChevron className={!selected ? null : subTit.toggle} />
+        </ToggleButton>
+      </ButtonGroup>
+    );
+  }
+
+  return (
+    <div className={subTit.wrap}>
+      <div className={subTit.title}>
+        <Typography variant="h4">{titleData.title}</Typography>
+        {Desc}
+      </div>
+      <Stack direction="row" spacing={5}>
+        {children}
+        {ButtonOption}
+      </Stack>
+    </div>
+  );
+};
+
+//
 PageTitle.propTypes = {
   children: PropTypes.node,
   titleData: PropTypes.array,
+};
+SubTitle.propTypes = {
+  children: PropTypes.node,
+  titleData: PropTypes.object,
 };
