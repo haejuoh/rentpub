@@ -9,6 +9,13 @@ const CodeBox = styled(Box)(({ theme }) => ({
   borderRadius: "4px",
   lineHeight: "1.68rem",
 }));
+const ConditionTitle = styled(Typography)(
+  ({ theme }) => `
+  font-size: 1.2rem;
+  font-weight: 500;
+  color:  ${theme.palette.grey[900]}
+`
+);
 const FlexBox = styled(Box)(({ theme }) => ({
   flex: 1,
 }));
@@ -34,4 +41,11 @@ const GuideKeyword = styled(Typography)(
 `
 );
 
-export { CodeBox, FlexBox, GuideTitle, GuideSubTitle, GuideKeyword };
+export {
+  CodeBox,
+  FlexBox,
+  GuideTitle,
+  GuideSubTitle,
+  GuideKeyword,
+  ConditionTitle,
+};
