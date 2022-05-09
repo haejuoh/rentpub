@@ -21,7 +21,6 @@ const titleData = [
   {
     type: "bookmark",
     menu: "다운로드 메뉴얼 1",
-    active: true,
   },
 ];
 const PageTit = () => {

@@ -19,22 +19,6 @@ const PageTitleStyle = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     gap: "5px",
-    "& button": {
-      border: "none",
-      width: "20px",
-      height: "20px",
-      padding: 1,
-      backgroundColor: "transparent",
-      cursor: "pointer",
-    },
-  },
-
-  active: {
-    "& svg": {
-      "& path": {
-        fill: `${theme.palette.primary.main}`,
-      },
-    },
   },
 }));
 const SubTitleStyle = makeStyles((theme) => ({
@@ -90,6 +74,7 @@ const TableTitleStyle = makeStyles((theme) => ({
 }));
 export const PageTitle = ({ titleData, children, ...rest }) => {
   const pageTit = PageTitleStyle();
+  const [selected, setSelected] = React.useState(false);
   return (
     <div className={pageTit.wrap}>
       <Breadcrumbs separator={<IconChevron />} aria-label="breadcrumb">
@@ -101,9 +86,16 @@ export const PageTitle = ({ titleData, children, ...rest }) => {
                   <Typography variant="h2" color="grey.900">
                     {title.menu}
                   </Typography>
-                  <button className={title.active === true ? pageTit.active : ""}>
+                  <ToggleButton
+                    color="standard"
+                    value="check"
+                    selected={selected}
+                    onChange={() => {
+                      setSelected(!selected);
+                    }}
+                  >
                     <IconBookmark />
-                  </button>
+                  </ToggleButton>
                 </div>
               );
               break;

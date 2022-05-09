@@ -39,6 +39,7 @@ import {
   DefaultRadio,
   RadioWithLabel,
   GroupRadio,
+  SegmentGroup,
 } from "../guide/Form";
 import {
   GuideTitle,
@@ -47,6 +48,8 @@ import {
 } from "../assets/style/guideStyle";
 import SelectVariants from "../components/SelectDemo";
 import Badge from "./../guide/Badge";
+import Segment from "../components/Segment";
+import Table from "../guide/Table";
 
 const Guide = () => {
   const [value, setValue] = React.useState("1");
@@ -150,14 +153,15 @@ const Guide = () => {
             Radio Group
           </GuideSubTitle>
           <GroupRadio />
+          <GuideTitle mt={40}>Segment</GuideTitle>
+          <SegmentGroup />
           {/* <MuiSelect /> */}
         </TabPanel>
         <TabPanel value="5">
           <List />
         </TabPanel>
         <TabPanel value="6">
-          {/* <GridExample /> */}
-          <MuiGrid mt={2} />
+          <Table mt={2} />
         </TabPanel>
       </TabContext>
     </Box>

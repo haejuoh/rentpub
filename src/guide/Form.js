@@ -20,6 +20,7 @@ import { ReactComponent as IconOption } from "../assets/images/icons/options.svg
 import { DefaultTextField } from "../assets/style/common";
 import { CodeBox, FlexBox } from "../assets/style/guideStyle";
 import { SelectField, DefaultSelectField } from "../components/Select";
+import Segment from "../components/Segment";
 // import Placeholder from "../assets/style/Placeholder";
 
 export const InputLabelPositionTop = () => {
@@ -1509,5 +1510,16 @@ export const GroupRadio = () => {
         </Grid>
       </Grid>
     </>
+  );
+};
+const SegmentData = [
+  { label: "사용", name: "Segment" },
+  { label: "미사용", name: "Segment" },
+];
+export const SegmentGroup = () => {
+  return (
+    <Box sx={{ width: "120px" }}>
+      <Segment segmentData={SegmentData} variant="2" />
+    </Box>
   );
 };

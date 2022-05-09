@@ -890,10 +890,39 @@ const theme = createTheme({
       defaultProps: {
         color: "primary",
       },
-      styleOverrides: {
-        root: sx({
+      variants:[
+        {props: { color: "standard" },
+        style: {
+          width:"20px",
+          height:"20px",
+          padding:0,
+          border:"none",
+          backgroundColor:"transparent",
+          svg: {
+            width: "18px",
+            height: "18px",
+            "& path": {
+              fill: colorSystem.status.cancel,
+            },
+          },
+          "&:hover": {
+            backgroundColor:"transparent",
+          },
+          "&.Mui-selected": {
+            backgroundColor:"transparent",
+            svg: {
+              "& path": {
+                fill: colorSystem.primary.b700,
+              },
+            },
+            "&:hover": {
+              backgroundColor:"transparent",
+            },
+          },
+        }},
+        {props: { color: "primary" },
+        style: {
           padding: "7px",
-          boxSizing: "border-box",
           borderColor: colorSystem.primary.b700,
           svg: {
             width: "18px",
@@ -906,11 +935,21 @@ const theme = createTheme({
             backgroundColor: colorSystem.bg.b300,
           },
           "&.Mui-selected": {
-            color: colorSystem.bg.b300,
+            svg: {
+              
+              "& path": {
+                fill: colorSystem.primary.b700,
+              },
+            },
             "&:hover": {
               backgroundColor: colorSystem.bg.b300,
             },
           },
+        }}
+      ],
+      styleOverrides: {
+        root: sx({          
+          boxSizing: "border-box",
         }),
       },
     },
@@ -1436,8 +1475,33 @@ const theme = createTheme({
           "& .MuiPaper-root": {
             height: "auto",
             width: "160px",
+            padding: 0,
+          },
+          "& .MuiMenuItem-root": {
+            padding: "8px",
+            "&:hover, &:focus": {
+              backgroundColor: colorSystem.bg.b300,
+              color: colorSystem.primary.b500,
+              "& .MuiListItemIcon-root": {
+                svg: {
+                  "& path": {
+                    fill: colorSystem.primary.b500,
+                  },
+                },
+              },
+            },
+            "& .MuiListItemIcon-root": {
+              minWidth: "14px",
+              marginRight: "5px",
+              svg: {
+                "& path": {
+                  fill: colorSystem.grey.b700,
+                },
+              },
+            },
           },
         },
+
         footerContainer: {
           borderColor: colorSystem.border.b500,
         },
