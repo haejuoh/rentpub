@@ -119,6 +119,8 @@ const TableGrid = ({
   return (
     <>
       <DataGrid
+        headerHeight={40}
+        rowHeight={40}
         pageSize={pageSize}
         onPageSizeChange={(newPageSize) => setPageSize(newPageSize)}
         rowsPerPageOptions={[5, 10, 20]}

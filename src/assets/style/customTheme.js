@@ -1034,7 +1034,7 @@ const theme = createTheme({
             padding: "4px 12px 6px",
             color: colorSystem.grey.b700,
             lineHeight: "100%",
-            fontSize: "1rem",
+            fontSize: fontSystem.b1.fontSize,
             fontWeight: 400,
             "&::placeholder": {
               color: colorSystem.grey.b400,
@@ -1377,6 +1377,9 @@ const theme = createTheme({
         }),
         columnHeaders: {
           borderColor: colorSystem.border.b700,
+          // minHeight: "40px",
+          // maxHeight: "40px",
+          // lineHeight: "40px",
         },
 
         columnHeader: {
