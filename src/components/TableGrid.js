@@ -1,23 +1,8 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
 import { theme } from "../assets/style/customTheme";
-import {
-  DataGrid,
-  GridActionsCellItem,
-  GridRowsProp,
-  GridColDef,
-  gridPageCountSelector,
-  gridPageSelector,
-  useGridApiContext,
-  useGridSelector,
-} from "@mui/x-data-grid";
-import {
-  Pagination,
-  TablePagination,
-  Typography,
-  Chip,
-  Stack,
-} from "@mui/material";
+import { DataGrid, GridActionsCellItem, GridRowsProp, GridColDef, gridPageCountSelector, gridPageSelector, useGridApiContext, useGridSelector } from "@mui/x-data-grid";
+import { Pagination, TablePagination, Typography, Chip, Stack } from "@mui/material";
 import { ReactComponent as IconArrowUp } from "../assets/images/icons/arrow-up.svg";
 import { ReactComponent as IconArrowDown } from "../assets/images/icons/arrow-down.svg";
 import { ReactComponent as IconFilter } from "../assets/images/icons/filter.svg";
@@ -189,15 +174,7 @@ const CustomPagination = () => {
         <div className={footer.select}>
           <SelectLabelHidden selectData={selectRowsPer} />
         </div>
-        <Pagination
-          color="primary"
-          count={pageCount}
-          page={page + 1}
-          onChange={(event, value) => apiRef.current.setPage(value - 1)}
-          showFirstButton
-          showLastButton
-          size="small"
-        />
+        <Pagination color="primary" count={pageCount} page={page + 1} onChange={(event, value) => apiRef.current.setPage(value - 1)} showFirstButton showLastButton size="small" />
       </div>
     </div>
   );
@@ -221,7 +198,7 @@ export function SortedAscendingIcon() {
 export function ColumnMenuIcon() {
   return <IconFilter className="icon" />;
 }
-const TableGrid = ({ columnData, rowData, customNoRowsOverlay }) => {
+const TableGrid = ({ columnData, rowData, customNoRowsOverlay, isCheckbox }) => {
   const [pageSize, setPageSize] = React.useState(5);
 
   return (
@@ -232,7 +209,7 @@ const TableGrid = ({ columnData, rowData, customNoRowsOverlay }) => {
         rowsPerPageOptions={[5, 10, 20]}
         rows={rowData}
         columns={columnData}
-        checkboxSelection
+        checkboxSelection={isCheckbox}
         components={{
           Footer: CustomPagination,
           ColumnSortedDescendingIcon: SortedDescendingIcon,
