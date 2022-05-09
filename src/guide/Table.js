@@ -554,10 +554,13 @@ const columnsBadge = [
     headerName: "상태",
     flex: 1,
     renderCell: (params) => {
-      if (params.value === "사용") {
-        return <Chip label={params.value} color="success" />;
-      } else {
-        return <Chip label={params.value} color="cancel" />;
+      switch (params.value) {
+        case "사용":
+          return <Chip label={params.value} color="success" />;
+          break;
+        default:
+          return <Chip label={params.value} color="cancel" />;
+          break;
       }
     },
   },
@@ -591,10 +594,13 @@ const columnsDefault = [
     headerName: "상태",
     flex: 1,
     renderCell: (params) => {
-      if (params.value === "사용") {
-        return <Chip label={params.value} color="success" />;
-      } else {
-        return <Chip label={params.value} color="cancel" />;
+      switch (params.value) {
+        case "사용":
+          return <Chip label={params.value} color="success" />;
+          break;
+        default:
+          return <Chip label={params.value} color="cancel" />;
+          break;
       }
     },
   },

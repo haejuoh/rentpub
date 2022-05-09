@@ -1619,13 +1619,13 @@ const theme = createTheme({
           height: "19px",
           borderRadius: "8px",
           boxSizing: "border-box",
-
           fontSize: fontSystem.ht.fontSize,
           fontWeight: fontSystem.ht.fontWeight,
         }),
         label: {
           paddingLeft: "8px",
           paddingRight: "8px",
+          paddingTop: "2px",
         },
       },
     },
