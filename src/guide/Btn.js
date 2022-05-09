@@ -575,13 +575,13 @@ export const BtnVariation = () => {
             <Button
               color="excel"
               size="small"
-              variant="contained"
+              variant="outlined"
               endIcon={<IconExcel />}
             >
               Button
             </Button>
 
-            <Button color="excel" variant="contained" endIcon={<IconExcel />}>
+            <Button color="excel" variant="outlined" endIcon={<IconExcel />}>
               Button
             </Button>
           </Stack>
@@ -589,10 +589,10 @@ export const BtnVariation = () => {
         <Grid item xs={6}>
           <CodeBox>
             <pre>{`// excel
-<Button color="excel" variant="contained" />
+<Button color="excel" variant="outlined" />
 // excel , icon
-<Button color="excel" variant="contained" size="small" endIcon={<IconExcel />}>Button</Button>
-<Button color="excel" variant="contained" endIcon={<IconExcel />}>Button</Button>`}</pre>
+<Button color="excel" variant="outlined" size="small" endIcon={<IconExcel />}>Button</Button>
+<Button color="excel" variant="outlined" endIcon={<IconExcel />}>Button</Button>`}</pre>
           </CodeBox>
         </Grid>
       </Grid>

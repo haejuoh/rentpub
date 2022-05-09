@@ -19,7 +19,7 @@ const TableTit = () => {
       <Grid container spacing={2}>
         <Grid item xs={8}>
           <TableTitle titleData={tableTitleData}>
-            <Button color="excel" variant="contained" endIcon={<IconExcel />}>
+            <Button color="excel" variant="outlined" endIcon={<IconExcel />}>
               엑셀다운로드
             </Button>
           </TableTitle>
@@ -34,7 +34,7 @@ const TableTit = () => {
   },
 };
 <TableTitle titleData={tableTitleData}>
-  <Button color="excel" variant="contained" endIcon={<IconExcel />}>엑셀다운로드</Button>
+  <Button color="excel" variant="outlined" endIcon={<IconExcel />}>엑셀다운로드</Button>
 </TableTitle>`}</pre>
           </CodeBox>
         </Grid>

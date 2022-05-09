@@ -31,7 +31,7 @@ const colorSystem = {
     disabled: "#C4C5CE",
     excel: {
       default: "#0F8953",
-      hover: "#13784B",
+      hover: "#F1FFF9",
     },
     delete: {
       default: "#F65858",
@@ -184,7 +184,7 @@ const theme = createTheme({
     excel: {
       main: colorSystem.fn.excel.default,
       dark: colorSystem.fn.excel.hover,
-      contrastText: colorSystem.white,
+      contrastText: colorSystem.fn.excel.default,
     },
     delete: {
       main: colorSystem.fn.delete.default,
@@ -303,7 +303,7 @@ const theme = createTheme({
           style: {
             minWidth: "auto",
             height: "24px",
-            fontSize: fontSystem.bt.default,
+            fontSize: fontSystem.bt.default.fontSize,
             padding: "0 6px",
             ".MuiButton-endIcon": {
               marginLeft: "2px",
@@ -315,7 +315,7 @@ const theme = createTheme({
           style: {
             minWidth: "auto",
             height: "34px",
-            fontSize: fontSystem.bt.default,
+            fontSize: fontSystem.bt.default.fontSize,
             padding: "0 12px",
             ".MuiButton-endIcon": {
               marginLeft: "5px",
@@ -327,7 +327,7 @@ const theme = createTheme({
           style: {
             minWidth: "auto",
             height: "42px",
-            fontSize: fontSystem.bt.large,
+            fontSize: fontSystem.bt.large.fontSize,
             padding: "0 18px",
             ".MuiButton-endIcon": {
               marginLeft: "5px",
@@ -470,6 +470,22 @@ const theme = createTheme({
             svg: {
               "& path": {
                 fill: colorSystem.primary.b200,
+              },
+            },
+          },
+        },
+        {
+          props: { color: "excel", variant: "outlined" },
+          style: {
+            backgroundColor: colorSystem.white,
+            borderColor: colorSystem.fn.excel.default,
+            "&:hover": {
+              borderColor: colorSystem.fn.excel.default,
+              backgroundColor: colorSystem.fn.excel.hover,
+            },
+            svg: {
+              "& path": {
+                fill: colorSystem.fn.excel.default,
               },
             },
           },
@@ -787,6 +803,31 @@ const theme = createTheme({
           props: { color: "cancel" },
           style: {
             borderColor: colorSystem.fn.disabled,
+          },
+        },
+
+        {
+          props: { size: "small", variant: "outlined" },
+          style: {
+            height: "24px",
+            "& .MuiButton-root": {
+              height: "22px",
+              "&:disabled": {
+                height: "24px",
+              },
+            },
+          },
+        },
+        {
+          props: { size: "large" },
+          style: {
+            height: "42px",
+            "& .MuiButton-root": {
+              height: "40px",
+              "&:disabled": {
+                height: "42px",
+              },
+            },
           },
         },
       ],
@@ -1610,6 +1651,7 @@ const theme = createTheme({
             ".MuiChip-label": {
               paddingLeft: "14px",
               paddingRight: "14px",
+              lineHeight: "34px",
             },
           },
         },
@@ -1625,7 +1667,7 @@ const theme = createTheme({
         label: {
           paddingLeft: "8px",
           paddingRight: "8px",
-          paddingTop: "2px",
+          lineHeight: "19px",
         },
       },
     },
