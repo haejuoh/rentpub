@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { styled } from "@mui/material/styles";
-import { Paper, IconButton, Grid } from "@mui/material";
+import { Paper, IconButton, Grid, Stack } from "@mui/material";
 import { ReactComponent as IconSearch } from "../assets/images/icons/search.svg";
 
 const SectionStyle = styled(Paper)(({ theme }) => ({
@@ -26,13 +26,11 @@ export const Section = ({ className = "", variant, children, ...rest }) => {
     return (
       <SectionStyle className={"section-" + variant} {...rest}>
         {children}
-        <Grid container justifyContent="flex-end" pt={18}>
-          <Grid item>
-            <IconButton color="primary">
-              <IconSearch />
-            </IconButton>
-          </Grid>
-        </Grid>
+        <Stack direction="row" justifyContent="flex-end" pt={18}>
+          <IconButton color="primary">
+            <IconSearch />
+          </IconButton>
+        </Stack>
       </SectionStyle>
     );
   } else {
