@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  GridActionsCellItem,
-  GridRowsProp,
-  GridColDef,
-} from "@mui/x-data-grid";
+import { GridActionsCellItem, GridRowsProp, GridColDef } from "@mui/x-data-grid";
 import { TablePagination, Typography, Chip, Stack } from "@mui/material";
 import { ReactComponent as IconArrowUp } from "../assets/images/icons/arrow-up.svg";
 import { ReactComponent as IconArrowDown } from "../assets/images/icons/arrow-down.svg";
@@ -116,10 +112,7 @@ const columns: GridColDef[] = [
     field: "actions",
     type: "actions",
     width: 40,
-    getActions: (params) => [
-      <GridActionsCellItem icon={<IconCheck />} label="사용함" showInMenu />,
-      <GridActionsCellItem icon={<IconDelete />} label="삭제" showInMenu />,
-    ],
+    getActions: (params) => [<GridActionsCellItem icon={<IconCheck />} label="사용함" showInMenu />, <GridActionsCellItem icon={<IconDelete />} label="삭제" showInMenu />],
   },
 ];
 
@@ -130,14 +123,10 @@ const CustomNoRowsOverlay = () => {
     </Stack>
   );
 };
-const Table = ({ columnData, rowData, customNoRowsOverlay }) => {
+const Table = ({ columnData, rowData, customNoRowsOverlay, isCheckbox }) => {
   return (
     <div style={{ height: 400, width: "100%" }}>
-      <TableGrid
-        columnData={columns}
-        rowData={rows}
-        customNoRowsOverlay={CustomNoRowsOverlay}
-      />
+      <TableGrid columnData={columns} rowData={rows} customNoRowsOverlay={CustomNoRowsOverlay} isCheckbox="false" />
     </div>
   );
 };
