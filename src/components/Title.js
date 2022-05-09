@@ -2,7 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import { styled, makeStyles } from "@mui/styles";
 import { theme } from "../assets/style/customTheme";
-import { Box, Typography, Breadcrumbs, IconButton, ToggleButton, ButtonGroup, Stack } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Breadcrumbs,
+  IconButton,
+  ToggleButton,
+  ButtonGroup,
+  Stack,
+} from "@mui/material";
 import { ReactComponent as IconBookmark } from "../assets/images/icons/bookmark.svg";
 import { ReactComponent as IconChevron } from "../assets/images/icons/chevron-forward.svg";
 import { ReactComponent as IconChevronDown } from "../assets/images/icons/chevron-down.svg";
@@ -159,7 +167,7 @@ export const SubTitle = ({ titleData, children, ...rest }) => {
     );
   } else if (titleData.toggle && titleData.tooltip) {
     ButtonOption = (
-      <ButtonGroup variant="outlined" size="small">
+      <ButtonGroup variant="outlined">
         <IconButton color="sub">
           <IconInfo />
         </IconButton>
