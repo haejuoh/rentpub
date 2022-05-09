@@ -890,53 +890,46 @@ const theme = createTheme({
       defaultProps: {
         color: "primary",
       },
-      variants:[
-        {props: { color: "standard" },
-        style: {
-          width:"20px",
-          height:"20px",
-          padding:0,
-          border:"none",
-          backgroundColor:"transparent",
-          svg: {
-            width: "18px",
-            height: "18px",
-            "& path": {
-              fill: colorSystem.status.cancel,
-            },
-          },
-          "&:hover": {
-            backgroundColor:"transparent",
-          },
-          "&.Mui-selected": {
-            backgroundColor:"transparent",
+      variants: [
+        {
+          props: { color: "standard" },
+          style: {
+            width: "20px",
+            height: "20px",
+            padding: 0,
+            border: "none",
+            backgroundColor: "transparent",
             svg: {
+              width: "18px",
+              height: "18px",
               "& path": {
-                fill: colorSystem.primary.b700,
+                fill: colorSystem.status.cancel,
               },
             },
             "&:hover": {
-              backgroundColor:"transparent",
+              backgroundColor: "transparent",
+            },
+            "&.Mui-selected": {
+              backgroundColor: "transparent",
+              svg: {
+                "& path": {
+                  fill: colorSystem.primary.b700,
+                },
+              },
+              "&:hover": {
+                backgroundColor: "transparent",
+              },
             },
           },
-        }},
-        {props: { color: "primary" },
-        style: {
-          padding: "7px",
-          borderColor: colorSystem.primary.b700,
-          svg: {
-            width: "18px",
-            height: "18px",
-            "& path": {
-              fill: colorSystem.primary.b700,
-            },
-          },
-          "&:hover": {
-            backgroundColor: colorSystem.bg.b300,
-          },
-          "&.Mui-selected": {
+        },
+        {
+          props: { color: "primary" },
+          style: {
+            padding: "7px",
+            borderColor: colorSystem.primary.b700,
             svg: {
-              
+              width: "18px",
+              height: "18px",
               "& path": {
                 fill: colorSystem.primary.b700,
               },
@@ -944,11 +937,21 @@ const theme = createTheme({
             "&:hover": {
               backgroundColor: colorSystem.bg.b300,
             },
+            "&.Mui-selected": {
+              svg: {
+                "& path": {
+                  fill: colorSystem.primary.b700,
+                },
+              },
+              "&:hover": {
+                backgroundColor: colorSystem.bg.b300,
+              },
+            },
           },
-        }}
+        },
       ],
       styleOverrides: {
-        root: sx({          
+        root: sx({
           boxSizing: "border-box",
         }),
       },
@@ -1453,6 +1456,7 @@ const theme = createTheme({
           },
         },
         cell: {
+          color: colorSystem.grey.b900,
           borderColor: colorSystem.border.b700,
           "&:focus": {
             outline: "none",
@@ -1465,7 +1469,7 @@ const theme = createTheme({
               backgroundColor: "transparent",
               svg: {
                 "& path": {
-                  fill: colorSystem.grey.b600,
+                  fill: colorSystem.grey.b900,
                 },
               },
             },

@@ -49,7 +49,7 @@ import {
 import SelectVariants from "../components/SelectDemo";
 import Badge from "./../guide/Badge";
 import Segment from "../components/Segment";
-import Table from "../guide/Table";
+import { Table, TableDefault, TableAction, TableBadge } from "../guide/Table";
 
 const Guide = () => {
   const [value, setValue] = React.useState("1");
@@ -161,7 +161,12 @@ const Guide = () => {
           <List />
         </TabPanel>
         <TabPanel value="6">
-          <Table mt={2} />
+          <GuideTitle>Default</GuideTitle>
+          <TableDefault mt={2} />
+          <GuideTitle>ActionField</GuideTitle>
+          <TableAction mt={2} />
+          <GuideTitle>BadgeField</GuideTitle>
+          <TableBadge mt={2} />
         </TabPanel>
       </TabContext>
     </Box>
