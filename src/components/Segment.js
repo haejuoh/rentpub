@@ -1,4 +1,5 @@
 import React from "react";
+import { Fragment } from "react";
 import PropTypes from "prop-types";
 import { styled } from "@mui/styles";
 import { theme } from "../assets/style/customTheme";
@@ -99,17 +100,16 @@ const Segment = ({ className = "", variant, segmentData, ...rest }) => {
     <SegmentStyle className={"segment-" + variant} {...rest}>
       {segmentData.map((item, idx) => {
         return (
-          <>
+          <Fragment key={idx}>
             <input
               type="radio"
               name={item.name}
               value={idx}
               id={item.name + idx}
               defaultChecked={item.checked}
-              key={idx}
             />
             <label htmlFor={item.name + idx}>{item.label}</label>
-          </>
+          </Fragment>
         );
       })}
     </SegmentStyle>

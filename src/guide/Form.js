@@ -1181,7 +1181,7 @@ export const CheckBoxGroup = () => {
                   label={item.label + idx}
                   disabled={item.disabled}
                   key={idx}
-                  handleChange={handleChange}
+                  onChange={handleChange}
                 />
               );
             })}
@@ -1227,7 +1227,7 @@ export const CheckBoxGroup = () => {
             &nbsp;&nbsp;&lt;FormControlLabel control=&#123;&lt;Checkbox
             /&gt;&#125; label=&#123;item.label + idx&#125;
             disabled=&#123;item.disabled&#125; key=&#123;idx&#125;
-            handleChange=&#123;handleChange&#125; /&gt; &#41;; &#125;&#41;&#125;
+            onChange=&#123;handleChange&#125; /&gt; &#41;; &#125;&#41;&#125;
             <br />
             &lt;/FormGroup&gt;
             <br />
