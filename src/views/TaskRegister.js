@@ -1,12 +1,28 @@
 import React from "react";
 import { makeStyles, styled } from "@mui/styles";
-import { Grid, IconButton, Box, Stack, Divider, TextField, InputAdornment, Typography, Pagination } from "@mui/material";
+import {
+  Grid,
+  IconButton,
+  Box,
+  Stack,
+  Divider,
+  TextField,
+  InputAdornment,
+  Typography,
+  Pagination,
+} from "@mui/material";
 import Mdi from "../components/Mdi";
 import { LayoutStyle } from "../assets/style/common";
 import { DefaultTextField } from "../assets/style/common";
 import { Section } from "../components/Section";
 import { PageTitle, SubTitle } from "../components/Title";
-import { DataGrid, gridPageCountSelector, gridPageSelector, useGridApiContext, useGridSelector } from "@mui/x-data-grid";
+import {
+  DataGrid,
+  gridPageCountSelector,
+  gridPageSelector,
+  useGridApiContext,
+  useGridSelector,
+} from "@mui/x-data-grid";
 import { SelectLabelHidden } from "../components/Select";
 import { ReactComponent as IconChevronForward } from "../assets/images/icons/chevron-forward.svg";
 import { ReactComponent as IconChevronBack } from "../assets/images/icons/chevron-back.svg";
@@ -14,7 +30,6 @@ import { ReactComponent as IconSearch } from "../assets/images/icons/search.svg"
 import { ReactComponent as IconArrowUp } from "../assets/images/icons/arrow-up.svg";
 import { ReactComponent as IconArrowDown } from "../assets/images/icons/arrow-down.svg";
 import { ReactComponent as IconFilter } from "../assets/images/icons/filter.svg";
-import MuiGrid from "../components/table/MuiGrid";
 
 const tabData = [
   { type: "home", label: "Home", active: false },
@@ -133,7 +148,15 @@ function CustomPagination() {
         <div className={footer.select}>
           <SelectLabelHidden selectData={selectRowsPer} />
         </div>
-        <Pagination color="primary" count={pageCount} page={page + 1} onChange={(event, value) => apiRef.current.setPage(value - 1)} showFirstButton showLastButton size="small" />
+        <Pagination
+          color="primary"
+          count={pageCount}
+          page={page + 1}
+          onChange={(event, value) => apiRef.current.setPage(value - 1)}
+          showFirstButton
+          showLastButton
+          size="small"
+        />
       </div>
     </div>
   );
@@ -192,9 +215,27 @@ const rows = [
   },
 ];
 const columns = [
-  { field: "col1", headerName: "권한명", width: 188, headerAlign: "center", align: "center" },
-  { field: "col2", headerName: "입력사용자", width: 134, headerAlign: "center", align: "center" },
-  { field: "col3", headerName: "입력일", flex: 1, headerAlign: "center", align: "center" },
+  {
+    field: "col1",
+    headerName: "권한명",
+    width: 188,
+    headerAlign: "center",
+    align: "center",
+  },
+  {
+    field: "col2",
+    headerName: "입력사용자",
+    width: 134,
+    headerAlign: "center",
+    align: "center",
+  },
+  {
+    field: "col3",
+    headerName: "입력일",
+    flex: 1,
+    headerAlign: "center",
+    align: "center",
+  },
 ];
 const MuiGridTable01 = () => {
   const [pageSize, setPageSize] = React.useState(5);
@@ -264,13 +305,25 @@ const TaskRegister = () => {
             <Divider type="section15" />
             <Grid container rowSpacing={16} columnSpacing={15}>
               <Grid item xs={3}>
-                <DefaultTextField label="직무명" placeholder="직무명" value="차정영업" />
+                <DefaultTextField
+                  label="직무명"
+                  placeholder="직무명"
+                  value="차정영업"
+                />
               </Grid>
               <Grid item xs={3}>
-                <DefaultTextField label="사용여부" placeholder="사용여부" value="사용여부" />
+                <DefaultTextField
+                  label="사용여부"
+                  placeholder="사용여부"
+                  value="사용여부"
+                />
               </Grid>
               <Grid item xs={12}>
-                <DefaultTextField label="직무설명" placeholder="직무설명" value="직무설명을 위한 공간" />
+                <DefaultTextField
+                  label="직무설명"
+                  placeholder="직무설명"
+                  value="직무설명을 위한 공간"
+                />
               </Grid>
             </Grid>
           </Section>
@@ -304,10 +357,20 @@ const TaskRegister = () => {
                 </Grid>
               </Grid>
               <Box className={transfer.btnWrap}>
-                <IconButton color="function" variant="outlined" size="small" className={transfer.btn}>
+                <IconButton
+                  color="function"
+                  variant="outlined"
+                  size="small"
+                  className={transfer.btn}
+                >
                   <IconChevronForward />
                 </IconButton>
-                <IconButton color="function" variant="outlined" size="small" className={transfer.btn}>
+                <IconButton
+                  color="function"
+                  variant="outlined"
+                  size="small"
+                  className={transfer.btn}
+                >
                   <IconChevronBack />
                 </IconButton>
               </Box>

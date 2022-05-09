@@ -11,8 +11,6 @@ import {
 } from "@mui/material";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
 import MuiTabs from "../components/MuiTab";
-import GridExample from "../components/table/AgGrid";
-import MuiGrid from "../components/table/MuiGrid";
 //guide
 import Typo from "../guide/Typo";
 import PageTit from "../guide/title/PageTit";
