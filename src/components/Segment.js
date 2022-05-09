@@ -105,7 +105,7 @@ const Segment = ({ className = "", variant, segmentData, ...rest }) => {
               name={item.name}
               value={idx}
               id={item.name + idx}
-              checked={item.checked}
+              defaultChecked={item.checked}
               key={idx}
             />
             <label htmlFor={item.name + idx}>{item.label}</label>
