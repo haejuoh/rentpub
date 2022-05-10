@@ -1,35 +1,26 @@
 import React from "react";
-import { makeStyles, styled } from "@mui/styles";
+import { makeStyles } from "@mui/styles";
 import {
   Grid,
   IconButton,
+  Button,
   Box,
   Stack,
   Divider,
   TextField,
   InputAdornment,
   Typography,
-  Pagination,
 } from "@mui/material";
+import { theme } from "../assets/style/customTheme";
+import { LayoutStyle, DefaultTextField } from "../assets/style/common";
 import Mdi from "../components/Mdi";
-import { LayoutStyle } from "../assets/style/common";
-import { DefaultTextField } from "../assets/style/common";
 import { Section } from "../components/Section";
 import { PageTitle, SubTitle } from "../components/Title";
-import {
-  DataGrid,
-  gridPageCountSelector,
-  gridPageSelector,
-  useGridApiContext,
-  useGridSelector,
-} from "@mui/x-data-grid";
-import { SelectLabelHidden } from "../components/Select";
+import Segment from "../components/Segment";
+import TableGrid from "../components/TableGrid";
 import { ReactComponent as IconChevronForward } from "../assets/images/icons/chevron-forward.svg";
 import { ReactComponent as IconChevronBack } from "../assets/images/icons/chevron-back.svg";
 import { ReactComponent as IconSearch } from "../assets/images/icons/search.svg";
-import { ReactComponent as IconArrowUp } from "../assets/images/icons/arrow-up.svg";
-import { ReactComponent as IconArrowDown } from "../assets/images/icons/arrow-down.svg";
-import { ReactComponent as IconFilter } from "../assets/images/icons/filter.svg";
 
 const tabData = [
   { type: "home", label: "Home", active: false },
@@ -73,19 +64,19 @@ const TitleDefault03 = {
   toggle: false,
   tooltip: false,
 };
+
 const TransferStyle = makeStyles((theme) => ({
   container: {
-    // position: "relative",
+    position: "relative",
   },
   wrap: {
     display: "flex",
     flexDirection: "column",
-    height: "382px",
-    // minHeight: "381px",
+    height: "384px",
   },
   btnWrap: {
     position: "absolute",
-    top: "179px",
+    top: "149px",
     left: "50%",
     transform: "translateX(-50%)",
     width: "24px",
@@ -97,80 +88,31 @@ const TransferStyle = makeStyles((theme) => ({
   },
 }));
 
-const FooterStyle = makeStyles((theme) => ({
-  wrap: {
-    display: "flex",
-    width: "100%",
-    height: "44px",
-    alignItems: "center",
-    justifyContent: "space-between",
-    borderTop: `1px solid ${theme.palette.border[500]}`,
+const rows01 = [];
+const columns01 = [
+  {
+    field: "col1",
+    headerName: "권한명",
+    width: 188,
+    headerAlign: "center",
+    align: "center",
   },
-  option: {
+  {
+    field: "col2",
+    headerName: "입력사용자",
+    width: 134,
+    headerAlign: "center",
+    align: "center",
+  },
+  {
+    field: "col3",
+    headerName: "입력일",
     flex: 1,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "flex-end",
-    gap: "20px",
+    headerAlign: "center",
+    align: "center",
   },
-  select: {
-    width: "103px",
-  },
-  count: {
-    color: ` ${theme.palette.primary.main}`,
-  },
-}));
-function CustomPagination() {
-  const footer = FooterStyle();
-  const selectRowsPer = {
-    style: {
-      PaperProps: {
-        style: {
-          width: 103,
-        },
-      },
-    },
-    option: ["5건 보기", "10건 보기", "20건 보기"],
-    disabled: false,
-    isIcon: false,
-  };
-  const apiRef = useGridApiContext();
-  const page = useGridSelector(apiRef, gridPageSelector);
-  const pageCount = useGridSelector(apiRef, gridPageCountSelector);
-
-  return (
-    <div className={footer.wrap}>
-      <Typography variant="b2">
-        <span className={footer.count}>0</span>
-        <span>건 선택됨</span>
-      </Typography>
-      <div className={footer.option}>
-        <div className={footer.select}>
-          <SelectLabelHidden selectData={selectRowsPer} />
-        </div>
-        <Pagination
-          color="primary"
-          count={pageCount}
-          page={page + 1}
-          onChange={(event, value) => apiRef.current.setPage(value - 1)}
-          showFirstButton
-          showLastButton
-          size="small"
-        />
-      </div>
-    </div>
-  );
-}
-export function SortedDescendingIcon() {
-  return <IconArrowDown className="icon" />;
-}
-export function SortedAscendingIcon() {
-  return <IconArrowUp className="icon" />;
-}
-export function ColumnMenuIcon() {
-  return <IconFilter className="icon" />;
-}
-const rows = [
+];
+const rows02 = [
   {
     id: 1,
     col1: "차정영업1",
@@ -214,7 +156,7 @@ const rows = [
     col3: "2022-04-01 12:00:30",
   },
 ];
-const columns = [
+const columns02 = [
   {
     field: "col1",
     headerName: "권한명",
@@ -237,63 +179,74 @@ const columns = [
     align: "center",
   },
 ];
-const MuiGridTable01 = () => {
-  const [pageSize, setPageSize] = React.useState(5);
-  const DataGridStyle = styled(Box)(({ theme }) => ({
-    width: "100%",
-    height: "333px",
-  }));
-
+const CustomNoRowsOverlay = () => {
   return (
-    <DataGridStyle>
-      <DataGrid
-        pageSize={pageSize}
-        onPageSizeChange={(newPageSize) => setPageSize(newPageSize)}
-        rowsPerPageOptions={[5, 10, 20]}
-        rows={rows}
-        columns={columns}
-        components={{
-          Footer: CustomPagination,
-          ColumnSortedDescendingIcon: SortedDescendingIcon,
-          ColumnSortedAscendingIcon: SortedAscendingIcon,
-          ColumnMenuIcon: ColumnMenuIcon,
-        }}
-        checkboxSelection
-      />
-    </DataGridStyle>
+    <Stack height="100%" alignItems="center" justifyContent="center">
+      <Typography variant="b1">
+        권한을 등록하려면, 우측에 있는 권한선택 테이블에서 권한을
+        이동시켜주세요.
+      </Typography>
+    </Stack>
   );
 };
-const MuiGridTable02 = () => {
-  const [pageSize, setPageSize] = React.useState(5);
-  const DataGridStyle = styled(Box)(({ theme }) => ({
-    width: "100%",
-    height: "284px",
-    marginTop: "15px",
+const Table01 = ({ columnData, rowData, customNoRowsOverlay, isCheckbox }) => {
+  const TableGridStyle = makeStyles((theme) => ({
+    wrap: {
+      flex: "1",
+      width: "100%",
+    },
   }));
-
+  const lytable = TableGridStyle();
   return (
-    <DataGridStyle>
-      <DataGrid
-        pageSize={pageSize}
-        onPageSizeChange={(newPageSize) => setPageSize(newPageSize)}
-        rowsPerPageOptions={[5, 10, 20]}
-        rows={rows}
-        columns={columns}
-        components={{
-          Footer: CustomPagination,
-          ColumnSortedDescendingIcon: SortedDescendingIcon,
-          ColumnSortedAscendingIcon: SortedAscendingIcon,
-          ColumnMenuIcon: ColumnMenuIcon,
-        }}
-        checkboxSelection
+    <Box className={lytable.wrap}>
+      <TableGrid
+        columnData={columns01}
+        rowData={rows01}
+        customNoRowsOverlay={CustomNoRowsOverlay}
+        isCheckbox={true}
       />
-    </DataGridStyle>
+    </Box>
   );
 };
+const Table02 = ({ columnData, rowData, customNoRowsOverlay, isCheckbox }) => {
+  const TableGridStyle = makeStyles((theme) => ({
+    wrap: {
+      flex: "1",
+      width: "100%",
+      marginTop: "15px",
+    },
+  }));
+  const lytable = TableGridStyle();
+  return (
+    <Box className={lytable.wrap}>
+      <TableGrid
+        columnData={columns02}
+        rowData={rows02}
+        customNoRowsOverlay={CustomNoRowsOverlay}
+        isCheckbox={true}
+      />
+    </Box>
+  );
+};
+
+const SegmentData = [
+  { label: "사용", name: "Segment", checked: true },
+  { label: "미사용", name: "Segment", checked: false },
+];
+const SegmentStyle = makeStyles((theme) => ({
+  label: {
+    width: "120px",
+  },
+  wrap: {
+    width: "116px",
+    height: "34px",
+  },
+}));
 
 const TaskRegister = () => {
-  const layout = LayoutStyle();
+  const layout = LayoutStyle({ theme });
   const transfer = TransferStyle();
+  const seg = SegmentStyle();
   return (
     <>
       <Mdi tabData={tabData} />
@@ -308,52 +261,59 @@ const TaskRegister = () => {
                 <DefaultTextField
                   label="직무명"
                   placeholder="직무명"
-                  value="차정영업"
+                  defaultValue="차정영업"
                 />
               </Grid>
               <Grid item xs={3}>
-                <DefaultTextField
-                  label="사용여부"
-                  placeholder="사용여부"
-                  value="사용여부"
-                />
+                <Stack direction="row" alignItems="center">
+                  <Typography variant="label" className={seg.label}>
+                    사용여부
+                  </Typography>
+                  <Box className={seg.wrap}>
+                    <Segment segmentData={SegmentData} variant="2" />
+                  </Box>
+                </Stack>
               </Grid>
               <Grid item xs={12}>
                 <DefaultTextField
                   label="직무설명"
                   placeholder="직무설명"
-                  value="직무설명을 위한 공간"
+                  defaultValue="직무설명을 위한 공간"
                 />
               </Grid>
             </Grid>
           </Section>
           <Section variant="default">
             <Box className={transfer.container}>
-              <Grid container columnSpacing={64}>
-                <Grid container item xs={6} className={transfer.wrap}>
-                  <SubTitle titleData={TitleDefault02} />
-                  <Divider type="section15" />
-                  <MuiGridTable01 />
+              <Grid container columnSpacing={84}>
+                <Grid item xs={6}>
+                  <Box className={transfer.wrap}>
+                    <SubTitle titleData={TitleDefault02} />
+                    <Divider type="section15" />
+                    <Table01 className={transfer.table} />
+                  </Box>
                 </Grid>
-                <Grid container item xs={6} className={transfer.wrap}>
-                  <SubTitle titleData={TitleDefault03} />
-                  <Divider type="section15" />
-                  <TextField
-                    hiddenLabel
-                    fullWidth
-                    placeholder="검색할 권한을 입력해주세요"
-                    defaultValue=""
-                    InputProps={{
-                      endAdornment: (
-                        <InputAdornment position="end">
-                          <IconButton color="function" size="small">
-                            <IconSearch />
-                          </IconButton>
-                        </InputAdornment>
-                      ),
-                    }}
-                  />
-                  <MuiGridTable02 />
+                <Grid item xs={6}>
+                  <Box className={transfer.wrap}>
+                    <SubTitle titleData={TitleDefault03} />
+                    <Divider type="section15" />
+                    <TextField
+                      hiddenLabel
+                      fullWidth
+                      placeholder="검색할 권한을 입력해주세요"
+                      defaultValue=""
+                      InputProps={{
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <IconButton color="function" size="small">
+                              <IconSearch />
+                            </IconButton>
+                          </InputAdornment>
+                        ),
+                      }}
+                    />
+                    <Table02 className={transfer.table} />
+                  </Box>
                 </Grid>
               </Grid>
               <Box className={transfer.btnWrap}>
@@ -376,6 +336,14 @@ const TaskRegister = () => {
               </Box>
             </Box>
           </Section>
+        </Stack>
+        <Stack direction="row" justifyContent="flex-end" spacing={8} mt={20}>
+          <Button color="cancel" variant="outlined">
+            취소
+          </Button>
+          <Button color="primary" variant="contained">
+            저장
+          </Button>
         </Stack>
       </div>
     </>
