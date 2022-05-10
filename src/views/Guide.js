@@ -38,6 +38,7 @@ import {
   RadioWithLabel,
   GroupRadio,
   SegmentGroup,
+  SwitchWithLabel,
 } from "../guide/Form";
 import {
   GuideTitle,
@@ -153,7 +154,8 @@ const Guide = () => {
           <GroupRadio />
           <GuideTitle mt={40}>Segment</GuideTitle>
           <SegmentGroup />
-          {/* <MuiSelect /> */}
+          <GuideTitle mt={40}>Switch</GuideTitle>
+          <SwitchWithLabel />
         </TabPanel>
         <TabPanel value="5">
           <List />

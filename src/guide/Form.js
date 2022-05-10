@@ -13,6 +13,7 @@ import {
   FormControlLabel,
   Radio,
   RadioGroup,
+  Switch,
 } from "@mui/material";
 import { ReactComponent as Accessibility } from "../assets/images/icons/accessibility.svg";
 import { ReactComponent as IconArrow } from "../assets/images/icons/chevron-down.svg";
@@ -1553,6 +1554,48 @@ export const SegmentGroup = () => {
 <Box sx={{ width: "300px" }}>
   <Segment segmentData={SegmentData3} variant="3" />
 </Box>
+`}</pre>
+        </CodeBox>
+      </Grid>
+    </Grid>
+  );
+};
+export const SwitchWithLabel = () => {
+  return (
+    <Grid container spacing={40}>
+      <Grid item xs={6}>
+        <FormControlLabel
+          value="switch"
+          control={<Switch color="primary" />}
+          label="활성화"
+          labelPlacement="start"
+          defaultChecked
+        />
+        <FormControlLabel
+          value="switch"
+          control={<Switch color="primary" />}
+          label="활성화"
+          labelPlacement="start"
+          defaultChecked
+          disabled
+        />
+        <FormControlLabel
+          value="switch"
+          control={<Switch color="primary" />}
+          label="활성화"
+          labelPlacement="start"
+        />
+        <FormControlLabel
+          value="switch"
+          control={<Switch color="primary" />}
+          label="활성화"
+          labelPlacement="start"
+          disabled
+        />
+      </Grid>
+      <Grid item xs={6}>
+        <CodeBox>
+          <pre>{`//가이드 명시
 `}</pre>
         </CodeBox>
       </Grid>

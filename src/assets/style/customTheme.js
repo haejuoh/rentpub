@@ -1502,6 +1502,7 @@ const theme = createTheme({
         cell: {
           color: colorSystem.grey.b900,
           borderColor: colorSystem.border.b700,
+          fontSize: fontSystem.b1.fontSize,
           "&:focus": {
             outline: "none",
           },
@@ -1546,6 +1547,9 @@ const theme = createTheme({
                   fill: colorSystem.grey.b700,
                 },
               },
+            },
+            "&.MuiSwitch-root": {
+              padding: "8px 0",
             },
           },
         },
@@ -1743,6 +1747,63 @@ const theme = createTheme({
           },
         },
       ],
+    },
+    // switch
+    MuiSwitch: {
+      styleOverrides: {
+        root: {
+          width: "34px",
+          height: "24px",
+          padding: "8px 0",
+          paddingLeft: "0",
+          paddingRight: "0",
+          ".Mui-disabled &": {
+            opacity: 0.5,
+          },
+          "& + .MuiFormControlLabel-label": {
+            fontSize: fontSystem.b1.fontSize,
+          },
+        },
+        track: {
+          backgroundColor: colorSystem.border.b500,
+          opacity: "1",
+        },
+        switchBase: {
+          top: "2px",
+          padding: "0",
+          color: colorSystem.bg.b700,
+          "&.Mui-checked": {
+            transform: "translate(14px)",
+            "& + .MuiSwitch-track": {
+              backgroundColor: colorSystem.primary.b300,
+              opacity: "1",
+            },
+          },
+          "&:hover": {
+            backgroundColor: "transparent",
+          },
+          "&.Mui-disabled": {
+            color: colorSystem.bg.b700,
+            opacity: "1",
+            "& + .MuiSwitch-track": {
+              backgroundColor: colorSystem.border.b500,
+              opacity: "1",
+            },
+          },
+        },
+        thumb: {
+          boxShadow: "none",
+        },
+      },
+    },
+    // link
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          color: "inherit",
+          textDecorationColor: "inherit",
+        },
+      },
     },
   },
 });
