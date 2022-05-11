@@ -1,7 +1,14 @@
 import React from "react";
 import { styled, makeStyles } from "@mui/styles";
 import { theme } from "./customTheme";
-import { TextField, MenuItem, FormControl } from "@mui/material";
+import {
+  TextField,
+  MenuItem,
+  FormControl,
+  ToggleButton,
+  InputLabel,
+  Box,
+} from "@mui/material";
 //custom textField
 const DefaultTextField = styled(TextField)(({ theme }) => ({
   "&.MuiFormControl-root": {
@@ -110,5 +117,37 @@ const LayoutStyle = makeStyles((theme) => ({
     padding: "30px 50px",
   },
 }));
+const FormControlContents = styled(FormControl)(({ theme }) => ({
+  "&.MuiFormControl-root": {
+    flexDirection: "row",
+    position: "relative",
+    alignItems: "center",
+    width: "100%",
+  },
+  "& .MuiInputLabel-root": {
+    display: "inline",
+    Width: "120px",
+    flex: "0 0 120px",
+  },
+  "& .MuiBox-root": {
+    width: "calc(100% - 120px)",
+    flex: "0 0 calc(100% - 120px)",
+  },
+}));
+const FormContents = ({ label, children, ...rest }) => {
+  return (
+    <FormControlContents>
+      <InputLabel htmlFor={label}>{label}</InputLabel>
+      <Box>{children}</Box>
+    </FormControlContents>
+  );
+};
 
-export { DefaultTextField, Placeholder, SelectCombo, DefaultFormControl, LayoutStyle };
+export {
+  DefaultTextField,
+  Placeholder,
+  SelectCombo,
+  DefaultFormControl,
+  LayoutStyle,
+  FormContents,
+};

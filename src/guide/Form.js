@@ -14,11 +14,12 @@ import {
   Radio,
   RadioGroup,
   Switch,
+  InputLabel,
 } from "@mui/material";
 import { ReactComponent as Accessibility } from "../assets/images/icons/accessibility.svg";
 import { ReactComponent as IconArrow } from "../assets/images/icons/chevron-down.svg";
 import { ReactComponent as IconOption } from "../assets/images/icons/options.svg";
-import { DefaultTextField } from "../assets/style/common";
+import { DefaultTextField, FormContents } from "../assets/style/common";
 import { CodeBox, FlexBox } from "../assets/style/guideStyle";
 import { SelectField, DefaultSelectField } from "../components/Select";
 import Segment from "../components/Segment";
@@ -1594,6 +1595,21 @@ export const SwitchWithLabel = () => {
           labelPlacement="start"
           disabled
         />
+      </Grid>
+      <Grid item xs={6}>
+        <CodeBox>
+          <pre>{`//가이드 명시
+`}</pre>
+        </CodeBox>
+      </Grid>
+    </Grid>
+  );
+};
+export const WithFormContents = () => {
+  return (
+    <Grid container spacing={40}>
+      <Grid item xs={6}>
+        <FormContents label="Label Text">Import Contents</FormContents>
       </Grid>
       <Grid item xs={6}>
         <CodeBox>

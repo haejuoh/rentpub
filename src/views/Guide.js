@@ -39,6 +39,7 @@ import {
   GroupRadio,
   SegmentGroup,
   SwitchWithLabel,
+  WithFormContents,
 } from "../guide/Form";
 import {
   GuideTitle,
@@ -156,6 +157,8 @@ const Guide = () => {
           <SegmentGroup />
           <GuideTitle mt={40}>Switch</GuideTitle>
           <SwitchWithLabel />
+          <GuideTitle mt={40}>WithFormContents</GuideTitle>
+          <WithFormContents />
         </TabPanel>
         <TabPanel value="5">
           <List />
