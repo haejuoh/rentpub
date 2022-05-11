@@ -1513,26 +1513,28 @@ export const GroupRadio = () => {
     </>
   );
 };
-const SegmentData = [
-  { label: "사용", name: "Segment", checked: true },
-  { label: "미사용", name: "Segment", checked: false },
-];
-const SegmentData3 = [
-  { label: "Segment", name: "Segment0", checked: true },
-  { label: "Segment", name: "Segment0", checked: false },
-  { label: "Segment", name: "Segment0", checked: false },
-];
+const SegmentData = {
+  disabled: true,
+  group: [
+    { label: "사용", name: "Segment", checked: true },
+    { label: "미사용", name: "Segment", checked: false },
+  ],
+};
+const SegmentData3 = {
+  disabled: false,
+  group: [
+    { label: "Segment", name: "Segment0", checked: true },
+    { label: "Segment", name: "Segment0", checked: false },
+    { label: "Segment", name: "Segment0", checked: false },
+  ],
+};
 export const SegmentGroup = () => {
   return (
     <Grid container spacing={40}>
       <Grid item xs={6}>
-        <Stack spacing={20}>
-          <Box sx={{ width: "120px" }}>
-            <Segment segmentData={SegmentData} variant="2" />
-          </Box>
-          <Box sx={{ width: "300px" }}>
-            <Segment segmentData={SegmentData3} variant="3" />
-          </Box>
+        <Stack direction="row" spacing={20}>
+          <Segment segmentData={SegmentData} />
+          <Segment segmentData={SegmentData3} />
         </Stack>
       </Grid>
       <Grid item xs={6}>

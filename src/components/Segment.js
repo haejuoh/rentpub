@@ -5,8 +5,8 @@ import { styled } from "@mui/styles";
 import { theme } from "../assets/style/customTheme";
 import { Box } from "@mui/material";
 const SegmentStyle = styled(Box)(({ theme }) => ({
-  display: "flex",
-  width: "100%",
+  display: "flex-inline",
+  height: "34px",
   position: "relative",
   userSelect: "none",
   zIndex: 1,
@@ -21,84 +21,43 @@ const SegmentStyle = styled(Box)(({ theme }) => ({
       fontSize: `${theme.typography.bt.fontSize}`,
       fontWeight: `${theme.typography.bt.fontWeight}`,
       borderRadius: "4px",
-    },
-    "&:nth-of-type(1):checked ~ label:last-of-type:before": {
-      transform: "translateX(calc(0% + 0px))",
-      borderRadius: "4px",
-      boxShadow: `${theme.shadows[1]}`,
-      margin: "3px",
-    },
-    "&:nth-of-type(2):checked ~ label:last-of-type:before": {
-      transform: "translateX(calc(100% + 0px))",
-      borderRadius: "4px",
-      boxShadow: `${theme.shadows[1]}`,
-      margin: "3px",
-    },
-    "&:nth-of-type(3):checked ~ label:last-of-type:before": {
-      transform: "translateX(calc(200% + 0px))",
-      borderRadius: "4px",
-      boxShadow: `${theme.shadows[1]}`,
-      margin: "3px",
-    },
-    "&:nth-of-type(4):checked ~ label:last-of-type:before": {
-      transform: "translateX(calc(300% + 0px))",
-      borderRadius: "4px",
-      boxShadow: `${theme.shadows[1]}`,
-      margin: "3px",
+
+      "&:before": {
+        content: "''",
+        width: "100%",
+        height: "28px",
+        borderRadius: "4px",
+        boxShadow: `${theme.shadows[1]}`,
+        background: `${theme.palette.common.white}`,
+        clear: "both",
+        position: "absolute",
+        left: 0,
+        top: "50%",
+        transform: "translateY(-50%)",
+        zIndex: -1,
+      },
     },
   },
   "& label": {
     flex: 1,
     textAlign: "center",
     cursor: "pointer",
-    padding: "4px 9px",
-    transition: "color 250ms cubic-bezier(0, 0.95, 0.38, 0.98)",
-    "&:before": {
-      background: `${theme.palette.common.white}`,
-      transition: "all 250ms cubic-bezier(0, 0.95, 0.38, 0.98)",
-    },
-    "&:last-of-type:before": {
-      content: "''",
-      display: "block",
-      maxWidth: "calc(50% - 3px)",
-      margin: "2px",
-      position: "absolute",
-      top: 0,
-      right: 0,
-      bottom: 0,
-      left: 0,
-      zIndex: -1,
-      transform: "translateX(0)",
-    },
+    height: "28px",
+    display: "flex-inline",
+    alignItems: "center",
+    position: "relative",
+    left: 0,
+    top: "4px",
+    padding: "6px 9px",
   },
-  "&.segment": {
-    "&-2": {
-      "& label": {
-        "&:last-of-type:before": {
-          maxWidth: "calc(50% - 3px)",
-        },
-      },
-    },
-    "&-3": {
-      "& label": {
-        "&:last-of-type:before": {
-          maxWidth: "calc(calc(100% / 3) - 3px)",
-        },
-      },
-    },
-    "&-4": {
-      "& label": {
-        "&:last-of-type:before": {
-          maxWidth: "calc(25% - 3px)",
-        },
-      },
-    },
+  "&.disabled": {
+    opacity: "0.52",
   },
 }));
-const Segment = ({ className = "", variant, segmentData, ...rest }) => {
+const Segment = ({ segmentData }) => {
   return (
-    <SegmentStyle className={"segment-" + variant} {...rest}>
-      {segmentData.map((item, idx) => {
+    <SegmentStyle className={segmentData.disabled ? "disabled" : ""}>
+      {segmentData.group.map((item, idx) => {
         return (
           <Fragment key={idx}>
             <input
@@ -107,17 +66,16 @@ const Segment = ({ className = "", variant, segmentData, ...rest }) => {
               value={idx}
               id={item.name + idx}
               defaultChecked={item.checked}
+              disabled={segmentData.disabled}
             />
-            <label htmlFor={item.name + idx}>{item.label}</label>
+            <label htmlFor={item.name + idx}>
+              <span>{item.label}</span>
+            </label>
           </Fragment>
         );
       })}
     </SegmentStyle>
   );
-};
-Segment.propTypes = {
-  className: PropTypes.string,
-  variant: PropTypes.oneOf(["2", "3", "4"]),
 };
 
 export default Segment;
