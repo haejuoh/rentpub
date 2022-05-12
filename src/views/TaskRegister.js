@@ -12,7 +12,11 @@ import {
   Typography,
 } from "@mui/material";
 import { theme } from "../assets/style/customTheme";
-import { LayoutStyle, DefaultTextField } from "../assets/style/common";
+import {
+  LayoutStyle,
+  DefaultTextField,
+  FormContents,
+} from "../assets/style/common";
 import Mdi from "../components/Mdi";
 import { Section } from "../components/Section";
 import { PageTitle, SubTitle } from "../components/Title";
@@ -268,14 +272,18 @@ const TaskRegister = () => {
                 />
               </Grid>
               <Grid item xs={3}>
-                <Stack direction="row" alignItems="center">
+                {/* <Stack direction="row" alignItems="center">
                   <Typography variant="label" className={seg.label}>
                     사용여부
                   </Typography>
                   <Box className={seg.wrap}>
                     <Segment segmentData={SegmentData} variant="2" />
                   </Box>
-                </Stack>
+                </Stack> */}
+
+                <FormContents label="사용여부" required={false}>
+                  <Segment segmentData={SegmentData} />
+                </FormContents>
               </Grid>
               <Grid item xs={12}>
                 <DefaultTextField

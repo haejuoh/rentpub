@@ -130,7 +130,7 @@ const FormControlContents = styled(FormControl)(({ theme }) => ({
     Width: "120px",
     flex: "0 0 120px",
   },
-  "& .MuiBox-root": {
+  "& > .MuiBox-root": {
     width: "calc(100% - 120px)",
     flex: "0 0 calc(100% - 120px)",
   },

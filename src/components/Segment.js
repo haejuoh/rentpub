@@ -5,7 +5,7 @@ import { styled } from "@mui/styles";
 import { theme } from "../assets/style/customTheme";
 import { Box } from "@mui/material";
 const SegmentStyle = styled(Box)(({ theme }) => ({
-  display: "flex-inline",
+  display: "inline-block",
   height: "34px",
   position: "relative",
   userSelect: "none",
