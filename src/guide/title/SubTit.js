@@ -7,75 +7,56 @@ import { CodeBox, ConditionTitle } from "../../assets/style/guideStyle";
 
 const TitleDefault = {
   title: "고객정보",
-  desc: {
-    isShow: false,
-    content: "",
-  },
+  desc: "",
   toggle: false,
   tooltip: false,
 };
 const TitleToggle = {
   title: "고객정보",
-  desc: {
-    isShow: false,
-    content: "",
-  },
+  desc: "",
   toggle: true,
   tooltip: false,
 };
 const TitleTooltip = {
   title: "고객정보",
-  desc: {
-    isShow: false,
-    content: "",
-  },
+  desc: "",
   toggle: false,
   tooltip: true,
 };
 const TitleOption = {
   title: "고객정보",
-  desc: {
-    isShow: false,
-    content: "",
-  },
+  desc: "",
   toggle: true,
   tooltip: true,
 };
 const TitleDesc = {
   title: "고객정보",
-  desc: {
-    isShow: true,
-    content: "(계약번호: 111111111111)",
-  },
+  desc: "(계약번호: 111111111111)",
   toggle: false,
   tooltip: false,
 };
 const TitleToggleDesc = {
   title: "고객정보",
-  desc: {
-    isShow: true,
-    content: "(계약번호: 111111111111)",
-  },
+  desc: "(계약번호: 111111111111)",
   toggle: true,
   tooltip: false,
 };
 const TitleTooltipDesc = {
   title: "고객정보",
-  desc: {
-    isShow: true,
-    content: "(계약번호: 111111111111)",
-  },
+  desc: "(계약번호: 111111111111)",
   toggle: false,
   tooltip: true,
 };
 const TitleOptionDesc = {
   title: "고객정보",
-  desc: {
-    isShow: true,
-    content: "(계약번호: 111111111111)",
-  },
+  desc: "(계약번호: 111111111111)",
   toggle: true,
   tooltip: true,
+};
+export const CustomButton = () => {
+  <Button color="primary" variant="outlined">
+    Button
+  </Button>;
 };
 
 const SubTit = () => {
@@ -183,10 +164,8 @@ const SubTit = () => {
       <Grid container spacing={2} pb={20}>
         <Grid item xs={8}>
           <Stack spacing={20}>
-            <SubTitle titleData={TitleToggle}>
-              <Button color="primary" variant="outlined">
-                Button
-              </Button>
+            <SubTitle titleData={TitleToggle} buttonGroup={CustomButton}>
+              <Box>hihihihi</Box>
             </SubTitle>
             <SubTitle titleData={TitleOption}>
               <Button color="primary" variant="outlined">

@@ -1814,6 +1814,14 @@ const theme = createTheme({
         },
       },
     },
+    //collapse
+    MuiCollapse: {
+      styleOverrides: {
+        root: {
+          marginTop: 0,
+        },
+      },
+    },
   },
 });
 

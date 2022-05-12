@@ -10,6 +10,9 @@ import {
   ToggleButton,
   ButtonGroup,
   Stack,
+  Collapse,
+  Divider,
+  Button,
 } from "@mui/material";
 import { ReactComponent as IconBookmark } from "../assets/images/icons/bookmark.svg";
 import { ReactComponent as IconChevron } from "../assets/images/icons/chevron-forward.svg";
@@ -133,71 +136,77 @@ export const PageTitle = ({ titleData, children, ...rest }) => {
   );
 };
 
-export const SubTitle = ({ titleData, children, ...rest }) => {
+export const SubTitle = ({ titleData, buttonGroup, children }) => {
   const subTit = SubTitleStyle();
   const [selected, setSelected] = React.useState(false);
 
-  let Desc;
-  let ButtonOption;
-
-  if (titleData.desc.isShow) {
-    Desc = (
-      <Typography variant="b1" className={subTit.desc}>
-        {titleData.desc.content}
-      </Typography>
-    );
-  }
-  if (titleData.toggle && !titleData.tooltip) {
-    ButtonOption = (
-      <ToggleButton
-        value="check"
-        selected={selected}
-        onChange={() => {
-          setSelected(!selected);
-        }}
-      >
-        <IconChevronDown className={!selected ? null : subTit.toggle} />
-      </ToggleButton>
-    );
-  } else if (!titleData.toggle && titleData.tooltip) {
-    ButtonOption = (
-      <IconButton color="primary" variant="outlined">
-        <IconInfo />
-      </IconButton>
-    );
-  } else if (titleData.toggle && titleData.tooltip) {
-    ButtonOption = (
-      <ButtonGroup variant="outlined">
-        <IconButton color="sub">
-          <IconInfo />
-        </IconButton>
-        <ToggleButton
-          value="check"
-          selected={selected}
-          onChange={() => {
-            setSelected(!selected);
-          }}
-        >
-          <IconChevronDown className={!selected ? null : subTit.toggle} />
-        </ToggleButton>
-      </ButtonGroup>
-    );
-  }
-
   return (
-    <div className={subTit.wrap}>
-      <div className={subTit.title}>
-        <Typography variant="h4">{titleData.title}</Typography>
-        {Desc}
+    <>
+      <div className={subTit.wrap}>
+        <div className={subTit.title}>
+          <Typography variant="h4">{titleData.title}</Typography>
+          {/* isDescription */}
+          {titleData.desc && (
+            <Typography variant="b1" className={subTit.desc}>
+              {titleData.desc}
+            </Typography>
+          )}
+        </div>
+        <Stack direction="row" spacing={5}>
+          {/* 0512 이슈 */}
+          {/* Button Children to custom */}
+          {buttonGroup}
+          {/* Optional Button */}
+          {/* isToggle */}
+          {titleData.toggle && !titleData.tooltip && (
+            <ToggleButton
+              value="check"
+              selected={selected}
+              onChange={() => {
+                setSelected(!selected);
+              }}
+              checked={selected}
+            >
+              <IconChevronDown className={!selected ? null : subTit.toggle} />
+            </ToggleButton>
+          )}
+          {/* isTooltip */}
+          {!titleData.toggle && titleData.tooltip && (
+            <IconButton color="primary" variant="outlined">
+              <IconInfo />
+            </IconButton>
+          )}
+          {/* all */}
+          {titleData.toggle && titleData.tooltip && (
+            <ButtonGroup variant="outlined">
+              <IconButton color="sub">
+                <IconInfo />
+              </IconButton>
+              <ToggleButton
+                value="check"
+                selected={selected}
+                onChange={() => {
+                  setSelected(!selected);
+                }}
+                checked={selected}
+              >
+                <IconChevronDown className={!selected ? null : subTit.toggle} />
+              </ToggleButton>
+            </ButtonGroup>
+          )}
+        </Stack>
       </div>
-      <Stack direction="row" spacing={5}>
-        {children}
-        {ButtonOption}
-      </Stack>
-    </div>
+      {titleData.toggle && (
+        <Collapse in={selected}>
+          <Divider type="section15" />
+          {/* Collapse Children to custom */}
+          {children}
+        </Collapse>
+      )}
+    </>
   );
 };
-export const TableTitle = ({ titleData, children, ...rest }) => {
+export const TableTitle = ({ titleData, children }) => {
   const tableTit = TableTitleStyle();
   let Desc;
   if (titleData.desc.isShow) {
@@ -229,6 +238,7 @@ PageTitle.propTypes = {
 SubTitle.propTypes = {
   children: PropTypes.node,
   titleData: PropTypes.object,
+  buttonGroup: PropTypes.element,
 };
 TableTitle.propTypes = {
   children: PropTypes.node,

@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { styled } from "@mui/material/styles";
 import { Paper, IconButton, Grid, Stack } from "@mui/material";
 import { ReactComponent as IconSearch } from "../assets/images/icons/search.svg";
+import { SubTitle } from "./Title";
 
 const SectionStyle = styled(Paper)(({ theme }) => ({
   position: "relative",
@@ -21,29 +22,30 @@ const SectionStyle = styled(Paper)(({ theme }) => ({
   },
 }));
 
-export const Section = ({ className = "", variant, children, ...rest }) => {
-  if (variant === "search") {
-    return (
-      <SectionStyle className={"section-" + variant} {...rest}>
-        {children}
+export const Section = ({
+  className = "",
+  variant,
+  titleToggle,
+  children,
+  ...rest
+}) => {
+  return (
+    <SectionStyle className={"section-" + variant} {...rest}>
+      {variant === "toggle" && <SubTitle titleData={titleToggle} />}
+      {children}
+      {variant === "search" && (
         <Stack direction="row" justifyContent="flex-end" pt={18}>
           <IconButton color="primary">
             <IconSearch />
           </IconButton>
         </Stack>
-      </SectionStyle>
-    );
-  } else {
-    return (
-      <SectionStyle className={"section-" + variant} {...rest}>
-        {children}
-      </SectionStyle>
-    );
-  }
+      )}
+    </SectionStyle>
+  );
 };
 
 Section.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-  variant: PropTypes.oneOf(["default", "search", "data"]),
+  variant: PropTypes.oneOf(["default", "search", "data", "toggle"]),
 };
