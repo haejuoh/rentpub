@@ -124,6 +124,7 @@ const FormControlContents = styled(FormControl)(({ theme }) => ({
     alignItems: "center",
     width: "100%",
   },
+
   "& .MuiInputLabel-root": {
     display: "inline",
     Width: "120px",
@@ -134,10 +135,12 @@ const FormControlContents = styled(FormControl)(({ theme }) => ({
     flex: "0 0 calc(100% - 120px)",
   },
 }));
-const FormContents = ({ label, children, ...rest }) => {
+const FormContents = ({ label, required, children, ...rest }) => {
   return (
     <FormControlContents>
-      <InputLabel htmlFor={label}>{label}</InputLabel>
+      <InputLabel htmlFor={label} required={required}>
+        {label}
+      </InputLabel>
       <Box>{children}</Box>
     </FormControlContents>
   );

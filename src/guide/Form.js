@@ -1515,7 +1515,7 @@ export const GroupRadio = () => {
   );
 };
 const SegmentData = {
-  disabled: true,
+  disabled: false,
   group: [
     { label: "사용", name: "Segment", checked: true },
     { label: "미사용", name: "Segment", checked: false },
@@ -1529,34 +1529,44 @@ const SegmentData3 = {
     { label: "Segment", name: "Segment0", checked: false },
   ],
 };
+const SegmentDataDisabled = {
+  disabled: true,
+  group: [
+    { label: "Segment", name: "Segment1", checked: true },
+    { label: "Segment", name: "Segment1", checked: false },
+    { label: "Segment", name: "Segment1", checked: false },
+  ],
+};
 export const SegmentGroup = () => {
   return (
     <Grid container spacing={40}>
       <Grid item xs={6}>
+        <Typography variant="st2" pb={12}>
+          Default
+        </Typography>
         <Stack direction="row" spacing={20}>
           <Segment segmentData={SegmentData} />
           <Segment segmentData={SegmentData3} />
         </Stack>
+        <Typography variant="st2" pb={12} mt={20}>
+          Disabled
+        </Typography>
+        <Stack direction="row" spacing={20}>
+          <Segment segmentData={SegmentDataDisabled} />
+        </Stack>
       </Grid>
       <Grid item xs={6}>
         <CodeBox>
-          <pre>{`const SegmentData = [
-  { label: "사용", name: "Segment", checked: true },
-  { label: "미사용", name: "Segment", checked: false },
-];
+          <pre>{`const SegmentData =  {
+  disabled: true,
+  group: [
+    { label: "사용", name: "Segment", checked: true },
+    { label: "미사용", name: "Segment", checked: false },
+  ],
+};
 
 // Default
-<Box sx={{ width: "120px" }}>
-  <Segment segmentData={SegmentData} variant="2" />
-</Box>
-
-// Segment 버튼 수에 따라 variant로 제어
-<Box sx={{ width: "120px" }}>
-  <Segment segmentData={SegmentData} variant="2" />
-</Box>
-<Box sx={{ width: "300px" }}>
-  <Segment segmentData={SegmentData3} variant="3" />
-</Box>
+  <Segment segmentData={SegmentData} />
 `}</pre>
         </CodeBox>
       </Grid>
@@ -1607,16 +1617,43 @@ export const SwitchWithLabel = () => {
 };
 export const WithFormContents = () => {
   return (
-    <Grid container spacing={40}>
-      <Grid item xs={6}>
-        <FormContents label="Label Text">Import Contents</FormContents>
-      </Grid>
-      <Grid item xs={6}>
-        <CodeBox>
-          <pre>{`//가이드 명시
+    <>
+      <Grid container spacing={40}>
+        <Grid item xs={6}>
+          <Typography variant="st2" pb={12}>
+            Default
+          </Typography>
+          <FormContents label="Label Text" required={false}>
+            Import Components or Contents
+          </FormContents>
+          <Typography variant="st2" pb={12} mt={20}>
+            Description
+          </Typography>
+          <FormContents label="Label Text" required={false}>
+            {/* Import Components or Contents */}
+            <Typography variant="ht" color="primary.light">
+              Description Message.
+            </Typography>
+          </FormContents>
+        </Grid>
+        <Grid item xs={6}>
+          <CodeBox>
+            <pre>{`// Default
+<FormContents label="Label Text" required={false}>
+    // Import Components or Contents
+</FormContents>
+
+// Description
+<FormContents label="Label Text" required={false}>
+    // Import Components or Contents
+    <Typography variant="ht" color="primary.light">
+            Description Message.
+    </Typography>
+</FormContents>
 `}</pre>
-        </CodeBox>
+          </CodeBox>
+        </Grid>
       </Grid>
-    </Grid>
+    </>
   );
 };

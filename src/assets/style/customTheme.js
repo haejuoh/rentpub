@@ -1019,6 +1019,9 @@ const theme = createTheme({
           "& + .MuiInput-root": {
             marginTop: 0,
           },
+          "& .MuiInputLabel-asterisk": {
+            color: colorSystem.status.danger,
+          },
         }),
       },
     },
@@ -1140,6 +1143,12 @@ const theme = createTheme({
           "& .Mui-disabled": {
             ".MuiInputAdornment-root": {
               backgroundColor: colorSystem.bg.b700,
+            },
+          },
+          ".MuiInputAdornment-root": {
+            backgroundColor: "transparent",
+            ".MuiIconButton-root": {
+              backgroundColor: "transparent",
             },
           },
         }),

@@ -229,10 +229,13 @@ const Table02 = ({ columnData, rowData, customNoRowsOverlay, isCheckbox }) => {
   );
 };
 
-const SegmentData = [
-  { label: "사용", name: "Segment", checked: true },
-  { label: "미사용", name: "Segment", checked: false },
-];
+const SegmentData = {
+  disabled: false,
+  group: [
+    { label: "사용", name: "Segment", checked: true },
+    { label: "미사용", name: "Segment", checked: false },
+  ],
+};
 const SegmentStyle = makeStyles((theme) => ({
   label: {
     width: "120px",
