@@ -46,7 +46,7 @@ export const InputLabelPositionTop = () => {
               <TextField
                 label="Label Text"
                 placeholder="Placeholder"
-                value="Input"
+                defaultValue="input"
                 focused
               />
             </FlexBox>
@@ -70,7 +70,7 @@ export const InputLabelPositionTop = () => {
               <TextField
                 label="Label Text"
                 placeholder="Placeholder"
-                value="Input"
+                defaultValue="input"
                 InputProps={{
                   readOnly: true,
                 }}
@@ -143,7 +143,6 @@ export const InputLabelPositionTop = () => {
                 Unit
               </Typography>
               <TextField
-                fullWidth
                 label="Label Text"
                 placeholder="Placeholder"
                 defaultValue="Input"
@@ -211,61 +210,35 @@ export const InputLabelPositionTop = () => {
         </Grid>
         <Grid item xs={6}>
           <CodeBox>
-            // Default
-            <br />
-            &lt;TextField label="Label Text" placeholder="Placeholder"
-            value="Input" /&gt;
-            <br />
-            <br />
-            // Focused
-            <br />
-            &lt;TextField label="Label Text" placeholder="Placeholder"
-            value="Input" focused/&gt;
-            <br />
-            <br />
-            // Required
-            <br />
-            &lt;TextField label="Label Text" placeholder="Placeholder"
-            value="Input" required/&gt;
-            <br />
-            <br />
-            // Read Only
-            <br />
-            // porperty 사용 유의
-            <br />
-            &lt;TextField label="Label Text" placeholder="Placeholder"
-            value="Input" InputProps=&#123;&#123; readOnly: true
-            &#125;&#125;/&gt;
-            <br />
-            <br />
-            // Disabled
-            <br />
-            &lt;TextField label="Label Text" placeholder="Placeholder"
-            value="Input" disabled/&gt;
-            <br />
-            <br />
-            // Error
-            <br />
-            &lt;TextField error label="Label Text" placeholder="Placeholder"
-            value="Input" /&gt;
-            <br />
-            <br />
-            // Success
-            <br />
-            &lt;TextField color="success" label="Label Text"
-            placeholder="Placeholder" value="Input" /&gt;
-            <br />
-            <br />
-            // Unit
-            <br />
-            &lt;TextField error label="Label Text" placeholder="Placeholder"
-            value="Input" /&gt;
-            <br />
-            <br />
-            // Icon
-            <br />
-            &lt;TextField color="success" label="Label Text"
-            placeholder="Placeholder" value="Input" /&gt;
+            <pre>{`// Default
+<TextField label="Label Text" placeholder="Placeholder" />
+
+// Focused
+<TextField label="Label Text" placeholder="Placeholder" defaultValue="input" focused />
+
+// Required
+<TextField label="Label Text" placeholder="Placeholder" defaultValue="Input" required />
+
+// Read Only : porperty 사용 유의
+<TextField label="Label Text" placeholder="Placeholder" defaultValue="input" InputProps={{ readOnly: true, }} />
+
+// Disabled
+<TextField label="Label Text" placeholder="Placeholder" disabled />
+
+// Error
+<TextField error label="Label Text" defaultValue="Input" helperText="Alret Message." />
+<TextField error label="Label Text" defaultValue="Input" helperText="Alret Message." disabled />
+
+// Success
+<TextField color="success" label="Label Text" defaultValue="Input" helperText="Alret Message." />
+<TextField color="success" label="Label Text" defaultValue="Input" helperText="Alret Message." disabled />
+
+// Unit
+<TextField label="Label Text" placeholder="Placeholder" defaultValue="Input" InputProps={{ endAdornment: ( <InputAdornment position="end">Unit</InputAdornment> ), }} />
+
+// Icon
+<TextField label="Label Text" placeholder="Placeholder" defaultValue="Input" InputProps={{ endAdornment: ( <InputAdornment position="end"> <Accessibility /> </InputAdornment> ), }} />
+`}</pre>
           </CodeBox>
         </Grid>
       </Grid>
@@ -293,7 +266,7 @@ export const InputLabelPositionLeft = () => {
               <DefaultTextField
                 label="Label Text"
                 placeholder="Placeholder"
-                value="Input"
+                defaultValue="input"
                 focused
               />
             </FlexBox>
@@ -317,7 +290,7 @@ export const InputLabelPositionLeft = () => {
               <DefaultTextField
                 label="Label Text"
                 placeholder="Placeholder"
-                value="Input"
+                defaultValue="input"
                 InputProps={{
                   readOnly: true,
                 }}
@@ -457,62 +430,34 @@ export const InputLabelPositionLeft = () => {
           </Stack>
         </Grid>
         <Grid item xs={6}>
-          <CodeBox sx={{ lineHeight: "1.5rem" }}>
-            // Default
-            <br />
-            &lt;DefaultTextField label="Label Text" placeholder="Placeholder"
-            value="Input" /&gt;
-            <br />
-            <br />
-            // Focused
-            <br />
-            &lt;DefaultTextField label="Label Text" placeholder="Placeholder"
-            value="Input" focused/&gt;
-            <br />
-            <br />
-            // Required
-            <br />
-            &lt;DefaultTextField label="Label Text" placeholder="Placeholder"
-            value="Input" required/&gt;
-            <br />
-            <br />
-            // Read Only
-            <br />
-            // porperty 사용 유의
-            <br />
-            &lt;DefaultTextField label="Label Text" placeholder="Placeholder"
-            value="Input" InputProps=&#123;&#123; readOnly: true
-            &#125;&#125;/&gt;
-            <br />
-            <br />
-            // Disabled
-            <br />
-            &lt;DefaultTextField label="Label Text" placeholder="Placeholder"
-            value="Input" disabled/&gt;
-            <br />
-            <br />
-            // Error
-            <br />
-            &lt;DefaultTextField error label="Label Text"
-            placeholder="Placeholder" value="Input" /&gt;
-            <br />
-            <br />
-            // Success
-            <br />
-            &lt;DefaultTextField color="success" label="Label Text"
-            placeholder="Placeholder" value="Input" /&gt;
-            <br />
-            <br />
-            // Unit
-            <br />
-            &lt;DefaultTextField error label="Label Text"
-            placeholder="Placeholder" value="Input" /&gt;
-            <br />
-            <br />
-            // Icon
-            <br />
-            &lt;DefaultTextField color="success" label="Label Text"
-            placeholder="Placeholder" value="Input" /&gt;
+          <CodeBox>
+            <pre>{`// Default
+<DefaultTextField label="Label Text" placeholder="Placeholder" />
+
+// Focused
+<DefaultTextField label="Label Text" placeholder="Placeholder" defaultValue="input" focused />
+
+// Required
+<DefaultTextField label="Label Text" placeholder="Placeholder" defaultValue="Input" required />
+
+// Read Only : porperty 사용 유의
+<DefaultTextField label="Label Text" placeholder="Placeholder" defaultValue="input" InputProps={{ readOnly: true, }} />
+
+// Disabled
+<DefaultTextField label="Label Text" placeholder="Placeholder" disabled />
+
+// Error
+<DefaultTextField error label="Label Text" defaultValue="Input" helperText="Alret Message." />
+
+// Success
+<DefaultTextField color="success" label="Label Text" defaultValue="Input" helperText="Alret Message." />
+
+// Unit
+<DefaultTextField label="Label Text" placeholder="Placeholder" defaultValue="Input" InputProps={{ endAdornment: ( <InputAdornment position="end">Unit</InputAdornment> ), }} />
+
+// Icon
+<DefaultTextField label="Label Text" placeholder="Placeholder" defaultValue="Input" InputProps={{ endAdornment: ( <InputAdornment position="end"> <Accessibility /> </InputAdornment> ), }} />
+`}</pre>
           </CodeBox>
         </Grid>
       </Grid>
@@ -701,14 +646,9 @@ export const InputHiddenLabel = () => {
         </Grid>
         <Grid item xs={6}>
           <CodeBox>
-            // add hiddenLabel property
-            <br />
-            // *<br />
-            // *<br />
-            // example
-            <br />
-            &lt;TextField hiddenLabel placeholder="Placeholder" value="Input"
-            /&gt;
+            <pre>{`// add hiddenLabel property
+<TextField hiddenLabel placeholder="Placeholder" />
+`}</pre>
           </CodeBox>
         </Grid>
       </Grid>
