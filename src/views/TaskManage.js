@@ -224,7 +224,7 @@ const TaskManage = () => {
               </Grid>
             </Grid>
           </Section>
-          <Section variant="default">
+          <Section variant="data">
             <Box pb={10}>
               <TableTitle titleData={tableTitleData}>
                 <Button color="primary" variant="contained">
