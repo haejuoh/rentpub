@@ -218,6 +218,10 @@ const theme = createTheme({
       main: colorSystem.status.success,
       contrastText: colorSystem.white,
     },
+    modal: {
+      main: colorSystem.white,
+      contrastText: colorSystem.status.cancel,
+    },
     grey: {
       // main: "#565863",
       0: colorSystem.grey.b000,
@@ -491,6 +495,18 @@ const theme = createTheme({
           },
         },
         {
+          props: { color: "modal" },
+          style: {
+            backgroundColor: colorSystem.white,
+            color: colorSystem.status.cancel,
+            svg: {
+              "& path": {
+                fill: colorSystem.status.cancel,
+              },
+            },
+          },
+        },
+        {
           props: { disabled: true },
           style: {
             svg: {
@@ -541,6 +557,9 @@ const theme = createTheme({
       },
     },
     MuiIconButton: {
+      defaultProps: {
+        color: "function",
+      },
       variants: [
         {
           props: { variant: "outlined" },
@@ -1819,6 +1838,46 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           marginTop: 0,
+        },
+      },
+    },
+    //dialog
+    MuiDialog: {
+      styleOverrides: {
+        paper: {
+          padding: "30px",
+          height: "auto",
+        },
+        paperWidthSm: {
+          maxWidth: "440px",
+          width: "440px",
+        },
+        paperWidthMd: {
+          maxWidth: "600px",
+          width: "600px",
+        },
+        paperWidthLg: {
+          maxWidth: "924px",
+          width: "924px",
+        },
+        paperWidthXl: {
+          maxWidth: "1200px",
+          width: "1200px",
+        },
+      },
+    },
+    MuiDialogContent: {
+      styleOverrides: {
+        root: {
+          padding: 0,
+          color: colorSystem.grey.b900,
+        },
+      },
+    },
+    MuiDialogActions: {
+      styleOverrides: {
+        root: {
+          padding: "30px 0 0 0",
         },
       },
     },

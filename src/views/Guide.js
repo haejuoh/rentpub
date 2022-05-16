@@ -51,6 +51,7 @@ import Badge from "./../guide/Badge";
 import Segment from "../components/Segment";
 import { Table, TableDefault, TableAction, TableBadge } from "../guide/Table";
 import { Section } from "../components/Section";
+import { ModalSample } from "../components/Modal";
 
 const Guide = () => {
   const [value, setValue] = React.useState("1");
@@ -85,7 +86,7 @@ const Guide = () => {
             <Tab label="Form" value="4" />
             <Tab label="List" value="5" />
             <Tab label="DataGrid" value="6" />
-            <Tab label="Section" value="7" />
+            <Tab label="Modal" value="7" />
           </TabList>
         </Box>
         <TabPanel value="1">
@@ -184,9 +185,8 @@ const Guide = () => {
           <TableBadge mt={2} />
         </TabPanel>
         <TabPanel value="7">
-          <Box sx={{ backgroundColor: "#F2F5F5" }}>
-            <Section variant="toggle" titleToggle={titleToggle} />
-          </Box>
+          <GuideTitle>Modal</GuideTitle>
+          <ModalSample />
         </TabPanel>
       </TabContext>
     </Box>

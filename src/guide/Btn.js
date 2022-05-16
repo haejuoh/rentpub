@@ -720,6 +720,31 @@ export const BtnVariation = () => {
           </CodeBox>
         </Grid>
       </Grid>
+      <Grid container spacing={5} mt={5}>
+        <Grid item xs={6}>
+          <Typography variant="h4" pb={1}>
+            Modal
+          </Typography>
+          <Stack direction="row" spacing={5} mt={5}>
+            <Button color="modal" size="small">
+              Button
+            </Button>
+            <Button color="modal">Button</Button>
+            <Button color="modal" size="large">
+              Button
+            </Button>
+          </Stack>
+        </Grid>
+        <Grid item xs={6}>
+          <CodeBox>
+            <pre>{`// modal
+<Button color="modal" size="small">Button</Button>
+<Button color="modal">Button</Button>
+<Button color="modal" size="large">Button</Button>
+`}</pre>
+          </CodeBox>
+        </Grid>
+      </Grid>
     </>
   );
 };
