@@ -13,6 +13,7 @@ import {
   Collapse,
   Divider,
   Button,
+  Chip,
 } from "@mui/material";
 import { ReactComponent as IconBookmark } from "../assets/images/icons/bookmark.svg";
 import { ReactComponent as IconChevron } from "../assets/images/icons/chevron-forward.svg";
@@ -83,6 +84,18 @@ const TableTitleStyle = makeStyles((theme) => ({
     color: `${theme.palette.grey[600]}`,
   },
 }));
+const LySectionTitle = styled(Box)({
+  display: "flex",
+  width: "100%",
+  justifyContent: "space-between",
+  alignItems: "center",
+  paddingBottom: "25px",
+});
+const LySectionContent = styled(Stack)({
+  gap: "5px",
+  flexDirection: "row !important",
+  alignItems: "flex-end",
+});
 export const PageTitle = ({ titleData, children, ...rest }) => {
   const pageTit = PageTitleStyle();
   const [selected, setSelected] = React.useState(false);
@@ -227,6 +240,35 @@ export const TableTitle = ({ titleData, children }) => {
         {children}
       </Stack>
     </div>
+  );
+};
+export const SectionTitle = ({ titleData, children }) => {
+  return (
+    <LySectionTitle>
+      <LySectionContent>
+        {/* is Badge */}
+        {titleData.badge && (
+          <Chip
+            color={titleData.badge.color}
+            variant={titleData.badge.variant}
+            label={titleData.badge.title}
+            mr={5}
+          />
+        )}
+        <Typography variant="h3" color="grey.900">
+          {titleData.title}
+        </Typography>
+        {/* is Description */}
+        {titleData.desc && (
+          <Typography variant="ct" color="grey.600">
+            {titleData.desc}
+          </Typography>
+        )}
+      </LySectionContent>
+      <Stack direction="row" spacing={5}>
+        {children}
+      </Stack>
+    </LySectionTitle>
   );
 };
 

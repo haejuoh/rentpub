@@ -1,122 +1,167 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
-import { Grid, Box, Typography } from "@mui/material";
-import SectionTitle from "../../components/title/SectionTitle";
+import { Grid, Box, Typography, Button } from "@mui/material";
+import { SectionTitle } from "../../components/Title";
+import { CodeBox, ConditionTitle } from "../../assets/style/guideStyle";
 
-const CodeBox = styled(Box)(({ theme }) => ({
-  backgroundColor: `${theme.palette.grey[700]}`,
-  color: `${theme.palette.grey[0]}`,
-  padding: "10px",
-  borderRadius: "4px",
-}));
-const ConditionTitle = styled(Typography)(
-  ({ theme }) => `
-  font-size: 1.142rem;
-  font-weight: 700;
-  color: ${theme.palette.primary.light400}
-`
-);
+const TitleDefault = {
+  title: "홍길동님의 계약정보",
+};
+const TitleDesc = {
+  title: "홍길동님의 계약정보",
+  desc: "(계약번호: 111111111111)",
+};
+const TitleBadge = {
+  title: "홍길동님의 계약정보",
+  badge: {
+    title: "Badge",
+    color: "default",
+    variant: "outlined",
+  },
+};
+const TitleOption = {
+  title: "홍길동님의 계약정보",
+  desc: "(계약번호: 111111111111)",
+  badge: {
+    title: "Badge",
+    color: "default",
+    variant: "outlined",
+  },
+};
 
 const SectionTit = () => {
   return (
     <>
-      <ConditionTitle mt={4}>기본</ConditionTitle>
+      <Typography variant="h3" pb={12}>
+        Default
+      </Typography>
+
       <Grid container spacing={2}>
         <Grid item xs={8}>
-          <SectionTitle title="섹션별 타이틀" />
+          <SectionTitle titleData={TitleDefault} />
+          <SectionTitle titleData={TitleDefault}>
+            <Button color="default" variant="outlined">
+              수정하기
+            </Button>
+          </SectionTitle>
         </Grid>
         <Grid item xs={4}>
           <CodeBox>
-            &lt;SectionTitle <b>title="섹션별 타이틀"</b>/&gt;
+            <pre>{`const TitleDefault = {
+  title: "홍길동님의 계약정보",
+};
+
+// Default
+<SectionTitle titleData={TitleDefault} />
+// Default with Button
+<SectionTitle titleData={TitleDefault}>
+            <Button color="default" variant="outlined">
+              수정하기
+            </Button>
+          </SectionTitle>
+`}</pre>
           </CodeBox>
         </Grid>
       </Grid>
-      <ConditionTitle mt={4}>제목에 부가적인 설명이 있는 경우</ConditionTitle>
+      <Typography variant="h3" pb={12}>
+        Description
+      </Typography>
       <Grid container spacing={2}>
         <Grid item xs={8}>
-          <SectionTitle
-            type="isCaption"
-            title="섹션별 타이틀"
-            caption="(계약번호: 111111111111)"
-          />
+          <SectionTitle titleData={TitleDesc} />
+          <SectionTitle titleData={TitleDesc}>
+            <Button color="default" variant="outlined">
+              수정하기
+            </Button>
+          </SectionTitle>
         </Grid>
         <Grid item xs={4}>
           <CodeBox>
-            &lt;SectionTitle <br />
-            <b>
-              &nbsp;type="isCaption"
-              <br />
-              &nbsp;title="섹션별 타이틀"
-              <br />
-              &nbsp;caption="(계약번호: 111111111111)"
-            </b>
-            <br />
-            /&gt;
+            <pre>{`const TitleDesc = {
+  title: "홍길동님의 계약정보",
+  desc: "(계약번호: 111111111111)",
+};
+
+// Description
+<SectionTitle titleData={TitleDesc} />
+// Description with Button
+<SectionTitle titleData={TitleDesc}>
+  <Button color="default" variant="outlined">
+    수정하기
+  </Button>
+</SectionTitle>
+`}</pre>
           </CodeBox>
         </Grid>
       </Grid>
-      <ConditionTitle mt={4}>제목에 버튼이 있는 경우</ConditionTitle>
+      <Typography variant="h3" pb={12}>
+        Badge
+      </Typography>
       <Grid container spacing={2}>
         <Grid item xs={8}>
-          <SectionTitle
-            type="isButton"
-            title="섹션별 타이틀"
-            btn={{
-              name: "버튼이름",
-              color: "default",
-              style: "contained",
-            }}
-          />
+          <SectionTitle titleData={TitleBadge} />
+          <SectionTitle titleData={TitleBadge}>
+            <Button color="default" variant="outlined">
+              수정하기
+            </Button>
+          </SectionTitle>
         </Grid>
         <Grid item xs={4}>
           <CodeBox>
-            &lt;SectionTitle <br />
-            <b>
-              &nbsp;type="isButton"
-              <br />
-              &nbsp;title="섹션별 타이틀"
-              <br />
-              &nbsp;btn=&#123;&#123; name: "버튼이름", color: "default", style:
-              "contained"
-            </b>
-            &#125;&#125;
-            <br />
-            /&gt;
+            <pre>{`const TitleBadge = {
+  title: "홍길동님의 계약정보",
+  badge: {
+    title: "Badge",
+    color: "default",
+    variant: "outlined",
+  },
+};
+
+// Badge
+<SectionTitle titleData={TitleBadge} />
+// Badge with Button
+<SectionTitle titleData={TitleBadge}>
+  <Button color="default" variant="outlined">
+    수정하기
+  </Button>
+</SectionTitle>
+`}</pre>
           </CodeBox>
         </Grid>
       </Grid>
-      <ConditionTitle mt={4}>
-        제목에 부가적인 설명과 버튼이 있는 경우
-      </ConditionTitle>
+      <Typography variant="h3" pb={12}>
+        Description &amp; Badge
+      </Typography>
       <Grid container spacing={2}>
         <Grid item xs={8}>
-          <SectionTitle
-            type="isAll"
-            title="섹션별 타이틀"
-            caption="(계약번호: 111111111111)"
-            btn={{
-              name: "버튼이름",
-              color: "default",
-              style: "outlined",
-            }}
-          />
+          <SectionTitle titleData={TitleOption} />
+          <SectionTitle titleData={TitleOption}>
+            <Button color="default" variant="outlined">
+              수정하기
+            </Button>
+          </SectionTitle>
         </Grid>
         <Grid item xs={4}>
           <CodeBox>
-            &lt;SectionTitle <br />
-            <b>
-              &nbsp;type="isAll"
-              <br />
-              &nbsp;title="페이지 타이틀"
-              <br />
-              &nbsp;caption="(계약번호: 111111111111)"
-              <br />
-              &nbsp;btn=&#123;&#123; name: "버튼이름", color: "default", style:
-              "outlined"
-            </b>
-            &#125;&#125;
-            <br />
-            /&gt;
+            <pre>{`const TitleOption = {
+  title: "홍길동님의 계약정보",
+  desc: "(계약번호: 111111111111)",
+  badge: {
+    title: "Badge",
+    color: "default",
+    variant: "outlined",
+  },
+};
+
+// Description & Badge
+<SectionTitle titleData={TitleOption} />
+// Description & Badge with Button
+<SectionTitle titleData={TitleOption}>
+  <Button color="default" variant="outlined">
+    수정하기
+  </Button>
+</SectionTitle>
+`}</pre>
           </CodeBox>
         </Grid>
       </Grid>
