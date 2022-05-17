@@ -774,30 +774,24 @@ export const SelectLabelPositionTop = () => {
         </Grid>
         <Grid item xs={6}>
           <CodeBox>
-            // Default
-            <br />
-            const defaultSelect = &#123;
-            <br />
-            &nbsp;&nbsp;label: "Label Text",
-            <br />
-            &nbsp;&nbsp;// select combo box 너비 지정
-            <br />
-            &nbsp;&nbsp;style: &#123; PaperProps: &#123; style: &#123; width:
-            444, &#125;, &#125;, &#125;,
-            <br />
-            &nbsp;&nbsp;option: &#91; "현대자동차", "기아자동차", "쉐보레",
-            "렉서스", "도요타", "포르쉐", &#93;,
-            <br />
-            &nbsp;&nbsp;disabled: false,
-            <br />
-            &nbsp;&nbsp;isIcon: false,
-            <br />
-            &#125;;
-            <br />
-            <br />
-            &lt;SelectField selectData=&#123;defaultData&#125; /&gt;
-            <br />
-            <br />
+            <pre>{`// Default
+const defaultSelect = {
+  label: "Label Text",
+  // select combo box 너비 지정
+  style: {PaperProps: {style: {width: 444,},},},
+  option: ["현대자동차", "기아자동차", "쉐보레", "렉서스", "도요타", "포르쉐",],
+  disabled: false,
+  isIcon: false,
+};
+
+<SelectField selectData={defaultSelect} />
+
+// icon
+  isIcon: true,
+
+// disabled
+  disabled: true,
+`}</pre>
           </CodeBox>
         </Grid>
       </Grid>
@@ -922,30 +916,24 @@ export const SelectLabelPositionLeft = () => {
         </Grid>
         <Grid item xs={6}>
           <CodeBox>
-            // Default
-            <br />
-            const defaultSelect = &#123;
-            <br />
-            &nbsp;&nbsp;label: "Label Text",
-            <br />
-            &nbsp;&nbsp;// select combo box 너비 지정
-            <br />
-            &nbsp;&nbsp;style: &#123; PaperProps: &#123; style: &#123; width:
-            444, &#125;, &#125;, &#125;,
-            <br />
-            &nbsp;&nbsp;option: &#91; "현대자동차", "기아자동차", "쉐보레",
-            "렉서스", "도요타", "포르쉐", &#93;,
-            <br />
-            &nbsp;&nbsp;disabled: false,
-            <br />
-            &nbsp;&nbsp;isIcon: false,
-            <br />
-            &#125;;
-            <br />
-            <br />
-            &lt;DefaultSelectField selectData=&#123;defaultData&#125; /&gt;
-            <br />
-            <br />
+            <pre>{`// Default
+const defaultSelect = {
+  label: "Label Text",
+  // select combo box 너비 지정
+  style: {PaperProps: {style: {width: 324,},},},
+  option: ["현대자동차","기아자동차","쉐보레","렉서스","도요타","포르쉐",],
+  disabled: false,
+  isIcon: false,
+};
+
+<DefaultSelectField selectData={defaultSelect} />
+
+// icon
+  isIcon: true,
+
+// disabled
+  disabled: true,
+`}</pre>
           </CodeBox>
         </Grid>
       </Grid>
@@ -991,28 +979,19 @@ export const CheckBox = () => {
         </Grid>
         <Grid item xs={6}>
           <CodeBox>
-            const label = &#123; inputProps: &#123; "aria-label": "Checkbox
-            demo" &#125; &#125;;
-            <br />
-            <br />
-            // Default
-            <br />
-            &lt;Checkbox &#123;...label&#125; /&gt;
-            <br />
-            <br />
-            // Checked
-            <br />
-            &lt;Checkbox &#123;...label&#125; checked /&gt;
-            <br />
-            <br />
-            // Disabled
-            <br />
-            &lt;Checkbox &#123;...label&#125; disabled /&gt;
-            <br />
-            <br />
-            // Checked Disabled
-            <br />
-            &lt;Checkbox &#123;...label&#125; disabled checked /&gt;
+            <pre>{`const label = { inputProps: { "aria-label": "Checkbox demo" } };
+// Default
+<Checkbox {...label} />
+
+// Checked
+<Checkbox {...label} checked />
+
+// Disabled
+<Checkbox {...label} disabled />
+
+// Checked Disabled
+<Checkbox {...label} disabled checked />
+`}</pre>
           </CodeBox>
         </Grid>
       </Grid>
@@ -1067,32 +1046,17 @@ export const CheckBoxWithLabel = () => {
         </Grid>
         <Grid item xs={6}>
           <CodeBox>
-            const label = &#123; inputProps: &#123; "aria-label": "Checkbox
-            demo" &#125; &#125;;
-            <br />
-            <br />
-            // Default
-            <br />
-            &lt;FormControlLabel control=&#123;&lt;Checkbox /&gt;&#125;
-            label="Label Text" /&gt;
-            <br />
-            <br />
-            // Checked
-            <br />
-            &lt;FormControlLabel control=&#123;&lt;Checkbox checked /&gt;&#125;
-            label="Label Text" /&gt;
-            <br />
-            <br />
-            // Disabled
-            <br />
-            &lt;FormControlLabel control=&#123;&lt;Checkbox disabled /&gt;&#125;
-            label="Label Text" /&gt;
-            <br />
-            <br />
-            // Checked Disabled
-            <br />
-            &lt;FormControlLabel control=&#123;&lt;Checkbox disabled checked
-            /&gt;&#125; label="Label Text" /&gt;
+            <pre>{`// Default
+<FormControlLabel control={<Checkbox />} label="Label Text" />
+
+// Checked
+<FormControlLabel control={<Checkbox checked />} label="Label Text" />
+// Disabled
+<FormControlLabel control={<Checkbox />} label="Label Text" disabled />
+
+// Checked Disabled
+<FormControlLabel disabled checked control={<Checkbox />} label="Label Text" />
+`}</pre>
           </CodeBox>
         </Grid>
       </Grid>
