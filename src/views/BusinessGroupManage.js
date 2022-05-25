@@ -31,16 +31,16 @@ import { ReactComponent as IconClose } from "../assets/images/icons/close.svg";
 
 const tabData = [
   { type: "home", label: "Home", active: false },
-  { label: "직무관리", active: true },
+  { label: "업무그룹관리", active: true },
 ];
 const titleData = [
   {
     path: "/",
-    menu: "기준정보",
+    menu: "사용자",
   },
   {
     type: "bookmark",
-    menu: "직무조회",
+    menu: "업무그룹관리",
     active: true,
   },
 ];
@@ -55,7 +55,7 @@ const defaultData = {
   isIcon: false,
 };
 const tableTitleData = {
-  title: "직무조회 목록",
+  title: "업무그룹",
   desc: {
     isShow: true,
     content: "12,340",
@@ -126,12 +126,12 @@ const columns = [
   },
   {
     field: "col2",
-    headerName: "직무명",
+    headerName: "업무그룹명",
     width: 176,
   },
   {
     field: "col3",
-    headerName: "직무설명",
+    headerName: "업무그룹설명",
     flex: 1,
   },
   {
@@ -175,6 +175,7 @@ const columns = [
     ],
   },
 ];
+
 const CustomNoRowsOverlay = () => {
   return (
     <Stack height="100%" alignItems="center" justifyContent="center">
@@ -191,6 +192,7 @@ const CustomNoResultsOverlay = () => {
     </Stack>
   );
 };
+
 const Table = ({ columnData, rowData, customNoRowsOverlay, isCheckbox }) => {
   const TableGridStyle = makeStyles((theme) => ({
     wrap: {
@@ -212,94 +214,7 @@ const Table = ({ columnData, rowData, customNoRowsOverlay, isCheckbox }) => {
   );
 };
 
-const Modal = styled(Dialog)(({ theme }) => ({
-  "& .MuiDialogTitle-root": {
-    fontSize: `${theme.typography.h4.fontSize}`,
-    fontWeight: `${theme.typography.h4.fontWeight}`,
-    display: "flex",
-    alignItems: "center",
-    gap: "5px",
-    position: "relative",
-    "&:before": {
-      content: "''",
-      display: "inline-block",
-      width: "6px",
-      height: "6px",
-      backgroundColor: `${theme.palette.primary.bright}`,
-      clear: "both",
-      borderRadius: 1,
-    },
-    "& .MuiIconButton-root": {
-      width: "24px",
-      height: "24px",
-      padding: "5.62px",
-      svg: {
-        width: "100%",
-        height: "100%",
-      },
-      position: "absolute",
-      right: 0,
-      top: "50%",
-      transform: "translateY(-50%)",
-    },
-  },
-}));
-
-const ModalTitle = (props) => {
-  const { children, onClose, ...other } = props;
-
-  return (
-    <>
-      <DialogTitle sx={{ m: 0, p: 2 }} {...other}>
-        {children}
-        {onClose ? (
-          <IconButton aria-label="close" onClick={onClose}>
-            <IconClose />
-          </IconButton>
-        ) : null}
-      </DialogTitle>
-      <Divider type="section15" />
-    </>
-  );
-};
-
-ModalTitle.propTypes = {
-  children: PropTypes.node,
-  onClose: PropTypes.func.isRequired,
-};
-const ModalRegister = ({ title, btnCancel, btnAction }) => {
-  const [open, setOpen] = React.useState(false);
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-  const handleClose = () => {
-    setOpen(false);
-  };
-  return (
-    <>
-      <Button color="primary" variant="contained" onClick={handleClickOpen}>
-        {title}
-      </Button>
-      <Modal onClose={handleClose} open={open}>
-        <ModalTitle id="customized-dialog-title" onClose={handleClose}>
-          {title}
-        </ModalTitle>
-        <DialogContent>
-          <Typography gutterBottom>Contents</Typography>
-        </DialogContent>
-        <DialogActions>
-          <Button color="modal" onClick={handleClose}>
-            {btnCancel}
-          </Button>
-          <Button color="sub" variant="contained" onClick={handleClose}>
-            {btnAction}
-          </Button>
-        </DialogActions>
-      </Modal>
-    </>
-  );
-};
-const TaskManage = () => {
+const BusinessGroupManage = () => {
   const layout = LayoutStyle({ theme });
   return (
     <>
@@ -313,21 +228,16 @@ const TaskManage = () => {
                 <SelectField selectData={defaultData} />
               </Grid>
               <Grid item xs={9}>
-                <TextField label="직무명" placeholder="직무명" />
+                <TextField label="업무그룹명" placeholder="업무그룹명" />
               </Grid>
             </Grid>
           </Section>
           <Section variant="data">
             <Box pb={10}>
               <TableTitle titleData={tableTitleData}>
-                {/* <Button color="primary" variant="contained">
-                  직무등록
-                </Button> */}
-                <ModalRegister
-                  title="직무등록"
-                  btnCancel="취소"
-                  btnAction="등록"
-                />
+                <Button color="primary" variant="contained">
+                  업무그룹 등록
+                </Button>
               </TableTitle>
             </Box>
             <Divider type="section15" />
@@ -343,4 +253,4 @@ const TaskManage = () => {
   );
 };
 
-export default TaskManage;
+export default BusinessGroupManage;

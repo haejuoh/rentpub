@@ -10,6 +10,7 @@ import UserManage from "./views/UserManage";
 import UserInquiry from "./views/UserInquiry";
 import TaskManage from "./views/TaskManage";
 import TaskRegister from "./views/TaskRegister";
+import BusinessGroupManage from "./views/BusinessGroupManage";
 import { Container } from "@mui/material";
 import { LayoutStyle } from "./assets/style/common";
 
@@ -68,6 +69,11 @@ const App = () => {
       path: "/task-register",
       element: <DefaultLayout />,
       children: [{ index: true, element: <TaskRegister /> }],
+    },
+    {
+      path: "/business-group-manage",
+      element: <DefaultLayout />,
+      children: [{ index: true, element: <BusinessGroupManage /> }],
     },
     {
       // path 지정

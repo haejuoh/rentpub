@@ -32,7 +32,7 @@ const Modal = styled(Dialog)(({ theme }) => ({
       clear: "both",
       borderRadius: 1,
     },
-    ".MuiIconButton-root": {
+    "& .MuiIconButton-root": {
       width: "24px",
       height: "24px",
       padding: "5.62px",
@@ -71,7 +71,7 @@ ModalTitle.propTypes = {
   onClose: PropTypes.func.isRequired,
 };
 
-export const ModalSample = () => {
+export const ModalSample = ({ title, btnCancel, btnAction }) => {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -90,17 +90,17 @@ export const ModalSample = () => {
           </Button>
           <Modal onClose={handleClose} open={open}>
             <ModalTitle id="customized-dialog-title" onClose={handleClose}>
-              Title
+              {title}
             </ModalTitle>
             <DialogContent>
               <Typography gutterBottom>Contents</Typography>
             </DialogContent>
             <DialogActions>
               <Button color="modal" onClick={handleClose}>
-                취소
+                {btnCancel}
               </Button>
               <Button color="sub" variant="contained" onClick={handleClose}>
-                확인
+                {btnAction}
               </Button>
             </DialogActions>
           </Modal>
