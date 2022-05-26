@@ -199,12 +199,9 @@ const Table = ({
   btnAction,
 }) => {
   const [open, openModify] = React.useState(false);
-  const openModal = React.useCallback(
-    () => () => {
-      openModify(true);
-    },
-    []
-  );
+  const openModal = () => {
+    openModify(true);
+  };
   const handleClose = () => {
     openModify(false);
   };
@@ -315,7 +312,7 @@ const Table = ({
       getActions: (params) => [
         <GridActionsCellItem
           icon={<IconPencil />}
-          onClick={openModal()}
+          onClick={openModal}
           label="수정"
           showInMenu
         />,
