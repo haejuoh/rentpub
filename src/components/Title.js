@@ -165,7 +165,7 @@ export const SubTitle = ({ titleData, buttonGroup, children }) => {
             </Typography>
           )}
         </div>
-        <Stack direction="row" spacing={5}>
+        <Stack direction="row" spacing={8}>
           {/* 0512 이슈 */}
           {/* Button Children to custom */}
           {buttonGroup}

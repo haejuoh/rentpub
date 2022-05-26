@@ -70,7 +70,9 @@ export const DefaultSelectField = ({ selectData }) => {
   };
   return (
     <DefaultFormControl variant="standard" sx={{ width: "100%" }}>
-      <InputLabel id="sample">{selectData.label}</InputLabel>
+      <InputLabel id="sample" required={selectData.required}>
+        {selectData.label}
+      </InputLabel>
 
       <Select
         labelId="sample"
