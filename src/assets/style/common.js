@@ -8,6 +8,7 @@ import {
   ToggleButton,
   InputLabel,
   Box,
+  Stack,
 } from "@mui/material";
 //custom textField
 const DefaultTextField = styled(TextField)(({ theme }) => ({
@@ -124,7 +125,6 @@ const FormControlContents = styled(FormControl)(({ theme }) => ({
     alignItems: "center",
     width: "100%",
   },
-
   "& .MuiInputLabel-root": {
     display: "inline",
     Width: "120px",
@@ -133,6 +133,13 @@ const FormControlContents = styled(FormControl)(({ theme }) => ({
   "& > .MuiBox-root": {
     width: "calc(100% - 120px)",
     flex: "0 0 calc(100% - 120px)",
+    flexShrink: "0",
+    "& .MuiButton-root": {
+      flexShrink: "0",
+    },
+    "& .MuiBox-root": {
+      flexShrink: "0",
+    },
   },
 }));
 const FormContents = ({ label, required, children, ...rest }) => {
@@ -145,6 +152,18 @@ const FormContents = ({ label, required, children, ...rest }) => {
     </FormControlContents>
   );
 };
+const FormLabelLeft = (props) => {
+  const LyLabel = styled(Box)(() => ({
+    width: "120px",
+    flex: "0 0 120px",
+  }));
+  return (
+    <Stack direction="row" alignItems="center">
+      <LyLabel>{props.children[0]}</LyLabel>
+      <Box>{props.children[1]}</Box>
+    </Stack>
+  );
+};
 
 export {
   DefaultTextField,
@@ -153,4 +172,5 @@ export {
   DefaultFormControl,
   LayoutStyle,
   FormContents,
+  FormLabelLeft,
 };
