@@ -48,10 +48,10 @@ const colorSystem = {
     b050: "#DDF1F0",
   },
   secondary: {
-    b900: "#FCCB1C",
-    b700: "#FFD954", //main**
+    b900: "#FCA21C",
+    b700: "#FFBB54", //main**
     b500: "#FFE91F",
-    b300: "#FFFAEA",
+    b050: "#FFFAEA",
   },
   bg: {
     b700: "#F2F5F5", //default**
@@ -404,9 +404,15 @@ const theme = createTheme({
         {
           props: { color: "secondary", variant: "contained" },
           style: {
+            backgroundColor: colorSystem.secondary.b700,
+            color: colorSystem.grey.b900,
+            "&:hover, &:active": {
+              backgroundColor: colorSystem.secondary.b900,
+              color: colorSystem.grey.b900,
+            },
             svg: {
               "& path": {
-                fill: colorSystem.grey.b700,
+                fill: colorSystem.grey.b900,
               },
             },
           },
@@ -416,14 +422,16 @@ const theme = createTheme({
           props: { color: "secondary", variant: "outlined" },
           style: {
             backgroundColor: colorSystem.white,
-            borderColor: colorSystem.secondary.b500,
+            borderColor: colorSystem.secondary.b900,
+            color: colorSystem.secondary.b900,
             "&:hover, &:active": {
-              backgroundColor: colorSystem.secondary.b300,
-              borderColor: colorSystem.secondary.b500,
+              backgroundColor: colorSystem.secondary.b050,
+              borderColor: colorSystem.secondary.b900,
+              color: colorSystem.secondary.b900,
             },
             svg: {
               "& path": {
-                fill: colorSystem.secondary.b500,
+                fill: colorSystem.secondary.b900,
               },
             },
           },
@@ -667,13 +675,13 @@ const theme = createTheme({
           props: { color: "secondary" },
           style: {
             borderRadius: 2,
-            backgroundColor: colorSystem.secondary.b500,
+            backgroundColor: colorSystem.secondary.b700,
             "&:hover,&:active": {
-              backgroundColor: colorSystem.secondary.b700,
+              backgroundColor: colorSystem.secondary.b900,
             },
             svg: {
               "& path": {
-                fill: colorSystem.grey.b700,
+                fill: colorSystem.grey.b900,
               },
             },
           },
@@ -682,14 +690,14 @@ const theme = createTheme({
           props: { color: "secondary", variant: "outlined" },
           style: {
             backgroundColor: colorSystem.white,
-            borderColor: colorSystem.secondary.b500,
+            borderColor: colorSystem.secondary.b900,
             "&:hover, &:active": {
-              backgroundColor: colorSystem.secondary.b300,
-              borderColor: colorSystem.secondary.b500,
+              backgroundColor: colorSystem.secondary.b050,
+              borderColor: colorSystem.secondary.b900,
             },
             svg: {
               "& path": {
-                fill: colorSystem.secondary.b500,
+                fill: colorSystem.secondary.b900,
               },
             },
           },
