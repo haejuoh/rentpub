@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment, useState } from "react";
 import { styled } from "@mui/styles";
 import {
   Grid,
@@ -12,10 +12,13 @@ import {
   Checkbox,
   Chip,
   Divider,
+  Radio,
+  RadioGroup,
+  FormControl,
+  FormLabel,
 } from "@mui/material";
 import { theme } from "../../../../assets/style/customTheme";
 import {
-  LayoutStyle,
   DefaultTextField,
   FormContents,
 } from "../../../../assets/style/common";
@@ -166,11 +169,47 @@ const CustomBadge = styled(Chip)(({ theme }) => ({
   },
 }));
 
-const SectionRentalPrice = () => {
-  const layout = LayoutStyle({ theme });
+const CustomRadioButtons = ({ idx }) => {
+  const [selectedValue, setSelectedValue] = React.useState(idx);
+  const handleChange = (event) => {
+    setSelectedValue(event.target.value);
+  };
+
+  const controlProps = (item) => ({
+    checked: selectedValue === item,
+    onChange: handleChange,
+    value: item,
+    name: "radio-button-group",
+    inputProps: { "aria-label": item },
+    label: "렌탈료 시뮬레이션" + item,
+  });
+
+  return (
+    <div>
+      <FormControlLabel control={<Radio />} {...controlProps(idx)} />
+      {/* <FormControlLabel
+        value="value"
+        control={<Radio />}
+        label="label"
+        {...controlProps("2")}
+      /> */}
+      {/* <FormControlLabel
+        value="value"
+        control={<Radio />}
+        label="label"
+        name="radio-buttons-group"
+      /> */}
+    </div>
+  );
+};
+
+const Simulation = () => {
   return (
     <>
       <Section>
+        <CustomRadioButtons idx="1" />
+        <CustomRadioButtons idx="2" />
+        {/*  */}
         <SubTitle titleData={TitleTooltip}></SubTitle>
         <LyList>
           <ListItem>
@@ -230,4 +269,4 @@ const SectionRentalPrice = () => {
   );
 };
 
-export default SectionRentalPrice;
+export default Simulation;

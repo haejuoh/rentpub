@@ -21,6 +21,8 @@ import { Section } from "../../../../components/Section";
 import { DefaultSelectField } from "../../../../components/Select";
 import LySectionInfo from "../../../../components/LySectionInfo";
 
+import SearchModal from "./SearchModal";
+
 // image
 import { ReactComponent as IconSearch } from "../../../../assets/images/icons/search.svg";
 
@@ -154,9 +156,10 @@ const RentalInfo = () => {
               InputProps={{
                 endAdornment: (
                   <InputAdornment position="end">
-                    <IconButton color="function" size="small">
+                    {/* <IconButton color="function" size="small">
                       <IconSearch />
-                    </IconButton>
+                    </IconButton> */}
+                    <SearchModal />
                   </InputAdornment>
                 ),
               }}

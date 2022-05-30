@@ -38,7 +38,10 @@ import RtnInfo from "./_parts/RtnInfo";
 import Dctype from "./_parts/Dctype";
 import CusInfo from "./_parts/CusInfo";
 import Drinfo from "./_parts/Drinfo";
+import Mtinfo from "./_parts/Mtinfo";
 import Simulation from "./_parts/Simulation";
+import NoteManage from "./_parts/NoteManage";
+import NoteVehicle from "./_parts/NoteVehicle";
 
 // icon
 import { ReactComponent as IconCopy } from "../../../assets/images/icons/copy.svg";
@@ -85,8 +88,11 @@ const Shtprsv = () => {
                 임시저장
               </Button>
             </Stack>
-            <CusInfo />
+            {/* <CusInfo /> */}
             {/* <Drinfo /> */}
+            <Mtinfo />
+            <NoteManage />
+            <NoteVehicle />
             <Stack direction="row" justifyContent="flex-end" spacing={8}>
               <Button color="cancel" variant="outlined">
                 예약취소
@@ -101,7 +107,9 @@ const Shtprsv = () => {
           </LySection>
 
           {/* 임시 저장후 추가*/}
-          <LySection>{/* <Simulation /> */}</LySection>
+          <LySection>
+            <Simulation />
+          </LySection>
         </LySectionDivider>
       </div>
     </>
