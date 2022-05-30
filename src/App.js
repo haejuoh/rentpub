@@ -11,6 +11,7 @@ import UserInquiry from "./views/UserInquiry";
 import TaskManage from "./views/TaskManage";
 import TaskRegister from "./views/TaskRegister";
 import BusinessGroupManage from "./views/BusinessGroupManage";
+import Shtprsv from "./views/shtprntlrsv/shtprsv/index";
 import { Container } from "@mui/material";
 import { LayoutStyle } from "./assets/style/common";
 
@@ -74,6 +75,11 @@ const App = () => {
       path: "/business-group-manage",
       element: <DefaultLayout />,
       children: [{ index: true, element: <BusinessGroupManage /> }],
+    },
+    {
+      path: "/shtprsv",
+      element: <DefaultLayout />,
+      children: [{ index: true, element: <Shtprsv /> }],
     },
     {
       // path 지정
