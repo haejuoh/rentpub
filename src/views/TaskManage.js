@@ -68,127 +68,6 @@ const tableTitleData = {
   },
 };
 
-const rows = [
-  {
-    id: 1,
-    col1: "00001111111",
-    col2: "차정영업및세차영업관차정영업및세차영업관차정영업및세차영업관",
-    col3: "차정영업관련된설명입니다차정영업관련된설명입니다차정영업관련된설명입니다차정영업관련된설명입니다",
-    status: "사용",
-    col5: "홍길동",
-    col6: "2022-04-01 12:00:30",
-  },
-  {
-    id: 2,
-    col1: "00001111111",
-    col2: "차정영업및세차영업관차정영업및세차영업관차정영업및세차영업관",
-    col3: "차정영업관련된설명입니다",
-    status: "사용안함",
-    col5: "홍길동",
-    col6: "2022-04-01 12:00:30",
-  },
-  {
-    id: 3,
-    col1: "00001111111",
-    col2: "차정영업및세차영업관차정영업및세차영업관차정영업및세차영업관",
-    col3: "차정영업관련된설명입니다",
-    status: "사용",
-    col5: "홍길동",
-    col6: "2022-04-01 12:00:30",
-  },
-  {
-    id: 4,
-    col1: "00001111111",
-    col2: "차정영업및세차영업관차정영업및세차영업관차정영업및세차영업관",
-    col3: "차정영업관련된설명입니다",
-    status: "사용",
-    col5: "홍길동",
-    col6: "2022-04-01 12:00:30",
-  },
-  {
-    id: 5,
-    col1: "00001111111",
-    col2: "차정영업및세차영업관차정영업및세차영업관차정영업및세차영업관",
-    col3: "차정영업관련된설명입니다",
-    status: "사용",
-    col5: "홍길동",
-    col6: "2022-04-01 12:00:30",
-  },
-  {
-    id: 6,
-    col1: "00001111111",
-    col2: "차정영업및세차영업관차정영업및세차영업관차정영업및세차영업관",
-    col3: "차정영업관련된설명입니다차정영업관련된설명입니다차정영업관련된설명입니다차정영업관련된설명입니다",
-    status: "사용",
-    col5: "홍길동",
-    col6: "2022-04-01 12:00:30",
-  },
-];
-
-//column -> table 컴포넌트 하위로 이동
-const columns = [
-  {
-    field: "col1",
-    headerName: "직무ID",
-    width: 142,
-  },
-  {
-    field: "col2",
-    headerName: "직무명",
-    width: 176,
-  },
-  {
-    field: "col3",
-    headerName: "직무설명",
-    flex: 1,
-  },
-  {
-    field: "status",
-    headerName: "사용여부",
-    width: 118,
-    renderCell: (params) => {
-      switch (params.value) {
-        case "사용":
-          return <Chip label={params.value} color="success" />;
-          break;
-        default:
-          return <Chip label={params.value} color="cancel" />;
-          break;
-      }
-    },
-  },
-  {
-    field: "col5",
-    headerName: "입력사용자",
-    width: 142,
-  },
-  {
-    field: "col6",
-    headerName: "최종 수정일",
-    width: 178,
-    headerAlign: "right",
-    align: "right",
-  },
-  {
-    field: "actions",
-    type: "actions",
-    width: 40,
-    renderHeader: () => (
-      <IconOpiton style={{ width: "18px", height: "18px" }} />
-    ),
-    getActions: (params) => [
-      <GridActionsCellItem
-        icon={<IconPencil />}
-        // onClick={openModify(params)}
-        label="수정"
-        showInMenu
-      />,
-      <GridActionsCellItem icon={<IconCheck />} label="사용함" showInMenu />,
-      // <GridActionsCellItem icon={<IconCheck />} label="사용안함" showInMenu />,
-    ],
-  },
-];
-
 const SegmentData = {
   disabled: false,
   group: [
@@ -224,16 +103,15 @@ const Table = ({
   btnAction,
 }) => {
   const [open, openModify] = React.useState(false);
-  const openModal = React.useCallback(
-    () => () => {
-      openModify(true);
-    },
-    []
-  );
+
+  const openModal = () => {
+    openModify(true);
+  };
   const handleClose = () => {
     openModify(false);
   };
-  const columns2 = React.useMemo(() => [
+
+  const columns = [
     {
       field: "col1",
       headerName: "직무ID",
@@ -284,7 +162,7 @@ const Table = ({
       getActions: (params) => [
         <GridActionsCellItem
           icon={<IconPencil />}
-          onClick={openModal()}
+          onClick={openModal}
           label="수정"
           showInMenu
         />,
@@ -297,8 +175,64 @@ const Table = ({
         />,
       ],
     },
-  ]);
-  const [rows2, setRows] = React.useState(rows);
+  ];
+
+  const rows = [
+    {
+      id: 1,
+      col1: "00001111111",
+      col2: "차정영업및세차영업관차정영업및세차영업관차정영업및세차영업관",
+      col3: "차정영업관련된설명입니다차정영업관련된설명입니다차정영업관련된설명입니다차정영업관련된설명입니다",
+      status: "사용",
+      col5: "홍길동",
+      col6: "2022-04-01 12:00:30",
+    },
+    {
+      id: 2,
+      col1: "00001111111",
+      col2: "차정영업및세차영업관차정영업및세차영업관차정영업및세차영업관",
+      col3: "차정영업관련된설명입니다",
+      status: "사용안함",
+      col5: "홍길동",
+      col6: "2022-04-01 12:00:30",
+    },
+    {
+      id: 3,
+      col1: "00001111111",
+      col2: "차정영업및세차영업관차정영업및세차영업관차정영업및세차영업관",
+      col3: "차정영업관련된설명입니다",
+      status: "사용",
+      col5: "홍길동",
+      col6: "2022-04-01 12:00:30",
+    },
+    {
+      id: 4,
+      col1: "00001111111",
+      col2: "차정영업및세차영업관차정영업및세차영업관차정영업및세차영업관",
+      col3: "차정영업관련된설명입니다",
+      status: "사용",
+      col5: "홍길동",
+      col6: "2022-04-01 12:00:30",
+    },
+    {
+      id: 5,
+      col1: "00001111111",
+      col2: "차정영업및세차영업관차정영업및세차영업관차정영업및세차영업관",
+      col3: "차정영업관련된설명입니다",
+      status: "사용",
+      col5: "홍길동",
+      col6: "2022-04-01 12:00:30",
+    },
+    {
+      id: 6,
+      col1: "00001111111",
+      col2: "차정영업및세차영업관차정영업및세차영업관차정영업및세차영업관",
+      col3: "차정영업관련된설명입니다차정영업관련된설명입니다차정영업관련된설명입니다차정영업관련된설명입니다",
+      status: "사용",
+      col5: "홍길동",
+      col6: "2022-04-01 12:00:30",
+    },
+  ];
 
   const TableGridStyle = makeStyles((theme) => ({
     wrap: {
@@ -306,13 +240,14 @@ const Table = ({
       height: "284px",
     },
   }));
+
   const lytable = TableGridStyle();
   return (
     <>
       <Box className={lytable.wrap}>
         <TableGrid
-          columnData={columns2}
-          rowData={rows2}
+          columnData={columns}
+          rowData={rows}
           customNoRowsOverlay={CustomNoRowsOverlay}
           customNoResultsOverlay={CustomNoResultsOverlay}
           isCheckbox={false}
