@@ -3,51 +3,27 @@ import { styled } from "@mui/styles";
 import {
   Grid,
   Stack,
-  Box,
-  Typography,
   Button,
   IconButton,
   TextField,
-  Switch,
   FormControlLabel,
   Checkbox,
-  Chip,
   Divider,
-  Link,
-  Paper,
-  Collapse,
   InputAdornment,
   FormGroup,
+  Switch,
 } from "@mui/material";
 import { theme } from "../../../../assets/style/customTheme";
 import {
   DefaultTextField,
   FormContents,
 } from "../../../../assets/style/common";
-import {
-  PageTitle,
-  SubTitle,
-  TableTitle,
-  SectionTitle,
-} from "../../../../components/Title";
+import { SubTitle } from "../../../../components/Title";
 import { Section } from "../../../../components/Section";
-import {
-  SelectField,
-  DefaultSelectField,
-  SelectLabelHidden,
-} from "../../../../components/Select";
+import { DefaultSelectField } from "../../../../components/Select";
 import Segment from "../../../../components/Segment";
 import LySectionInfo from "../../../../components/LySectionInfo";
 
-import TableGrid from "../../../../components/TableGrid";
-import { GridActionsCellItem } from "@mui/x-data-grid";
-import { ReactComponent as IconPencil } from "../../../../assets/images/icons/pencil.svg";
-import { ReactComponent as IconExcel } from "../../../../assets/images/icons/excel.svg";
-import { ReactComponent as IconDelete } from "../../../../assets/images/icons/trash.svg";
-import { ReactComponent as IconCheck } from "../../../../assets/images/icons/checkmark-circle.svg";
-import { ReactComponent as IconOpiton } from "../../../../assets/images/icons/options.svg";
-import { ReactComponent as IconChevronForward } from "../../../../assets/images/icons/chevron-forward.svg";
-import { ReactComponent as IconChevronBack } from "../../../../assets/images/icons/chevron-back.svg";
 import { ReactComponent as IconSearch } from "../../../../assets/images/icons/search.svg";
 
 const TitleSubData = {
@@ -244,16 +220,22 @@ const CusInfo = () => {
             <DefaultSelectField selectData={defaultSelect01} />
           </Grid>
           <Grid item xs={6}>
-            <DefaultTextField label="운전면허번호" placeholder="직접입력" />
+            <DefaultTextField
+              label="운전면허번호"
+              placeholder="운전면허번호 입력"
+            />
           </Grid>
           <Grid item xs={6}>
             <FormContents label="면허유효기간">{/* datepicker */}</FormContents>
           </Grid>
           <Grid item xs={6}>
-            <DefaultTextField label="국적" placeholder="직접입력" />
+            <DefaultTextField
+              label="국제면허등급"
+              placeholder="국제면허등급 입력"
+            />
           </Grid>
           <Grid item xs={6}>
-            <DefaultTextField label="국제면허등급" placeholder="직접입력" />
+            <DefaultTextField label="국적" placeholder="국적 입력" />
           </Grid>
           <Grid item xs={6}>
             <FormContents label="국제면허유효기간">
@@ -286,9 +268,13 @@ const CusInfo = () => {
             </FormContents>
           </Grid>
           <Grid item xs={6}>
-            <FormContents label="개인정보수집동의 유/무">
-              <FormControlLabel control={<Checkbox />} label="동의" />
-            </FormContents>
+            <FormControlLabel
+              value="switch"
+              control={<Switch color="primary" />}
+              label="개인정보수집동의 유/무"
+              labelPlacement="start"
+              defaultChecked
+            />
           </Grid>
           <Grid item xs={12}>
             <DefaultTextField label="고객UID" placeholder="UID 자동생성" />

@@ -11,9 +11,9 @@ import {
   TextareaAutosize,
   Box,
 } from "@mui/material";
-import { SubTitle } from "../components/Title";
-import { Section } from "../components/Section";
-import { ReactComponent as IconChevronDown } from "../assets/images/icons/chevron-down.svg";
+import { SubTitle } from "../../../../components/Title";
+import { Section } from "../../../../components/Section";
+import { ReactComponent as IconChevronDown } from "../../../../assets/images/icons/chevron-down.svg";
 
 const TitleToggle = {
   title: "비고(내부관리용)",

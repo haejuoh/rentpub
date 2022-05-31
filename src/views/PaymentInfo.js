@@ -10,16 +10,16 @@ import {
   Chip,
   Divider,
 } from "@mui/material";
-import { theme } from "../../../../assets/style/customTheme";
-import { LayoutStyle, DefaultTextField } from "../../../../assets/style/common";
-import { SubTitle } from "../../../../components/Title";
-import { Section } from "../../../../components/Section";
-import { SelectField, DefaultSelectField } from "../../../../components/Select";
-import Segment from "../../../../components/Segment";
-import TableGrid from "../../../../components/TableGrid";
-import { ReactComponent as IconDelete } from "../../../../assets/images/icons/trash.svg";
-import { ReactComponent as IconCheck } from "../../../../assets/images/icons/checkmark-circle.svg";
-import { ReactComponent as IconOpiton } from "../../../../assets/images/icons/options.svg";
+import { theme } from "../assets/style/customTheme";
+import { LayoutStyle, DefaultTextField } from "../assets/style/common";
+import { SubTitle } from "../components/Title";
+import { Section } from "../components/Section";
+import { SelectField, DefaultSelectField } from "../components/Select";
+import Segment from "../components/Segment";
+import TableGrid from "../components/TableGrid";
+import { ReactComponent as IconDelete } from "../assets/images/icons/trash.svg";
+import { ReactComponent as IconCheck } from "../assets/images/icons/checkmark-circle.svg";
+import { ReactComponent as IconOpiton } from "../assets/images/icons/options.svg";
 import { GridActionsCellItem } from "@mui/x-data-grid";
 
 const TitleToggle = {
@@ -42,17 +42,15 @@ const selectData = {
     style: {
       PaperProps: { style: { minWidth: 203, maxHeight: 160, height: "auto" } },
     },
-    option: ["청구구분"],
+    option: ["선택", "선택2"],
     disabled: false,
     isIcon: false,
-    required: false,
+    required: true,
   },
   select01: {
     label: "",
-    style: {
-      PaperProps: { style: { minWidth: 203, maxHeight: 160, height: "auto" } },
-    },
-    option: ["결제수단"],
+    style: { PaperProps: { style: { width: 444 } } },
+    option: ["선택", "선택2", "선택3", "선택4", "선택5", "선택6"],
     disabled: false,
     isIcon: false,
   },
@@ -163,35 +161,33 @@ const PaymentInfo = () => {
     <>
       <Section>
         <SubTitle titleData={TitleToggle} />
-        <Divider type="section15" />
+        <Divider type="item15" />
         <Grid container spacing={15} alignItems="center">
-          <Grid container item spacing={15}>
-            <Grid item xs="auto">
-              <Segment segmentData={SegmentData} />
-            </Grid>
-            <Grid item xs>
-              <DefaultTextField label="발행일자" placeholder="날짜선택" />
-            </Grid>
-            <Grid item xs>
-              <DefaultSelectField
-                selectData={selectData.payCase}
-                placeholder="선택"
-              />
-            </Grid>
+          <Grid item xs={3.4}>
+            <Segment segmentData={SegmentData} />
           </Grid>
-          <Grid item xs>
+          <Grid item xs={4.3}>
+            <DefaultTextField label="발행일자" placeholder="날짜선택" />
+          </Grid>
+          <Grid item xs={4.3}>
+            <DefaultSelectField
+              selectData={selectData.payCase}
+              placeholder="선택"
+            />
+          </Grid>
+          <Grid item xs={2}>
             <SelectField selectData={selectData.select01} />
           </Grid>
-          <Grid item xs="auto">
+          <Grid item xs={3.1}>
             <CustomButtonGroup1 /> {/*버튼 그룹 결제,결제취소,전표출력*/}
           </Grid>
-          <Grid item xs="auto">
+          <Grid item xs={2.6}>
             <FormControlLabel
               control={<Checkbox />}
               label="신용카드결제 보안단말기 사용"
             />
           </Grid>
-          <Grid item xs="auto">
+          <Grid item xs={4.3}>
             <CustomButtonGroup2 />
           </Grid>
         </Grid>

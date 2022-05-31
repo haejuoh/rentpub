@@ -21,6 +21,8 @@ import { Section } from "../../../../components/Section";
 import { DefaultSelectField } from "../../../../components/Select";
 import LySectionInfo from "../../../../components/LySectionInfo";
 
+import SearchModal from "./SearchModal";
+
 // image
 import { ReactComponent as IconSearch } from "../../../../assets/images/icons/search.svg";
 
@@ -102,24 +104,11 @@ const defaultSelect07 = {
   required: true,
 };
 
-const CustomButtonGroup = () => {
-  return (
-    <>
-      <Button color="primary" variant="outlined">
-        선택
-      </Button>
-    </>
-  );
-};
-
 const RentalInfo = () => {
   return (
     <>
       <Section>
-        <SubTitle
-          titleData={TitleSubData}
-          buttonGroup={<CustomButtonGroup />}
-        />
+        <SubTitle titleData={TitleSubData} />
         <Divider type="section15" />
         <LySectionInfo>
           <Grid item xs={12}>
@@ -154,9 +143,10 @@ const RentalInfo = () => {
               InputProps={{
                 endAdornment: (
                   <InputAdornment position="end">
-                    <IconButton color="function" size="small">
+                    {/* <IconButton color="function" size="small">
                       <IconSearch />
-                    </IconButton>
+                    </IconButton> */}
+                    <SearchModal />
                   </InputAdornment>
                 ),
               }}

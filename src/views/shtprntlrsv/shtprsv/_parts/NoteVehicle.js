@@ -11,10 +11,10 @@ import {
   TextareaAutosize,
   Box,
 } from "@mui/material";
-import { SubTitle } from "../components/Title";
-import { Section } from "../components/Section";
+import { SubTitle } from "../../../../components/Title";
+import { Section } from "../../../../components/Section";
 import { TextArea, TextAreaList } from "./NoteManage";
-import { ReactComponent as IconChevronDown } from "../assets/images/icons/chevron-down.svg";
+import { ReactComponent as IconChevronDown } from "../../../../assets/images/icons/chevron-down.svg";
 
 const TitleToggle = {
   title: "비고(차량준비용)",
