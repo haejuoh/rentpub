@@ -198,7 +198,7 @@ const SearchTable = () => {
   );
 };
 
-const SelectModal = () => {
+const SearchModal = () => {
   const [modalState, ctrlModal] = React.useState(false);
   const ctrlOpen = () => {
     ctrlModal(true);
@@ -208,7 +208,7 @@ const SelectModal = () => {
   };
   return (
     <>
-      <IconButton color="function" variant="outlined" onClick={ctrlOpen}>
+      <IconButton color="function" size="small" onClick={ctrlOpen}>
         <IconSearch />
       </IconButton>
       <Modal open={modalState} onClose={ctrlClose} maxWidth="xl">
@@ -283,4 +283,4 @@ const SelectModal = () => {
   );
 };
 
-export default SelectModal;
+export default SearchModal;

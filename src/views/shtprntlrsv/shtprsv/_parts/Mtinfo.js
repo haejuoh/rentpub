@@ -45,7 +45,7 @@ const selectData = {
     option: ["청구구분"],
     disabled: false,
     isIcon: false,
-    required: true,
+    required: false,
   },
   select01: {
     label: "",

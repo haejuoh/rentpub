@@ -104,24 +104,11 @@ const defaultSelect07 = {
   required: true,
 };
 
-const CustomButtonGroup = () => {
-  return (
-    <>
-      <Button color="primary" variant="outlined">
-        선택
-      </Button>
-    </>
-  );
-};
-
 const RentalInfo = () => {
   return (
     <>
       <Section>
-        <SubTitle
-          titleData={TitleSubData}
-          buttonGroup={<CustomButtonGroup />}
-        />
+        <SubTitle titleData={TitleSubData} />
         <Divider type="section15" />
         <LySectionInfo>
           <Grid item xs={12}>

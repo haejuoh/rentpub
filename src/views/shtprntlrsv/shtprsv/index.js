@@ -81,15 +81,15 @@ const Shtprsv = () => {
         </PageTitle>
         <LySectionDivider spacing="30">
           <LySection>
-            {/* <RtnInfo /> */}
-            {/* <Dctype /> */}
+            <RtnInfo />
+            <Dctype />
             <Stack direction="row" justifyContent="flex-end">
               <Button color="primary" variant="contained">
                 임시저장
               </Button>
             </Stack>
-            {/* <CusInfo /> */}
-            {/* <Drinfo /> */}
+            <CusInfo />
+            <Drinfo />
             <Mtinfo />
             <NoteManage />
             <NoteVehicle />
