@@ -37,6 +37,9 @@ const colorSystem = {
       default: "#F65858",
       hover: "#FFEBEB",
     },
+    modal: {
+      hover: "#F8F8F8",
+    },
   },
   primary: {
     b900: "#07857F",
@@ -220,6 +223,7 @@ const theme = createTheme({
     },
     modal: {
       main: colorSystem.white,
+
       contrastText: colorSystem.status.cancel,
     },
     grey: {
@@ -507,6 +511,9 @@ const theme = createTheme({
           style: {
             backgroundColor: colorSystem.white,
             color: colorSystem.status.cancel,
+            "&:hover, &:active": {
+              backgroundColor: colorSystem.fn.modal.hover,
+            },
             svg: {
               "& path": {
                 fill: colorSystem.status.cancel,
