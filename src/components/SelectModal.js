@@ -172,7 +172,7 @@ const ModalTitle = (props) => {
           </IconButton>
         ) : null}
       </DialogTitle>
-      <Divider type="section15" />
+      <Divider variants="section15" />
     </>
   );
 };

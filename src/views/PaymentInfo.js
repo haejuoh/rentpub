@@ -161,7 +161,7 @@ const PaymentInfo = () => {
     <>
       <Section>
         <SubTitle titleData={TitleToggle} />
-        <Divider type="item15" />
+        <Divider variants="item15" />
         <Grid container spacing={15} alignItems="center">
           <Grid item xs={3.4}>
             <Segment segmentData={SegmentData} />

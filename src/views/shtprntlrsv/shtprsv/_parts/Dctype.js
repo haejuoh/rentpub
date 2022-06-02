@@ -69,7 +69,7 @@ const Dctype = () => {
     <>
       <Section>
         <SubTitle titleData={TitleSubData}></SubTitle>
-        <Divider type="section15" />
+        <Divider variants="section15" />
         <LySectionInfo>
           <Grid item xs={12}>
             <Typography variant="st2">제휴할인</Typography>

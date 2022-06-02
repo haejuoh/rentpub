@@ -114,19 +114,19 @@ export const BtnVariation = () => {
             <IconButton color="primary" size="small">
               <IconPencil />
             </IconButton>
-            <IconButton color="primary" variant="outlined" size="small">
+            <IconButton color="primaryOutlined" size="small">
               <IconPencil />
             </IconButton>
             <IconButton color="primary">
               <IconPencil />
             </IconButton>
-            <IconButton color="primary" variant="outlined">
+            <IconButton color="primaryOutlined">
               <IconPencil />
             </IconButton>
             <IconButton color="primary" size="large">
               <IconPencil />
             </IconButton>
-            <IconButton color="primary" variant="outlined" size="large">
+            <IconButton color="primaryOutlined" size="large">
               <IconPencil />
             </IconButton>
           </Stack>
@@ -220,19 +220,19 @@ export const BtnVariation = () => {
             <IconButton color="default" size="small">
               <IconPencil />
             </IconButton>
-            <IconButton color="default" variant="outlined" size="small">
+            <IconButton color="defaultOutlined" size="small">
               <IconPencil />
             </IconButton>
             <IconButton color="default">
               <IconPencil />
             </IconButton>
-            <IconButton color="default" variant="outlined">
+            <IconButton color="defaultOutlined">
               <IconPencil />
             </IconButton>
             <IconButton color="default" size="large">
               <IconPencil />
             </IconButton>
-            <IconButton color="default" variant="outlined" size="large">
+            <IconButton color="defaultOutlined" size="large">
               <IconPencil />
             </IconButton>
           </Stack>
@@ -389,19 +389,19 @@ export const BtnVariation = () => {
             <IconButton color="secondary" size="small">
               <IconPencil />
             </IconButton>
-            <IconButton color="secondary" variant="outlined" size="small">
+            <IconButton color="secondaryOutlined" size="small">
               <IconPencil />
             </IconButton>
             <IconButton color="secondary">
               <IconPencil />
             </IconButton>
-            <IconButton color="secondary" variant="outlined">
+            <IconButton color="secondaryOutlined">
               <IconPencil />
             </IconButton>
             <IconButton color="secondary" size="large">
               <IconPencil />
             </IconButton>
-            <IconButton color="secondary" variant="outlined" size="large">
+            <IconButton color="secondaryOutlined" size="large">
               <IconPencil />
             </IconButton>
           </Stack>
@@ -499,23 +499,34 @@ export const BtnVariation = () => {
             <IconButton color="function" size="small">
               <IconPencil />
             </IconButton>
-            <IconButton color="function" variant="outlined" size="small">
+            <IconButton color="functionOutlined" size="small">
               <IconPencil />
             </IconButton>
             <IconButton color="function">
               <IconPencil />
             </IconButton>
-            <IconButton color="function" variant="outlined">
+            <IconButton color="functionOutlined">
               <IconPencil />
             </IconButton>
             <IconButton color="function" size="large">
               <IconPencil />
             </IconButton>
-            <IconButton color="function" variant="outlined" size="large">
+            <IconButton color="functionOutlined" size="large">
               <IconPencil />
             </IconButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
+            <Button color="function" size="small" variant="contained">
+              Button
+            </Button>
+            <Button
+              color="function"
+              variant="contained"
+              size="small"
+              endIcon={<IconPencil />}
+            >
+              Button
+            </Button>
             <Button color="function" size="small" variant="outlined">
               Button
             </Button>
@@ -529,6 +540,16 @@ export const BtnVariation = () => {
             </Button>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
+            <Button color="function" variant="contained">
+              Button
+            </Button>
+            <Button
+              color="function"
+              variant="contained"
+              endIcon={<IconPencil />}
+            >
+              Button
+            </Button>
             <Button color="function" variant="outlined">
               Button
             </Button>
@@ -541,6 +562,17 @@ export const BtnVariation = () => {
             </Button>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
+            <Button color="function" size="large" variant="contained">
+              Button
+            </Button>
+            <Button
+              size="large"
+              color="function"
+              variant="contained"
+              endIcon={<IconPencil />}
+            >
+              Button
+            </Button>
             <Button color="function" size="large" variant="outlined">
               Button
             </Button>
@@ -602,13 +634,13 @@ export const BtnVariation = () => {
             Delete
           </Typography>
           <Stack direction="row" spacing={5}>
-            <IconButton color="delete" variant="outlined" size="small">
+            <IconButton color="deleteOutlined" size="small">
               <IconPencil />
             </IconButton>
-            <IconButton color="delete" variant="outlined">
+            <IconButton color="deleteOutlined">
               <IconPencil />
             </IconButton>
-            <IconButton color="delete" variant="outlined" size="large">
+            <IconButton color="deleteOutlined" size="large">
               <IconPencil />
             </IconButton>
           </Stack>
@@ -664,13 +696,13 @@ export const BtnVariation = () => {
             cancel
           </Typography>
           <Stack direction="row" spacing={5}>
-            <IconButton color="cancel" variant="outlined" size="small">
+            <IconButton color="cancelOutlined" size="small">
               <IconPencil />
             </IconButton>
-            <IconButton color="cancel" variant="outlined">
+            <IconButton color="cancelOutlined">
               <IconPencil />
             </IconButton>
-            <IconButton color="cancel" variant="outlined" size="large">
+            <IconButton color="cancelOutlined" size="large">
               <IconPencil />
             </IconButton>
           </Stack>

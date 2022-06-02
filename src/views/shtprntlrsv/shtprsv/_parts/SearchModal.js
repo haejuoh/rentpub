@@ -175,7 +175,7 @@ const ModalTitle = (props) => {
           </IconButton>
         ) : null}
       </DialogTitle>
-      <Divider type="section15" />
+      <Divider variants="section15" />
     </>
   );
 };
@@ -267,7 +267,7 @@ const SearchModal = () => {
             </Grid>
           </Grid>
           <SubTitle titleData={TitleDesc} />
-          <Divider type="section15" />
+          <Divider variants="section15" />
           <SearchTable />
         </DialogContent>
         <DialogActions>

@@ -28,7 +28,7 @@ const NoteManage = () => {
     <>
       <Section>
         <SubTitle titleData={TitleToggle} />
-        <Divider type="item15" />
+        <Divider variants="item15" />
         <Stack direction="column" spacing={10} justifyContent="space-between">
           <TextArea line={6} />
           <TextAreaList line={1} />

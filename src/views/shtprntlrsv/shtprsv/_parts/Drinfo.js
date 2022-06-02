@@ -50,7 +50,7 @@ const Drinfo = () => {
           titleData={TitleSubData}
           buttonGroup={<CustomButtonGroup />}
         />
-        <Divider type="item15" />
+        <Divider variants="item15" />
         <Typography variant="st2" mb={25}>
           제1 운전자
         </Typography>

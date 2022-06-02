@@ -116,7 +116,7 @@ const CusInfo = () => {
           titleData={TitleSubData}
           buttonGroup={<CustomButtonGroup />}
         />
-        <Divider type="item15" />
+        <Divider variants="item15" />
         <LySectionInfo>
           <Grid item xs={6}>
             <DefaultTextField

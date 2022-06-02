@@ -109,7 +109,7 @@ const RentalInfo = () => {
     <>
       <Section>
         <SubTitle titleData={TitleSubData} />
-        <Divider type="section15" />
+        <Divider variants="section15" />
         <LySectionInfo>
           <Grid item xs={12}>
             <DefaultSelectField selectData={defaultSelect01} required />

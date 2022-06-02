@@ -262,7 +262,7 @@ const TaskRegister = () => {
         <Stack spacing={30}>
           <Section variant="default">
             <SubTitle titleData={TitleDefault01} />
-            <Divider type="section15" />
+            <Divider variants="section15" />
             <Grid container rowSpacing={16} columnSpacing={15}>
               <Grid item xs={3}>
                 <DefaultTextField
@@ -300,14 +300,14 @@ const TaskRegister = () => {
                 <Grid item xs={6}>
                   <Box className={transfer.wrap}>
                     <SubTitle titleData={TitleDefault02} />
-                    <Divider type="section15" />
+                    <Divider variants="section15" />
                     <Table01 className={transfer.table} />
                   </Box>
                 </Grid>
                 <Grid item xs={6}>
                   <Box className={transfer.wrap}>
                     <SubTitle titleData={TitleDefault03} />
-                    <Divider type="section15" />
+                    <Divider variants="section15" />
                     <TextField
                       hiddenLabel
                       fullWidth

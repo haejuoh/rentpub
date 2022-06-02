@@ -121,7 +121,7 @@ const ModalTitle = (props) => {
           </IconButton>
         ) : null}
       </DialogTitle>
-      <Divider type="section15" />
+      <Divider variants="section15" />
     </>
   );
 };
@@ -407,7 +407,7 @@ const BusinessGroupManage = () => {
                 />
               </TableTitle>
             </Box>
-            <Divider type="section15" />
+            <Divider variants="section15" />
             <Grid container>
               <Grid item xs={12}>
                 <Table

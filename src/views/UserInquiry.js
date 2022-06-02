@@ -293,7 +293,7 @@ const UserInquiry = () => {
                 </Button>
               </TableTitle>
             </Box>
-            <Divider type="section15" />
+            <Divider variants="section15" />
             <Grid container>
               <Grid item xs={12}>
                 <Table />

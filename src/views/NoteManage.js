@@ -65,7 +65,7 @@ export const TextArea = (props) => {
           </>
         </Grid>
       </Grid>
-      <Divider type="item15" />
+      <Divider variants="item15" />
     </>
   );
 };
@@ -105,7 +105,7 @@ export const TextAreaList = (props) => {
           <ReadArea>안녕하세요 SK렌터카입니다.</ReadArea>
         ) : null}
       </Grid>
-      <Divider type="item15" />
+      <Divider variants="item15" />
     </>
   );
 };
@@ -115,7 +115,7 @@ const NoteManage = () => {
     <>
       <Section>
         <SubTitle titleData={TitleToggle} />
-        <Divider type="item15" />
+        <Divider variants="item15" />
         <Stack direction="column" spacing={10} justifyContent="space-between">
           <TextArea line={6} />
           <TextAreaList line={1} />

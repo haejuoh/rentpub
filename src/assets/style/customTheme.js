@@ -164,10 +164,18 @@ const theme = createTheme({
       main: colorSystem.primary.b700,
       dark: colorSystem.primary.b900,
     },
+    primaryOutlined: {
+      main: colorSystem.white,
+      contrastText: colorSystem.primary.b700,
+    },
     default: {
       main: colorSystem.grey.b700,
       dark: colorSystem.grey.b900,
       contrastText: colorSystem.white,
+    },
+    defaultOutlined: {
+      main: colorSystem.white,
+      contrastText: colorSystem.grey.b700,
     },
     sub: {
       main: colorSystem.white,
@@ -179,9 +187,17 @@ const theme = createTheme({
       dark: colorSystem.secondary.b700,
       contrastText: colorSystem.grey.b700,
     },
+    secondaryOutlined: {
+      main: colorSystem.white,
+      contrastText: colorSystem.secondary.b900,
+    },
     function: {
       main: colorSystem.white,
       dark: colorSystem.bg.b300,
+      contrastText: colorSystem.grey.b900,
+    },
+    functionOutlined: {
+      main: colorSystem.white,
       contrastText: colorSystem.grey.b900,
     },
     excel: {
@@ -193,8 +209,16 @@ const theme = createTheme({
       main: colorSystem.fn.delete.default,
       contrastText: colorSystem.fn.delete.default,
     },
+    deleteOutlined: {
+      main: colorSystem.white,
+      contrastText: colorSystem.fn.delete.default,
+    },
     cancel: {
       main: colorSystem.fn.disabled,
+      contrastText: colorSystem.primary.b200,
+    },
+    cancelOutlined: {
+      main: colorSystem.white,
       contrastText: colorSystem.primary.b200,
     },
     error: {
@@ -280,10 +304,33 @@ const theme = createTheme({
     label: fontSystem.label,
     body1: fontSystem.b1,
   },
-  shadows: {
-    1: colorSystem.shadow.drop,
-    2: colorSystem.shadow.section,
-  },
+  shadows: [
+    "none",
+    colorSystem.shadow.drop,
+    colorSystem.shadow.section,
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+  ],
 
   components: {
     //Typography
@@ -441,6 +488,21 @@ const theme = createTheme({
           },
         },
         {
+          props: { color: "function", variant: "contained" },
+          style: {
+            backgroundColor: colorSystem.white,
+            color: colorSystem.grey.b900,
+            "&:hover, &:active": {
+              backgroundColor: colorSystem.bg.b300,
+            },
+            svg: {
+              "& path": {
+                fill: colorSystem.grey.b900,
+              },
+            },
+          },
+        },
+        {
           props: { color: "function", variant: "outlined" },
           style: {
             backgroundColor: colorSystem.white,
@@ -577,12 +639,6 @@ const theme = createTheme({
       },
       variants: [
         {
-          props: { variant: "outlined" },
-          style: {
-            border: "1px solid",
-          },
-        },
-        {
           props: { size: "small" },
           style: {
             width: "24px",
@@ -618,9 +674,10 @@ const theme = createTheme({
           },
         },
         {
-          props: { color: "primary", variant: "outlined" },
+          props: { color: "primaryOutlined" },
           style: {
             backgroundColor: colorSystem.white,
+            border: "1px solid",
             borderColor: colorSystem.primary.b700,
             "&:hover, &:active": {
               backgroundColor: colorSystem.bg.b300,
@@ -648,10 +705,10 @@ const theme = createTheme({
           },
         },
         {
-          props: { color: "default", variant: "outlined" },
+          props: { color: "defaultOutlined" },
           style: {
             backgroundColor: colorSystem.white,
-
+            border: "1px solid",
             borderColor: colorSystem.grey.b700,
             "&:hover, &:active": {
               backgroundColor: colorSystem.bg.b700,
@@ -694,9 +751,10 @@ const theme = createTheme({
           },
         },
         {
-          props: { color: "secondary", variant: "outlined" },
+          props: { color: "secondaryOutlined" },
           style: {
             backgroundColor: colorSystem.white,
+            border: "1px solid",
             borderColor: colorSystem.secondary.b900,
             "&:hover, &:active": {
               backgroundColor: colorSystem.secondary.b050,
@@ -724,9 +782,10 @@ const theme = createTheme({
           },
         },
         {
-          props: { color: "function", variant: "outlined" },
+          props: { color: "functionOutlined" },
           style: {
             backgroundColor: colorSystem.white,
+            border: "1px solid",
             borderColor: colorSystem.grey.b900,
             "&:hover,&:active": {
               backgroundColor: colorSystem.bg.b300,
@@ -739,9 +798,10 @@ const theme = createTheme({
           },
         },
         {
-          props: { color: "delete", variant: "outlined" },
+          props: { color: "deleteOutlined" },
           style: {
             backgroundColor: colorSystem.white,
+            border: "1px solid",
             borderColor: colorSystem.fn.delete.default,
             "&:hover,&:active": {
               backgroundColor: colorSystem.fn.delete.hover,
@@ -754,9 +814,10 @@ const theme = createTheme({
           },
         },
         {
-          props: { color: "cancel", variant: "outlined" },
+          props: { color: "cancelOutlined" },
           style: {
             backgroundColor: colorSystem.white,
+            border: "1px solid",
             borderColor: colorSystem.fn.disabled,
             "&:hover,&:active": {
               backgroundColor: colorSystem.bg.b700,
@@ -1524,7 +1585,7 @@ const theme = createTheme({
             fill: colorSystem.grey.b600,
           },
         },
-        ColumnMenuIcon: {
+        menuIconButton: {
           svg: {
             "& path": {
               fill: colorSystem.grey.b600,
@@ -1725,21 +1786,21 @@ const theme = createTheme({
       variants: [
         //section
         {
-          props: { type: "section15" },
+          props: { variant: "section15" },
           style: {
             borderColor: colorSystem.border.b700,
             margin: "15px 0",
           },
         },
         {
-          props: { type: "section20" },
+          props: { variant: "section20" },
           style: {
             borderColor: colorSystem.border.b700,
             margin: "20px 0",
           },
         },
         {
-          props: { type: "section30" },
+          props: { variant: "section30" },
           style: {
             borderColor: colorSystem.border.b700,
             margin: "30px 0",
@@ -1747,21 +1808,21 @@ const theme = createTheme({
         },
         //Function
         {
-          props: { type: "function15" },
+          props: { variant: "function15" },
           style: {
             borderColor: colorSystem.border.b100,
             margin: "15px 0",
           },
         },
         {
-          props: { type: "function20" },
+          props: { variant: "function20" },
           style: {
             borderColor: colorSystem.border.b100,
             margin: "20px 0",
           },
         },
         {
-          props: { type: "function30" },
+          props: { variant: "function30" },
           style: {
             borderColor: colorSystem.border.b100,
             margin: "30px 0",
@@ -1769,21 +1830,21 @@ const theme = createTheme({
         },
         //Item
         {
-          props: { type: "item15" },
+          props: { variant: "item15" },
           style: {
             borderColor: colorSystem.border.b300,
             margin: "15px 0",
           },
         },
         {
-          props: { type: "item20" },
+          props: { variant: "item20" },
           style: {
             borderColor: colorSystem.border.b300,
             margin: "20px 0",
           },
         },
         {
-          props: { type: "item30" },
+          props: { variant: "item30" },
           style: {
             borderColor: colorSystem.border.b300,
             margin: "30px 0",

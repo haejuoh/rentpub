@@ -334,7 +334,7 @@ const ModalTitle = (props) => {
           </IconButton>
         ) : null}
       </DialogTitle>
-      <Divider type="section15" />
+      <Divider variants="section15" />
     </>
   );
 };
@@ -421,7 +421,7 @@ const TaskManage = () => {
                 />
               </TableTitle>
             </Box>
-            <Divider type="section15" />
+            <Divider variants="section15" />
             <Grid container>
               <Grid item xs={12}>
                 <Table title="직무수정" btnCancel="취소" btnAction="수정" />

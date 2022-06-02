@@ -185,7 +185,7 @@ export const SubTitle = ({ titleData, buttonGroup, children }) => {
           )}
           {/* isTooltip */}
           {!titleData.toggle && titleData.tooltip && (
-            <IconButton color="primary" variant="outlined">
+            <IconButton color="primaryOutlined">
               <IconInfo />
             </IconButton>
           )}
@@ -211,7 +211,7 @@ export const SubTitle = ({ titleData, buttonGroup, children }) => {
       </div>
       {titleData.toggle && (
         <Collapse in={selected}>
-          <Divider type="section15" />
+          <Divider variants="section15" />
           {/* Collapse Children to custom */}
           {children}
         </Collapse>

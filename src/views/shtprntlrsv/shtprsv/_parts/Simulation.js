@@ -25,7 +25,7 @@ const subTitleData01 = {
 const LyList = ({ subtitle, children, borderNone, ...rest }) => {
   return (
     <>
-      {!borderNone && <Divider type="item15" />}
+      {!borderNone && <Divider variants="item15" />}
       {subtitle && (
         <Typography variant="st2" color="grey.900" mb={15}>
           {subtitle}
@@ -183,7 +183,7 @@ const Simulation = () => {
               제휴할인유형표기
             </Typography>
           </LyList>
-          <Divider type="item15" />
+          <Divider variants="item15" />
           <SubTitle titleData={subTitleData01}>
             <LyList borderNone>
               <ListItem>
@@ -296,7 +296,7 @@ const Simulation = () => {
               제휴할인유형표기
             </Typography>
           </LyList>
-          <Divider type="item15" />
+          <Divider variants="item15" />
           <SubTitle titleData={subTitleData01}>
             <LyList borderNone>
               <ListItem>
@@ -409,7 +409,7 @@ const Simulation = () => {
               제휴할인유형표기
             </Typography>
           </LyList>
-          <Divider type="item15" />
+          <Divider variants="item15" />
           <SubTitle titleData={subTitleData01}>
             <LyList borderNone>
               <ListItem>
