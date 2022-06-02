@@ -8,7 +8,15 @@ import { Button } from "@mui/material";
  * @type { React.FC<ButtonProps> }
  */
 
-const SkrButton = ({ color, variant, size, startIcon, endIcon, children }) => {
+const SkrButton = ({
+  color,
+  variant,
+  size,
+  startIcon,
+  endIcon,
+  disabled,
+  children,
+}) => {
   return (
     <Button
       color={color}
@@ -16,6 +24,7 @@ const SkrButton = ({ color, variant, size, startIcon, endIcon, children }) => {
       size={size}
       startIcon={startIcon}
       endIcon={endIcon}
+      disabled={disabled}
     >
       {children}
     </Button>
