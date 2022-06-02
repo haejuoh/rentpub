@@ -1,115 +1,115 @@
 import React from "react";
 // import { styled, makeStyles } from "@mui/material/styles";
 import { styled } from "@mui/material/styles";
-import {
-  Grid,
-  Box,
-  Button,
-  IconButton,
-  Typography,
-  Stack,
-  ButtonGroup,
-} from "@mui/material";
-import { PencilOutline } from "react-ionicons";
+import { Box, IconButton, Stack, ButtonGroup } from "@mui/material";
 import { ReactComponent as IconPencil } from "../assets/images/icons/pencil.svg";
 import { ReactComponent as IconExcel } from "../assets/images/icons/excel.svg";
 
 import { CodeBox, FlexBox } from "../assets/style/guideStyle";
 
+import SkrGrid from "../components/skr/SkrGrid";
+import SkrTypography from "../components/skr/SkrTypography";
+import SkrButton from "../components/skr/SkrButton";
+import SkrButtonGroup from "../components/skr/SkrButtonGroup";
+
 export const BtnSize = () => {
   return (
     <>
-      <Grid container spacing={5}>
-        <Grid item xs={6}>
+      <SkrGrid container spacing={5}>
+        <SkrGrid item xs={6}>
           <Stack spacing={3}>
             <div>
-              <Typography variant="h4" pb={1}>
+              <SkrTypography variant="h4" pb={1}>
                 Small
-              </Typography>
-              <Button color="primary" size="small" variant="contained">
-                Button
-              </Button>
+              </SkrTypography>
+              <SkrButton color="primary" size="small" variant="contained">
+                SkrButton
+              </SkrButton>
             </div>
             <div>
-              <Typography variant="h4" pb={1}>
+              <SkrTypography variant="h4" pb={1}>
                 Medium (Default)
-              </Typography>
-              <Button color="primary" variant="contained">
-                Button
-              </Button>
+              </SkrTypography>
+              <SkrButton color="primary" variant="contained">
+                SkrButton
+              </SkrButton>
             </div>
             <div>
-              <Typography variant="h4" pb={1}>
+              <SkrTypography variant="h4" pb={1}>
                 Large
-              </Typography>
-              <Button color="primary" size="large" variant="contained">
-                Button
-              </Button>
+              </SkrTypography>
+              <SkrButton color="primary" size="large" variant="contained">
+                SkrButton
+              </SkrButton>
             </div>
           </Stack>
-        </Grid>
-        <Grid item xs={6}>
+        </SkrGrid>
+        <SkrGrid item xs={6}>
           <CodeBox>
             <pre>{`// small
-<Button color="primary" variant="contained" size="small">Button</Button>
+<SkrButton color="primary" variant="contained" size="small">SkrButton</SkrButton>
 // medium
 // default porperty로 size 생략해도 medium 적용됨
-<Button color="primary" variant="contained" size="medium">Button</Button>
-<Button color="primary" variant="contained">Button</Button>
+<SkrButton color="primary" variant="contained" size="medium">SkrButton</SkrButton>
+<SkrButton color="primary" variant="contained">SkrButton</SkrButton>
 //large
-<Button color="primary" variant="contained" size="large">Button</Button>`}</pre>
+<SkrButton color="primary" variant="contained" size="large">SkrButton</SkrButton>`}</pre>
           </CodeBox>
-        </Grid>
-      </Grid>
+        </SkrGrid>
+      </SkrGrid>
     </>
   );
 };
 export const BtnIcon = () => {
   return (
     <>
-      <Grid container spacing={5}>
-        <Grid item xs={6}>
-          <Typography variant="h4" pb={1}>
+      <SkrGrid container spacing={5}>
+        <SkrGrid item xs={6}>
+          <SkrTypography variant="h4" pb={1}>
             Only Icon
-          </Typography>
+          </SkrTypography>
           <Stack direction="row" spacing={5}>
             <IconButton color="primary">
               <IconPencil />
             </IconButton>
           </Stack>
-        </Grid>
-        <Grid item xs={6}>
+        </SkrGrid>
+        <SkrGrid item xs={6}>
           <CodeBox>
             <pre>{`<IconButton color="primary"><IconPencil /></IconButton>`}</pre>
           </CodeBox>
-        </Grid>
-      </Grid>
-      <Grid container spacing={5} mt={5}>
-        <Grid item xs={6}>
-          <Typography variant="h4" pb={1}>
-            Button With endIcon
-          </Typography>
-          <Button color="primary" variant="contained" endIcon={<IconPencil />}>
-            Button
-          </Button>
-        </Grid>
-        <Grid item xs={6}>
+        </SkrGrid>
+      </SkrGrid>
+      <SkrGrid container spacing={5} mt={5}>
+        <SkrGrid item xs={6}>
+          <SkrTypography variant="h4" pb={1}>
+            SkrButton With endIcon
+          </SkrTypography>
+          <SkrButton
+            color="primary"
+            variant="contained"
+            endIcon={<IconPencil />}
+          >
+            SkrButton
+          </SkrButton>
+        </SkrGrid>
+        <SkrGrid item xs={6}>
           <CodeBox>
-            <pre>{`<Button color="primary" variant="contained" endIcon={<IconPencil />}>Button</Button>`}</pre>
+            <pre>{`<SkrButton color="primary" variant="contained" endIcon={<IconPencil />}>SkrButton</SkrButton>`}</pre>
           </CodeBox>
-        </Grid>
-      </Grid>
+        </SkrGrid>
+      </SkrGrid>
     </>
   );
 };
 export const BtnVariation = () => {
   return (
     <>
-      <Grid container spacing={5}>
-        <Grid item xs={6}>
-          <Typography variant="h4" pb={1}>
+      <SkrGrid container spacing={5}>
+        <SkrGrid item xs={6}>
+          <SkrTypography variant="h4" pb={1}>
             Primary
-          </Typography>
+          </SkrTypography>
           <Stack direction="row" spacing={5}>
             <IconButton color="primary" size="small">
               <IconPencil />
@@ -131,91 +131,95 @@ export const BtnVariation = () => {
             </IconButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
-            <Button color="primary" size="small" variant="contained">
-              Button
-            </Button>
-            <Button
+            <SkrButton color="primary" size="small" variant="contained">
+              SkrButton
+            </SkrButton>
+            <SkrButton
               color="primary"
               variant="contained"
               size="small"
               endIcon={<IconPencil />}
             >
-              Button
-            </Button>
-            <Button color="primary" size="small" variant="outlined">
-              Button
-            </Button>
-            <Button
+              SkrButton
+            </SkrButton>
+            <SkrButton color="primary" size="small" variant="outlined">
+              SkrButton
+            </SkrButton>
+            <SkrButton
               color="primary"
               variant="outlined"
               size="small"
               endIcon={<IconPencil />}
             >
-              Button
-            </Button>
+              SkrButton
+            </SkrButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
-            <Button color="primary" variant="contained">
-              Button
-            </Button>
-            <Button
+            <SkrButton color="primary" variant="contained">
+              SkrButton
+            </SkrButton>
+            <SkrButton
               color="primary"
               variant="contained"
               endIcon={<IconPencil />}
             >
-              Button
-            </Button>
-            <Button color="primary" variant="outlined">
-              Button
-            </Button>
-            <Button color="primary" variant="outlined" endIcon={<IconPencil />}>
-              Button
-            </Button>
+              SkrButton
+            </SkrButton>
+            <SkrButton color="primary" variant="outlined">
+              SkrButton
+            </SkrButton>
+            <SkrButton
+              color="primary"
+              variant="outlined"
+              endIcon={<IconPencil />}
+            >
+              SkrButton
+            </SkrButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
-            <Button color="primary" size="large" variant="contained">
-              Button
-            </Button>
-            <Button
+            <SkrButton color="primary" size="large" variant="contained">
+              SkrButton
+            </SkrButton>
+            <SkrButton
               color="primary"
               variant="contained"
               size="large"
               endIcon={<IconPencil />}
             >
-              Button
-            </Button>
-            <Button color="primary" size="large" variant="outlined">
-              Button
-            </Button>
-            <Button
+              SkrButton
+            </SkrButton>
+            <SkrButton color="primary" size="large" variant="outlined">
+              SkrButton
+            </SkrButton>
+            <SkrButton
               size="large"
               color="primary"
               variant="outlined"
               endIcon={<IconPencil />}
             >
-              Button
-            </Button>
+              SkrButton
+            </SkrButton>
           </Stack>
-        </Grid>
-        <Grid item xs={6}>
+        </SkrGrid>
+        <SkrGrid item xs={6}>
           <CodeBox>
             <pre>{`// primary
 <IconButton color="primary" size="small"><IconPencil /></IconButton>
 <IconButton color="primary" variant="outlined" size="small"><IconPencil /></IconButton>
-<Button color="primary" variant="contained" size="small">Button</Button>
-<Button color="primary" variant="outlined" size="small">Button</Button>
+<SkrButton color="primary" variant="contained" size="small">SkrButton</SkrButton>
+<SkrButton color="primary" variant="outlined" size="small">SkrButton</SkrButton>
 
 // primary , icon
-<Button color="primary" variant="contained" size="small" endIcon={<IconPencil />}>Button</Button>
-<Button color="primary" variant="outlined" size="small" endIcon={<IconPencil />}>Button</Button>`}</pre>
+<SkrButton color="primary" variant="contained" size="small" endIcon={<IconPencil />}>SkrButton</SkrButton>
+<SkrButton color="primary" variant="outlined" size="small" endIcon={<IconPencil />}>SkrButton</SkrButton>`}</pre>
           </CodeBox>
-        </Grid>
-      </Grid>
-      <Grid container spacing={5} mt={5}>
-        <Grid item xs={6}>
-          <Typography variant="h4" pb={1}>
+        </SkrGrid>
+      </SkrGrid>
+      <SkrGrid container spacing={5} mt={5}>
+        <SkrGrid item xs={6}>
+          <SkrTypography variant="h4" pb={1}>
             Default
-          </Typography>
+          </SkrTypography>
           <Stack direction="row" spacing={5}>
             <IconButton color="default" size="small">
               <IconPencil />
@@ -237,91 +241,95 @@ export const BtnVariation = () => {
             </IconButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
-            <Button color="default" size="small" variant="contained">
-              Button
-            </Button>
-            <Button
+            <SkrButton color="default" size="small" variant="contained">
+              SkrButton
+            </SkrButton>
+            <SkrButton
               color="default"
               variant="contained"
               size="small"
               endIcon={<IconPencil />}
             >
-              Button
-            </Button>
-            <Button color="default" size="small" variant="outlined">
-              Button
-            </Button>
-            <Button
+              SkrButton
+            </SkrButton>
+            <SkrButton color="default" size="small" variant="outlined">
+              SkrButton
+            </SkrButton>
+            <SkrButton
               color="default"
               variant="outlined"
               size="small"
               endIcon={<IconPencil />}
             >
-              Button
-            </Button>
+              SkrButton
+            </SkrButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
-            <Button color="default" variant="contained">
-              Button
-            </Button>
-            <Button
+            <SkrButton color="default" variant="contained">
+              SkrButton
+            </SkrButton>
+            <SkrButton
               color="default"
               variant="contained"
               endIcon={<IconPencil />}
             >
-              Button
-            </Button>
-            <Button color="default" variant="outlined">
-              Button
-            </Button>
-            <Button color="default" variant="outlined" endIcon={<IconPencil />}>
-              Button
-            </Button>
+              SkrButton
+            </SkrButton>
+            <SkrButton color="default" variant="outlined">
+              SkrButton
+            </SkrButton>
+            <SkrButton
+              color="default"
+              variant="outlined"
+              endIcon={<IconPencil />}
+            >
+              SkrButton
+            </SkrButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
-            <Button color="default" size="large" variant="contained">
-              Button
-            </Button>
-            <Button
+            <SkrButton color="default" size="large" variant="contained">
+              SkrButton
+            </SkrButton>
+            <SkrButton
               color="default"
               variant="contained"
               size="large"
               endIcon={<IconPencil />}
             >
-              Button
-            </Button>
-            <Button color="default" size="large" variant="outlined">
-              Button
-            </Button>
-            <Button
+              SkrButton
+            </SkrButton>
+            <SkrButton color="default" size="large" variant="outlined">
+              SkrButton
+            </SkrButton>
+            <SkrButton
               size="large"
               color="default"
               variant="outlined"
               endIcon={<IconPencil />}
             >
-              Button
-            </Button>
+              SkrButton
+            </SkrButton>
           </Stack>
-        </Grid>
-        <Grid item xs={6}>
+        </SkrGrid>
+        <SkrGrid item xs={6}>
           <CodeBox>
             <pre>{`// default
 <IconButton color="default" size="small"><IconPencil /></IconButton>
 <IconButton color="default" variant="outlined" size="small"><IconPencil /></IconButton>
-<Button color="default" variant="contained" size="small">Button</Button>
-<Button color="default" variant="outlined" size="small">Button</Button>
+<SkrButton color="default" variant="contained" size="small">SkrButton</SkrButton>
+<SkrButton color="default" variant="outlined" size="small">SkrButton</SkrButton>
 
 // default , icon
-<Button color="default" variant="contained" size="small" endIcon={<IconPencil />}>Button</Button>
-<Button color="default" variant="outlined" size="small" endIcon={<IconPencil />}>Button</Button>`}</pre>
+<SkrButton color="default" variant="contained" size="small" endIcon={<IconPencil />}>SkrButton</SkrButton>
+<SkrButton color="default" variant="outlined" size="small" endIcon={<IconPencil />}>SkrButton</SkrButton>`}</pre>
           </CodeBox>
-        </Grid>
-      </Grid>
-      <Grid container spacing={5} mt={5}>
-        <Grid item xs={6}>
-          <Typography variant="h4" pb={1}>
+        </SkrGrid>
+      </SkrGrid>
+      <SkrGrid container spacing={5} mt={5}>
+        <SkrGrid item xs={6}>
+          <SkrTypography variant="h4" pb={1}>
             Sub
-          </Typography>
+          </SkrTypography>
           <Stack direction="row" spacing={5}>
             <IconButton color="sub" size="small">
               <IconPencil />
@@ -334,57 +342,57 @@ export const BtnVariation = () => {
             </IconButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
-            <Button color="sub" size="small" variant="contained">
-              Button
-            </Button>
-            <Button
+            <SkrButton color="sub" size="small" variant="contained">
+              SkrButton
+            </SkrButton>
+            <SkrButton
               color="sub"
               variant="contained"
               size="small"
               endIcon={<IconPencil />}
             >
-              Button
-            </Button>
+              SkrButton
+            </SkrButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
-            <Button color="sub" variant="contained">
-              Button
-            </Button>
-            <Button color="sub" variant="contained" endIcon={<IconPencil />}>
-              Button
-            </Button>
+            <SkrButton color="sub" variant="contained">
+              SkrButton
+            </SkrButton>
+            <SkrButton color="sub" variant="contained" endIcon={<IconPencil />}>
+              SkrButton
+            </SkrButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
-            <Button color="sub" size="large" variant="contained">
-              Button
-            </Button>
-            <Button
+            <SkrButton color="sub" size="large" variant="contained">
+              SkrButton
+            </SkrButton>
+            <SkrButton
               color="sub"
               variant="contained"
               size="large"
               endIcon={<IconPencil />}
             >
-              Button
-            </Button>
+              SkrButton
+            </SkrButton>
           </Stack>
-        </Grid>
-        <Grid item xs={6}>
+        </SkrGrid>
+        <SkrGrid item xs={6}>
           <CodeBox>
             <pre>{`// sub
 <IconButton color="sub" size="small"><IconPencil /></IconButton>
-<Button color="sub" variant="contained" size="small">Button</Button>
+<SkrButton color="sub" variant="contained" size="small">SkrButton</SkrButton>
 
 // sub , icon
-<Button color="sub" variant="contained" size="small" endIcon={<IconPencil />}>Button</Button>
+<SkrButton color="sub" variant="contained" size="small" endIcon={<IconPencil />}>SkrButton</SkrButton>
 `}</pre>
           </CodeBox>
-        </Grid>
-      </Grid>
-      <Grid container spacing={5} mt={5}>
-        <Grid item xs={6}>
-          <Typography variant="h4" pb={1}>
+        </SkrGrid>
+      </SkrGrid>
+      <SkrGrid container spacing={5} mt={5}>
+        <SkrGrid item xs={6}>
+          <SkrTypography variant="h4" pb={1}>
             Secondary
-          </Typography>
+          </SkrTypography>
           <Stack direction="row" spacing={5}>
             <IconButton color="secondary" size="small">
               <IconPencil />
@@ -406,95 +414,95 @@ export const BtnVariation = () => {
             </IconButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
-            <Button color="secondary" size="small" variant="contained">
-              Button
-            </Button>
-            <Button
+            <SkrButton color="secondary" size="small" variant="contained">
+              SkrButton
+            </SkrButton>
+            <SkrButton
               color="secondary"
               variant="contained"
               size="small"
               endIcon={<IconPencil />}
             >
-              Button
-            </Button>
-            <Button color="secondary" size="small" variant="outlined">
-              Button
-            </Button>
-            <Button
+              SkrButton
+            </SkrButton>
+            <SkrButton color="secondary" size="small" variant="outlined">
+              SkrButton
+            </SkrButton>
+            <SkrButton
               color="secondary"
               variant="outlined"
               size="small"
               endIcon={<IconPencil />}
             >
-              Button
-            </Button>
+              SkrButton
+            </SkrButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
-            <Button color="secondary" variant="contained">
-              Button
-            </Button>
-            <Button
+            <SkrButton color="secondary" variant="contained">
+              SkrButton
+            </SkrButton>
+            <SkrButton
               color="secondary"
               variant="contained"
               endIcon={<IconPencil />}
             >
-              Button
-            </Button>
-            <Button color="secondary" variant="outlined">
-              Button
-            </Button>
-            <Button
+              SkrButton
+            </SkrButton>
+            <SkrButton color="secondary" variant="outlined">
+              SkrButton
+            </SkrButton>
+            <SkrButton
               color="secondary"
               variant="outlined"
               endIcon={<IconPencil />}
             >
-              Button
-            </Button>
+              SkrButton
+            </SkrButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
-            <Button color="secondary" size="large" variant="contained">
-              Button
-            </Button>
-            <Button
+            <SkrButton color="secondary" size="large" variant="contained">
+              SkrButton
+            </SkrButton>
+            <SkrButton
               color="secondary"
               variant="contained"
               size="large"
               endIcon={<IconPencil />}
             >
-              Button
-            </Button>
-            <Button color="secondary" size="large" variant="outlined">
-              Button
-            </Button>
-            <Button
+              SkrButton
+            </SkrButton>
+            <SkrButton color="secondary" size="large" variant="outlined">
+              SkrButton
+            </SkrButton>
+            <SkrButton
               size="large"
               color="secondary"
               variant="outlined"
               endIcon={<IconPencil />}
             >
-              Button
-            </Button>
+              SkrButton
+            </SkrButton>
           </Stack>
-        </Grid>
-        <Grid item xs={6}>
+        </SkrGrid>
+        <SkrGrid item xs={6}>
           <CodeBox>
             <pre>{`// secondary
 <IconButton color="secondary" size="small"><IconPencil /></IconButton>
 <IconButton color="secondary" variant="outlined" size="small"><IconPencil /></IconButton>
-<Button color="secondary" variant="contained" size="small">Button</Button>
-<Button color="secondary" variant="outlined" size="small">Button</Button>
+<SkrButton color="secondary" variant="contained" size="small">SkrButton</SkrButton>
+<SkrButton color="secondary" variant="outlined" size="small">SkrButton</SkrButton>
 
 // secondary , icon
-<Button color="secondary" variant="contained" size="small" endIcon={<IconPencil />}>Button</Button>
-<Button color="secondary" variant="outlined" size="small" endIcon={<IconPencil />}>Button</Button>`}</pre>
+<SkrButton color="secondary" variant="contained" size="small" endIcon={<IconPencil />}>SkrButton</SkrButton>
+<SkrButton color="secondary" variant="outlined" size="small" endIcon={<IconPencil />}>SkrButton</SkrButton>`}</pre>
           </CodeBox>
-        </Grid>
-      </Grid>
-      <Grid container spacing={5} mt={5}>
-        <Grid item xs={6}>
-          <Typography variant="h4" pb={1}>
+        </SkrGrid>
+      </SkrGrid>
+      <SkrGrid container spacing={5} mt={5}>
+        <SkrGrid item xs={6}>
+          <SkrTypography variant="h4" pb={1}>
             Function
-          </Typography>
+          </SkrTypography>
           <Stack direction="row" spacing={5}>
             <IconButton color="function" size="small">
               <IconPencil />
@@ -516,91 +524,91 @@ export const BtnVariation = () => {
             </IconButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
-            <Button color="function" size="small" variant="outlined">
-              Button
-            </Button>
-            <Button
+            <SkrButton color="function" size="small" variant="outlined">
+              SkrButton
+            </SkrButton>
+            <SkrButton
               color="function"
               variant="outlined"
               size="small"
               endIcon={<IconPencil />}
             >
-              Button
-            </Button>
+              SkrButton
+            </SkrButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
-            <Button color="function" variant="outlined">
-              Button
-            </Button>
-            <Button
+            <SkrButton color="function" variant="outlined">
+              SkrButton
+            </SkrButton>
+            <SkrButton
               color="function"
               variant="outlined"
               endIcon={<IconPencil />}
             >
-              Button
-            </Button>
+              SkrButton
+            </SkrButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
-            <Button color="function" size="large" variant="outlined">
-              Button
-            </Button>
-            <Button
+            <SkrButton color="function" size="large" variant="outlined">
+              SkrButton
+            </SkrButton>
+            <SkrButton
               size="large"
               color="function"
               variant="outlined"
               endIcon={<IconPencil />}
             >
-              Button
-            </Button>
+              SkrButton
+            </SkrButton>
           </Stack>
-        </Grid>
-        <Grid item xs={6}>
+        </SkrGrid>
+        <SkrGrid item xs={6}>
           <CodeBox>
             <pre>{`// function
 <IconButton color="function" size="small"><IconPencil /></IconButton>
 <IconButton color="function" variant="outlined" size="small"><IconPencil /></IconButton>
-<Button color="function" variant="outlined" size="small">Button</Button>
+<SkrButton color="function" variant="outlined" size="small">SkrButton</SkrButton>
 
 // function , icon
-<Button color="function" variant="outlined" size="small" endIcon={<IconPencil />}>Button</Button>`}</pre>
+<SkrButton color="function" variant="outlined" size="small" endIcon={<IconPencil />}>SkrButton</SkrButton>`}</pre>
           </CodeBox>
-        </Grid>
-      </Grid>
-      <Grid container spacing={5} mt={5}>
-        <Grid item xs={6}>
-          <Typography variant="h4" pb={1}>
+        </SkrGrid>
+      </SkrGrid>
+      <SkrGrid container spacing={5} mt={5}>
+        <SkrGrid item xs={6}>
+          <SkrTypography variant="h4" pb={1}>
             Excel
-          </Typography>
+          </SkrTypography>
           <Stack direction="row" spacing={5}>
-            <Button
+            <SkrButton
               color="excel"
               size="small"
               variant="outlined"
               endIcon={<IconExcel />}
             >
-              Button
-            </Button>
+              SkrButton
+            </SkrButton>
 
-            <Button color="excel" variant="outlined" endIcon={<IconExcel />}>
-              Button
-            </Button>
+            <SkrButton color="excel" variant="outlined" endIcon={<IconExcel />}>
+              SkrButton
+            </SkrButton>
           </Stack>
-        </Grid>
-        <Grid item xs={6}>
+        </SkrGrid>
+        <SkrGrid item xs={6}>
           <CodeBox>
             <pre>{`// excel
-<Button color="excel" variant="outlined" />
+<SkrButton color="excel" variant="outlined" />
 // excel , icon
-<Button color="excel" variant="outlined" size="small" endIcon={<IconExcel />}>Button</Button>
-<Button color="excel" variant="outlined" endIcon={<IconExcel />}>Button</Button>`}</pre>
+<SkrButton color="excel" variant="outlined" size="small" endIcon={<IconExcel />}>SkrButton</SkrButton>
+<SkrButton color="excel" variant="outlined" endIcon={<IconExcel />}>SkrButton</SkrButton>`}</pre>
           </CodeBox>
-        </Grid>
-      </Grid>
-      <Grid container spacing={5} mt={5}>
-        <Grid item xs={6}>
-          <Typography variant="h4" pb={1}>
+        </SkrGrid>
+      </SkrGrid>
+      <SkrGrid container spacing={5} mt={5}>
+        <SkrGrid item xs={6}>
+          <SkrTypography variant="h4" pb={1}>
             Delete
-          </Typography>
+          </SkrTypography>
           <Stack direction="row" spacing={5}>
             <IconButton color="delete" variant="outlined" size="small">
               <IconPencil />
@@ -613,56 +621,60 @@ export const BtnVariation = () => {
             </IconButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
-            <Button color="delete" size="small" variant="outlined">
-              Button
-            </Button>
-            <Button
+            <SkrButton color="delete" size="small" variant="outlined">
+              SkrButton
+            </SkrButton>
+            <SkrButton
               color="delete"
               variant="outlined"
               size="small"
               endIcon={<IconPencil />}
             >
-              Button
-            </Button>
+              SkrButton
+            </SkrButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
-            <Button color="delete" variant="outlined">
-              Button
-            </Button>
-            <Button color="delete" variant="outlined" endIcon={<IconPencil />}>
-              Button
-            </Button>
+            <SkrButton color="delete" variant="outlined">
+              SkrButton
+            </SkrButton>
+            <SkrButton
+              color="delete"
+              variant="outlined"
+              endIcon={<IconPencil />}
+            >
+              SkrButton
+            </SkrButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
-            <Button color="delete" size="large" variant="outlined">
-              Button
-            </Button>
-            <Button
+            <SkrButton color="delete" size="large" variant="outlined">
+              SkrButton
+            </SkrButton>
+            <SkrButton
               size="large"
               color="delete"
               variant="outlined"
               endIcon={<IconPencil />}
             >
-              Button
-            </Button>
+              SkrButton
+            </SkrButton>
           </Stack>
-        </Grid>
-        <Grid item xs={6}>
+        </SkrGrid>
+        <SkrGrid item xs={6}>
           <CodeBox>
             <pre>{`// delete
 <IconButton color="delete" variant="outlined" size="small"><IconPencil /></IconButton>
-<Button color="delete" variant="outlined" size="small">Button</Button>
+<SkrButton color="delete" variant="outlined" size="small">SkrButton</SkrButton>
 
 // delete , icon
-<Button color="delete" variant="outlined" size="small" endIcon={<IconPencil />}>Button</Button>`}</pre>
+<SkrButton color="delete" variant="outlined" size="small" endIcon={<IconPencil />}>SkrButton</SkrButton>`}</pre>
           </CodeBox>
-        </Grid>
-      </Grid>
-      <Grid container spacing={5} mt={5}>
-        <Grid item xs={6}>
-          <Typography variant="h4" pb={1}>
+        </SkrGrid>
+      </SkrGrid>
+      <SkrGrid container spacing={5} mt={5}>
+        <SkrGrid item xs={6}>
+          <SkrTypography variant="h4" pb={1}>
             cancel
-          </Typography>
+          </SkrTypography>
           <Stack direction="row" spacing={5}>
             <IconButton color="cancel" variant="outlined" size="small">
               <IconPencil />
@@ -675,87 +687,91 @@ export const BtnVariation = () => {
             </IconButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
-            <Button color="cancel" size="small" variant="outlined">
-              Button
-            </Button>
-            <Button
+            <SkrButton color="cancel" size="small" variant="outlined">
+              SkrButton
+            </SkrButton>
+            <SkrButton
               color="cancel"
               variant="outlined"
               size="small"
               endIcon={<IconPencil />}
             >
-              Button
-            </Button>
+              SkrButton
+            </SkrButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
-            <Button color="cancel" variant="outlined">
-              Button
-            </Button>
-            <Button color="cancel" variant="outlined" endIcon={<IconPencil />}>
-              Button
-            </Button>
+            <SkrButton color="cancel" variant="outlined">
+              SkrButton
+            </SkrButton>
+            <SkrButton
+              color="cancel"
+              variant="outlined"
+              endIcon={<IconPencil />}
+            >
+              SkrButton
+            </SkrButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
-            <Button color="cancel" size="large" variant="outlined">
-              Button
-            </Button>
-            <Button
+            <SkrButton color="cancel" size="large" variant="outlined">
+              SkrButton
+            </SkrButton>
+            <SkrButton
               size="large"
               color="cancel"
               variant="outlined"
               endIcon={<IconPencil />}
             >
-              Button
-            </Button>
+              SkrButton
+            </SkrButton>
           </Stack>
-        </Grid>
-        <Grid item xs={6}>
+        </SkrGrid>
+        <SkrGrid item xs={6}>
           <CodeBox>
             <pre>{`// cancel
 <IconButton color="cancel" variant="outlined" size="small"><IconPencil /></IconButton>
-<Button color="cancel" variant="outlined" size="small">Button</Button>
+<SkrButton color="cancel" variant="outlined" size="small">SkrButton</SkrButton>
 
 // cancel , icon
-<Button color="cancel" variant="outlined" size="small" endIcon={<IconPencil />}>Button</Button>`}</pre>
+<SkrButton color="cancel" variant="outlined" size="small" endIcon={<IconPencil />}>SkrButton</SkrButton>`}</pre>
           </CodeBox>
-        </Grid>
-      </Grid>
-      <Grid container spacing={5} mt={5}>
-        <Grid item xs={6}>
-          <Typography variant="h4" pb={1}>
+        </SkrGrid>
+      </SkrGrid>
+      <SkrGrid container spacing={5} mt={5}>
+        <SkrGrid item xs={6}>
+          <SkrTypography variant="h4" pb={1}>
             Modal
-          </Typography>
+          </SkrTypography>
           <Stack direction="row" spacing={5} mt={5}>
-            <Button color="modal" size="small">
-              Button
-            </Button>
-            <Button color="modal">Button</Button>
-            <Button color="modal" size="large">
-              Button
-            </Button>
+            <SkrButton color="modal" size="small">
+              SkrButton
+            </SkrButton>
+            <SkrButton color="modal">SkrButton</SkrButton>
+            <SkrButton color="modal" size="large">
+              SkrButton
+            </SkrButton>
           </Stack>
-        </Grid>
-        <Grid item xs={6}>
+        </SkrGrid>
+        <SkrGrid item xs={6}>
           <CodeBox>
             <pre>{`// modal
-<Button color="modal" size="small">Button</Button>
-<Button color="modal">Button</Button>
-<Button color="modal" size="large">Button</Button>
+<SkrButton color="modal" size="small">SkrButton</SkrButton>
+<SkrButton color="modal">SkrButton</SkrButton>
+<SkrButton color="modal" size="large">SkrButton</SkrButton>
 `}</pre>
           </CodeBox>
-        </Grid>
-      </Grid>
+        </SkrGrid>
+      </SkrGrid>
     </>
   );
 };
 export const BtnDisabled = () => {
   return (
     <>
-      <Grid container spacing={5}>
-        <Grid item xs={6}>
-          <Typography variant="h4" pb={1}>
+      <SkrGrid container spacing={5}>
+        <SkrGrid item xs={6}>
+          <SkrTypography variant="h4" pb={1}>
             Disabled
-          </Typography>
+          </SkrTypography>
           <Stack direction="row" spacing={5}>
             <IconButton color="primary" size="small" disabled>
               <IconPencil />
@@ -768,156 +784,161 @@ export const BtnDisabled = () => {
             </IconButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
-            <Button size="small" variant="contained" disabled>
-              Button
-            </Button>
-            <Button
+            <SkrButton size="small" variant="contained" disabled>
+              SkrButton
+            </SkrButton>
+            <SkrButton
               variant="contained"
               size="small"
               endIcon={<IconPencil />}
               disabled
             >
-              Button
-            </Button>
+              SkrButton
+            </SkrButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
-            <Button variant="outlined" disabled>
-              Button
-            </Button>
-            <Button variant="outlined" endIcon={<IconPencil />} disabled>
-              Button
-            </Button>
+            <SkrButton variant="outlined" disabled>
+              SkrButton
+            </SkrButton>
+            <SkrButton variant="outlined" endIcon={<IconPencil />} disabled>
+              SkrButton
+            </SkrButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
-            <Button color="primary" size="large" variant="contained" disabled>
-              Button
-            </Button>
-            <Button
+            <SkrButton
+              color="primary"
+              size="large"
+              variant="contained"
+              disabled
+            >
+              SkrButton
+            </SkrButton>
+            <SkrButton
               color="sub"
               variant="contained"
               size="large"
               endIcon={<IconPencil />}
               disabled
             >
-              Button
-            </Button>
+              SkrButton
+            </SkrButton>
           </Stack>
-        </Grid>
-        <Grid item xs={6}>
+        </SkrGrid>
+        <SkrGrid item xs={6}>
           <CodeBox>
             <pre>{`// disabled
 <IconButton color="primary" size="small" disabled><IconPencil /></IconButton>
-<Button color="primary" variant="contained" size="small" disabled>Button</Button>
+<SkrButton color="primary" variant="contained" size="small" disabled>SkrButton</SkrButton>
 
 // disabled , icon
-<Button color="primary" variant="contained" size="small" endIcon={<IconPencil />} disabled>Button</Button>`}</pre>
+<SkrButton color="primary" variant="contained" size="small" endIcon={<IconPencil />} disabled>SkrButton</SkrButton>`}</pre>
           </CodeBox>
-        </Grid>
-      </Grid>
+        </SkrGrid>
+      </SkrGrid>
     </>
   );
 };
 const buttons = [
-  <Button key="one">Button</Button>,
-  <Button key="two">Button</Button>,
+  <SkrButton key="one">SkrButton</SkrButton>,
+  <SkrButton key="two">SkrButton</SkrButton>,
 ];
 
 export const GroupBtn = () => {
   return (
     <>
-      <Grid container spacing={5}>
-        <Grid item xs={6}>
-          <Typography variant="h4" pb={1}>
+      <SkrGrid container spacing={5}>
+        <SkrGrid item xs={6}>
+          <SkrTypography variant="h4" pb={1}>
             Stack Spacing
-          </Typography>
+          </SkrTypography>
           <Box mt={10}>
             <Stack direction="row" spacing={5}>
-              <Button color="primary" variant="contained" size="small">
-                Button
-              </Button>
-              <Button color="primary" variant="contained" size="small">
-                Button
-              </Button>
-              <Button color="primary" variant="contained" size="small">
-                Button
-              </Button>
-              <Button color="primary" variant="contained" size="small">
-                Button
-              </Button>
-              <Button color="primary" variant="contained" size="small">
-                Button
-              </Button>
+              <SkrButton color="primary" variant="contained" size="small">
+                SkrButton
+              </SkrButton>
+              <SkrButton color="primary" variant="contained" size="small">
+                SkrButton
+              </SkrButton>
+              <SkrButton color="primary" variant="contained" size="small">
+                SkrButton
+              </SkrButton>
+              <SkrButton color="primary" variant="contained" size="small">
+                SkrButton
+              </SkrButton>
+              <SkrButton color="primary" variant="contained" size="small">
+                SkrButton
+              </SkrButton>
             </Stack>
           </Box>
           <Box mt={20}>
             <Stack direction="row" spacing={8}>
-              <Button color="primary" variant="contained">
-                Button
-              </Button>
-              <Button color="primary" variant="contained">
-                Button
-              </Button>
-              <Button color="primary" variant="contained">
-                Button
-              </Button>
-              <Button color="primary" variant="contained">
-                Button
-              </Button>
-              <Button color="primary" variant="contained">
-                Button
-              </Button>
+              <SkrButton color="primary" variant="contained">
+                SkrButton
+              </SkrButton>
+              <SkrButton color="primary" variant="contained">
+                SkrButton
+              </SkrButton>
+              <SkrButton color="primary" variant="contained">
+                SkrButton
+              </SkrButton>
+              <SkrButton color="primary" variant="contained">
+                SkrButton
+              </SkrButton>
+              <SkrButton color="primary" variant="contained">
+                SkrButton
+              </SkrButton>
             </Stack>
           </Box>
           <Box mt={20}>
             <Stack direction="row" spacing={10}>
-              <Button color="primary" variant="contained" size="large">
-                Button
-              </Button>
-              <Button color="primary" variant="contained" size="large">
-                Button
-              </Button>
-              <Button color="primary" variant="contained" size="large">
-                Button
-              </Button>
-              <Button color="primary" variant="contained" size="large">
-                Button
-              </Button>
-              <Button color="primary" variant="contained" size="large">
-                Button
-              </Button>
+              <SkrButton color="primary" variant="contained" size="large">
+                SkrButton
+              </SkrButton>
+              <SkrButton color="primary" variant="contained" size="large">
+                SkrButton
+              </SkrButton>
+              <SkrButton color="primary" variant="contained" size="large">
+                SkrButton
+              </SkrButton>
+              <SkrButton color="primary" variant="contained" size="large">
+                SkrButton
+              </SkrButton>
+              <SkrButton color="primary" variant="contained" size="large">
+                SkrButton
+              </SkrButton>
             </Stack>
           </Box>
-        </Grid>
-        <Grid item xs={6}>
+        </SkrGrid>
+        <SkrGrid item xs={6}>
           <CodeBox>
             <pre>{`// small _ spacing 5px
 <Stack direction="row" spacing={5}>
-  <Button color="primary" variant="contained" size="small">Button</Button>
+  <SkrButton color="primary" variant="contained" size="small">SkrButton</SkrButton>
 </Stack>
 
 // medium _ spacing 8px
 <Stack direction="row" spacing={8}>
-  <Button color="primary" variant="contained">Button</Button>
+  <SkrButton color="primary" variant="contained">SkrButton</SkrButton>
 </Stack>
 
 // large _ spacing 10px
 <Stack direction="row" spacing={10}>
-  <Button color="primary" variant="contained" size="large">Button</Button>
+  <SkrButton color="primary" variant="contained" size="large">SkrButton</SkrButton>
 </Stack>
 `}</pre>
           </CodeBox>
-        </Grid>
-      </Grid>
-      <Grid container spacing={5} mt={5}>
-        <Grid item xs={6}>
-          <Typography variant="h4" pb={1}>
-            Button Group
-          </Typography>
+        </SkrGrid>
+      </SkrGrid>
+      <SkrGrid container spacing={5} mt={5}>
+        <SkrGrid item xs={6}>
+          <SkrTypography variant="h4" pb={1}>
+            SkrButton Group
+          </SkrTypography>
           <Stack direction="row" spacing={5}>
-            <ButtonGroup variant="outlined" color="primary" size="small">
+            <SkrButtonGroup variant="outlined" color="primary" size="small">
               {buttons}
-            </ButtonGroup>
-            <ButtonGroup
+            </SkrButtonGroup>
+            <SkrButtonGroup
               variant="outlined"
               color="primary"
               size="small"
@@ -925,26 +946,26 @@ export const GroupBtn = () => {
               disabled
             >
               {buttons}
-            </ButtonGroup>
+            </SkrButtonGroup>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
-            <ButtonGroup variant="outlined" color="primary">
+            <SkrButtonGroup variant="outlined" color="primary">
               {buttons}
-            </ButtonGroup>
-            <ButtonGroup
+            </SkrButtonGroup>
+            <SkrButtonGroup
               variant="outlined"
               color="primary"
               disableElevation
               disabled
             >
               {buttons}
-            </ButtonGroup>
+            </SkrButtonGroup>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
-            <ButtonGroup variant="outlined" color="primary" size="large">
+            <SkrButtonGroup variant="outlined" color="primary" size="large">
               {buttons}
-            </ButtonGroup>
-            <ButtonGroup
+            </SkrButtonGroup>
+            <SkrButtonGroup
               variant="outlined"
               color="primary"
               size="large"
@@ -952,43 +973,43 @@ export const GroupBtn = () => {
               disabled
             >
               {buttons}
-            </ButtonGroup>
+            </SkrButtonGroup>
           </Stack>
 
-          {/* <ButtonGroup variant="outlined" color="default">
+          {/* <SkrButtonGroup variant="outlined" color="default">
             {buttons}
-          </ButtonGroup>
-          <ButtonGroup variant="outlined" color="secondary">
+          </SkrButtonGroup>
+          <SkrButtonGroup variant="outlined" color="secondary">
             {buttons}
-          </ButtonGroup>
-          <ButtonGroup variant="outlined" color="function">
+          </SkrButtonGroup>
+          <SkrButtonGroup variant="outlined" color="function">
             {buttons}
-          </ButtonGroup>
-          <ButtonGroup variant="outlined" color="delete">
+          </SkrButtonGroup>
+          <SkrButtonGroup variant="outlined" color="delete">
             {buttons}
-          </ButtonGroup>
-          <ButtonGroup variant="outlined" color="cancel">
+          </SkrButtonGroup>
+          <SkrButtonGroup variant="outlined" color="cancel">
             {buttons}
-          </ButtonGroup> */}
-        </Grid>
-        <Grid item xs={6}>
+          </SkrButtonGroup> */}
+        </SkrGrid>
+        <SkrGrid item xs={6}>
           <CodeBox>
             <pre>{`// default
-<ButtonGroup variant="outlined" size="small">
-  <Button>Button</Button>
-  <Button>Button</Button>
-</ButtonGroup>
-<ButtonGroup color="primary" variant="outlined" size="small">
-  input Button components
-</ButtonGroup>
+<SkrButtonGroup variant="outlined" size="small">
+  <SkrButton>SkrButton</SkrButton>
+  <SkrButton>SkrButton</SkrButton>
+</SkrButtonGroup>
+<SkrButtonGroup color="primary" variant="outlined" size="small">
+  input SkrButton components
+</SkrButtonGroup>
 
 // disabled (disabled 활성시 disableElevation, disabled porperty)
-<ButtonGroup color="primary" variant="outlined" size="small" disableElevation disabled>
-  input Button components
-</ButtonGroup>`}</pre>
+<SkrButtonGroup color="primary" variant="outlined" size="small" disableElevation disabled>
+  input SkrButton components
+</SkrButtonGroup>`}</pre>
           </CodeBox>
-        </Grid>
-      </Grid>
+        </SkrGrid>
+      </SkrGrid>
     </>
   );
 };

@@ -8,6 +8,7 @@ import { TextareaAutosize } from "@mui/material";
 /**
  * @type { React.FC<TextareaAutosizeProps> }
  */
+
 const SkrTextArea = ({ maxRows = 5, placeholder = "내용을 입력해주세요." }) => {
   return <TextareaAutosize maxRows={maxRows} placeholder={placeholder} />;
 };
