@@ -13,7 +13,10 @@ import { TabContext, TabList, TabPanel } from "@mui/lab";
 import MuiTabs from "../components/MuiTab";
 //guide
 import Typo from "../guide/Typo";
-import PageTit from "../guide/title/PageTit";
+import {
+  TitlePageDefault,
+  TitlePageWithButton,
+} from "../guide/title/TitlePage";
 import SubTit from "../guide/title/SubTit";
 import TableTit from "../guide/title/TableTit";
 import SectionTit from "../guide/title/SectionTit";
@@ -93,7 +96,8 @@ const Guide = () => {
           <GuideTitle>Typography</GuideTitle>
           <Typo />
           <GuideTitle mt={5}>Page Title</GuideTitle>
-          <PageTit />
+          <TitlePageDefault />
+          <TitlePageWithButton />
           <GuideTitle mt={5}>Sub Title</GuideTitle>
           <SubTit />
           <GuideTitle mt={5}>Table Title</GuideTitle>

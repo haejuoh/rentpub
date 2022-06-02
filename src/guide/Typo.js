@@ -4,13 +4,7 @@ import { Grid, Box } from "@mui/material";
 import SkrTypography from "../components/skr/SkrTypography";
 import SkrGrid from "../components/skr/SkrGrid";
 import SkrBox from "../components/skr/SkrBox";
-
-const CodeBox = styled("div")(({ theme }) => ({
-  backgroundColor: `${theme.palette.grey[700]}`,
-  color: `${theme.palette.grey[0]}`,
-  padding: "10px",
-  borderRadius: "4px",
-}));
+import { CodeBox } from "../assets/style/guideStyle";
 
 const Typo = () => {
   return (

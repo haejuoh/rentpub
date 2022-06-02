@@ -1684,6 +1684,14 @@ const theme = createTheme({
           marginLeft: 2,
           marginRight: 2,
         },
+        li: {
+          a: {
+            color: colorSystem.grey.b600,
+            "&:hover, &:active": {
+              color: colorSystem.grey.b600,
+            },
+          },
+        },
       },
     },
     //chip

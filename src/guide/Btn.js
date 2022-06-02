@@ -1,7 +1,7 @@
 import React from "react";
 // import { styled, makeStyles } from "@mui/material/styles";
 import { styled } from "@mui/material/styles";
-import { Box, IconButton, Stack, ButtonGroup } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import { ReactComponent as IconPencil } from "../assets/images/icons/pencil.svg";
 import { ReactComponent as IconExcel } from "../assets/images/icons/excel.svg";
 
@@ -10,6 +10,7 @@ import { CodeBox, FlexBox } from "../assets/style/guideStyle";
 import SkrGrid from "../components/skr/SkrGrid";
 import SkrTypography from "../components/skr/SkrTypography";
 import SkrButton from "../components/skr/SkrButton";
+import SkrIconButton from "../components/skr/SkrIconButton";
 import SkrButtonGroup from "../components/skr/SkrButtonGroup";
 
 export const BtnSize = () => {
@@ -69,14 +70,14 @@ export const BtnIcon = () => {
             Only Icon
           </SkrTypography>
           <Stack direction="row" spacing={5}>
-            <IconButton color="primary">
+            <SkrIconButton color="primary">
               <IconPencil />
-            </IconButton>
+            </SkrIconButton>
           </Stack>
         </SkrGrid>
         <SkrGrid item xs={6}>
           <CodeBox>
-            <pre>{`<IconButton color="primary"><IconPencil /></IconButton>`}</pre>
+            <pre>{`<SkrIconButton color="primary"><IconPencil /></SkrIconButton>`}</pre>
           </CodeBox>
         </SkrGrid>
       </SkrGrid>
@@ -111,24 +112,24 @@ export const BtnVariation = () => {
             Primary
           </SkrTypography>
           <Stack direction="row" spacing={5}>
-            <IconButton color="primary" size="small">
+            <SkrIconButton color="primary" size="small">
               <IconPencil />
-            </IconButton>
-            <IconButton color="primaryOutlined" size="small">
+            </SkrIconButton>
+            <SkrIconButton color="primaryOutlined" size="small">
               <IconPencil />
-            </IconButton>
-            <IconButton color="primary">
+            </SkrIconButton>
+            <SkrIconButton color="primary">
               <IconPencil />
-            </IconButton>
-            <IconButton color="primaryOutlined">
+            </SkrIconButton>
+            <SkrIconButton color="primaryOutlined">
               <IconPencil />
-            </IconButton>
-            <IconButton color="primary" size="large">
+            </SkrIconButton>
+            <SkrIconButton color="primary" size="large">
               <IconPencil />
-            </IconButton>
-            <IconButton color="primaryOutlined" size="large">
+            </SkrIconButton>
+            <SkrIconButton color="primaryOutlined" size="large">
               <IconPencil />
-            </IconButton>
+            </SkrIconButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
             <SkrButton color="primary" size="small" variant="contained">
@@ -204,8 +205,8 @@ export const BtnVariation = () => {
         <SkrGrid item xs={6}>
           <CodeBox>
             <pre>{`// primary
-<IconButton color="primary" size="small"><IconPencil /></IconButton>
-<IconButton color="primary" variant="outlined" size="small"><IconPencil /></IconButton>
+<SkrIconButton color="primary" size="small"><IconPencil /></SkrIconButton>
+<SkrIconButton color="primary" variant="outlined" size="small"><IconPencil /></SkrIconButton>
 <SkrButton color="primary" variant="contained" size="small">SkrButton</SkrButton>
 <SkrButton color="primary" variant="outlined" size="small">SkrButton</SkrButton>
 
@@ -221,24 +222,24 @@ export const BtnVariation = () => {
             Default
           </SkrTypography>
           <Stack direction="row" spacing={5}>
-            <IconButton color="default" size="small">
+            <SkrIconButton color="default" size="small">
               <IconPencil />
-            </IconButton>
-            <IconButton color="defaultOutlined" size="small">
+            </SkrIconButton>
+            <SkrIconButton color="defaultOutlined" size="small">
               <IconPencil />
-            </IconButton>
-            <IconButton color="default">
+            </SkrIconButton>
+            <SkrIconButton color="default">
               <IconPencil />
-            </IconButton>
-            <IconButton color="defaultOutlined">
+            </SkrIconButton>
+            <SkrIconButton color="defaultOutlined">
               <IconPencil />
-            </IconButton>
-            <IconButton color="default" size="large">
+            </SkrIconButton>
+            <SkrIconButton color="default" size="large">
               <IconPencil />
-            </IconButton>
-            <IconButton color="defaultOutlined" size="large">
+            </SkrIconButton>
+            <SkrIconButton color="defaultOutlined" size="large">
               <IconPencil />
-            </IconButton>
+            </SkrIconButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
             <SkrButton color="default" size="small" variant="contained">
@@ -314,8 +315,8 @@ export const BtnVariation = () => {
         <SkrGrid item xs={6}>
           <CodeBox>
             <pre>{`// default
-<IconButton color="default" size="small"><IconPencil /></IconButton>
-<IconButton color="default" variant="outlined" size="small"><IconPencil /></IconButton>
+<SkrIconButton color="default" size="small"><IconPencil /></SkrIconButton>
+<SkrIconButton color="default" variant="outlined" size="small"><IconPencil /></SkrIconButton>
 <SkrButton color="default" variant="contained" size="small">SkrButton</SkrButton>
 <SkrButton color="default" variant="outlined" size="small">SkrButton</SkrButton>
 
@@ -331,15 +332,15 @@ export const BtnVariation = () => {
             Sub
           </SkrTypography>
           <Stack direction="row" spacing={5}>
-            <IconButton color="sub" size="small">
+            <SkrIconButton color="sub" size="small">
               <IconPencil />
-            </IconButton>
-            <IconButton color="sub">
+            </SkrIconButton>
+            <SkrIconButton color="sub">
               <IconPencil />
-            </IconButton>
-            <IconButton color="sub" size="large">
+            </SkrIconButton>
+            <SkrIconButton color="sub" size="large">
               <IconPencil />
-            </IconButton>
+            </SkrIconButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
             <SkrButton color="sub" size="small" variant="contained">
@@ -379,7 +380,7 @@ export const BtnVariation = () => {
         <SkrGrid item xs={6}>
           <CodeBox>
             <pre>{`// sub
-<IconButton color="sub" size="small"><IconPencil /></IconButton>
+<SkrIconButton color="sub" size="small"><IconPencil /></SkrIconButton>
 <SkrButton color="sub" variant="contained" size="small">SkrButton</SkrButton>
 
 // sub , icon
@@ -394,24 +395,24 @@ export const BtnVariation = () => {
             Secondary
           </SkrTypography>
           <Stack direction="row" spacing={5}>
-            <IconButton color="secondary" size="small">
+            <SkrIconButton color="secondary" size="small">
               <IconPencil />
-            </IconButton>
-            <IconButton color="secondaryOutlined" size="small">
+            </SkrIconButton>
+            <SkrIconButton color="secondaryOutlined" size="small">
               <IconPencil />
-            </IconButton>
-            <IconButton color="secondary">
+            </SkrIconButton>
+            <SkrIconButton color="secondary">
               <IconPencil />
-            </IconButton>
-            <IconButton color="secondaryOutlined">
+            </SkrIconButton>
+            <SkrIconButton color="secondaryOutlined">
               <IconPencil />
-            </IconButton>
-            <IconButton color="secondary" size="large">
+            </SkrIconButton>
+            <SkrIconButton color="secondary" size="large">
               <IconPencil />
-            </IconButton>
-            <IconButton color="secondaryOutlined" size="large">
+            </SkrIconButton>
+            <SkrIconButton color="secondaryOutlined" size="large">
               <IconPencil />
-            </IconButton>
+            </SkrIconButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
             <SkrButton color="secondary" size="small" variant="contained">
@@ -487,8 +488,8 @@ export const BtnVariation = () => {
         <SkrGrid item xs={6}>
           <CodeBox>
             <pre>{`// secondary
-<IconButton color="secondary" size="small"><IconPencil /></IconButton>
-<IconButton color="secondary" variant="outlined" size="small"><IconPencil /></IconButton>
+<SkrIconButton color="secondary" size="small"><IconPencil /></SkrIconButton>
+<SkrIconButton color="secondary" variant="outlined" size="small"><IconPencil /></SkrIconButton>
 <SkrButton color="secondary" variant="contained" size="small">SkrButton</SkrButton>
 <SkrButton color="secondary" variant="outlined" size="small">SkrButton</SkrButton>
 
@@ -504,24 +505,24 @@ export const BtnVariation = () => {
             Function
           </SkrTypography>
           <Stack direction="row" spacing={5}>
-            <IconButton color="function" size="small">
+            <SkrIconButton color="function" size="small">
               <IconPencil />
-            </IconButton>
-            <IconButton color="functionOutlined" size="small">
+            </SkrIconButton>
+            <SkrIconButton color="functionOutlined" size="small">
               <IconPencil />
-            </IconButton>
-            <IconButton color="function">
+            </SkrIconButton>
+            <SkrIconButton color="function">
               <IconPencil />
-            </IconButton>
-            <IconButton color="functionOutlined">
+            </SkrIconButton>
+            <SkrIconButton color="functionOutlined">
               <IconPencil />
-            </IconButton>
-            <IconButton color="function" size="large">
+            </SkrIconButton>
+            <SkrIconButton color="function" size="large">
               <IconPencil />
-            </IconButton>
-            <IconButton color="functionOutlined" size="large">
+            </SkrIconButton>
+            <SkrIconButton color="functionOutlined" size="large">
               <IconPencil />
-            </IconButton>
+            </SkrIconButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
             <SkrButton color="function" size="small" variant="outlined">
@@ -565,8 +566,8 @@ export const BtnVariation = () => {
         <SkrGrid item xs={6}>
           <CodeBox>
             <pre>{`// function
-<IconButton color="function" size="small"><IconPencil /></IconButton>
-<IconButton color="function" variant="outlined" size="small"><IconPencil /></IconButton>
+<SkrIconButton color="function" size="small"><IconPencil /></SkrIconButton>
+<SkrIconButton color="function" variant="outlined" size="small"><IconPencil /></SkrIconButton>
 <SkrButton color="function" variant="outlined" size="small">SkrButton</SkrButton>
 
 // function , icon
@@ -610,15 +611,15 @@ export const BtnVariation = () => {
             Delete
           </SkrTypography>
           <Stack direction="row" spacing={5}>
-            <IconButton color="deleteOutlined" size="small">
+            <SkrIconButton color="deleteOutlined" size="small">
               <IconPencil />
-            </IconButton>
-            <IconButton color="deleteOutlined">
+            </SkrIconButton>
+            <SkrIconButton color="deleteOutlined">
               <IconPencil />
-            </IconButton>
-            <IconButton color="deleteOutlined" size="large">
+            </SkrIconButton>
+            <SkrIconButton color="deleteOutlined" size="large">
               <IconPencil />
-            </IconButton>
+            </SkrIconButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
             <SkrButton color="delete" size="small" variant="outlined">
@@ -662,7 +663,7 @@ export const BtnVariation = () => {
         <SkrGrid item xs={6}>
           <CodeBox>
             <pre>{`// delete
-<IconButton color="delete" variant="outlined" size="small"><IconPencil /></IconButton>
+<SkrIconButton color="delete" variant="outlined" size="small"><IconPencil /></SkrIconButton>
 <SkrButton color="delete" variant="outlined" size="small">SkrButton</SkrButton>
 
 // delete , icon
@@ -676,15 +677,15 @@ export const BtnVariation = () => {
             cancel
           </SkrTypography>
           <Stack direction="row" spacing={5}>
-            <IconButton color="cancelOutlined" size="small">
+            <SkrIconButton color="cancelOutlined" size="small">
               <IconPencil />
-            </IconButton>
-            <IconButton color="cancelOutlined">
+            </SkrIconButton>
+            <SkrIconButton color="cancelOutlined">
               <IconPencil />
-            </IconButton>
-            <IconButton color="cancelOutlined" size="large">
+            </SkrIconButton>
+            <SkrIconButton color="cancelOutlined" size="large">
               <IconPencil />
-            </IconButton>
+            </SkrIconButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
             <SkrButton color="cancel" size="small" variant="outlined">
@@ -728,7 +729,7 @@ export const BtnVariation = () => {
         <SkrGrid item xs={6}>
           <CodeBox>
             <pre>{`// cancel
-<IconButton color="cancel" variant="outlined" size="small"><IconPencil /></IconButton>
+<SkrIconButton color="cancel" variant="outlined" size="small"><IconPencil /></SkrIconButton>
 <SkrButton color="cancel" variant="outlined" size="small">SkrButton</SkrButton>
 
 // cancel , icon
@@ -773,15 +774,15 @@ export const BtnDisabled = () => {
             Disabled
           </SkrTypography>
           <Stack direction="row" spacing={5}>
-            <IconButton color="primary" size="small" disabled>
+            <SkrIconButton color="primary" size="small" disabled>
               <IconPencil />
-            </IconButton>
-            <IconButton color="secondary" disabled>
+            </SkrIconButton>
+            <SkrIconButton color="secondary" disabled>
               <IconPencil />
-            </IconButton>
-            <IconButton color="function" size="large" disabled>
+            </SkrIconButton>
+            <SkrIconButton color="function" size="large" disabled>
               <IconPencil />
-            </IconButton>
+            </SkrIconButton>
           </Stack>
           <Stack direction="row" spacing={5} mt={5}>
             <SkrButton size="small" variant="contained" disabled>
@@ -827,7 +828,7 @@ export const BtnDisabled = () => {
         <SkrGrid item xs={6}>
           <CodeBox>
             <pre>{`// disabled
-<IconButton color="primary" size="small" disabled><IconPencil /></IconButton>
+<SkrIconButton color="primary" size="small" disabled><IconPencil /></SkrIconButton>
 <SkrButton color="primary" variant="contained" size="small" disabled>SkrButton</SkrButton>
 
 // disabled , icon

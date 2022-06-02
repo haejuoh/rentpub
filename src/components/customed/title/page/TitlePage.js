@@ -1,23 +1,34 @@
 import React from "react";
-import { Typography, Breadcrumbs, ToggleButton } from "@mui/material";
-import { BookmarkIcon, ChevronForwardIcon } from "../../../assets/style/icons";
 import { Link } from "react-router-dom";
-import * as PageTitleStyled from "./style";
+// SkrComponents
+import SkrTypography from "../../../skr/SkrTypography";
+import SkrBreadcrumbs from "./../../../skr/SkrBreadcrumbs";
+import SkrToggleButton from "./../../../skr/SkrToggleButton";
+// Icons
+import {
+  BookmarkIcon,
+  ChevronForwardIcon,
+} from "../../../../assets/style/icons";
+// Style
+import * as TitlePageStyled from "./style";
 
-export const PageTitle = ({ titleData, children, ...rest }) => {
-  const [selected, setSelected] = React.useState(false);
+export const TitlePage = ({ titleData, children, ...rest }) => {
+  const [selected, setSelected] = React.useState(true);
   return (
-    <PageTitleStyled.Wrap>
-      <Breadcrumbs separator={<ChevronForwardIcon />} aria-label="breadcrumb">
+    <TitlePageStyled.Wrap>
+      <SkrBreadcrumbs
+        separator={<ChevronForwardIcon />}
+        aria-label="breadcrumb"
+      >
         {titleData.map((title, idx) => {
           switch (title.type) {
             case "bookmark":
               return (
-                <div key={idx} className={pageTit.item}>
-                  <Typography variant="h2" color="grey.900">
+                <TitlePageStyled.Item key={idx}>
+                  <SkrTypography variant="h2" color="grey.900">
                     {title.menu}
-                  </Typography>
-                  <ToggleButton
+                  </SkrTypography>
+                  <SkrToggleButton
                     color="standard"
                     value="check"
                     selected={selected}
@@ -26,32 +37,32 @@ export const PageTitle = ({ titleData, children, ...rest }) => {
                     }}
                   >
                     <BookmarkIcon />
-                  </ToggleButton>
-                </div>
+                  </SkrToggleButton>
+                </TitlePageStyled.Item>
               );
               break;
             case "current":
               return (
                 <div key={idx}>
-                  <Typography variant="h2" color="grey.900">
+                  <SkrTypography variant="h2" color="grey.900">
                     {title.menu}
-                  </Typography>
+                  </SkrTypography>
                 </div>
               );
               break;
             default:
               return (
                 <Link to={title.path} key={idx}>
-                  <Typography variant="h3" color="grey.600">
+                  <SkrTypography variant="h3" color="grey.600">
                     {title.menu}
-                  </Typography>
+                  </SkrTypography>
                 </Link>
               );
               break;
           }
         })}
-      </Breadcrumbs>
+      </SkrBreadcrumbs>
       {children}
-    </PageTitleStyled.Wrap>
+    </TitlePageStyled.Wrap>
   );
 };

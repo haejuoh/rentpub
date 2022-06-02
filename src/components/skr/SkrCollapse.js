@@ -9,25 +9,10 @@ import { Collapse } from "@mui/material";
  * @type { React.FC<CollapseProps> }
  */
 
-const SkrCollapse = ({
-  collapsedSize,
-  in,
-  easing,
-  orientation,
-  sx,
-  children
-}) => {
+const SkrCollapse = ({ children, ...rest }) => {
   return (
     <>
-      <Collapse
-        collapsedSize={collapsedSize}
-        easing={easing}
-        in={in}
-        orientation={orientation}
-        sx={sx}
-      >
-        {children}
-      </Collapse>
+      <Collapse {...rest}>{children}</Collapse>
     </>
   );
 };

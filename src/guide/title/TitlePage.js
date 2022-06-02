@@ -1,14 +1,8 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
 import { Grid, Box, Stack, Button } from "@mui/material";
-import { PageTitle } from "../../components/Title";
-
-const CodeBox = styled(Box)(({ theme }) => ({
-  backgroundColor: `${theme.palette.grey[700]}`,
-  color: `${theme.palette.grey[0]}`,
-  padding: "10px",
-  borderRadius: "4px",
-}));
+import { TitlePage } from "../../components/customed/title/page/TitlePage";
+import { CodeBox } from "../../assets/style/guideStyle";
 const titleData = [
   {
     path: "/",
@@ -23,12 +17,28 @@ const titleData = [
     menu: "다운로드 메뉴얼 1",
   },
 ];
-const PageTit = () => {
+export const TitlePageDefault = () => {
   return (
     <>
       <Grid container spacing={2} mt={2}>
         <Grid item xs={8}>
-          <PageTitle titleData={titleData}>
+          <TitlePage titleData={titleData} />
+        </Grid>
+        <Grid item xs={4}>
+          <CodeBox>
+            <pre>{`<TitlePage titleData={titleData}/>`}</pre>
+          </CodeBox>
+        </Grid>
+      </Grid>
+    </>
+  );
+};
+export const TitlePageWithButton = () => {
+  return (
+    <>
+      <Grid container spacing={2} mt={2}>
+        <Grid item xs={8}>
+          <TitlePage titleData={titleData}>
             <Stack direction="row" spacing={8}>
               <Button color="primary" variant="contained">
                 Button
@@ -40,16 +50,16 @@ const PageTit = () => {
                 Button
               </Button>
             </Stack>
-          </PageTitle>
+          </TitlePage>
         </Grid>
         <Grid item xs={4}>
           <CodeBox>
-            <pre>{`<PageTitle titleData={titleData}>
+            <pre>{`<TitlePage titleData={titleData}>
   <Stack direction="row" spacing={8}>
     <Button color="primary" variant="contained">Button</Button>
     <Button color="primary" variant="contained">Button</Button>
   </Stack>
-</PageTitle>
+</TitlePage>
 `}</pre>
           </CodeBox>
         </Grid>
@@ -57,5 +67,3 @@ const PageTit = () => {
     </>
   );
 };
-
-export default PageTit;
