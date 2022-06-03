@@ -58,11 +58,9 @@ export const TextArea = (props) => {
           <Typography variant="b2">2022.12.22 14:09:52 홍길동</Typography>
         </Grid>
         <Grid item xs={6} textAlign="right">
-          <>
-            <Button color="primary" variant="outlined">
-              작성완료
-            </Button>
-          </>
+          <Button color="primary" variant="outlined">
+            작성완료
+          </Button>
         </Grid>
       </Grid>
       <Divider type="item15" />
@@ -101,9 +99,7 @@ export const TextAreaList = (props) => {
             <IconChevronDown style={setStyle} />
           </IconButton>
         </Grid>
-        {noteState.open ? (
-          <ReadArea>안녕하세요 SK렌터카입니다.</ReadArea>
-        ) : null}
+        {noteState.open && <ReadArea>안녕하세요 SK렌터카입니다.</ReadArea>}
       </Grid>
       <Divider type="item15" />
     </>
