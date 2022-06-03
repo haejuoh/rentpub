@@ -12,6 +12,8 @@ import TaskManage from "./views/TaskManage";
 import TaskRegister from "./views/TaskRegister";
 import BusinessGroupManage from "./views/BusinessGroupManage";
 import Shtprsv from "./views/shtprntlrsv/shtprsv/index";
+import RateInqury from "./views/periodRate/rateInquiry/index";
+import RateRegist from "./views/periodRate/rateRegist/index";
 import { Container } from "@mui/material";
 import { LayoutStyle } from "./assets/style/common";
 
@@ -80,6 +82,16 @@ const App = () => {
       path: "/shtprsv",
       element: <DefaultLayout />,
       children: [{ index: true, element: <Shtprsv /> }],
+    },
+    {
+      path: "/rateinquiry",
+      element: <DefaultLayout />,
+      children: [{ index: true, element: <RateInqury /> }],
+    },
+    {
+      path: "/rateregist",
+      element: <DefaultLayout />,
+      children: [{ index: true, element: <RateRegist /> }],
     },
     {
       // path 지정
