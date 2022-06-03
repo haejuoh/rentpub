@@ -14,6 +14,8 @@ import BusinessGroupManage from "./views/BusinessGroupManage";
 import Shtprsv from "./views/shtprntlrsv/shtprsv/index";
 import RateInqury from "./views/periodRate/rateInquiry/index";
 import RateRegist from "./views/periodRate/rateRegist/index";
+import ParkManage from "./views/park/parkingLotManage/index";
+import ParkDetail from "./views/park/parkingLotDetail/index";
 import { Container } from "@mui/material";
 import { LayoutStyle } from "./assets/style/common";
 
@@ -92,6 +94,16 @@ const App = () => {
       path: "/rateregist",
       element: <DefaultLayout />,
       children: [{ index: true, element: <RateRegist /> }],
+    },
+    {
+      path: "/parkmanage",
+      element: <DefaultLayout />,
+      children: [{ index: true, element: <ParkManage /> }],
+    },
+    {
+      path: "/parkdetail",
+      element: <DefaultLayout />,
+      children: [{ index: true, element: <ParkDetail /> }],
     },
     {
       // path 지정

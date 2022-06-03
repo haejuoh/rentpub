@@ -31,7 +31,9 @@ export const SelectField = ({ selectData }) => {
   };
   return (
     <FormControl variant="standard" sx={{ width: "100%" }}>
-      <InputLabel id="sample">{selectData.label}</InputLabel>
+      <InputLabel id="sample" required={selectData.required}>
+        {selectData.label}
+      </InputLabel>
 
       <Select
         labelId="sample"
