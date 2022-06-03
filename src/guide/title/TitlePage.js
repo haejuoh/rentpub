@@ -1,7 +1,12 @@
 import React from "react";
-import { styled } from "@mui/material/styles";
-import { Grid, Box, Stack, Button } from "@mui/material";
+// SkrComponents
+import SkrTypography from "../../components/skr/SkrTypography";
+import SkrGrid from "./../../components/skr/SkrGrid";
+import SkrStack from "../../components/skr/SkrStack";
+import SkrButton from "../../components/skr/SkrButton";
+// Title Components
 import { TitlePage } from "../../components/customed/title/page/TitlePage";
+// Guide
 import { CodeBox } from "../../assets/style/guideStyle";
 const titleData = [
   {
@@ -20,50 +25,56 @@ const titleData = [
 export const TitlePageDefault = () => {
   return (
     <>
-      <Grid container spacing={2} mt={2}>
-        <Grid item xs={8}>
+      <SkrTypography variant="h3" pb={12}>
+        Default
+      </SkrTypography>
+      <SkrGrid container spacing={2} mt={2}>
+        <SkrGrid item xs={8}>
           <TitlePage titleData={titleData} />
-        </Grid>
-        <Grid item xs={4}>
+        </SkrGrid>
+        <SkrGrid item xs={4}>
           <CodeBox>
             <pre>{`<TitlePage titleData={titleData}/>`}</pre>
           </CodeBox>
-        </Grid>
-      </Grid>
+        </SkrGrid>
+      </SkrGrid>
     </>
   );
 };
 export const TitlePageWithButton = () => {
   return (
     <>
-      <Grid container spacing={2} mt={2}>
-        <Grid item xs={8}>
+      <SkrTypography variant="h3" pb={12}>
+        Button
+      </SkrTypography>
+      <SkrGrid container spacing={2} mt={2}>
+        <SkrGrid item xs={8}>
           <TitlePage titleData={titleData}>
-            <Stack direction="row" spacing={8}>
-              <Button color="primary" variant="contained">
+            <SkrStack direction="row" spacing={8}>
+              <SkrButton color="primary" variant="contained">
                 Button
-              </Button>
-              <Button color="primary" variant="contained">
+              </SkrButton>
+              <SkrButton color="primary" variant="contained">
                 Button
-              </Button>
-              <Button color="primary" variant="contained">
+              </SkrButton>
+              <SkrButton color="primary" variant="contained">
                 Button
-              </Button>
-            </Stack>
+              </SkrButton>
+            </SkrStack>
           </TitlePage>
-        </Grid>
-        <Grid item xs={4}>
+        </SkrGrid>
+        <SkrGrid item xs={4}>
           <CodeBox>
             <pre>{`<TitlePage titleData={titleData}>
-  <Stack direction="row" spacing={8}>
-    <Button color="primary" variant="contained">Button</Button>
-    <Button color="primary" variant="contained">Button</Button>
-  </Stack>
+  <SkrStack direction="row" spacing={8}>
+    <SkrButton color="primary" variant="contained">Button</SkrButton>
+    <SkrButton color="primary" variant="contained">Button</SkrButton>
+  </SkrStack>
 </TitlePage>
 `}</pre>
           </CodeBox>
-        </Grid>
-      </Grid>
+        </SkrGrid>
+      </SkrGrid>
     </>
   );
 };

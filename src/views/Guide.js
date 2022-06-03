@@ -17,9 +17,25 @@ import {
   TitlePageDefault,
   TitlePageWithButton,
 } from "../guide/title/TitlePage";
-import SubTit from "../guide/title/SubTit";
-import TableTit from "../guide/title/TableTit";
-import SectionTit from "../guide/title/SectionTit";
+import {
+  TitleSubDefault,
+  TitleSubToggle,
+  TitleSubTooltip,
+  TitleSubOption,
+  TitleSubDesc,
+  TitleSubToggleDesc,
+  TitleSubTooltipDesc,
+  TitleSubOptionDesc,
+  TitleSubButton1,
+  TitleSubButton2,
+} from "../guide/title/TitleSub";
+import TitleTableDefault from "../guide/title/TitleTable";
+import {
+  TitleSectionDefault,
+  TitleSectionDesc,
+  TitleSectionBadge,
+  TitleSectionOption,
+} from "../guide/title/TitleSection";
 import List from "../guide/List";
 import {
   BtnSize,
@@ -55,6 +71,7 @@ import Segment from "../components/Segment";
 import { Table, TableDefault, TableAction, TableBadge } from "../guide/Table";
 import { Section } from "../components/Section";
 import { ModalSample } from "../components/Modal";
+import TitleTable from "./../components/customed/title/table/TitleTable";
 
 const Guide = () => {
   const [value, setValue] = React.useState("1");
@@ -99,11 +116,23 @@ const Guide = () => {
           <TitlePageDefault />
           <TitlePageWithButton />
           <GuideTitle mt={5}>Sub Title</GuideTitle>
-          <SubTit />
+          <TitleSubDefault />
+          <TitleSubToggle />
+          <TitleSubTooltip />
+          <TitleSubOption />
+          <TitleSubDesc />
+          <TitleSubToggleDesc />
+          <TitleSubTooltipDesc />
+          <TitleSubOptionDesc />
+          <TitleSubButton1 />
+          <TitleSubButton2 />
           <GuideTitle mt={5}>Table Title</GuideTitle>
-          <TableTit />
+          <TitleTableDefault />
           <GuideTitle mt={5}>Section Title</GuideTitle>
-          <SectionTit />
+          <TitleSectionDefault />
+          <TitleSectionDesc />
+          <TitleSectionBadge />
+          <TitleSectionOption />
         </TabPanel>
         <TabPanel value="2">
           <Badge />

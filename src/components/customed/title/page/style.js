@@ -1,5 +1,4 @@
 import { styled } from "@mui/styles";
-import { theme } from "../../../../assets/style/customTheme";
 const Wrap = styled("div")(({ theme }) => ({
   display: "flex",
   alignItems: "center",
