@@ -1,4 +1,5 @@
 import React from "react";
+import { styled } from "@mui/styles";
 import { TextField } from "@mui/material";
 
 /**
@@ -8,6 +9,42 @@ import { TextField } from "@mui/material";
 /**
  * @type { React.FC<TextFieldProps> }
  */
+
+// add position property
+/**
+ * @typedef position
+ * @type {string}
+ */
+
+/** @type {position} */
+
+const TextFieldStyled = styled(TextField)(({ theme, position }) => {
+  return (
+    position === "left" && {
+      "&.MuiFormControl-root": {
+        flexDirection: "row",
+        position: "relative",
+        alignItems: "center",
+      },
+      "& .MuiInputLabel-root": {
+        display: "inline",
+        Width: "120px",
+        flex: "0 0 120px",
+      },
+      "& .MuiInput-root": {
+        width: "calc(100% - 120px)",
+        flex: "0 0 calc(100% - 120px)",
+      },
+      "& .MuiFormHelperText-root": {
+        position: "absolute",
+        left: "120px",
+        bottom: "-18px",
+      },
+    }
+  );
+  return position === "top" && {};
+  return position === "hidden" && {};
+});
 
 const SkrTextField = ({
   label,
@@ -20,10 +57,11 @@ const SkrTextField = ({
   helperText,
   InputProps,
   required,
+  position,
 }) => {
   return (
     <>
-      <TextField
+      <TextFieldStyled
         label={label}
         placeholder={placeholder}
         color={color}
@@ -34,6 +72,7 @@ const SkrTextField = ({
         helperText={helperText}
         InputProps={InputProps}
         required={required}
+        position={position}
       />
     </>
   );

@@ -9,7 +9,15 @@ import { Stack } from "@mui/material";
  * @type { React.FC<StackProps> }
  */
 
-const SkrStack = ({ component, direction, divider, spacing, sx, children }) => {
+const SkrStack = ({
+  component,
+  direction,
+  divider,
+  spacing,
+  sx,
+  children,
+  ...rest
+}) => {
   return (
     <>
       <Stack
@@ -18,6 +26,7 @@ const SkrStack = ({ component, direction, divider, spacing, sx, children }) => {
         divider={divider}
         spacing={spacing}
         sx={sx}
+        {...rest}
       >
         {children}
       </Stack>

@@ -9,8 +9,12 @@ import { Box } from "@mui/material";
  * @type { React.FC<BoxProps> }
  */
 
-const SkrBox = ({ sx, children }) => {
-  return <Box sx={sx}>{children}</Box>;
+const SkrBox = ({ sx, children, ...rest }) => {
+  return (
+    <Box sx={sx} {...rest}>
+      {children}
+    </Box>
+  );
 };
 
 export default SkrBox;

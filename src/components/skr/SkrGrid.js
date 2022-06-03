@@ -21,6 +21,7 @@ const SkrGrid = ({
   wrap,
   xs,
   children,
+  ...rest
 }) => {
   return (
     <>
@@ -35,6 +36,7 @@ const SkrGrid = ({
         sx={sx}
         wrap={wrap}
         xs={xs}
+        {...rest}
       >
         {children}
       </Grid>

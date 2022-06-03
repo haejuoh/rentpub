@@ -9,10 +9,12 @@ import { Typography } from "@mui/material";
  * @type { React.FC<TypographyProps> }
  */
 
-const SkrTypography = ({ variant, children }) => {
+const SkrTypography = ({ variant, children, ...rest }) => {
   return (
     <>
-      <Typography variant={variant}>{children}</Typography>
+      <Typography variant={variant} {...rest}>
+        {children}
+      </Typography>
     </>
   );
 };
