@@ -45,13 +45,13 @@ import {
   GroupBtn,
 } from "../guide/Btn";
 import {
-  InputLabelPositionTop,
-  InputLabelPositionLeft,
-  InputHiddenLabel,
-  SelectLabelPositionTop,
+  InputLabelPositionTopList,
+  InputLabelPositionLeftList,
+  InputLabelHiddenList,
+  SelectLabelPositionTopList,
   SelectLabelPositionLeft,
-  CheckBox,
-  CheckBoxWithLabel,
+  CheckboxLabelHiddenList,
+  CheckboxLabelPositionRightList,
   CheckBoxGroup,
   DefaultRadio,
   RadioWithLabel,
@@ -160,30 +160,30 @@ const Guide = () => {
           <SelectVariants />
           <GuideTitle>Input</GuideTitle>
           <GuideSubTitle pb={8}>Label Position : Top</GuideSubTitle>
-          <InputLabelPositionTop />
+          <InputLabelPositionTopList />
           <GuideSubTitle mt={40}>Label Position : Left</GuideSubTitle>
           <GuideKeyword pb={20}>
             styledComponents : DefaultTextField
           </GuideKeyword>
-          <InputLabelPositionLeft />
+          <InputLabelPositionLeftList />
           <GuideSubTitle pb={8} mt={40}>
             Label Hidden
           </GuideSubTitle>
-          <InputHiddenLabel />
+          <InputLabelHiddenList />
           <GuideTitle mt={40}>Select</GuideTitle>
           <GuideSubTitle pb={8}>Label Position : Top</GuideSubTitle>
-          <SelectLabelPositionTop />
+          <SelectLabelPositionTopList />
           <GuideSubTitle mt={40} pb={8}>
             Label Position : Left
           </GuideSubTitle>
           <SelectLabelPositionLeft />
           <GuideTitle mt={40}>Checkbox</GuideTitle>
           <GuideSubTitle pb={8}>Label Hidden</GuideSubTitle>
-          <CheckBox />
+          <CheckboxLabelHiddenList />
           <GuideSubTitle mt={40} pb={8}>
-            Label Position : Left
+            Label Position : Right
           </GuideSubTitle>
-          <CheckBoxWithLabel />
+          <CheckboxLabelPositionRightList />
           <GuideSubTitle mt={40} pb={8}>
             Checkbox Group
           </GuideSubTitle>
