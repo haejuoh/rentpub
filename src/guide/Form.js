@@ -33,6 +33,7 @@ import InputLabelHidden from "../components/customed/form/input/InputLabelHidden
 import SelectLabelPositionTop from "../components/customed/form/select/SelectLabelPositionTop";
 import CheckboxLabelHidden from "../components/customed/form/checkbox/CheckboxLabelHidden";
 import CheckboxLabelPositionRight from "../components/customed/form/checkbox/CheckboxLabelPositionRight";
+import CheckboxGroup from "../components/customed/form/checkbox/CheckboxGroup";
 
 export const InputLabelPositionTopList = () => {
   return (
@@ -1062,28 +1063,12 @@ const checkBoxData = [
   { label: "Label Text", checkItem: true, disabled: false },
   { label: "Label Text", checkItem: true, disabled: false },
 ];
-export const CheckBoxGroup = () => {
-  const [checkItem, setCheckItem] = React.useState(true);
-  const handleChange = (event) => {
-    setCheckItem(event.target.checked);
-  };
+export const CheckBoxGroupList = () => {
   return (
     <>
       <SkrGrid container spacing={40}>
         <SkrGrid item xs={6}>
-          <SkrFormGroup>
-            {checkBoxData.map((item, idx) => {
-              return (
-                <SkrFormControlLabel
-                  control={<SkrCheckbox />}
-                  label={item.label + idx}
-                  disabled={item.disabled}
-                  key={idx}
-                  onChange={handleChange}
-                />
-              );
-            })}
-          </SkrFormGroup>
+          <CheckboxGroup checkBoxData={checkBoxData} />
         </SkrGrid>
         <SkrGrid item xs={6}>
           <CodeBox>
@@ -1094,17 +1079,8 @@ export const CheckBoxGroup = () => {
   { label: "Label Text", checkItem: true, disabled: false },
   { label: "Label Text", checkItem: true, disabled: false },
 ];
-const [checkItem, setCheckItem] = React.useState(true);
-const handleChange = (event) => {
-  setCheckItem(event.target.checked);
-};
-<SkrFormControlLabel
-  control={<SkrCheckbox />}
-  label={item.label + idx}
-  disabled={item.disabled}
-  key={idx}
-  onChange={handleChange}
-/>`}</pre>
+
+<CheckboxGroup checkBoxData={checkBoxData} />`}</pre>
           </CodeBox>
         </SkrGrid>
       </SkrGrid>
