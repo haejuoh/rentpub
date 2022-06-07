@@ -12,6 +12,7 @@ import { Select } from "@mui/material";
 const SkrSelect = ({
   defaultValue,
   displayEmpty,
+  disabled,
   IconComponent,
   id,
   label,
@@ -28,6 +29,7 @@ const SkrSelect = ({
       <Select
         defaultValue={defaultValue}
         displayEmpty={displayEmpty}
+        disabled={disabled}
         IconComponent={IconComponent}
         id={id}
         label={label}

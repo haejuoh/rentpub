@@ -11,8 +11,6 @@ import {
   Switch,
 } from "@mui/material";
 import { ReactComponent as Accessibility } from "../assets/images/icons/accessibility.svg";
-import { ReactComponent as IconArrow } from "../assets/images/icons/chevron-down.svg";
-import { ReactComponent as IconOption } from "../assets/images/icons/options.svg";
 import { DefaultTextField, FormContents } from "../assets/style/common";
 import { CodeBox, FlexBox } from "../assets/style/guideStyle";
 import { SelectField, DefaultSelectField } from "../components/Select";
@@ -31,6 +29,8 @@ import InputLabelPositionTop from "../components/customed/form/input/InputLabelP
 import InputLabelPositionLeft from "../components/customed/form/input/InputLabelPositionLeft";
 import InputLabelHidden from "../components/customed/form/input/InputLabelHidden";
 import SelectLabelPositionTop from "../components/customed/form/select/SelectLabelPositionTop";
+import SelectLabelPositionLeft from "../components/customed/form/select/SelectLabelPositionLeft";
+import SelectLabelHidden from "../components/customed/form/select/SelectLabelHidden";
 import CheckboxLabelHidden from "../components/customed/form/checkbox/CheckboxLabelHidden";
 import CheckboxLabelPositionRight from "../components/customed/form/checkbox/CheckboxLabelPositionRight";
 import CheckboxGroup from "../components/customed/form/checkbox/CheckboxGroup";
@@ -752,7 +752,7 @@ export const SelectLabelPositionTopList = () => {
               </SkrTypography>
               <SkrBox sx={{ width: "444px" }}>
                 <SelectLabelPositionTop selectData={defaultSelect} />
-                <SelectField selectData={defaultSelect} />
+                {/* <SelectField selectData={defaultSelect} /> */}
               </SkrBox>
             </FlexBox>
             <FlexBox>
@@ -760,7 +760,8 @@ export const SelectLabelPositionTopList = () => {
                 Icon
               </SkrTypography>
               <SkrBox sx={{ width: "444px" }}>
-                <SelectField selectData={iconSelect} />
+                <SelectLabelPositionTop selectData={iconSelect} />
+                {/* <SelectField selectData={iconSelect} /> */}
               </SkrBox>
             </FlexBox>
 
@@ -769,10 +770,10 @@ export const SelectLabelPositionTopList = () => {
                 Disabled
               </SkrTypography>
               <SkrBox sx={{ width: "444px" }}>
-                <SelectField selectData={disabledDefaultSelect} />
+                <SelectLabelPositionTop selectData={disabledDefaultSelect} />
               </SkrBox>
               <SkrBox sx={{ width: "444px", marginTop: "20px" }}>
-                <SelectField selectData={disabledIconSelect} />
+                <SelectLabelPositionTop selectData={disabledIconSelect} />
               </SkrBox>
             </FlexBox>
           </SkrStack>
@@ -789,21 +790,20 @@ const defaultSelect = {
   isIcon: false,
 };
 
-<SelectField selectData={defaultSelect} />
+<SelectLabelPositionTop selectData={defaultSelect} />
 
 // icon
   isIcon: true,
 
 // disabled
-  disabled: true,
-`}</pre>
+  disabled: true,`}</pre>
           </CodeBox>
         </SkrGrid>
       </SkrGrid>
     </>
   );
 };
-export const SelectLabelPositionLeft = () => {
+export const SelectLabelPositionLeftList = () => {
   const defaultSelect = {
     label: "Label Text",
     style: {
@@ -894,7 +894,7 @@ export const SelectLabelPositionLeft = () => {
                 Default
               </SkrTypography>
               <SkrBox sx={{ width: "444px" }}>
-                <DefaultSelectField selectData={defaultSelect} />
+                <SelectLabelPositionLeft selectData={defaultSelect} />
               </SkrBox>
             </FlexBox>
             <FlexBox>
@@ -902,19 +902,18 @@ export const SelectLabelPositionLeft = () => {
                 Icon
               </SkrTypography>
               <SkrBox sx={{ width: "444px" }}>
-                <DefaultSelectField selectData={iconSelect} />
+                <SelectLabelPositionLeft selectData={iconSelect} />
               </SkrBox>
             </FlexBox>
-
             <FlexBox>
               <SkrTypography variant="st2" pb={12}>
                 Disabled
               </SkrTypography>
               <SkrBox sx={{ width: "444px" }}>
-                <DefaultSelectField selectData={disabledDefaultSelect} />
+                <SelectLabelPositionLeft selectData={disabledDefaultSelect} />
               </SkrBox>
               <SkrBox sx={{ width: "444px", marginTop: "20px" }}>
-                <DefaultSelectField selectData={disabledIconSelect} />
+                <SelectLabelPositionLeft selectData={disabledIconSelect} />
               </SkrBox>
             </FlexBox>
           </SkrStack>
@@ -931,14 +930,153 @@ const defaultSelect = {
   isIcon: false,
 };
 
-<DefaultSelectField selectData={defaultSelect} />
+<SelectLabelPositionLeft selectData={defaultSelect} />
 
 // icon
   isIcon: true,
 
 // disabled
-  disabled: true,
-`}</pre>
+  disabled: true,`}</pre>
+          </CodeBox>
+        </SkrGrid>
+      </SkrGrid>
+    </>
+  );
+};
+export const SelectLabelHiddenList = () => {
+  const defaultSelect = {
+    label: "Label Text",
+    style: {
+      PaperProps: {
+        style: {
+          width: 444,
+        },
+      },
+    },
+    option: [
+      "현대자동차",
+      "기아자동차",
+      "쉐보레",
+      "렉서스",
+      "도요타",
+      "포르쉐",
+    ],
+    disabled: false,
+    isIcon: false,
+  };
+  const iconSelect = {
+    label: "Label Text",
+    style: {
+      PaperProps: {
+        style: {
+          width: 444,
+        },
+      },
+    },
+    option: [
+      "현대자동차",
+      "기아자동차",
+      "쉐보레",
+      "렉서스",
+      "도요타",
+      "포르쉐",
+    ],
+    disabled: false,
+    isIcon: true,
+  };
+  const disabledDefaultSelect = {
+    label: "Label Text",
+    style: {
+      PaperProps: {
+        style: {
+          width: 444,
+        },
+      },
+    },
+    option: [
+      "현대자동차",
+      "기아자동차",
+      "쉐보레",
+      "렉서스",
+      "도요타",
+      "포르쉐",
+    ],
+    disabled: true,
+    isIcon: false,
+  };
+  const disabledIconSelect = {
+    label: "Label Text",
+    style: {
+      PaperProps: {
+        style: {
+          width: 444,
+        },
+      },
+    },
+    option: [
+      "현대자동차",
+      "기아자동차",
+      "쉐보레",
+      "렉서스",
+      "도요타",
+      "포르쉐",
+    ],
+    disabled: true,
+    isIcon: true,
+  };
+  return (
+    <>
+      <SkrGrid container spacing={40}>
+        <SkrGrid item xs={6}>
+          <SkrStack spacing={20}>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Default
+              </SkrTypography>
+              <SkrBox sx={{ width: "444px" }}>
+                <SelectLabelHidden selectData={defaultSelect} />
+              </SkrBox>
+            </FlexBox>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Icon
+              </SkrTypography>
+              <SkrBox sx={{ width: "444px" }}>
+                <SelectLabelHidden selectData={iconSelect} />
+              </SkrBox>
+            </FlexBox>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Disabled
+              </SkrTypography>
+              <SkrBox sx={{ width: "444px" }}>
+                <SelectLabelHidden selectData={disabledDefaultSelect} />
+              </SkrBox>
+              <SkrBox sx={{ width: "444px", marginTop: "20px" }}>
+                <SelectLabelHidden selectData={disabledIconSelect} />
+              </SkrBox>
+            </FlexBox>
+          </SkrStack>
+        </SkrGrid>
+        <SkrGrid item xs={6}>
+          <CodeBox>
+            <pre>{`// Default
+const defaultSelect = {
+  label: "Label Text",
+  // select combo SkrBox 너비 지정
+  style: {PaperProps: {style: {width: 324,},},},
+  option: ["현대자동차","기아자동차","쉐보레","렉서스","도요타","포르쉐",],
+  disabled: false,
+  isIcon: false,
+};
+
+<SelectLabelPositionLeft selectData={defaultSelect} />
+
+// icon
+  isIcon: true,
+
+// disabled
+  disabled: true,`}</pre>
           </CodeBox>
         </SkrGrid>
       </SkrGrid>

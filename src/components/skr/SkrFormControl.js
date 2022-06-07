@@ -1,4 +1,5 @@
 import React from "react";
+import { styled } from "@mui/styles";
 import { FormControl } from "@mui/material";
 
 /**
@@ -8,6 +9,35 @@ import { FormControl } from "@mui/material";
 /**
  * @type { React.FC<FormControlProps> }
  */
+
+// add position property
+/**
+ * @typedef position
+ * @type {string}
+ */
+
+/** @type {position} */
+
+const FormControlStyled = styled(FormControl)(({ theme, position }) => {
+  return (
+    position === "left" && {
+      "&.MuiFormControl-root": {
+        flexDirection: "row",
+        position: "relative",
+        alignItems: "center",
+      },
+      "& .MuiInputLabel-root": {
+        display: "inline",
+        Width: "120px",
+        flex: "0 0 120px",
+      },
+      "& .MuiInput-root": {
+        width: "calc(100% - 120px)",
+        flex: "0 0 calc(100% - 120px)",
+      },
+    }
+  );
+});
 
 const SkrFormControl = ({
   color,
@@ -20,11 +50,12 @@ const SkrFormControl = ({
   size,
   sx,
   variant,
+  position,
   children,
 }) => {
   return (
     <>
-      <FormControl
+      <FormControlStyled
         color={color}
         disabled={disabled}
         error={error}
@@ -35,9 +66,10 @@ const SkrFormControl = ({
         size={size}
         sx={sx}
         variant={variant}
+        position={position}
       >
         {children}
-      </FormControl>
+      </FormControlStyled>
     </>
   );
 };

@@ -49,7 +49,8 @@ import {
   InputLabelPositionLeftList,
   InputLabelHiddenList,
   SelectLabelPositionTopList,
-  SelectLabelPositionLeft,
+  SelectLabelPositionLeftList,
+  SelectLabelHiddenList,
   CheckboxLabelHiddenList,
   CheckboxLabelPositionRightList,
   CheckBoxGroupList,
@@ -176,7 +177,11 @@ const Guide = () => {
           <GuideSubTitle mt={40} pb={8}>
             Label Position : Left
           </GuideSubTitle>
-          <SelectLabelPositionLeft />
+          <SelectLabelPositionLeftList />
+          <GuideSubTitle mt={40} pb={8}>
+            Label Hidden
+          </GuideSubTitle>
+          <SelectLabelHiddenList />
           <GuideTitle mt={40}>Checkbox</GuideTitle>
           <GuideSubTitle pb={8}>Label Hidden</GuideSubTitle>
           <CheckboxLabelHiddenList />
