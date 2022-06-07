@@ -1,14 +1,5 @@
 import React, { useState } from "react";
-import {
-  Box,
-  Paper,
-  Button,
-  Typography,
-  useMediaQuery,
-  Tab,
-  Chip,
-  Stack,
-} from "@mui/material";
+import { Box, Typography, Tab } from "@mui/material";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
 import MuiTabs from "../components/MuiTab";
 //guide
@@ -66,13 +57,9 @@ import {
   GuideSubTitle,
   GuideKeyword,
 } from "../assets/style/guideStyle";
-import SelectVariants from "../components/SelectDemo";
 import Badge from "./../guide/Badge";
-import Segment from "../components/Segment";
-import { Table, TableDefault, TableAction, TableBadge } from "../guide/Table";
-import { Section } from "../components/Section";
+import { TableDefault, TableAction, TableBadge } from "../guide/Table";
 import { ModalSample } from "../components/Modal";
-import TitleTable from "./../components/customed/title/table/TitleTable";
 
 const Guide = () => {
   const [value, setValue] = React.useState("1");
@@ -158,7 +145,6 @@ const Guide = () => {
           <GroupBtn />
         </TabPanel>
         <TabPanel value="4">
-          <SelectVariants />
           <GuideTitle>Input</GuideTitle>
           <GuideSubTitle pb={8}>Label Position : Top</GuideSubTitle>
           <InputLabelPositionTopList />
