@@ -8,6 +8,7 @@ import { ReactComponent as IconArrowDown } from "../images/icons/arrow-down.svg"
 import { ReactComponent as IconFilter } from "../images/icons/filter.svg";
 import { ReactComponent as IconDelete } from "../images/icons/trash.svg";
 import { ReactComponent as IconCheck } from "../images/icons/checkmark-circle.svg";
+import { ReactComponent as IconOption } from "../images/icons/options.svg";
 
 const BookmarkIcon = () => <IconBookmark className="icon" />;
 const ChevronForwardIcon = () => <IconChevron className="icon" />;
@@ -19,6 +20,7 @@ const ArrowDownIcon = () => <IconArrowDown className="icon" />;
 const FilterIcon = () => <IconFilter className="icon" />;
 const DeleteIcon = () => <IconDelete className="icon" />;
 const CheckIcon = () => <IconCheck className="icon" />;
+const OptionIcon = () => <IconOption className="icon" />;
 
 export {
   BookmarkIcon,
@@ -31,4 +33,5 @@ export {
   FilterIcon,
   DeleteIcon,
   CheckIcon,
+  OptionIcon,
 };
