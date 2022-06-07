@@ -1,6 +1,5 @@
 import React, { Children } from "react";
-// Style
-import * as SelectStyled from "./style";
+
 import SkrMenuItem from "../../../skr/SkrMenuItem";
 
 const SelectCombo = ({ children, ...rest }) => {

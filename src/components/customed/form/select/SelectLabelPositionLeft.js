@@ -1,6 +1,4 @@
 import React from "react";
-import { styled } from "@mui/styles";
-import { theme } from "../../../../assets/style/customTheme";
 import SkrSelect from "../../../skr/SkrSelect";
 import SkrListItemIcon from "../../../skr/SkrListItemIcon";
 import SkrFormControl from "../../../skr/SkrFormControl";
@@ -12,8 +10,6 @@ import SelectCombo from "./SelectCombo";
 
 // Icons
 import { OptionIcon, ChevronDownIcon } from "../../../../assets/style/icons";
-
-import { FormControl } from "@mui/material";
 
 const SelectLabelPositionLeft = ({ selectData }) => {
   let IconComponent;
