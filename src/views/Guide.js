@@ -49,7 +49,9 @@ import {
   RadioLabelPositionRightList,
   RadioGroupLabelList,
   SegmentGroup,
-  SwitchWithLabel,
+  SwitchLabelHiddenList,
+  SwitchLabelPositionLeftList,
+  SwitchGroupList,
   WithFormContents,
 } from "../guide/Form";
 import {
@@ -193,7 +195,16 @@ const Guide = () => {
           <GuideTitle mt={40}>Segment</GuideTitle>
           <SegmentGroup />
           <GuideTitle mt={40}>Switch</GuideTitle>
-          <SwitchWithLabel />
+          <GuideSubTitle pb={8}>Label Hidden</GuideSubTitle>
+          <SwitchLabelHiddenList />
+          <GuideSubTitle mt={40} pb={8}>
+            Label Position : Left
+          </GuideSubTitle>
+          <SwitchLabelPositionLeftList />
+          <GuideSubTitle mt={40} pb={8}>
+            Switch Group - Grid
+          </GuideSubTitle>
+          <SwitchGroupList />
           <GuideTitle mt={40}>WithFormContents</GuideTitle>
           <WithFormContents />
         </TabPanel>

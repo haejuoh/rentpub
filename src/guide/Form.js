@@ -35,6 +35,9 @@ import RadioLabelHidden from "../components/customed/form/radio/RadioLabelHidden
 import RadioLabelPositionRight from "../components/customed/form/radio/RadioLabelPositionRight";
 import RadioGroupLabel from "../components/customed/form/radio/RadioGroupLabel";
 import Segment from "../components/customed/form/radio/Segment";
+import SwitchLabelHidden from "../components/customed/form/switch/SwitchLabelHidden";
+import SwitchLabelPositionLeft from "../components/customed/form/switch/SwitchLabelPositionLeft";
+import SwitchGroup from "../components/customed/form/switch/SwitchGroup";
 
 // input
 export const InputLabelPositionTopList = () => {
@@ -1472,48 +1475,83 @@ export const SegmentGroup = () => {
     </SkrGrid>
   );
 };
-export const SwitchWithLabel = () => {
+
+// switch
+export const SwitchLabelHiddenList = () => {
   return (
     <SkrGrid container spacing={40}>
       <SkrGrid item xs={6}>
-        <FormControlLabel
-          value="switch"
-          control={<Switch color="primary" />}
-          label="활성화"
-          labelPlacement="start"
-          defaultChecked
-        />
-        <FormControlLabel
-          value="switch"
-          control={<Switch color="primary" />}
-          label="활성화"
-          labelPlacement="start"
-          defaultChecked
-          disabled
-        />
-        <FormControlLabel
-          value="switch"
-          control={<Switch color="primary" />}
-          label="활성화"
-          labelPlacement="start"
-        />
-        <FormControlLabel
-          value="switch"
-          control={<Switch color="primary" />}
-          label="활성화"
-          labelPlacement="start"
-          disabled
-        />
+        <SkrStack direction="row" spacing={20}>
+          <SwitchLabelHidden />
+          <SwitchLabelHidden defaultChecked />
+          <SwitchLabelHidden disabled />
+          <SwitchLabelHidden defaultChecked disabled />
+        </SkrStack>
       </SkrGrid>
       <SkrGrid item xs={6}>
         <CodeBox>
-          <pre>{`//가이드 명시
+          <pre>{`<SwitchLabelHidden defaultChecked disabled />
 `}</pre>
         </CodeBox>
       </SkrGrid>
     </SkrGrid>
   );
 };
+export const SwitchLabelPositionLeftList = () => {
+  return (
+    <SkrGrid container spacing={40}>
+      <SkrGrid item xs={6}>
+        <SkrStack direction="row" spacing={20}>
+          <SwitchLabelPositionLeft value="switch01" label="label text" />
+          <SwitchLabelPositionLeft
+            value="switch02"
+            label="label text"
+            defaultChecked
+          />
+          <SwitchLabelPositionLeft
+            value="switch03"
+            label="label text"
+            disabled
+          />
+          <SwitchLabelPositionLeft
+            value="switch04"
+            label="label text"
+            defaultChecked
+            disabled
+          />
+        </SkrStack>
+      </SkrGrid>
+      <SkrGrid item xs={6}>
+        <CodeBox>
+          <pre>{`<SwitchLabelPositionLeft value="switch04" label="label text" defaultChecked disabled />
+`}</pre>
+        </CodeBox>
+      </SkrGrid>
+    </SkrGrid>
+  );
+};
+export const SwitchGroupList = () => {
+  const switchGroupData = [
+    { label: "Label Text", defaultChecked: true, disabled: false },
+    { label: "Label Text", defaultChecked: false, disabled: false },
+    { label: "Label Text", defaultChecked: false, disabled: false },
+  ];
+  return (
+    <SkrGrid container spacing={40}>
+      <SkrGrid item xs={6}>
+        <SwitchGroup switchGroupData={switchGroupData} />
+      </SkrGrid>
+      <SkrGrid item xs={6}>
+        <CodeBox>
+          <pre>{`<SwitchGroup switchGroupData={switchGroupData} />
+`}</pre>
+        </CodeBox>
+      </SkrGrid>
+    </SkrGrid>
+  );
+};
+
+//
 export const WithFormContents = () => {
   return (
     <>

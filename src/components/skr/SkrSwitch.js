@@ -11,12 +11,10 @@ import { Switch } from "@mui/material";
 
 const SkrSwitch = ({
   checked,
-  checkedIcon,
   color,
   defaultChecked,
   disabled,
-  icon,
-  id,
+  inputProps,
   name,
   onChange,
   required,
@@ -28,12 +26,10 @@ const SkrSwitch = ({
     <>
       <Switch
         checked={checked}
-        checkedIcon={checkedIcon}
         color={color}
         defaultChecked={defaultChecked}
         disabled={disabled}
-        icon={icon}
-        id={id}
+        inputProps={inputProps}
         name={name}
         onChange={onChange}
         required={required}
