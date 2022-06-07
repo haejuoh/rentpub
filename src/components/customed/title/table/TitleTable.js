@@ -11,10 +11,10 @@ const TitleTable = ({ titleData, children }) => {
         <SkrTypography variant="h4">{titleData.title}</SkrTypography>
         {/* isDesc */}
         {titleData.desc && (
-          <TitleTableStyled.Desc variant="b1">
+          <SkrTypography variant="b1" color="grey.600">
             {titleData.desc}
             <span>건</span>
-          </TitleTableStyled.Desc>
+          </SkrTypography>
         )}
       </TitleTableStyled.Title>
       <SkrStack direction="row" spacing={5}>

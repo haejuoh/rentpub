@@ -7,6 +7,7 @@ import SkrToggleButton from "./../../../skr/SkrToggleButton";
 import SkrButtonGroup from "../../../skr/SkrButtonGroup";
 import SkrIconButton from "../../../skr/SkrIconButton";
 import SkrDivider from "./../../../skr/SkrDivider";
+import SkrTooltip from "../../../skr/SkrTooltip";
 // Icons
 import { InfoIcon } from "../../../../assets/style/icons";
 // Style
@@ -44,16 +45,33 @@ const TitleSub = ({ titleData, buttonGroup, children }) => {
           )}
           {/* isTooltip */}
           {!titleData.toggle && titleData.tooltip && (
-            <SkrIconButton color="primaryOutlined">
-              <InfoIcon />
-            </SkrIconButton>
+            <SkrTooltip title="message">
+              <SkrIconButton color="primaryOutlined">
+                <InfoIcon />
+              </SkrIconButton>
+            </SkrTooltip>
+            // <Tooltip title="message">
+            //   <SkrIconButton color="primaryOutlined">
+            //     <InfoIcon />
+            //   </SkrIconButton>
+            // </Tooltip>
           )}
           {/* all */}
           {titleData.toggle && titleData.tooltip && (
             <SkrButtonGroup variant="outlined">
-              <SkrIconButton color="sub">
+              {/* <SkrIconButton color="sub">
                 <InfoIcon />
-              </SkrIconButton>
+              </SkrIconButton> */}
+              {/* <Tooltip title="message">
+                <SkrIconButton color="primaryOutlined">
+                  <InfoIcon />
+                </SkrIconButton>
+              </Tooltip> */}
+              <SkrTooltip title="message">
+                <SkrIconButton color="primaryOutlined">
+                  <InfoIcon />
+                </SkrIconButton>
+              </SkrTooltip>
               <SkrToggleButton
                 value="check"
                 selected={selected}

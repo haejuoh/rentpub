@@ -7,7 +7,7 @@ const Wrap = styled("div")(({ theme }) => ({
   alignItems: "center",
   justifyContent: "space-between",
 }));
-const Title = styled(SkrTypography)(({ theme }) => ({
+const Title = styled("div")(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   gap: "5px",

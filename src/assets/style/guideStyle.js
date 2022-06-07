@@ -19,21 +19,21 @@ const ConditionTitle = styled(Typography)(
 const FlexBox = styled(Box)(({ theme }) => ({
   flex: 1,
 }));
-const GuideTitle = styled(Typography)(
+const GuideTitle = styled("h3")(
   ({ theme }) => `
   font-size: 1.8125rem;
   font-weight: 600;
   color: ${theme.palette.grey[900]}
 `
 );
-const GuideSubTitle = styled(Typography)(
+const GuideSubTitle = styled("h4")(
   ({ theme }) => `
   font-size: 1.2rem;
   font-weight: 600;
   color: ${theme.palette.grey[700]}
 `
 );
-const GuideKeyword = styled(Typography)(
+const GuideKeyword = styled("h5")(
   ({ theme }) => `
   font-size: 1rem;
   font-weight: 600;

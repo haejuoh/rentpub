@@ -19,6 +19,7 @@ const SkrDataGrid = ({
   pageSize,
   rowHeight,
   rowsPerPageOptions,
+  ...rest
 }) => {
   return (
     <DataGrid
@@ -32,8 +33,9 @@ const SkrDataGrid = ({
       pageSize={pageSize}
       rowHeight={rowHeight}
       rowsPerPageOptions={rowsPerPageOptions}
+      {...rest}
     />
   );
 };
 
-export default SkrDataGrid;
+export default React.forwardRef((props, ref) => <SkrDataGrid ref={ref} />);

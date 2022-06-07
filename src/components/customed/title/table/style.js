@@ -19,7 +19,4 @@ const Title = styled("div")(({ theme }) => ({
     borderRadius: 1,
   },
 }));
-const Desc = styled(SkrTypography)(({ theme }) => ({
-  color: `${theme.palette.grey[600]}`,
-}));
-export { Wrap, Title, Desc };
+export { Wrap, Title };

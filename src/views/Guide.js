@@ -62,6 +62,7 @@ import {
 import Badge from "./../guide/Badge";
 import { TableDefault, TableAction, TableBadge } from "../guide/Table";
 import { ModalSample } from "../components/Modal";
+import DataGridDefault from "./../guide/dataGrid/DataGridDefault";
 
 const Guide = () => {
   const [value, setValue] = React.useState("1");
@@ -213,7 +214,7 @@ const Guide = () => {
         </TabPanel>
         <TabPanel value="6">
           <GuideTitle>Default</GuideTitle>
-          <TableDefault mt={2} />
+          <DataGridDefault mt={2} />
           <GuideTitle>ActionField</GuideTitle>
           <TableAction mt={2} />
           <GuideTitle>BadgeField</GuideTitle>

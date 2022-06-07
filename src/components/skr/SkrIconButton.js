@@ -8,12 +8,14 @@ import { IconButton } from "@mui/material";
  * @type { React.FC<IconButtonProps> }
  */
 
-const SkrIconButton = ({ color, size, disabled, children }) => {
-  return (
-    <IconButton color={color} size={size} disabled={disabled}>
-      {children}
-    </IconButton>
-  );
-};
+const SkrIconButton = React.forwardRef(
+  ({ color, size, disabled, children }, ref) => {
+    return (
+      <IconButton ref={ref} color={color} size={size} disabled={disabled}>
+        {children}
+      </IconButton>
+    );
+  }
+);
 
 export default SkrIconButton;
