@@ -45,9 +45,9 @@ import {
   CheckboxLabelHiddenList,
   CheckboxLabelPositionRightList,
   CheckBoxGroupList,
-  DefaultRadio,
-  RadioWithLabel,
-  GroupRadio,
+  RadioLabelHiddenList,
+  RadioLabelPositionRightList,
+  RadioGroupLabelList,
   SegmentGroup,
   SwitchWithLabel,
   WithFormContents,
@@ -181,15 +181,15 @@ const Guide = () => {
           <CheckBoxGroupList />
           <GuideTitle mt={40}>Radio</GuideTitle>
           <GuideSubTitle pb={8}>Label Hidden</GuideSubTitle>
-          <DefaultRadio />
+          <RadioLabelHiddenList />
           <GuideSubTitle mt={40} pb={8}>
-            Label Position : Left
+            Label Position : Right
           </GuideSubTitle>
-          <RadioWithLabel />
+          <RadioLabelPositionRightList />
           <GuideSubTitle mt={40} pb={8}>
             Radio Group
           </GuideSubTitle>
-          <GroupRadio />
+          <RadioGroupLabelList />
           <GuideTitle mt={40}>Segment</GuideTitle>
           <SegmentGroup />
           <GuideTitle mt={40}>Switch</GuideTitle>

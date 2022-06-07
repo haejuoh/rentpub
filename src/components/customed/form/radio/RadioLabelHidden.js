@@ -1,15 +1,7 @@
 import React from "react";
-import { Radio } from "@mui/material";
+import SkrRadio from "../../../skr/SkrRadio";
 
-/**
- * @typedef {import('@mui/material').RadioProps} RadioProps
- */
-
-/**
- * @type { React.FC<RadioProps> }
- */
-
-const SkrRadio = ({
+const RadioLabelHidden = ({
   checked,
   checkedIcon,
   color,
@@ -25,7 +17,7 @@ const SkrRadio = ({
 }) => {
   return (
     <>
-      <Radio
+      <SkrRadio
         checked={checked}
         checkedIcon={checkedIcon}
         color={color}
@@ -43,4 +35,4 @@ const SkrRadio = ({
   );
 };
 
-export default SkrRadio;
+export default RadioLabelHidden;

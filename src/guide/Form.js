@@ -14,16 +14,13 @@ import { ReactComponent as Accessibility } from "../assets/images/icons/accessib
 import { DefaultTextField, FormContents } from "../assets/style/common";
 import { CodeBox, FlexBox } from "../assets/style/guideStyle";
 import { SelectField, DefaultSelectField } from "../components/Select";
-import Segment from "../components/Segment";
+// import Segment from "../components/Segment";
 // import Placeholder from "../assets/style/Placeholder";
 
 import SkrGrid from "../components/skr/SkrGrid";
 import SkrStack from "../components/skr/SkrStack";
 import SkrBox from "../components/skr/SkrBox";
 import SkrTypography from "../components/skr/SkrTypography";
-import SkrFormGroup from "../components/skr/SkrFormGroup";
-import SkrFormControlLabel from "../components/skr/SkrFormControlLabel";
-import SkrCheckbox from "../components/skr/SkrCheckbox";
 
 import InputLabelPositionTop from "../components/customed/form/input/InputLabelPositionTop";
 import InputLabelPositionLeft from "../components/customed/form/input/InputLabelPositionLeft";
@@ -34,7 +31,12 @@ import SelectLabelHidden from "../components/customed/form/select/SelectLabelHid
 import CheckboxLabelHidden from "../components/customed/form/checkbox/CheckboxLabelHidden";
 import CheckboxLabelPositionRight from "../components/customed/form/checkbox/CheckboxLabelPositionRight";
 import CheckboxGroup from "../components/customed/form/checkbox/CheckboxGroup";
+import RadioLabelHidden from "../components/customed/form/radio/RadioLabelHidden";
+import RadioLabelPositionRight from "../components/customed/form/radio/RadioLabelPositionRight";
+import RadioGroupLabel from "../components/customed/form/radio/RadioGroupLabel";
+import Segment from "../components/customed/form/radio/Segment";
 
+// input
 export const InputLabelPositionTopList = () => {
   return (
     <>
@@ -660,6 +662,7 @@ export const InputLabelHiddenList = () => {
   );
 };
 
+// select
 export const SelectLabelPositionTopList = () => {
   const defaultSelect = {
     label: "Label Text",
@@ -1070,7 +1073,7 @@ const defaultSelect = {
   isIcon: false,
 };
 
-<SelectLabelPositionLeft selectData={defaultSelect} />
+<SelectLabelHidden selectData={defaultSelect} />
 
 // icon
   isIcon: true,
@@ -1084,8 +1087,8 @@ const defaultSelect = {
   );
 };
 
+// checkbox
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
-
 export const CheckboxLabelHiddenList = () => {
   return (
     <>
@@ -1225,9 +1228,10 @@ export const CheckBoxGroupList = () => {
     </>
   );
 };
-export const DefaultRadio = () => {
-  const [selectedValue, setSelectedValue] = React.useState("a");
 
+// radio
+export const RadioLabelHiddenList = () => {
+  const [selectedValue, setSelectedValue] = React.useState("a");
   const handleChange = (event) => {
     setSelectedValue(event.target.value);
   };
@@ -1241,21 +1245,26 @@ export const DefaultRadio = () => {
               <SkrTypography variant="st2" pb={12}>
                 Default
               </SkrTypography>
-
-              <Radio
+              <RadioLabelHidden
                 checked={selectedValue === "b"}
                 onChange={handleChange}
                 value="b"
                 name="radio-buttons"
                 inputProps={{ "aria-label": "B" }}
               />
+              <RadioLabelHidden
+                checked={selectedValue === "a"}
+                onChange={handleChange}
+                value="a"
+                name="radio-buttons"
+                inputProps={{ "aria-label": "A" }}
+              />
             </SkrBox>
-
             <SkrBox>
               <SkrTypography variant="st2" pb={12}>
                 Disabled
               </SkrTypography>
-              <Radio
+              <RadioLabelHidden
                 checked={selectedValue === "c"}
                 onChange={handleChange}
                 value="c"
@@ -1268,8 +1277,7 @@ export const DefaultRadio = () => {
               <SkrTypography variant="st2" pb={12}>
                 Disabled Checked
               </SkrTypography>
-
-              <Radio
+              <RadioLabelHidden
                 checked={selectedValue === "a"}
                 onChange={handleChange}
                 value="a"
@@ -1282,62 +1290,31 @@ export const DefaultRadio = () => {
         </SkrGrid>
         <SkrGrid item xs={6}>
           <CodeBox>
-            const &#91; value, setValue&#93;= React.useState&#40;"a"&#41;;
-            <br /> const handleChange = &#40;event&#41; =&gt; &#123;
-            <br />
-            &nbsp;&nbsp;setValue(event.target.value);
-            <br />
-            &#125;;
-            <br />
-            <br />
-            // Default
-            <br />
-            &lt;Radio checked=&#123;selectedValue === "c"&#125;
-            onChange=&#123;handleChange&#125; value="c" name="radio-buttons"
-            inputProps=&#123;&#123; "aria-label": "c" &#125;&#125; /&gt;
-            <br />
-            <br />
-            // Selected
-            <br />
-            &lt;Radio checked=&#123;selectedValue === "a"&#125;
-            onChange=&#123;handleChange&#125; value="a" name="radio-buttons"
-            inputProps=&#123;&#123; "aria-label": "a" &#125;&#125; /&gt;
-            <br />
-            <br />
-            // Disabled
-            <br />
-            &lt;Radio checked=&#123;selectedValue === "b"&#125;
-            onChange=&#123;handleChange&#125; value="b" name="radio-buttons"
-            inputProps=&#123;&#123; "aria-label": "b" &#125;&#125; disabled
-            /&gt;
-            <br />
-            <br />
-            // Selected Disabled
-            <br />
-            &lt;Radio checked=&#123;selectedValue === "a"&#125;
-            onChange=&#123;handleChange&#125; value="a" name="radio-buttons"
-            inputProps=&#123;&#123; "aria-label": "a" &#125;&#125; disabled
-            /&gt;
+            <pre>{`const [selectedValue, setSelectedValue] = React.useState("a");
+const handleChange = (event) => {
+  setSelectedValue(event.target.value);
+};
+
+// Default
+<RadioLabelHidden checked={selectedValue === "b"} onChange={handleChange} value="b" name="radio-buttons" inputProps={{ "aria-label": "B" }} />
+
+// Selected
+<RadioLabelHidden checked={selectedValue === "a"} onChange={handleChange} value="a" name="radio-buttons" inputProps={{ "aria-label": "A" }} />
+
+// disabled
+<RadioLabelHidden checked={selectedValue === "b"} onChange={handleChange} value="b" name="radio-buttons" inputProps={{ "aria-label": "B" }} disabled/>`}</pre>
           </CodeBox>
         </SkrGrid>
       </SkrGrid>
     </>
   );
 };
-const radioData1 = [
-  { label: "Label Text", disabled: false },
-  { label: "Label Text", disabled: false },
-];
-const radioData2 = [
-  { label: "Label Text", disabled: true },
-  { label: "Label Text", disabled: true },
-];
-export const RadioWithLabel = () => {
-  const [value, setValue] = React.useState("0");
-
+export const RadioLabelPositionRightList = () => {
+  const [value, setValue] = React.useState("b");
   const handleChange = (event) => {
     setValue(event.target.value);
   };
+
   return (
     <>
       <SkrGrid container spacing={40}>
@@ -1347,153 +1324,89 @@ export const RadioWithLabel = () => {
               <SkrTypography variant="st2" pb={12}>
                 Default , Selected
               </SkrTypography>
-              <RadioGroup
-                name="radioGroup"
-                value={value}
+
+              <RadioLabelPositionRight
+                control={<Radio name="radio-label-right" />}
+                value="a"
+                label="Label Text 1"
                 onChange={handleChange}
-              >
-                {radioData1.map((item, idx) => {
-                  return (
-                    <FormControlLabel
-                      value={idx}
-                      control={<Radio />}
-                      label={item.label}
-                      disabled={item.disabled}
-                      key={idx}
-                    />
-                  );
-                })}
-              </RadioGroup>
+                checked={value === "a"}
+              />
+              <RadioLabelPositionRight
+                control={<Radio name="radio-label-right" />}
+                value="b"
+                label="Label Text 2"
+                onChange={handleChange}
+                checked={value === "b"}
+              />
             </SkrBox>
 
             <SkrBox>
               <SkrTypography variant="st2" pb={12}>
                 Disabled , Selected
               </SkrTypography>
-              <RadioGroup
-                name="radioGroup"
-                value={value}
+              <RadioLabelPositionRight
+                control={<Radio name="radio-label-right" />}
+                value="a"
+                label="Label Text 1"
                 onChange={handleChange}
-              >
-                {radioData2.map((item, idx) => {
-                  return (
-                    <FormControlLabel
-                      value={idx}
-                      control={<Radio />}
-                      label={item.label}
-                      disabled={item.disabled}
-                      key={idx}
-                    />
-                  );
-                })}
-              </RadioGroup>
+                checked={value === "a"}
+                disabled
+              />
+              <RadioLabelPositionRight
+                control={<Radio name="radio-label-right" />}
+                value="b"
+                label="Label Text 2"
+                onChange={handleChange}
+                checked={value === "b"}
+                disabled
+              />
             </SkrBox>
           </SkrStack>
         </SkrGrid>
         <SkrGrid item xs={6}>
           <CodeBox>
-            const radioData1 = &#91;
-            <br />
-            &nbsp;&nbsp;&#123; label: "Label Text", disabled: false &#125;,
-            <br /> &nbsp;&nbsp;&#123; label: "Label Text", disabled: false
-            &#125;,
-            <br /> &#93;;
-            <br /> <br />
-            const &#91; value, setValue&#93;= React.useState&#40;"0"&#41;;
-            <br /> const handleChange = &#40;event&#41; =&gt; &#123;
-            <br />
-            &nbsp;&nbsp;setValue(event.target.value);
-            <br />
-            &#125;;
-            <br />
-            <br />
-            // Default
-            <br />
-            &lt;RadioGroupname="radioGroup" value=&#123;value&#125;
-            onChange=&#123;handleChange&#125; &gt;
-            <br />
-            &nbsp;&nbsp;&#123; radioData1.map&#40;&#40;item, idx&#41; =&gt;
-            &#123; return &#40; &lt;FormControlLabel value=&#123;idx&#125;
-            control=&#123;&lt;Radio /&gt;&#125; label=&#123;item.label&#125;
-            disabled=&#123;item.disabled&#125; key=&#123;idx&#125; /&gt; &#41;;
-            &#125;&#41;&#125;
-            <br /> &lt;/RadioGroup&gt;
+            <pre>{`const [value, setValue] = React.useState("b");
+const handleChange = (event) => {
+  setValue(event.target.value);
+};
+
+// Default
+<RadioLabelPositionRight control={<Radio name="radio-label-right" />} value="a" label="Label Text 1" onChange={handleChange} checked={value === "a"} />
+// disabled
+<RadioLabelPositionRight control={<Radio name="radio-label-right" />} value="b" label="Label Text 1" onChange={handleChange} checked={value === "b"} disabled />`}</pre>
           </CodeBox>
         </SkrGrid>
       </SkrGrid>
     </>
   );
 };
-const radioDataGroup = [
-  { label: "Label Text", disabled: false },
-  { label: "Label Text", disabled: false },
-  { label: "Label Text", disabled: false },
-  { label: "Label Text", disabled: false },
-  { label: "Label Text", disabled: false },
-];
-export const GroupRadio = () => {
-  const [value, setValue] = React.useState("0");
-
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
+export const RadioGroupLabelList = () => {
+  const radioDataGroup = [
+    { label: "Label Text", disabled: false },
+    { label: "Label Text", disabled: false },
+    { label: "Label Text", disabled: false },
+    { label: "Label Text", disabled: false },
+    { label: "Label Text", disabled: false },
+  ];
   return (
     <>
       <SkrGrid container spacing={40}>
         <SkrGrid item xs={6}>
           <SkrStack spacing={20}>
             <SkrBox>
-              <RadioGroup
-                name="radioGroup"
-                value={value}
-                onChange={handleChange}
-              >
-                {radioDataGroup.map((item, idx) => {
-                  return (
-                    <FormControlLabel
-                      value={idx}
-                      control={<Radio />}
-                      label={item.label}
-                      disabled={item.disabled}
-                      key={idx}
-                    />
-                  );
-                })}
-              </RadioGroup>
+              <RadioGroupLabel radioGroupData={radioDataGroup} />
             </SkrBox>
           </SkrStack>
         </SkrGrid>
         <SkrGrid item xs={6}>
           <CodeBox>
-            const radioDataGroup = &#91;
-            <br />
-            &nbsp;&nbsp;&#123; label: "Label Text", disabled: false &#125;,
-            <br /> &nbsp;&nbsp;&#123; label: "Label Text", disabled: false
-            <br /> &nbsp;&nbsp;&#123; label: "Label Text", disabled: false
-            <br /> &nbsp;&nbsp;&#123; label: "Label Text", disabled: false
-            <br /> &nbsp;&nbsp;&#123; label: "Label Text", disabled: false
-            &#125;,
-            <br /> &#93;;
-            <br /> <br />
-            const &#91; value, setValue&#93;= React.useState&#40;"0"&#41;;
-            <br /> const handleChange = &#40;event&#41; =&gt; &#123;
-            <br />
-            &nbsp;&nbsp;setValue(event.target.value);
-            <br />
-            &#125;;
-            <br />
-            <br />
-            // Default
-            <br />
-            &lt;RadioGroupname="radioGroup" value=&#123;value&#125;
-            onChange=&#123;handleChange&#125; &gt;
-            <br />
-            &nbsp;&nbsp;&#123; radioDataGroup.map&#40;&#40;item, idx&#41; =&gt;
-            &#123; return &#40; &lt;FormControlLabel value=&#123;idx&#125;
-            control=&#123;&lt;Radio /&gt;&#125; label=&#123;item.label&#125;
-            disabled=&#123;item.disabled&#125; key=&#123;idx&#125; /&gt; &#41;;
-            &#125;&#41;&#125;
-            <br /> &lt;/RadioGroup&gt;
+            <pre>{`const radioDataGroup = [
+  { label: "Label Text", disabled: false },
+  { label: "Label Text", disabled: false },
+];
+
+<RadioGroupLabel radioGroupData={radioDataGroup} />`}</pre>
           </CodeBox>
         </SkrGrid>
       </SkrGrid>

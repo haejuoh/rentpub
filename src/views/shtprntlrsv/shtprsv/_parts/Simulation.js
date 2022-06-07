@@ -145,19 +145,33 @@ const Simulation = () => {
       },
     });
   };
-
+  // 아래 방식이 더 작업하기 편할듯 06.07
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
+  const [value, setValue] = React.useState("a");
+  // 06.07
   return (
     <>
       <LySection>
         <Section>
           <Stack direction="row" justifyContent="space-between">
+            {/* // 06.07 */}
             <CustomFormControlLabel
-              control={<Radio />}
-              value={radios.radio1.name}
+              control={<Radio name="aa" />}
+              value="a"
               label="렌탈료 시뮬레이션 1"
-              onChange={checking}
-              checked={radios.radio1.value}
+              onChange={handleChange}
+              checked={value === "a"}
             />
+            <CustomFormControlLabel
+              control={<Radio name="aa" />}
+              value="b"
+              label="렌탈료 시뮬레이션 1"
+              onChange={handleChange}
+              checked={value === "b"}
+            />
+            {/* 06.07 // */}
             <Button color="delete" variant="outlined">
               삭제
             </Button>
