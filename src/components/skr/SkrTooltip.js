@@ -10,27 +10,7 @@ import { Tooltip } from "@mui/material";
  */
 
 const SkrTooltip = ({ children, ...rest }) => {
-  const onOpen = () => {
-    console.log("aaa");
-  };
-  return (
-    <>
-      <Tooltip {...rest}>{children}</Tooltip>
-    </>
-  );
+  return <Tooltip {...rest}>{children}</Tooltip>;
 };
-
-// const SkrTooltip = React.forwardRef((ref, { ...rest }) => {
-//   const onOpen = () => {
-//     console.log("aaa");
-//   };
-//   return (
-//     <>
-//       <Tooltip {...rest} ref={ref}>
-
-//       </Tooltip>
-//     </>
-//   );
-// });
 
 export default SkrTooltip;
