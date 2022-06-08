@@ -28,6 +28,9 @@ import InputLabelHidden from "../components/customed/form/input/InputLabelHidden
 import SelectLabelPositionTop from "../components/customed/form/select/SelectLabelPositionTop";
 import SelectLabelPositionLeft from "../components/customed/form/select/SelectLabelPositionLeft";
 import SelectLabelHidden from "../components/customed/form/select/SelectLabelHidden";
+import SelectAutoCompleteLabelHidden from "../components/customed/form/select/SelectAutoCompleteLabelHidden";
+import SelectAutoCompleteLabelPositionTop from "../components/customed/form/select/SelectAutoCompleteLabelPositionTop";
+import SelectAutoCompleteLabelPositionLeft from "../components/customed/form/select/SelectAutoCompleteLabelPositionLeft";
 import CheckboxLabelHidden from "../components/customed/form/checkbox/CheckboxLabelHidden";
 import CheckboxLabelPositionRight from "../components/customed/form/checkbox/CheckboxLabelPositionRight";
 import CheckboxGroup from "../components/customed/form/checkbox/CheckboxGroup";
@@ -1083,6 +1086,125 @@ const defaultSelect = {
 
 // disabled
   disabled: true,`}</pre>
+          </CodeBox>
+        </SkrGrid>
+      </SkrGrid>
+    </>
+  );
+};
+export const SelectAutoCompleteLabelHiddenList = () => {
+  const autocompleteData = [
+    { optionLabel: "Autocomplete item 01111" },
+    { optionLabel: "Autocomplete item 02" },
+    { optionLabel: "Autocomplete item 03" },
+    { optionLabel: "Autocomplete item 04" },
+    { optionLabel: "Autocomplete item 05" },
+  ];
+  return (
+    <>
+      <SkrGrid container spacing={40}>
+        <SkrGrid item xs={6}>
+          <SkrStack spacing={20}>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Default
+              </SkrTypography>
+              <SkrBox sx={{ width: "444px" }}>
+                <SelectAutoCompleteLabelHidden
+                  autocompleteData={autocompleteData}
+                />
+              </SkrBox>
+            </FlexBox>
+          </SkrStack>
+        </SkrGrid>
+        <SkrGrid item xs={6}>
+          <CodeBox>
+            <pre>{`// Default
+const autocompleteData = [
+  { optionLabel: "Autocomplete item 01111" },
+  { optionLabel: "Autocomplete item 02" },
+  { optionLabel: "Autocomplete item 03" },
+  { optionLabel: "Autocomplete item 04" },
+  { optionLabel: "Autocomplete item 05" },
+];
+
+<SelectAutoCompleteLabelHidden autocompleteData={autocompleteData} />`}</pre>
+          </CodeBox>
+        </SkrGrid>
+      </SkrGrid>
+    </>
+  );
+};
+export const SelectAutoCompleteLabelPositionTopList = () => {
+  const autocompleteData = [
+    { optionLabel: "Autocomplete item 01111" },
+    { optionLabel: "Autocomplete item 02" },
+    { optionLabel: "Autocomplete item 03" },
+    { optionLabel: "Autocomplete item 04" },
+    { optionLabel: "Autocomplete item 05" },
+  ];
+  return (
+    <>
+      <SkrGrid container spacing={40}>
+        <SkrGrid item xs={6}>
+          <SkrStack spacing={20}>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Default
+              </SkrTypography>
+              <SkrBox sx={{ width: "444px" }}>
+                <SelectAutoCompleteLabelPositionTop
+                  label="label text"
+                  autocompleteData={autocompleteData}
+                />
+              </SkrBox>
+            </FlexBox>
+          </SkrStack>
+        </SkrGrid>
+        <SkrGrid item xs={6}>
+          <CodeBox>
+            <pre>{`// Default
+<SelectAutoCompleteLabelPositionTop
+  label="label text"
+  autocompleteData={autocompleteData}
+/>
+`}</pre>
+          </CodeBox>
+        </SkrGrid>
+      </SkrGrid>
+    </>
+  );
+};
+export const SelectAutoCompleteLabelPositionLeftList = () => {
+  const autocompleteData = [
+    { optionLabel: "Autocomplete item 01111" },
+    { optionLabel: "Autocomplete item 02" },
+    { optionLabel: "Autocomplete item 03" },
+    { optionLabel: "Autocomplete item 04" },
+    { optionLabel: "Autocomplete item 05" },
+  ];
+  return (
+    <>
+      <SkrGrid container spacing={40}>
+        <SkrGrid item xs={6}>
+          <SkrStack spacing={20}>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Default
+              </SkrTypography>
+              <SkrBox sx={{ width: "444px" }}>
+                <SelectAutoCompleteLabelPositionLeft
+                  label="label text"
+                  autocompleteData={autocompleteData}
+                />
+              </SkrBox>
+            </FlexBox>
+          </SkrStack>
+        </SkrGrid>
+        <SkrGrid item xs={6}>
+          <CodeBox>
+            <pre>{`// Default
+<SelectAutoCompleteLabelPositionLeft label="label text" autocompleteData={autocompleteData} />`}</pre>
           </CodeBox>
         </SkrGrid>
       </SkrGrid>

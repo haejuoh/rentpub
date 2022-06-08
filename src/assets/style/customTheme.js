@@ -1124,10 +1124,10 @@ const theme = createTheme({
     MuiInput: {
       styleOverrides: {
         root: sx({
+          height: "34px",
           "&:before": {
             borderBottomColor: colorSystem.bg.b700,
           },
-          // height: "33px",
           "& input": {
             padding: "4px 12px 6px",
             color: colorSystem.grey.b700,
@@ -1976,6 +1976,62 @@ const theme = createTheme({
       styleOverrides: {
         popper: {
           marginTop: "-9px !important",
+        },
+      },
+    },
+    MuiAutocomplete: {
+      styleOverrides: {
+        root: {
+          minWidth: "185px",
+          width: "100%",
+          "&:hover, &:active": {
+            "& .MuiInput-root": {
+              "&:after": {
+                transform: "scale(1)",
+              },
+              "& .MuiAutocomplete-popupIndicator": {
+                backgroundColor: colorSystem.bg.b300,
+                backgroundColor: colorSystem.bg.b300,
+              },
+            },
+          },
+          "& .MuiAutocomplete-inputRoot": {
+            width: "100%",
+            "& .MuiAutocomplete-input": {
+              minHeight: "14px",
+              padding: "9px 12px 10px",
+            },
+          },
+          "& .MuiAutocomplete-endAdornment": {
+            display: "flex",
+            alignItems: "center",
+            height: "14px",
+            top: "unset",
+            right: "12px",
+            "& .MuiAutocomplete-popupIndicator": {
+              width: "14px",
+              height: "14px",
+              padding: "0",
+              "&Open": {
+                backgroundColor: colorSystem.bg.b300,
+                transform: "none",
+              },
+              "& svg": {
+                width: "14px",
+                height: "14px",
+              },
+            },
+            "& .MuiAutocomplete-clearIndicator": {
+              width: "14px",
+              height: "14px",
+              padding: "0",
+              marginRight: "5px",
+              backgroundColor: colorSystem.bg.b300,
+              "& svg path": {
+                fill: colorSystem.grey.b300,
+              },
+            },
+          },
         },
       },
     },
