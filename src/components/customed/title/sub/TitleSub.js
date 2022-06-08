@@ -45,29 +45,16 @@ const TitleSub = ({ titleData, buttonGroup, children }) => {
           )}
           {/* isTooltip */}
           {!titleData.toggle && titleData.tooltip && (
-            <SkrTooltip title="message">
+            <SkrTooltip title="message" placement="bottom-start">
               <SkrIconButton color="primaryOutlined">
                 <InfoIcon />
               </SkrIconButton>
             </SkrTooltip>
-            // <Tooltip title="message">
-            //   <SkrIconButton color="primaryOutlined">
-            //     <InfoIcon />
-            //   </SkrIconButton>
-            // </Tooltip>
           )}
           {/* all */}
           {titleData.toggle && titleData.tooltip && (
             <SkrButtonGroup variant="outlined">
-              {/* <SkrIconButton color="sub">
-                <InfoIcon />
-              </SkrIconButton> */}
-              {/* <Tooltip title="message">
-                <SkrIconButton color="primaryOutlined">
-                  <InfoIcon />
-                </SkrIconButton>
-              </Tooltip> */}
-              <SkrTooltip title="message">
+              <SkrTooltip title="message" placement="bottom-start">
                 <SkrIconButton color="primaryOutlined">
                   <InfoIcon />
                 </SkrIconButton>

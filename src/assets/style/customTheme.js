@@ -1972,6 +1972,13 @@ const theme = createTheme({
         },
       },
     },
+    MuiTooltip: {
+      styleOverrides: {
+        popper: {
+          marginTop: "-9px !important",
+        },
+      },
+    },
   },
 });
 
