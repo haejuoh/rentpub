@@ -2,12 +2,23 @@ import React from "react";
 import SkrTypography from "../../../skr/SkrTypography";
 // Style
 import * as LegendStyle from "./style";
+/**
+ * @typedef label
+ * @type {string}
+ * @typedef status
+ * @type {string}
+ */
 
-const Legend = ({ legend, status }) => {
+/** @type {label} */
+/** @type {status} */
+var props;
+const Legend = ({ label, status }) => {
   return (
     <LegendStyle.Item>
-      <SkrTypography>{legend}</SkrTypography>
-      <LegendStyle.Status status={status}></LegendStyle.Status>
+      <SkrTypography>{label}</SkrTypography>
+      <LegendStyle.ChipBox>
+        <LegendStyle.Chip status={status}></LegendStyle.Chip>
+      </LegendStyle.ChipBox>
     </LegendStyle.Item>
   );
 };

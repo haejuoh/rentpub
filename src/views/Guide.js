@@ -63,6 +63,8 @@ import Badge from "./../guide/Badge";
 import { TableDefault, TableAction, TableBadge } from "../guide/Table";
 import { ModalSample } from "../components/Modal";
 import DataGridDefault from "./../guide/dataGrid/DataGridDefault";
+import { LegendSingleGuide, LegendGroupGuide } from "../guide/calendar/Legend";
+import Legend from "./../components/customed/calendar/legend/Legend";
 
 const Guide = () => {
   const [value, setValue] = React.useState("1");
@@ -80,6 +82,7 @@ const Guide = () => {
     toggle: true,
     tooltip: false,
   };
+
   return (
     <Box sx={{ width: "100%", typography: "body1" }}>
       <Typography variant="h1" mt={3}>
@@ -98,6 +101,7 @@ const Guide = () => {
             <Tab label="List" value="5" />
             <Tab label="DataGrid" value="6" />
             <Tab label="Modal" value="7" />
+            <Tab label="legend" value="8" />
           </TabList>
         </Box>
         <TabPanel value="1">
@@ -223,6 +227,11 @@ const Guide = () => {
         <TabPanel value="7">
           <GuideTitle>Modal</GuideTitle>
           <ModalSample />
+        </TabPanel>
+        <TabPanel value="8">
+          <GuideTitle mt={40}>Legend</GuideTitle>
+          <LegendSingleGuide />
+          <LegendGroupGuide />
         </TabPanel>
       </TabContext>
     </Box>
