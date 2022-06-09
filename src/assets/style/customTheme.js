@@ -1984,19 +1984,19 @@ const theme = createTheme({
         root: {
           minWidth: "185px",
           width: "100%",
-          "&:hover, &:active": {
-            "& .MuiInput-root": {
-              "&:after": {
-                transform: "scale(1)",
+          "& .MuiAutocomplete-inputRoot": {
+            width: "100%",
+            "&:hover, &:active": {
+              "& .MuiInput-root": {
+                "&:after": {
+                  transform: "scale(1)",
+                },
               },
-              "& .MuiAutocomplete-popupIndicator": {
+              ".MuiAutocomplete-popupIndicator": {
                 backgroundColor: colorSystem.bg.b300,
                 backgroundColor: colorSystem.bg.b300,
               },
             },
-          },
-          "& .MuiAutocomplete-inputRoot": {
-            width: "100%",
             "& .MuiAutocomplete-input": {
               minHeight: "14px",
               padding: "9px 12px 10px",
