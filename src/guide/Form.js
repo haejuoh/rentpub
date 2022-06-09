@@ -11,7 +11,7 @@ import {
   Switch,
 } from "@mui/material";
 import { ReactComponent as Accessibility } from "../assets/images/icons/accessibility.svg";
-import { DefaultTextField, FormContents } from "../assets/style/common";
+// import { DefaultTextField, FormContents } from "../assets/style/common";
 import { CodeBox, FlexBox } from "../assets/style/guideStyle";
 import { SelectField, DefaultSelectField } from "../components/Select";
 // import Segment from "../components/Segment";
@@ -41,6 +41,7 @@ import Segment from "../components/customed/form/radio/Segment";
 import SwitchLabelHidden from "../components/customed/form/switch/SwitchLabelHidden";
 import SwitchLabelPositionLeft from "../components/customed/form/switch/SwitchLabelPositionLeft";
 import SwitchGroup from "../components/customed/form/switch/SwitchGroup";
+import FormContents from "../components/customed/form/contents/FormContents";
 
 // input
 export const InputLabelPositionTopList = () => {
@@ -1680,16 +1681,21 @@ export const WithFormContents = () => {
       <SkrGrid container spacing={40}>
         <SkrGrid item xs={6}>
           <SkrTypography variant="st2" pb={12}>
-            Default
+            Label Position Top
           </SkrTypography>
           <FormContents label="Label Text" required={false}>
             Import Components or Contents
           </FormContents>
           <SkrTypography variant="st2" pb={12} mt={20}>
+            Label Position Left
+          </SkrTypography>
+          <FormContents label="Label Text" required={true} position="left">
+            Import Components or Contents
+          </FormContents>
+          <SkrTypography variant="st2" pb={12} mt={20}>
             Description
           </SkrTypography>
-          <FormContents label="Label Text" required={false}>
-            {/* Import Components or Contents */}
+          <FormContents label="Label Text" required={false} position="left">
             <SkrTypography variant="ht" color="primary.light">
               Description Message.
             </SkrTypography>
@@ -1697,17 +1703,21 @@ export const WithFormContents = () => {
         </SkrGrid>
         <SkrGrid item xs={6}>
           <CodeBox>
-            <pre>{`// Default
+            <pre>{`// Label Position Top
 <FormContents label="Label Text" required={false}>
-    // Import Components or Contents
+  "Import Components or Contents"
+</FormContents>
+
+//Label Position Left
+<FormContents label="Label Text" required={true} position="left">
+  "Import Components or Contents"
 </FormContents>
 
 // Description
-<FormContents label="Label Text" required={false}>
-    // Import Components or Contents
-    <SkrTypography variant="ht" color="primary.light">
-            Description Message.
-    </SkrTypography>
+<FormContents label="Label Text" required={false} position="left">
+  <SkrTypography variant="ht" color="primary.light">
+    "Description Message."
+  </SkrTypography>
 </FormContents>
 `}</pre>
           </CodeBox>
