@@ -11,6 +11,7 @@ import { SearchIcon, CloseCircleIcon } from "../../../../assets/style/icons";
 const SelectAutoCompleteLabelPositionTopList = ({
   label,
   autocompleteData,
+  placeholder,
 }) => {
   return (
     <SkrFormControl variant="standard" sx={{ width: "100%" }}>
@@ -18,7 +19,9 @@ const SelectAutoCompleteLabelPositionTopList = ({
       <SkrAutocomplete
         disablePortal
         options={autocompleteData.map((option) => option.optionLabel)}
-        renderInput={(params) => <SkrTextField {...params} />}
+        renderInput={(params) => (
+          <SkrTextField {...params} placeholder={placeholder} />
+        )}
         popupIcon={<SearchIcon />}
         clearIcon={<CloseCircleIcon />}
       />
