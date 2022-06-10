@@ -3,12 +3,14 @@ import SkrTypography from "../../../skr/SkrTypography";
 // Style
 import * as FooterStyled from "./style";
 import SkrPagination from "./../../../skr/SkrPagination";
-import {
-  gridPageCountSelector,
-  gridPageSelector,
-  useGridApiContext,
-  useGridSelector,
-} from "@mui/x-data-grid";
+import SelectLabelHidden from "../../form/select/SelectLabelHidden";
+// DataGrid Page Property
+// import {
+//   gridPageCountSelector,
+//   gridPageSelector,
+//   useGridApiContext,
+//   useGridSelector,
+// } from "@mui/x-data-grid";
 const DataGridFooter = () => {
   const selectRowsPer = {
     style: {
@@ -22,9 +24,10 @@ const DataGridFooter = () => {
     disabled: false,
     isIcon: false,
   };
-  const apiRef = useGridApiContext();
-  const page = useGridSelector(apiRef, gridPageSelector);
-  const pageCount = useGridSelector(apiRef, gridPageCountSelector);
+  // DataGrid Page Property
+  // const apiRef = useGridApiContext();
+  // const page = useGridSelector(apiRef, gridPageSelector);
+  // const pageCount = useGridSelector(apiRef, gridPageCountSelector);
   return (
     <FooterStyled.Wrap>
       <SkrTypography variant="b2">
@@ -36,13 +39,13 @@ const DataGridFooter = () => {
       <FooterStyled.Option>
         <FooterStyled.Select>
           {/* Select Component */}
-          {/* <SelectLabelHidden selectData={selectRowsPer} /> */}
+          <SelectLabelHidden selectData={selectRowsPer} />
         </FooterStyled.Select>
         <SkrPagination
           color="primary"
-          count={pageCount}
-          page={page + 1}
-          onChange={(event, value) => apiRef.current.setPage(value - 1)}
+          // count={pageCount}
+          // page={page + 1}
+          // onChange={(event, value) => apiRef.current.setPage(value - 1)}
           showFirstButton
           showLastButton
           size="small"
