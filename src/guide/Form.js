@@ -28,6 +28,9 @@ import InputLabelHidden from "../components/customed/form/input/InputLabelHidden
 import SelectLabelPositionTop from "../components/customed/form/select/SelectLabelPositionTop";
 import SelectLabelPositionLeft from "../components/customed/form/select/SelectLabelPositionLeft";
 import SelectLabelHidden from "../components/customed/form/select/SelectLabelHidden";
+import SelectMultipleLabelHidden from "../components/customed/form/select/SelectMultipleLabelHidden";
+import SelectMultipleLabelTop from "../components/customed/form/select/SelectMultipleLabelTop";
+import SelectMultipleLabelLeft from "../components/customed/form/select/SelectMultipleLabelLeft";
 import SelectAutoCompleteLabelHidden from "../components/customed/form/select/SelectAutoCompleteLabelHidden";
 import SelectAutoCompleteLabelPositionTop from "../components/customed/form/select/SelectAutoCompleteLabelPositionTop";
 import SelectAutoCompleteLabelPositionLeft from "../components/customed/form/select/SelectAutoCompleteLabelPositionLeft";
@@ -833,6 +836,7 @@ export const SelectLabelPositionLeftList = () => {
     ],
     disabled: false,
     isIcon: false,
+    required: true,
   };
   const iconSelect = {
     label: "Label Text",
@@ -938,6 +942,7 @@ const defaultSelect = {
   option: ["현대자동차","기아자동차","쉐보레","렉서스","도요타","포르쉐",],
   disabled: false,
   isIcon: false,
+  required: true,
 };
 
 <SelectLabelPositionLeft selectData={defaultSelect} />
@@ -1093,6 +1098,219 @@ const defaultSelect = {
     </>
   );
 };
+export const SelectMultipleLabelHiddenList = () => {
+  const defaultSelect = {
+    label: "Label Text",
+    style: {
+      PaperProps: {
+        style: {
+          width: 444,
+        },
+      },
+    },
+    option: [
+      "현대자동차",
+      "기아자동차",
+      "쉐보레",
+      "렉서스",
+      "도요타",
+      "포르쉐01",
+      "포르쉐02",
+      "포르쉐03",
+      "포르쉐04",
+      "포르쉐05",
+      "포르쉐06",
+      "포르쉐07",
+      "포르쉐08",
+      "포르쉐09",
+      "포르쉐010",
+      "포르쉐011",
+      "포르쉐012",
+      "포르쉐013",
+      "포르쉐014",
+      "포르쉐015",
+      "포르쉐016",
+    ],
+    disabled: false,
+    isIcon: false,
+  };
+  return (
+    <>
+      <SkrGrid container spacing={40}>
+        <SkrGrid item xs={6}>
+          <SkrStack spacing={20}>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Default
+              </SkrTypography>
+              <SkrBox sx={{ width: "444px" }}>
+                <SelectMultipleLabelHidden selectData={defaultSelect} />
+              </SkrBox>
+            </FlexBox>
+          </SkrStack>
+        </SkrGrid>
+        <SkrGrid item xs={6}>
+          <CodeBox>
+            <pre>{`// Default
+const defaultSelect = {
+  label: "Label Text",
+  // select combo SkrBox 너비 지정
+  style: {PaperProps: {style: {width: 324,},},},
+  option: ["현대자동차","기아자동차","쉐보레","렉서스","도요타","포르쉐",],
+  disabled: false,
+  isIcon: false,
+};
+
+<SelectMultipleLabelHidden selectData={defaultSelect} />`}</pre>
+          </CodeBox>
+        </SkrGrid>
+      </SkrGrid>
+    </>
+  );
+};
+export const SelectMultipleLabelTopList = () => {
+  const defaultSelect = {
+    label: "Label Text",
+    style: {
+      PaperProps: {
+        style: {
+          width: 444,
+        },
+      },
+    },
+    option: [
+      "현대자동차",
+      "기아자동차",
+      "쉐보레",
+      "렉서스",
+      "도요타",
+      "포르쉐01",
+      "포르쉐02",
+      "포르쉐03",
+      "포르쉐04",
+      "포르쉐05",
+      "포르쉐06",
+      "포르쉐07",
+      "포르쉐08",
+      "포르쉐09",
+      "포르쉐010",
+      "포르쉐011",
+      "포르쉐012",
+      "포르쉐013",
+      "포르쉐014",
+      "포르쉐015",
+      "포르쉐016",
+    ],
+    disabled: false,
+    isIcon: false,
+  };
+  return (
+    <>
+      <SkrGrid container spacing={40}>
+        <SkrGrid item xs={6}>
+          <SkrStack spacing={20}>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Default
+              </SkrTypography>
+              <SkrBox sx={{ width: "444px" }}>
+                <SelectMultipleLabelTop selectData={defaultSelect} />
+              </SkrBox>
+            </FlexBox>
+          </SkrStack>
+        </SkrGrid>
+        <SkrGrid item xs={6}>
+          <CodeBox>
+            <pre>{`// Default
+const defaultSelect = {
+  label: "Label Text",
+  // select combo SkrBox 너비 지정
+  style: {PaperProps: {style: {width: 324,},},},
+  option: ["현대자동차","기아자동차","쉐보레","렉서스","도요타","포르쉐",],
+  disabled: false,
+  isIcon: false,
+};
+
+<SelectMultipleLabelTop selectData={defaultSelect} />`}</pre>
+          </CodeBox>
+        </SkrGrid>
+      </SkrGrid>
+    </>
+  );
+};
+export const SelectMultipleLabelLeftList = () => {
+  const defaultSelect = {
+    label: "Label Text",
+    style: {
+      PaperProps: {
+        style: {
+          width: 444,
+        },
+      },
+    },
+    option: [
+      "현대자동차",
+      "기아자동차",
+      "쉐보레",
+      "렉서스",
+      "도요타",
+      "포르쉐01",
+      "포르쉐02",
+      "포르쉐03",
+      "포르쉐04",
+      "포르쉐05",
+      "포르쉐06",
+      "포르쉐07",
+      "포르쉐08",
+      "포르쉐09",
+      "포르쉐010",
+      "포르쉐011",
+      "포르쉐012",
+      "포르쉐013",
+      "포르쉐014",
+      "포르쉐015",
+      "포르쉐016",
+    ],
+    disabled: false,
+    isIcon: false,
+    required: true,
+  };
+  return (
+    <>
+      <SkrGrid container spacing={40}>
+        <SkrGrid item xs={6}>
+          <SkrStack spacing={20}>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Default
+              </SkrTypography>
+              <SkrBox sx={{ width: "444px" }}>
+                <SelectMultipleLabelLeft selectData={defaultSelect} />
+              </SkrBox>
+            </FlexBox>
+          </SkrStack>
+        </SkrGrid>
+        <SkrGrid item xs={6}>
+          <CodeBox>
+            <pre>{`// Default
+const defaultSelect = {
+  label: "Label Text",
+  // select combo SkrBox 너비 지정
+  style: {PaperProps: {style: {width: 324,},},},
+  option: ["현대자동차","기아자동차","쉐보레","렉서스","도요타","포르쉐",],
+  disabled: false,
+  isIcon: false,
+};
+
+<SelectMultipleLabelLeft selectData={defaultSelect} />`}</pre>
+          </CodeBox>
+        </SkrGrid>
+      </SkrGrid>
+    </>
+  );
+};
+
+// autocomplete
 export const SelectAutoCompleteLabelHiddenList = () => {
   const autocompleteData = [
     { optionLabel: "Autocomplete item 01111" },
@@ -1113,6 +1331,7 @@ export const SelectAutoCompleteLabelHiddenList = () => {
               <SkrBox sx={{ width: "444px" }}>
                 <SelectAutoCompleteLabelHidden
                   autocompleteData={autocompleteData}
+                  placeholder="Autocomplete"
                 />
               </SkrBox>
             </FlexBox>
@@ -1124,12 +1343,9 @@ export const SelectAutoCompleteLabelHiddenList = () => {
 const autocompleteData = [
   { optionLabel: "Autocomplete item 01111" },
   { optionLabel: "Autocomplete item 02" },
-  { optionLabel: "Autocomplete item 03" },
-  { optionLabel: "Autocomplete item 04" },
-  { optionLabel: "Autocomplete item 05" },
 ];
 
-<SelectAutoCompleteLabelHidden autocompleteData={autocompleteData} />`}</pre>
+<SelectAutoCompleteLabelHidden autocompleteData={autocompleteData} placeholder="Autocomplete" />`}</pre>
           </CodeBox>
         </SkrGrid>
       </SkrGrid>
@@ -1157,6 +1373,7 @@ export const SelectAutoCompleteLabelPositionTopList = () => {
                 <SelectAutoCompleteLabelPositionTop
                   label="label text"
                   autocompleteData={autocompleteData}
+                  placeholder="Autocomplete"
                 />
               </SkrBox>
             </FlexBox>
@@ -1165,9 +1382,7 @@ export const SelectAutoCompleteLabelPositionTopList = () => {
         <SkrGrid item xs={6}>
           <CodeBox>
             <pre>{`// Default
-<SelectAutoCompleteLabelPositionTop
-  label="label text"
-  autocompleteData={autocompleteData}
+<SelectAutoCompleteLabelPositionTop label="label text" autocompleteData={autocompleteData} placeholder="Autocomplete"
 />
 `}</pre>
           </CodeBox>
@@ -1197,6 +1412,7 @@ export const SelectAutoCompleteLabelPositionLeftList = () => {
                 <SelectAutoCompleteLabelPositionLeft
                   label="label text"
                   autocompleteData={autocompleteData}
+                  placeholder="Autocomplete"
                 />
               </SkrBox>
             </FlexBox>
@@ -1205,7 +1421,7 @@ export const SelectAutoCompleteLabelPositionLeftList = () => {
         <SkrGrid item xs={6}>
           <CodeBox>
             <pre>{`// Default
-<SelectAutoCompleteLabelPositionLeft label="label text" autocompleteData={autocompleteData} />`}</pre>
+<SelectAutoCompleteLabelPositionLeft label="label text" autocompleteData={autocompleteData} placeholder="Autocomplete"/>`}</pre>
           </CodeBox>
         </SkrGrid>
       </SkrGrid>

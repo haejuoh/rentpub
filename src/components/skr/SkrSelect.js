@@ -23,6 +23,7 @@ const SkrSelect = ({
   value,
   children,
   variant,
+  multiple,
 }) => {
   return (
     <>
@@ -39,6 +40,7 @@ const SkrSelect = ({
         renderValue={renderValue}
         value={value}
         variant={variant}
+        multiple={multiple}
       >
         {children}
       </Select>
