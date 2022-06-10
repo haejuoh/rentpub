@@ -42,6 +42,9 @@ import {
   SelectLabelPositionTopList,
   SelectLabelPositionLeftList,
   SelectLabelHiddenList,
+  SelectAutoCompleteLabelHiddenList,
+  SelectAutoCompleteLabelPositionTopList,
+  SelectAutoCompleteLabelPositionLeftList,
   CheckboxLabelHiddenList,
   CheckboxLabelPositionRightList,
   CheckBoxGroupList,
@@ -176,6 +179,19 @@ const Guide = () => {
             Label Hidden
           </GuideSubTitle>
           <SelectLabelHiddenList />
+          <GuideTitle>Autocomplete</GuideTitle>
+          <GuideSubTitle mt={40} pb={8}>
+            Label Hidden
+          </GuideSubTitle>
+          <SelectAutoCompleteLabelHiddenList />
+          <GuideSubTitle mt={40} pb={8}>
+            Label Position Top
+          </GuideSubTitle>
+          <SelectAutoCompleteLabelPositionTopList />
+          <GuideSubTitle mt={40} pb={8}>
+            Label Position Left
+          </GuideSubTitle>
+          <SelectAutoCompleteLabelPositionLeftList />
           <GuideTitle mt={40}>Checkbox</GuideTitle>
           <GuideSubTitle pb={8}>Label Hidden</GuideSubTitle>
           <CheckboxLabelHiddenList />

@@ -11,7 +11,7 @@ import {
   Switch,
 } from "@mui/material";
 import { ReactComponent as Accessibility } from "../assets/images/icons/accessibility.svg";
-import { DefaultTextField, FormContents } from "../assets/style/common";
+// import { DefaultTextField, FormContents } from "../assets/style/common";
 import { CodeBox, FlexBox } from "../assets/style/guideStyle";
 import { SelectField, DefaultSelectField } from "../components/Select";
 // import Segment from "../components/Segment";
@@ -28,6 +28,9 @@ import InputLabelHidden from "../components/customed/form/input/InputLabelHidden
 import SelectLabelPositionTop from "../components/customed/form/select/SelectLabelPositionTop";
 import SelectLabelPositionLeft from "../components/customed/form/select/SelectLabelPositionLeft";
 import SelectLabelHidden from "../components/customed/form/select/SelectLabelHidden";
+import SelectAutoCompleteLabelHidden from "../components/customed/form/select/SelectAutoCompleteLabelHidden";
+import SelectAutoCompleteLabelPositionTop from "../components/customed/form/select/SelectAutoCompleteLabelPositionTop";
+import SelectAutoCompleteLabelPositionLeft from "../components/customed/form/select/SelectAutoCompleteLabelPositionLeft";
 import CheckboxLabelHidden from "../components/customed/form/checkbox/CheckboxLabelHidden";
 import CheckboxLabelPositionRight from "../components/customed/form/checkbox/CheckboxLabelPositionRight";
 import CheckboxGroup from "../components/customed/form/checkbox/CheckboxGroup";
@@ -38,6 +41,7 @@ import Segment from "../components/customed/form/radio/Segment";
 import SwitchLabelHidden from "../components/customed/form/switch/SwitchLabelHidden";
 import SwitchLabelPositionLeft from "../components/customed/form/switch/SwitchLabelPositionLeft";
 import SwitchGroup from "../components/customed/form/switch/SwitchGroup";
+import FormContents from "../components/customed/form/contents/FormContents";
 
 // input
 export const InputLabelPositionTopList = () => {
@@ -1089,6 +1093,125 @@ const defaultSelect = {
     </>
   );
 };
+export const SelectAutoCompleteLabelHiddenList = () => {
+  const autocompleteData = [
+    { optionLabel: "Autocomplete item 01111" },
+    { optionLabel: "Autocomplete item 02" },
+    { optionLabel: "Autocomplete item 03" },
+    { optionLabel: "Autocomplete item 04" },
+    { optionLabel: "Autocomplete item 05" },
+  ];
+  return (
+    <>
+      <SkrGrid container spacing={40}>
+        <SkrGrid item xs={6}>
+          <SkrStack spacing={20}>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Default
+              </SkrTypography>
+              <SkrBox sx={{ width: "444px" }}>
+                <SelectAutoCompleteLabelHidden
+                  autocompleteData={autocompleteData}
+                />
+              </SkrBox>
+            </FlexBox>
+          </SkrStack>
+        </SkrGrid>
+        <SkrGrid item xs={6}>
+          <CodeBox>
+            <pre>{`// Default
+const autocompleteData = [
+  { optionLabel: "Autocomplete item 01111" },
+  { optionLabel: "Autocomplete item 02" },
+  { optionLabel: "Autocomplete item 03" },
+  { optionLabel: "Autocomplete item 04" },
+  { optionLabel: "Autocomplete item 05" },
+];
+
+<SelectAutoCompleteLabelHidden autocompleteData={autocompleteData} />`}</pre>
+          </CodeBox>
+        </SkrGrid>
+      </SkrGrid>
+    </>
+  );
+};
+export const SelectAutoCompleteLabelPositionTopList = () => {
+  const autocompleteData = [
+    { optionLabel: "Autocomplete item 01111" },
+    { optionLabel: "Autocomplete item 02" },
+    { optionLabel: "Autocomplete item 03" },
+    { optionLabel: "Autocomplete item 04" },
+    { optionLabel: "Autocomplete item 05" },
+  ];
+  return (
+    <>
+      <SkrGrid container spacing={40}>
+        <SkrGrid item xs={6}>
+          <SkrStack spacing={20}>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Default
+              </SkrTypography>
+              <SkrBox sx={{ width: "444px" }}>
+                <SelectAutoCompleteLabelPositionTop
+                  label="label text"
+                  autocompleteData={autocompleteData}
+                />
+              </SkrBox>
+            </FlexBox>
+          </SkrStack>
+        </SkrGrid>
+        <SkrGrid item xs={6}>
+          <CodeBox>
+            <pre>{`// Default
+<SelectAutoCompleteLabelPositionTop
+  label="label text"
+  autocompleteData={autocompleteData}
+/>
+`}</pre>
+          </CodeBox>
+        </SkrGrid>
+      </SkrGrid>
+    </>
+  );
+};
+export const SelectAutoCompleteLabelPositionLeftList = () => {
+  const autocompleteData = [
+    { optionLabel: "Autocomplete item 01111" },
+    { optionLabel: "Autocomplete item 02" },
+    { optionLabel: "Autocomplete item 03" },
+    { optionLabel: "Autocomplete item 04" },
+    { optionLabel: "Autocomplete item 05" },
+  ];
+  return (
+    <>
+      <SkrGrid container spacing={40}>
+        <SkrGrid item xs={6}>
+          <SkrStack spacing={20}>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Default
+              </SkrTypography>
+              <SkrBox sx={{ width: "444px" }}>
+                <SelectAutoCompleteLabelPositionLeft
+                  label="label text"
+                  autocompleteData={autocompleteData}
+                />
+              </SkrBox>
+            </FlexBox>
+          </SkrStack>
+        </SkrGrid>
+        <SkrGrid item xs={6}>
+          <CodeBox>
+            <pre>{`// Default
+<SelectAutoCompleteLabelPositionLeft label="label text" autocompleteData={autocompleteData} />`}</pre>
+          </CodeBox>
+        </SkrGrid>
+      </SkrGrid>
+    </>
+  );
+};
 
 // checkbox
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
@@ -1558,16 +1681,21 @@ export const WithFormContents = () => {
       <SkrGrid container spacing={40}>
         <SkrGrid item xs={6}>
           <SkrTypography variant="st2" pb={12}>
-            Default
+            Label Position Top
           </SkrTypography>
           <FormContents label="Label Text" required={false}>
             Import Components or Contents
           </FormContents>
           <SkrTypography variant="st2" pb={12} mt={20}>
+            Label Position Left
+          </SkrTypography>
+          <FormContents label="Label Text" required={true} position="left">
+            Import Components or Contents
+          </FormContents>
+          <SkrTypography variant="st2" pb={12} mt={20}>
             Description
           </SkrTypography>
-          <FormContents label="Label Text" required={false}>
-            {/* Import Components or Contents */}
+          <FormContents label="Label Text" required={false} position="left">
             <SkrTypography variant="ht" color="primary.light">
               Description Message.
             </SkrTypography>
@@ -1575,17 +1703,21 @@ export const WithFormContents = () => {
         </SkrGrid>
         <SkrGrid item xs={6}>
           <CodeBox>
-            <pre>{`// Default
+            <pre>{`// Label Position Top
 <FormContents label="Label Text" required={false}>
-    // Import Components or Contents
+  "Import Components or Contents"
+</FormContents>
+
+//Label Position Left
+<FormContents label="Label Text" required={true} position="left">
+  "Import Components or Contents"
 </FormContents>
 
 // Description
-<FormContents label="Label Text" required={false}>
-    // Import Components or Contents
-    <SkrTypography variant="ht" color="primary.light">
-            Description Message.
-    </SkrTypography>
+<FormContents label="Label Text" required={false} position="left">
+  <SkrTypography variant="ht" color="primary.light">
+    "Description Message."
+  </SkrTypography>
 </FormContents>
 `}</pre>
           </CodeBox>

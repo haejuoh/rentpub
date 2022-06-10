@@ -3,6 +3,7 @@ import { Grid, Stack } from "@mui/material";
 import { CodeBox, GuideTitle } from "../assets/style/guideStyle";
 import SkrChip from "../components/skr/SkrChip";
 import SkrTypography from "../components/skr/SkrTypography";
+import BadgeResultItem from "../components/customed/badge/BadgeResultItem";
 
 const Badge = () => {
   return (
@@ -71,6 +72,29 @@ const Badge = () => {
             <SkrChip label="Badge" color="ready" size="large" />
             <SkrChip label="Badge" color="danger" size="large" />
             <SkrChip label="Badge" color="cancel" size="large" />
+          </Stack>
+        </Grid>
+
+        <Grid item xs={6}>
+          <CodeBox>
+            <pre>{`// medium
+// default porperty로 size 생략해도 medium 적용됨
+<SkrChip label="Badge" color="default" variant="outlined" />
+
+// large
+<SkrChip label="Badge" color="default" variant="outlined" size="large"/>
+`}</pre>
+          </CodeBox>
+        </Grid>
+      </Grid>
+      <GuideTitle>Custom Badge</GuideTitle>
+      <Grid container spacing={5}>
+        <Grid item xs={6}>
+          <SkrTypography variant="st2" pb={10}>
+            Multiple Select Result Item
+          </SkrTypography>
+          <Stack direction="row" spacing={10}>
+            <BadgeResultItem label="Result Name" />
           </Stack>
         </Grid>
 

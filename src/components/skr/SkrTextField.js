@@ -58,6 +58,7 @@ const SkrTextField = ({
   InputProps,
   required,
   position,
+  ...rest
 }) => {
   return (
     <>
@@ -73,6 +74,7 @@ const SkrTextField = ({
         InputProps={InputProps}
         required={required}
         position={position}
+        {...rest}
       />
     </>
   );
