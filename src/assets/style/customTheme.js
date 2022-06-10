@@ -1288,8 +1288,9 @@ const theme = createTheme({
       },
       styleOverrides: {
         root: sx({
-          height: "33px",
-          padding: "9px 0",
+          height: "auto",
+          minHeight: "34px",
+          padding: "0",
           svg: {
             width: "14px",
             height: "14px",
