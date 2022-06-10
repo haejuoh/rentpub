@@ -3,6 +3,8 @@ import React from "react";
 import SkrBox from "../../components/skr/SkrBox";
 import SkrGrid from "../../components/skr/SkrGrid";
 import SkrTypography from "../../components/skr/SkrTypography";
+import SkrChip from "../../components/skr/SkrChip";
+//common
 import DataGrid from "../../components/customed/datagrid";
 import NoRows from "../../components/customed/datagrid/NoRows";
 import NoResults from "../../components/customed/datagrid/NoResults";
@@ -16,6 +18,7 @@ const rows = [
     col2: "1번째",
     col3: "1번째",
     col4: "1번째",
+    status: "사용",
   },
   {
     id: 2,
@@ -23,6 +26,7 @@ const rows = [
     col2: "2번째",
     col3: "2번째",
     col4: "2번째",
+    status: "미사용",
   },
   {
     id: 3,
@@ -30,6 +34,7 @@ const rows = [
     col2: "3번째",
     col3: "3번째",
     col4: "3번째",
+    status: "사용",
   },
   {
     id: 4,
@@ -37,6 +42,7 @@ const rows = [
     col2: "4번째",
     col3: "4번째",
     col4: "4번째",
+    status: "사용",
   },
   {
     id: 5,
@@ -44,6 +50,7 @@ const rows = [
     col2: "5번째",
     col3: "5번째",
     col4: "5번째",
+    status: "미사용",
   },
   {
     id: 6,
@@ -51,6 +58,7 @@ const rows = [
     col2: "6번째",
     col3: "6번째",
     col4: "6번째",
+    status: "미사용",
   },
   {
     id: 7,
@@ -58,6 +66,7 @@ const rows = [
     col2: "7번째",
     col3: "7번째",
     col4: "7번째",
+    status: "미사용",
   },
   {
     id: 8,
@@ -65,6 +74,7 @@ const rows = [
     col2: "8번째",
     col3: "8번째",
     col4: "8번째",
+    status: "사용",
   },
   {
     id: 9,
@@ -72,6 +82,7 @@ const rows = [
     col2: "9번째",
     col3: "9번째",
     col4: "9번째",
+    status: "미사용",
   },
   {
     id: 10,
@@ -79,6 +90,7 @@ const rows = [
     col2: "10번째",
     col3: "10번째",
     col4: "10번째",
+    status: "사용",
   },
 ];
 const columns = [
@@ -86,15 +98,27 @@ const columns = [
   { field: "col2", headerName: "Header", flex: 1 },
   { field: "col3", headerName: "Header", flex: 1 },
   { field: "col4", headerName: "Header", flex: 1 },
+  {
+    field: "status",
+    headerName: "상태",
+    flex: 1,
+    renderCell: (params) => {
+      switch (params.value) {
+        case "사용":
+          return <SkrChip label={params.value} color="success" />;
+          break;
+        default:
+          return <SkrChip label={params.value} color="cancel" />;
+          break;
+      }
+    },
+  },
 ];
 
-const DataGridDefault = () => {
+const DataGridBadge = () => {
   return (
     <SkrGrid container spacing={40}>
       <SkrGrid item xs={6}>
-        <SkrTypography variant="st2" pb={10}>
-          checbox : false
-        </SkrTypography>
         <SkrBox sx={{ height: 284 }}>
           <DataGrid
             columnData={columns}
@@ -102,18 +126,6 @@ const DataGridDefault = () => {
             customNoRowsOverlay={<NoRows message="데이터 없음" />}
             customNoResultsOverlay={<NoResults message="결과 없음" />}
             isCheckbox={false}
-          />
-        </SkrBox>
-        <SkrBox sx={{ height: 284 }}>
-          <SkrTypography variant="st2" pb={10}>
-            checbox : true
-          </SkrTypography>
-          <DataGrid
-            columnData={columns}
-            rowData={rows}
-            customNoRowsOverlay={<NoRows message="데이터 없음" />}
-            customNoResultsOverlay={<NoResults message="결과 없음" />}
-            isCheckbox={true}
           />
         </SkrBox>
       </SkrGrid>
@@ -148,4 +160,4 @@ const columns = [
   );
 };
 
-export default DataGridDefault;
+export default DataGridBadge;

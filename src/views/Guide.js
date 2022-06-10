@@ -63,10 +63,10 @@ import {
   GuideKeyword,
 } from "../assets/style/guideStyle";
 import Badge from "./../guide/Badge";
-import { TableDefault, TableAction, TableBadge } from "../guide/Table";
 import { ModalSample } from "../components/Modal";
-import DataGridDefault from "./../guide/dataGrid/DataGridDefault";
-import DataGridActionField from "./../guide/dataGrid/DataGridActionField";
+import DataGridDefault from "../guide/datagrid/DataGridDefault";
+import DataGridActionField from "../guide/datagrid/DataGridActionField";
+import DataGridBadge from "../guide/datagrid/DataGridBadge";
 import { LegendSingleGuide, LegendGroupGuide } from "../guide/calendar/Legend";
 import Legend from "./../components/customed/calendar/legend/Legend";
 import SnackBar from "../guide/SnackBar";
@@ -240,9 +240,8 @@ const Guide = () => {
           <DataGridDefault mt={2} />
           <GuideTitle>ActionField</GuideTitle>
           <DataGridActionField mt={2} />
-          <TableAction mt={2} />
           <GuideTitle>BadgeField</GuideTitle>
-          <TableBadge mt={2} />
+          <DataGridBadge mt={2} />
         </TabPanel>
         <TabPanel value="7">
           <GuideTitle>Modal</GuideTitle>

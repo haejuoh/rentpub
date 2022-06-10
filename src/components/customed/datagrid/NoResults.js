@@ -1,7 +1,7 @@
 import React from "react";
 //skr
-import SkrTypography from "../../../skr/SkrTypography";
-import SkrStack from "./../../../skr/SkrStack";
+import SkrTypography from "../../skr/SkrTypography";
+import SkrStack from "../../skr/SkrStack";
 
 const NoResults = ({ message }) => {
   return (

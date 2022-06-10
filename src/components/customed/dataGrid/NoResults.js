@@ -1,9 +1,9 @@
 import React from "react";
 //skr
-import SkrTypography from "../../../skr/SkrTypography";
-import SkrStack from "./../../../skr/SkrStack";
+import SkrTypography from "../../skr/SkrTypography";
+import SkrStack from "../../skr/SkrStack";
 
-const NoRows = ({ message }) => {
+const NoResults = ({ message }) => {
   return (
     <SkrStack height="100%" alignItems="center" justifyContent="center">
       <SkrTypography variant="b1">{message}</SkrTypography>
@@ -11,4 +11,4 @@ const NoRows = ({ message }) => {
   );
 };
 
-export default NoRows;
+export default NoResults;

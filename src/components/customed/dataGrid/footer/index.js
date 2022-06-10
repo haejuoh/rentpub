@@ -2,7 +2,7 @@ import React from "react";
 import SkrTypography from "../../../skr/SkrTypography";
 // Style
 import * as FooterStyled from "./style";
-import SkrPagination from "./../../../skr/SkrPagination";
+import SkrPagination from "../../../skr/SkrPagination";
 import SelectLabelHidden from "../../form/select/SelectLabelHidden";
 // DataGrid Page Property
 // import {
@@ -11,7 +11,7 @@ import SelectLabelHidden from "../../form/select/SelectLabelHidden";
 //   useGridApiContext,
 //   useGridSelector,
 // } from "@mui/x-data-grid";
-const DataGridFooter = () => {
+export const DataGridFooter = () => {
   const selectRowsPer = {
     style: {
       PaperProps: {
@@ -54,5 +54,3 @@ const DataGridFooter = () => {
     </FooterStyled.Wrap>
   );
 };
-
-export default DataGridFooter;

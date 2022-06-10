@@ -8,10 +8,8 @@ import { GridActionsCellItem } from "@mui/x-data-grid";
  * @type { React.FC<GridActionsCellItemProps> }
  */
 
-const SkrGridActionsCellItem = ({ label, icon, showInMenu }) => {
-  return (
-    <GridActionsCellItem label={label} icon={icon} showInMenu={showInMenu} />
-  );
+const SkrGridActionsCellItem = ({ ...rest }) => {
+  return <GridActionsCellItem {...rest} />;
 };
 
 export default SkrGridActionsCellItem;
