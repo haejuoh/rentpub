@@ -45,6 +45,9 @@ import {
   SelectAutoCompleteLabelHiddenList,
   SelectAutoCompleteLabelPositionTopList,
   SelectAutoCompleteLabelPositionLeftList,
+  SelectMultipleLabelHiddenList,
+  SelectMultipleLabelTopList,
+  SelectMultipleLabelLeftList,
   CheckboxLabelHiddenList,
   CheckboxLabelPositionRightList,
   CheckBoxGroupList,
@@ -56,6 +59,7 @@ import {
   SwitchLabelPositionLeftList,
   SwitchGroupList,
   WithFormContents,
+  TextareaList,
 } from "../guide/Form";
 import {
   GuideTitle,
@@ -170,6 +174,9 @@ const Guide = () => {
             Label Hidden
           </GuideSubTitle>
           <InputLabelHiddenList />
+          <GuideTitle mt={40}>Textarea</GuideTitle>
+          {/* <GuideSubTitle pb={8}>Label Position : Top</GuideSubTitle> */}
+          <TextareaList />
           <GuideTitle mt={40}>Select</GuideTitle>
           <GuideSubTitle pb={8}>Label Position : Top</GuideSubTitle>
           <SelectLabelPositionTopList />
@@ -181,6 +188,19 @@ const Guide = () => {
             Label Hidden
           </GuideSubTitle>
           <SelectLabelHiddenList />
+          <GuideTitle>Multiple Select</GuideTitle>
+          <GuideSubTitle mt={40} pb={8}>
+            Label Position Top
+          </GuideSubTitle>
+          <SelectMultipleLabelTopList />
+          <GuideSubTitle mt={40} pb={8}>
+            Label Position Left
+          </GuideSubTitle>
+          <SelectMultipleLabelLeftList />
+          <GuideSubTitle mt={40} pb={8}>
+            Label Hidden
+          </GuideSubTitle>
+          <SelectMultipleLabelHiddenList />
           <GuideTitle>Autocomplete</GuideTitle>
           <GuideSubTitle mt={40} pb={8}>
             Label Hidden
