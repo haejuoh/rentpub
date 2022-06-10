@@ -11,6 +11,7 @@ import { ReactComponent as IconCheck } from "../images/icons/checkmark-circle.sv
 import { ReactComponent as IconOption } from "../images/icons/options.svg";
 import { ReactComponent as IconCloseCircle } from "../images/icons/close-circle.svg";
 import { ReactComponent as IconSearch } from "../images/icons/search.svg";
+import { ReactComponent as IconClose } from "../images/icons/close.svg";
 
 const BookmarkIcon = () => <IconBookmark className="icon" />;
 const ChevronForwardIcon = () => <IconChevron className="icon" />;
@@ -25,6 +26,7 @@ const CheckIcon = () => <IconCheck className="icon" />;
 const OptionIcon = () => <IconOption className="icon" />;
 const CloseCircleIcon = () => <IconCloseCircle className="icon" />;
 const SearchIcon = () => <IconSearch className="icon" />;
+const CloseIcon = () => <IconClose className="icon" />;
 
 export {
   BookmarkIcon,
@@ -40,4 +42,5 @@ export {
   OptionIcon,
   CloseCircleIcon,
   SearchIcon,
+  CloseIcon,
 };

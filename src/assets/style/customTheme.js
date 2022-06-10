@@ -2035,6 +2035,39 @@ const theme = createTheme({
         },
       },
     },
+    MuiSnackbar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: colorSystem.white,
+        },
+      },
+    },
+    MuiSnackbarContent: {
+      styleOverrides: {
+        root: {
+          backgroundColor: colorSystem.white,
+          marginTop: 0,
+          boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.15)",
+          width: "230px",
+          height: "44px",
+          padding: "0 15px",
+          position: "relative",
+        },
+        message: {
+          color: colorSystem.grey.b900,
+          fontSize: fontSystem.b1.fontSize,
+          fontWeight: fontSystem.b1.fontWeight,
+        },
+        action: {
+          marginLeft: 0,
+          paddingLeft: 0,
+          position: "absolute",
+          right: "15px",
+          top: "50%",
+          transform: "translateY(-50%)",
+        },
+      },
+    },
   },
 });
 
