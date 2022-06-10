@@ -24,12 +24,13 @@ const FormControlStyled = styled(FormControl)(({ theme, position }) => {
       "&.MuiFormControl-root": {
         flexDirection: "row",
         position: "relative",
-        alignItems: "center",
+        alignItems: "flex-start",
       },
       "& .MuiInputLabel-root": {
         display: "inline",
         Width: "120px",
         flex: "0 0 120px",
+        height: "34px",
       },
       "& .MuiInput-root": {
         width: "calc(100% - 120px)",

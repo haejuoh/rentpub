@@ -25,6 +25,7 @@ import SkrTypography from "../components/skr/SkrTypography";
 import InputLabelPositionTop from "../components/customed/form/input/InputLabelPositionTop";
 import InputLabelPositionLeft from "../components/customed/form/input/InputLabelPositionLeft";
 import InputLabelHidden from "../components/customed/form/input/InputLabelHidden";
+import Textarea from "../components/customed/form/textarea/Textarea";
 import SelectLabelPositionTop from "../components/customed/form/select/SelectLabelPositionTop";
 import SelectLabelPositionLeft from "../components/customed/form/select/SelectLabelPositionLeft";
 import SelectLabelHidden from "../components/customed/form/select/SelectLabelHidden";
@@ -141,13 +142,7 @@ export const InputLabelPositionTopList = () => {
               <SkrTypography variant="st2" pb={12}>
                 Error Disabled
               </SkrTypography>
-              <InputLabelPositionTop
-                error
-                label="Label Text"
-                defaultValue="Input"
-                helperText="Alret Message."
-                disabled
-              />
+              <Textarea label="Label Text" error disabled />
             </FlexBox>
             <FlexBox>
               <SkrTypography variant="st2" pb={12}>
@@ -364,13 +359,7 @@ export const InputLabelPositionLeftList = () => {
               <SkrTypography variant="st2" pb={12}>
                 Error Disabled
               </SkrTypography>
-              <InputLabelPositionLeft
-                error
-                label="Label Text"
-                defaultValue="Input"
-                helperText="Alret Message."
-                disabled
-              />
+              <Textarea label="Label Text" error disabled />
             </FlexBox>
             <FlexBox>
               <SkrTypography variant="st2" pb={12}>
@@ -664,6 +653,194 @@ export const InputLabelHiddenList = () => {
         <SkrGrid item xs={6}>
           <CodeBox>
             <pre>{`<InputLabelHidden placeholder="Placeholder" />
+`}</pre>
+          </CodeBox>
+        </SkrGrid>
+      </SkrGrid>
+    </>
+  );
+};
+
+// textarea
+
+export const TextareaList = () => {
+  return (
+    <>
+      <SkrGrid container spacing={40}>
+        <SkrGrid item xs={6}>
+          <SkrTypography variant="h2">Label Position : Top</SkrTypography>
+          <SkrStack direction="row" spacing={20}>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Default
+              </SkrTypography>
+              <Textarea label="Label Text" />
+            </FlexBox>
+          </SkrStack>
+          <SkrStack direction="row" spacing={20} mt={20}>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Required
+              </SkrTypography>
+              <Textarea label="Label Text" required />
+            </FlexBox>
+          </SkrStack>
+          <SkrStack direction="row" spacing={20} mt={20}>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Read Only
+              </SkrTypography>
+              <Textarea label="Label Text" readOnly />
+            </FlexBox>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Disabled
+              </SkrTypography>
+              <Textarea label="Label Text" disabled />
+            </FlexBox>
+          </SkrStack>
+          <SkrStack direction="row" spacing={20} mt={20}>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Error
+              </SkrTypography>
+              <Textarea label="Label Text" error />
+            </FlexBox>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Success
+              </SkrTypography>
+              <Textarea label="Label Text" success />
+            </FlexBox>
+          </SkrStack>
+          <SkrStack direction="row" spacing={20} mt={20} mb={20}>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Error Disabled
+              </SkrTypography>
+              <Textarea label="Label Text" error disabled />
+            </FlexBox>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Success Disabled
+              </SkrTypography>
+              <Textarea label="Label Text" success disabled />
+            </FlexBox>
+          </SkrStack>
+          <SkrTypography variant="h2">Label Position : Left</SkrTypography>
+          <SkrStack direction="row" spacing={20} mt={20}>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Default
+              </SkrTypography>
+              <Textarea position="left" label="Label Text" />
+            </FlexBox>
+          </SkrStack>
+          <SkrStack direction="row" spacing={20} mt={20}>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Required
+              </SkrTypography>
+              <Textarea position="left" label="Label Text" required />
+            </FlexBox>
+          </SkrStack>
+          <SkrStack direction="row" spacing={20} mt={20}>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Read Only
+              </SkrTypography>
+              <Textarea position="left" label="Label Text" readOnly />
+            </FlexBox>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Disabled
+              </SkrTypography>
+              <Textarea position="left" label="Label Text" disabled />
+            </FlexBox>
+          </SkrStack>
+          <SkrStack direction="row" spacing={20} mt={20}>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Error
+              </SkrTypography>
+              <Textarea position="left" label="Label Text" error />
+            </FlexBox>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Success
+              </SkrTypography>
+              <Textarea position="left" label="Label Text" success />
+            </FlexBox>
+          </SkrStack>
+          <SkrStack direction="row" spacing={20} mt={20} mb={20}>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Error Disabled
+              </SkrTypography>
+              <Textarea position="left" label="Label Text" error disabled />
+            </FlexBox>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Success Disabled
+              </SkrTypography>
+              <Textarea position="left" label="Label Text" success disabled />
+            </FlexBox>
+          </SkrStack>
+          <SkrTypography variant="h2">Label Hidden</SkrTypography>
+          <SkrStack direction="row" spacing={20}>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Default
+              </SkrTypography>
+              <Textarea />
+            </FlexBox>
+          </SkrStack>
+          <SkrStack direction="row" spacing={20} mt={20}>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Read Only
+              </SkrTypography>
+              <Textarea readOnly />
+            </FlexBox>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Disabled
+              </SkrTypography>
+              <Textarea disabled />
+            </FlexBox>
+          </SkrStack>
+          <SkrStack direction="row" spacing={20} mt={20}>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Error
+              </SkrTypography>
+              <Textarea error />
+            </FlexBox>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Success
+              </SkrTypography>
+              <Textarea success />
+            </FlexBox>
+          </SkrStack>
+          <SkrStack direction="row" spacing={20} mt={20}>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Error Disabled
+              </SkrTypography>
+              <Textarea error disabled />
+            </FlexBox>
+            <FlexBox>
+              <SkrTypography variant="st2" pb={12}>
+                Success Disabled
+              </SkrTypography>
+              <Textarea success disabled />
+            </FlexBox>
+          </SkrStack>
+        </SkrGrid>
+        <SkrGrid item xs={6}>
+          <CodeBox>
+            <pre>{`// Default
 `}</pre>
           </CodeBox>
         </SkrGrid>
