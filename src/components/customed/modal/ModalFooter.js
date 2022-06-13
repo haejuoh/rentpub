@@ -1,9 +1,5 @@
 import React from "react";
-import SkrDialog from "../../skr/SkrDialog";
-import SkrDialogTitle from "../../skr/SkrDialogTitle";
-import SkrDialogContent from "../../skr/SkrDialogContent";
 import SkrDialogActions from "../../skr/SkrDialogActions";
-import SkrTypography from "../../skr/SkrTypography";
 import SkrButton from "../../skr/SkrButton";
 
 const ModalFooter = React.forwardRef(
