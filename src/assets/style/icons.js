@@ -12,6 +12,9 @@ import { ReactComponent as IconOption } from "../images/icons/options.svg";
 import { ReactComponent as IconCloseCircle } from "../images/icons/close-circle.svg";
 import { ReactComponent as IconSearch } from "../images/icons/search.svg";
 import { ReactComponent as IconClose } from "../images/icons/close.svg";
+import { ReactComponent as IconAccessibility } from "../images/icons/accessibility.svg";
+import { ReactComponent as IconCar } from "../images/icons/car.svg";
+import { ReactComponent as IconStop } from "../images/icons/stop.svg";
 
 const BookmarkIcon = () => <IconBookmark className="icon" />;
 const ChevronForwardIcon = () => <IconChevron className="icon" />;
@@ -27,6 +30,9 @@ const OptionIcon = () => <IconOption className="icon" />;
 const CloseCircleIcon = () => <IconCloseCircle className="icon" />;
 const SearchIcon = () => <IconSearch className="icon" />;
 const CloseIcon = () => <IconClose className="icon" />;
+const AccessibilityIcon = () => <IconAccessibility className="icon" />;
+const CarIcon = () => <IconCar className="icon" />;
+const StopIcon = () => <IconStop className="icon" />;
 
 export {
   BookmarkIcon,
@@ -43,4 +49,7 @@ export {
   CloseCircleIcon,
   SearchIcon,
   CloseIcon,
+  AccessibilityIcon,
+  CarIcon,
+  StopIcon,
 };

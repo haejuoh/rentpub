@@ -1,9 +1,9 @@
 import React from "react";
-import SkrTypography from "../../../skr/SkrTypography";
+import SkrTypography from "../../skr/SkrTypography";
 // Style
 import * as FooterStyled from "./style";
-import SkrPagination from "../../../skr/SkrPagination";
-import SelectLabelHidden from "../../form/select/SelectLabelHidden";
+import SkrPagination from "../../skr/SkrPagination";
+import SelectLabelHidden from "../form/select/SelectLabelHidden";
 // DataGrid Page Property
 // import {
 //   gridPageCountSelector,

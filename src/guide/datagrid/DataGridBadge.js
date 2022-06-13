@@ -8,6 +8,7 @@ import SkrChip from "../../components/skr/SkrChip";
 import DataGrid from "../../components/customed/datagrid";
 import NoRows from "../../components/customed/datagrid/NoRows";
 import NoResults from "../../components/customed/datagrid/NoResults";
+import FieldBadges from "../../components/customed/datagrid/fields/FieldBadges";
 
 import { CodeBox } from "../../assets/style/guideStyle";
 //data

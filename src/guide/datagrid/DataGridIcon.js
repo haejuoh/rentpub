@@ -4,12 +4,19 @@ import SkrBox from "../../components/skr/SkrBox";
 import SkrGrid from "../../components/skr/SkrGrid";
 import SkrTypography from "../../components/skr/SkrTypography";
 import SkrChip from "../../components/skr/SkrChip";
+// import SkrTooltip from "../../components/skr/SkrTooltip";
+// import SkrIconButton from "../../components/skr/SkrIconButton";
 //common
 import DataGrid from "../../components/customed/datagrid";
 import NoRows from "../../components/customed/datagrid/NoRows";
 import NoResults from "../../components/customed/datagrid/NoResults";
+// import { AccessibilityIcon, CarIcon, StopIcon } from "../../assets/style/icons";
 
 import { CodeBox } from "../../assets/style/guideStyle";
+import SkrButton from "../../components/skr/SkrButton";
+import SkrStack from "../../components/skr/SkrStack";
+// import * as DataGridStyled from "../../components/customed/datagrid/style";
+import FieldIcons from "../../components/customed/datagrid/fields/FieldIcons";
 //data
 const rows = [
   {
@@ -18,7 +25,12 @@ const rows = [
     col2: "1번째",
     col3: "1번째",
     col4: "1번째",
-    option: "person",
+    option: [
+      { icon: "accessibility", active: true, title: "옵션1" },
+      { icon: "car", active: false, title: "옵션2" },
+      { icon: "stop", active: false, title: "옵션3" },
+      { icon: "stop", active: false, title: "옵션4" },
+    ],
   },
   {
     id: 2,
@@ -26,7 +38,12 @@ const rows = [
     col2: "2번째",
     col3: "2번째",
     col4: "2번째",
-    status: "미사용",
+    option: [
+      { icon: "accessibility", active: true, title: "옵션1" },
+      { icon: "car", active: false, title: "옵션2" },
+      { icon: "stop", active: false, title: "옵션3" },
+      { icon: "stop", active: false, title: "옵션4" },
+    ],
   },
   {
     id: 3,
@@ -34,7 +51,12 @@ const rows = [
     col2: "3번째",
     col3: "3번째",
     col4: "3번째",
-    option: "person",
+    option: [
+      { icon: "accessibility", active: true, title: "옵션1" },
+      { icon: "car", active: false, title: "옵션2" },
+      { icon: "stop", active: false, title: "옵션3" },
+      { icon: "stop", active: false, title: "옵션4" },
+    ],
   },
   {
     id: 4,
@@ -42,7 +64,12 @@ const rows = [
     col2: "4번째",
     col3: "4번째",
     col4: "4번째",
-    option: "person",
+    option: [
+      { icon: "accessibility", active: true, title: "옵션1" },
+      { icon: "car", active: false, title: "옵션2" },
+      { icon: "stop", active: false, title: "옵션3" },
+      { icon: "stop", active: false, title: "옵션4" },
+    ],
   },
   {
     id: 5,
@@ -50,7 +77,12 @@ const rows = [
     col2: "5번째",
     col3: "5번째",
     col4: "5번째",
-    status: "미사용",
+    option: [
+      { icon: "accessibility", active: true, title: "옵션1" },
+      { icon: "car", active: false, title: "옵션2" },
+      { icon: "stop", active: false, title: "옵션3" },
+      { icon: "stop", active: false, title: "옵션4" },
+    ],
   },
   {
     id: 6,
@@ -58,7 +90,12 @@ const rows = [
     col2: "6번째",
     col3: "6번째",
     col4: "6번째",
-    status: "미사용",
+    option: [
+      { icon: "accessibility", active: true, title: "옵션1" },
+      { icon: "car", active: false, title: "옵션2" },
+      { icon: "stop", active: false, title: "옵션3" },
+      { icon: "stop", active: false, title: "옵션4" },
+    ],
   },
   {
     id: 7,
@@ -66,7 +103,12 @@ const rows = [
     col2: "7번째",
     col3: "7번째",
     col4: "7번째",
-    status: "미사용",
+    option: [
+      { icon: "accessibility", active: true, title: "옵션1" },
+      { icon: "car", active: false, title: "옵션2" },
+      { icon: "stop", active: false, title: "옵션3" },
+      { icon: "stop", active: false, title: "옵션4" },
+    ],
   },
   {
     id: 8,
@@ -74,7 +116,12 @@ const rows = [
     col2: "8번째",
     col3: "8번째",
     col4: "8번째",
-    option: "person",
+    option: [
+      { icon: "accessibility", active: true, title: "옵션1" },
+      { icon: "car", active: false, title: "옵션2" },
+      { icon: "stop", active: false, title: "옵션3" },
+      { icon: "stop", active: false, title: "옵션4" },
+    ],
   },
   {
     id: 9,
@@ -82,7 +129,12 @@ const rows = [
     col2: "9번째",
     col3: "9번째",
     col4: "9번째",
-    status: "미사용",
+    option: [
+      { icon: "accessibility", active: true, title: "옵션1" },
+      { icon: "car", active: false, title: "옵션2" },
+      { icon: "stop", active: false, title: "옵션3" },
+      { icon: "stop", active: false, title: "옵션4" },
+    ],
   },
   {
     id: 10,
@@ -90,7 +142,12 @@ const rows = [
     col2: "10번째",
     col3: "10번째",
     col4: "10번째",
-    option: "person",
+    option: [
+      { icon: "accessibility", active: true, title: "옵션1" },
+      { icon: "car", active: false, title: "옵션2" },
+      { icon: "stop", active: false, title: "옵션3" },
+      { icon: "stop", active: false, title: "옵션4" },
+    ],
   },
 ];
 const columns = [
@@ -99,23 +156,14 @@ const columns = [
   { field: "col3", headerName: "Header", flex: 1 },
   { field: "col4", headerName: "Header", flex: 1 },
   {
-    field: "status",
-    headerName: "상태",
+    field: "option",
+    headerName: "추가옵션",
     flex: 1,
-    renderCell: (params) => {
-      switch (params.value) {
-        case "사용":
-          return <SkrChip label={params.value} color="success" />;
-          break;
-        default:
-          return <SkrChip label={params.value} color="cancel" />;
-          break;
-      }
-    },
+    renderCell: FieldIcons,
   },
 ];
 
-const DataGridBadge = () => {
+const DataGridIcon = () => {
   return (
     <SkrGrid container spacing={40}>
       <SkrGrid item xs={6}>
@@ -160,4 +208,4 @@ const columns = [
   );
 };
 
-export default DataGridBadge;
+export default DataGridIcon;

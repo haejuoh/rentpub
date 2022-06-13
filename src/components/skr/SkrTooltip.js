@@ -9,8 +9,13 @@ import { Tooltip } from "@mui/material";
  * @type { React.FC<TooltipProps> }
  */
 
-const SkrTooltip = ({ children, ...rest }) => {
-  return <Tooltip {...rest}>{children}</Tooltip>;
-};
+const SkrTooltip = React.forwardRef(({ children, ...rest }, ref) => {
+  return (
+    <Tooltip {...rest} ref={ref}>
+      {children}
+    </Tooltip>
+  );
+});
 
+SkrTooltip.displayName = "SkrTooltip";
 export default SkrTooltip;

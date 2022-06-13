@@ -71,6 +71,7 @@ import { ModalSample } from "../components/Modal";
 import DataGridDefault from "../guide/datagrid/DataGridDefault";
 import DataGridActionField from "../guide/datagrid/DataGridActionField";
 import DataGridBadge from "../guide/datagrid/DataGridBadge";
+import DataGridIcon from "../guide/datagrid/DataGridIcon";
 import { LegendSingleGuide, LegendGroupGuide } from "../guide/calendar/Legend";
 import Legend from "./../components/customed/calendar/legend/Legend";
 import SnackBar from "../guide/SnackBar";
@@ -257,11 +258,13 @@ const Guide = () => {
         </TabPanel>
         <TabPanel value="6">
           <GuideTitle>Default</GuideTitle>
-          <DataGridDefault mt={2} />
+          <DataGridDefault />
           <GuideTitle>ActionField</GuideTitle>
-          <DataGridActionField mt={2} />
+          <DataGridActionField />
           <GuideTitle>BadgeField</GuideTitle>
-          <DataGridBadge mt={2} />
+          <DataGridBadge />
+          <GuideTitle>IconField</GuideTitle>
+          <DataGridIcon />
         </TabPanel>
         <TabPanel value="7">
           <GuideTitle>Modal</GuideTitle>

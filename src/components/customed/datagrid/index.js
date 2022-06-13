@@ -1,7 +1,7 @@
 import React from "react";
 //skr
 import SkrDataGrid from "../../skr/SkrDataGrid";
-import { DataGridFooter as Footer } from "./footer";
+import { DataGridFooter as Footer } from "./Footer";
 //icons
 import { SortedDescendingIcon as ColumnSortedDescendingIcon } from "./Icons";
 import { SortedAscendingIcon as ColumnSortedAscendingIcon } from "./Icons";
