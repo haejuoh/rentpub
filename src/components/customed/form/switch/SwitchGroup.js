@@ -12,7 +12,7 @@ const SwitchGroup = ({ switchGroupData }) => {
     <>
       {switchGroupData.map((item, idx) => {
         return (
-          <SwitchStyled.SwitchGroupWrap>
+          <SwitchStyled.SwitchGroupWrap key={idx}>
             <SkrTypography variant="b1" color="grey.700">
               {item.label}
             </SkrTypography>

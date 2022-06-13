@@ -47,9 +47,16 @@ const SegmentStyle = styled("div")(({ theme }) => ({
     top: "4px",
     padding: "6px 9px",
   },
-  "&.disabled": {
-    opacity: "0.52",
-  },
 }));
 
-export { SegmentStyle };
+const Disabled = styled("div")(({ disabled }) => {
+  return (
+    disabled && {
+      "&": {
+        opacity: "0.52",
+      },
+    }
+  );
+});
+
+export { SegmentStyle, Disabled };
