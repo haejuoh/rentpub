@@ -7,7 +7,7 @@ const ModalFooter = React.forwardRef(
     if (btnCancel || btnAction) {
       return (
         <>
-          <SkrDialogActions>
+          <SkrDialogActions ref={ref}>
             {btnCancel && (
               <SkrButton color="modal" onClick={onClick}>
                 {btnCancel}
