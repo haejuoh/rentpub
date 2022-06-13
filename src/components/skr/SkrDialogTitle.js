@@ -1,5 +1,8 @@
 import React from "react";
 import { DialogTitle } from "@mui/material";
+import SkrDivider from "./SkrDivider";
+import SkrIconButton from "./SkrIconButton";
+
 /**
  * @typedef {import('@mui/material').DialogTitleProps} DialogTitleProps
  */
@@ -8,8 +11,22 @@ import { DialogTitle } from "@mui/material";
  * @type { React.FC<DialogTitleProps> }
  */
 
-const SkrDialogTitle = ({ sx, children }) => {
-  return <DialogTitle sx={sx}>{children}</DialogTitle>;
+import { CloseIcon } from "../../assets/style/icons";
+
+const SkrDialogTitle = ({ sx, children, onClose, ...rest }) => {
+  return (
+    <>
+      <DialogTitle sx={{ m: 0, p: 2 }} {...rest}>
+        {children}
+        {onClose ? (
+          <SkrIconButton aria-label="close" onClick={onClose}>
+            <CloseIcon />
+          </SkrIconButton>
+        ) : null}
+      </DialogTitle>
+      {onClose && <SkrDivider sx={{ margin: "15px 0" }} />}
+    </>
+  );
 };
 
 export default SkrDialogTitle;
