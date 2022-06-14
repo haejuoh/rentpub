@@ -60,6 +60,14 @@ import {
 import Badge from "./../guide/Badge";
 import { TableDefault, TableAction, TableBadge } from "../guide/Table";
 import { ModalSample } from "../components/Modal";
+// import { SnackBarSample } from "../components/SnackBar";
+import { SnackBarSample } from "../components/customed/snackbar/SnackBar";
+// import {
+//   SnackbarSuccessDefault,
+//   SnackbarSuccessDesc,
+//   SnackbarSuccessBadge,
+//   SnackbarSuccessOption,
+// } from "../guide/snackbar/SnackbarSuccess";
 
 const Guide = () => {
   const [value, setValue] = React.useState("1");
@@ -211,6 +219,12 @@ const Guide = () => {
         <TabPanel value="7">
           <GuideTitle>Modal</GuideTitle>
           <ModalSample />
+          <GuideTitle mt={5}>Snackbar</GuideTitle>
+          <SnackBarSample />
+        {/* <TabPanel value="8">
+          <GuideTitle>SnackBar</GuideTitle>
+          <SnackBarSample />
+        </TabPanel> */}
         </TabPanel>
       </TabContext>
     </Box>
