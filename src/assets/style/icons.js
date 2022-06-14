@@ -15,6 +15,10 @@ import { ReactComponent as IconClose } from "../images/icons/close.svg";
 import { ReactComponent as IconAccessibility } from "../images/icons/accessibility.svg";
 import { ReactComponent as IconCar } from "../images/icons/car.svg";
 import { ReactComponent as IconStop } from "../images/icons/stop.svg";
+import { ReactComponent as IconSad } from "../images/icons/sad.svg";
+import { ReactComponent as IconHappy } from "../images/icons/happy.svg";
+import { ReactComponent as IconAlertCircle } from "../images/icons/alert-circle.svg";
+// import { ReactComponent as IconCheckmarkCircle } from "../images/icons/checkmark-circle.svg";
 
 const BookmarkIcon = () => <IconBookmark className="icon" />;
 const ChevronForwardIcon = () => <IconChevron className="icon" />;
@@ -33,6 +37,10 @@ const CloseIcon = () => <IconClose className="icon" />;
 const AccessibilityIcon = () => <IconAccessibility className="icon" />;
 const CarIcon = () => <IconCar className="icon" />;
 const StopIcon = () => <IconStop className="icon" />;
+const SadIcon = () => <IconSad className="icon" />;
+const HappyIcon = () => <IconHappy className="icon" />;
+const AlertCircleIcon = () => <IconAlertCircle className="icon" />;
+// const CheckmarkCircleIcon = () => <IconCheckmarkCircle className="icon" />;
 
 export {
   BookmarkIcon,
@@ -52,4 +60,8 @@ export {
   AccessibilityIcon,
   CarIcon,
   StopIcon,
+  SadIcon,
+  HappyIcon,
+  AlertCircleIcon,
+  // CheckmarkCircleIcon,
 };
