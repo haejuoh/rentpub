@@ -75,6 +75,7 @@ import DataGridIcon from "../guide/datagrid/DataGridIcon";
 import { LegendSingleGuide, LegendGroupGuide } from "../guide/calendar/Legend";
 import Legend from "./../components/customed/calendar/legend/Legend";
 import SnackBar from "../guide/SnackBar";
+import LoadingBarList from "../guide/LoadingBar";
 
 const Guide = () => {
   const [value, setValue] = React.useState("1");
@@ -113,6 +114,7 @@ const Guide = () => {
             <Tab label="Modal" value="7" />
             <Tab label="Legend" value="8" />
             <Tab label="Snackbar" value="9" />
+            <Tab label="LoadingBar" value="10" />
           </TabList>
         </Box>
         <TabPanel value="1">
@@ -278,6 +280,9 @@ const Guide = () => {
         <TabPanel value="9">
           <GuideTitle>Snackbar</GuideTitle>
           <SnackBar />
+        </TabPanel>
+        <TabPanel value="10">
+          <LoadingBarList />
         </TabPanel>
       </TabContext>
     </Box>
