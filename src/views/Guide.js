@@ -67,7 +67,7 @@ import {
   GuideKeyword,
 } from "../assets/style/guideStyle";
 import Badge from "./../guide/Badge";
-import { ModalSample } from "../components/Modal";
+import { ModalSample } from "../guide/Modal";
 import DataGridDefault from "../guide/datagrid/DataGridDefault";
 import DataGridActionField from "../guide/datagrid/DataGridActionField";
 import DataGridBadge from "../guide/datagrid/DataGridBadge";

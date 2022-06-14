@@ -16,6 +16,11 @@ import { ReactComponent as IconAccessibility } from "../images/icons/accessibili
 import { ReactComponent as IconCar } from "../images/icons/car.svg";
 import { ReactComponent as IconStop } from "../images/icons/stop.svg";
 import { ReactComponent as IconReload } from "../images/icons/reload.svg";
+import { ReactComponent as IconSad } from "../images/icons/sad.svg";
+import { ReactComponent as IconHappy } from "../images/icons/happy.svg";
+import { ReactComponent as IconAlertCircle } from "../images/icons/alert-circle.svg";
+import { ReactComponent as IconLoadItemDot } from "../images/icons/load-item-dot.svg";
+import { ReactComponent as IconLoadItemCar } from "../images/icons/load-item-car.svg";
 
 const BookmarkIcon = () => <IconBookmark className="icon" />;
 const ChevronForwardIcon = () => <IconChevron className="icon" />;
@@ -35,6 +40,11 @@ const AccessibilityIcon = () => <IconAccessibility className="icon" />;
 const CarIcon = () => <IconCar className="icon" />;
 const StopIcon = () => <IconStop className="icon" />;
 const ReloadIcon = () => <IconReload className="icon" />;
+const SadIcon = () => <IconSad className="icon" />;
+const HappyIcon = () => <IconHappy className="icon" />;
+const AlertCircleIcon = () => <IconAlertCircle className="icon" />;
+const LoadItemDotIcon = () => <IconLoadItemDot className="icon" />;
+const LoadItemCarIcon = () => <IconLoadItemCar className="icon" />;
 
 export {
   BookmarkIcon,
@@ -55,4 +65,9 @@ export {
   CarIcon,
   StopIcon,
   ReloadIcon,
+  SadIcon,
+  HappyIcon,
+  AlertCircleIcon,
+  LoadItemDotIcon,
+  LoadItemCarIcon,
 };

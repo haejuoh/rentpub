@@ -44,12 +44,12 @@ const TextAreaStyled = styled(TextareaAutosize)(({ theme }) => ({
     border: "none",
   },
 }));
-const SkrTextArea = ({ minRows, placeholder, autofocus, ...rest }) => {
+const SkrTextArea = ({ minRows, placeholder, autoFocus, ...rest }) => {
   return (
     <TextAreaStyled
       minRows={minRows}
       placeholder={placeholder}
-      autofocus={autofocus}
+      autoFocus={autoFocus}
       {...rest}
     />
   );

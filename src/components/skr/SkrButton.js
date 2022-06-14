@@ -16,6 +16,7 @@ const SkrButton = ({
   endIcon,
   disabled,
   children,
+  ...rest
 }) => {
   return (
     <Button
@@ -25,6 +26,7 @@ const SkrButton = ({
       startIcon={startIcon}
       endIcon={endIcon}
       disabled={disabled}
+      {...rest}
     >
       {children}
     </Button>
