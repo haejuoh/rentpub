@@ -11,11 +11,9 @@ import { Breadcrumbs } from "@mui/material";
 
 const SkrBreadcrumbs = ({ separator, sx, children }) => {
   return (
-    <>
-      <Breadcrumbs separator={separator} sx={sx}>
-        {children}
-      </Breadcrumbs>
-    </>
+    <Breadcrumbs separator={separator} sx={sx}>
+      {children}
+    </Breadcrumbs>
   );
 };
 

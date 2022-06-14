@@ -20,18 +20,16 @@ const SkrAutocomplete = ({
   sx,
 }) => {
   return (
-    <>
-      <Autocomplete
-        options={options}
-        renderInput={renderInput}
-        clearIcon={clearIcon}
-        defaultValue={defaultValue}
-        disabled={disabled}
-        disablePortal={disablePortal}
-        popupIcon={popupIcon}
-        sx={sx}
-      />
-    </>
+    <Autocomplete
+      options={options}
+      renderInput={renderInput}
+      clearIcon={clearIcon}
+      defaultValue={defaultValue}
+      disabled={disabled}
+      disablePortal={disablePortal}
+      popupIcon={popupIcon}
+      sx={sx}
+    />
   );
 };
 

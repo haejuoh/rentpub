@@ -1246,6 +1246,9 @@ const theme = createTheme({
               backgroundColor: "transparent",
             },
           },
+          ".MuiInputBase-inputAdornedEnd": {
+            paddingRight: 0,
+          },
         }),
       },
     },
@@ -1272,6 +1275,11 @@ const theme = createTheme({
           maxHeight: "100%",
           "& .MuiTypography-root": {
             color: colorSystem.grey.b700,
+          },
+          "& .MuiIconButton-root": {
+            padding: 0,
+            width: "14px",
+            height: "14px",
           },
           svg: {
             width: "14px",
@@ -1346,6 +1354,18 @@ const theme = createTheme({
           height: "160px",
           overflow: "hidden",
           overflowY: "auto",
+          "&::-webkit-scrollbar": {
+            width: "10px",
+          },
+          "&::-webkit-scrollbar-thumb": {
+            backgroundColor: "#c4c4c4",
+            borderRadius: "6px",
+            width: "6px",
+            margin: "5.6px 2px 0",
+          },
+          "&::-webkit-scrollbar-track": {
+            backgroundColor: "#f1f3f5",
+          },
         }),
       },
     },
@@ -1486,7 +1506,6 @@ const theme = createTheme({
           // maxHeight: "40px",
           // lineHeight: "40px",
         },
-
         columnHeader: {
           padding: "0 8px",
           flex: "1 1 104px",
@@ -1658,7 +1677,22 @@ const theme = createTheme({
             },
           },
         },
-
+        virtualScroller: {
+          "&::-webkit-scrollbar": {
+            width: "10px",
+            height: "10px",
+          },
+          "&::-webkit-scrollbar-thumb": {
+            backgroundColor: "#c4c4c4",
+            borderRadius: "6px",
+            width: "6px",
+            height: "6px",
+            margin: "5.6px 2px 0",
+          },
+          "&::-webkit-scrollbar-track": {
+            backgroundColor: "#f1f3f5",
+          },
+        },
         footerContainer: {
           borderColor: colorSystem.border.b500,
         },

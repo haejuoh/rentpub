@@ -15,6 +15,7 @@ import { ReactComponent as IconClose } from "../images/icons/close.svg";
 import { ReactComponent as IconAccessibility } from "../images/icons/accessibility.svg";
 import { ReactComponent as IconCar } from "../images/icons/car.svg";
 import { ReactComponent as IconStop } from "../images/icons/stop.svg";
+import { ReactComponent as IconReload } from "../images/icons/reload.svg";
 
 const BookmarkIcon = () => <IconBookmark className="icon" />;
 const ChevronForwardIcon = () => <IconChevron className="icon" />;
@@ -33,6 +34,7 @@ const CloseIcon = () => <IconClose className="icon" />;
 const AccessibilityIcon = () => <IconAccessibility className="icon" />;
 const CarIcon = () => <IconCar className="icon" />;
 const StopIcon = () => <IconStop className="icon" />;
+const ReloadIcon = () => <IconReload className="icon" />;
 
 export {
   BookmarkIcon,
@@ -52,4 +54,5 @@ export {
   AccessibilityIcon,
   CarIcon,
   StopIcon,
+  ReloadIcon,
 };

@@ -24,23 +24,21 @@ const SkrCheckbox = ({
   children,
 }) => {
   return (
-    <>
-      <Checkbox
-        checked={checked}
-        checkedIcon={checkedIcon}
-        color={color}
-        defaultChecked={defaultChecked}
-        disabled={disabled}
-        id={id}
-        onChange={onChange}
-        size={size}
-        sx={sx}
-        required={required}
-        value={value}
-      >
-        {children}
-      </Checkbox>
-    </>
+    <Checkbox
+      checked={checked}
+      checkedIcon={checkedIcon}
+      color={color}
+      defaultChecked={defaultChecked}
+      disabled={disabled}
+      id={id}
+      onChange={onChange}
+      size={size}
+      sx={sx}
+      required={required}
+      value={value}
+    >
+      {children}
+    </Checkbox>
   );
 };
 

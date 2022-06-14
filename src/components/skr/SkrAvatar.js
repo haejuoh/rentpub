@@ -20,19 +20,17 @@ const SkrAvatar = ({
   children,
 }) => {
   return (
-    <>
-      <Avatar
-        alt={alt}
-        imgProps={imgProps}
-        sizes={sizes}
-        src={src}
-        srcSet={srcSet}
-        sx={sx}
-        variant={variant}
-      >
-        {children}
-      </Avatar>
-    </>
+    <Avatar
+      alt={alt}
+      imgProps={imgProps}
+      sizes={sizes}
+      src={src}
+      srcSet={srcSet}
+      sx={sx}
+      variant={variant}
+    >
+      {children}
+    </Avatar>
   );
 };
 

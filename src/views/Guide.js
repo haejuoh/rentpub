@@ -75,6 +75,7 @@ import DataGridIcon from "../guide/datagrid/DataGridIcon";
 import { LegendSingleGuide, LegendGroupGuide } from "../guide/calendar/Legend";
 import Legend from "./../components/customed/calendar/legend/Legend";
 import SnackBar from "../guide/SnackBar";
+import GridPanel from "../guide/datagrid/GridPanel";
 
 const Guide = () => {
   const [value, setValue] = React.useState("1");
@@ -265,6 +266,8 @@ const Guide = () => {
           <DataGridBadge />
           <GuideTitle>IconField</GuideTitle>
           <DataGridIcon />
+          <GuideTitle>Filter MarkUp Sample</GuideTitle>
+          <GridPanel />
         </TabPanel>
         <TabPanel value="7">
           <GuideTitle>Modal</GuideTitle>

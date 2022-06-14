@@ -2,7 +2,6 @@ import React from "react";
 import { styled } from "@mui/material/styles";
 import { useState } from "react";
 import {
-  InputAdornment,
   Checkbox,
   FormGroup,
   FormControlLabel,
@@ -21,7 +20,7 @@ import SkrGrid from "../components/skr/SkrGrid";
 import SkrStack from "../components/skr/SkrStack";
 import SkrBox from "../components/skr/SkrBox";
 import SkrTypography from "../components/skr/SkrTypography";
-
+import SkrInputAdornment from "../components/skr/SkrInputAdornment";
 import InputLabelPositionTop from "../components/customed/form/input/InputLabelPositionTop";
 import InputLabelPositionLeft from "../components/customed/form/input/InputLabelPositionLeft";
 import InputLabelHidden from "../components/customed/form/input/InputLabelHidden";
@@ -168,7 +167,7 @@ export const InputLabelPositionTopList = () => {
                 defaultValue="Input"
                 InputProps={{
                   endAdornment: (
-                    <InputAdornment position="end">Unit</InputAdornment>
+                    <SkrInputAdornment position="end">Unit</SkrInputAdornment>
                   ),
                 }}
               />
@@ -183,9 +182,9 @@ export const InputLabelPositionTopList = () => {
                 defaultValue="Input"
                 InputProps={{
                   endAdornment: (
-                    <InputAdornment position="end">
+                    <SkrInputAdornment position="end">
                       <Accessibility />
-                    </InputAdornment>
+                    </SkrInputAdornment>
                   ),
                 }}
               />
@@ -202,7 +201,7 @@ export const InputLabelPositionTopList = () => {
                 defaultValue="Input"
                 InputProps={{
                   endAdornment: (
-                    <InputAdornment position="end">Unit</InputAdornment>
+                    <SkrInputAdornment position="end">Unit</SkrInputAdornment>
                   ),
                 }}
                 disabled
@@ -218,9 +217,9 @@ export const InputLabelPositionTopList = () => {
                 defaultValue="Input"
                 InputProps={{
                   endAdornment: (
-                    <InputAdornment position="end">
+                    <SkrInputAdornment position="end">
                       <Accessibility />
-                    </InputAdornment>
+                    </SkrInputAdornment>
                   ),
                 }}
                 disabled
@@ -254,10 +253,10 @@ export const InputLabelPositionTopList = () => {
 <InputLabelPositionTop color="success" label="Label Text" defaultValue="Input" helperText="Alret Message." disabled />
 
 // Unit
-<InputLabelPositionTop label="Label Text" placeholder="Placeholder" defaultValue="Input" InputProps={{ endAdornment: ( <InputAdornment position="end">Unit</InputAdornment> ), }} />
+<InputLabelPositionTop label="Label Text" placeholder="Placeholder" defaultValue="Input" InputProps={{ endAdornment: ( <SkrInputAdornment position="end">Unit</SkrInputAdornment> ), }} />
 
 // Icon
-<InputLabelPositionTop label="Label Text" placeholder="Placeholder" defaultValue="Input" InputProps={{ endAdornment: ( <InputAdornment position="end"> <Accessibility /> </InputAdornment> ), }} />
+<InputLabelPositionTop label="Label Text" placeholder="Placeholder" defaultValue="Input" InputProps={{ endAdornment: ( <SkrInputAdornment position="end"> <Accessibility /> </SkrInputAdornment> ), }} />
 `}</pre>
           </CodeBox>
         </SkrGrid>
@@ -386,7 +385,7 @@ export const InputLabelPositionLeftList = () => {
                 defaultValue="Input"
                 InputProps={{
                   endAdornment: (
-                    <InputAdornment position="end">Unit</InputAdornment>
+                    <SkrInputAdornment position="end">Unit</SkrInputAdornment>
                   ),
                 }}
               />
@@ -401,9 +400,9 @@ export const InputLabelPositionLeftList = () => {
                 defaultValue="Input"
                 InputProps={{
                   endAdornment: (
-                    <InputAdornment position="end">
+                    <SkrInputAdornment position="end">
                       <Accessibility />
-                    </InputAdornment>
+                    </SkrInputAdornment>
                   ),
                 }}
               />
@@ -420,7 +419,7 @@ export const InputLabelPositionLeftList = () => {
                 defaultValue="Input"
                 InputProps={{
                   endAdornment: (
-                    <InputAdornment position="end">Unit</InputAdornment>
+                    <SkrInputAdornment position="end">Unit</SkrInputAdornment>
                   ),
                 }}
                 disabled
@@ -436,9 +435,9 @@ export const InputLabelPositionLeftList = () => {
                 defaultValue="Input"
                 InputProps={{
                   endAdornment: (
-                    <InputAdornment position="end">
+                    <SkrInputAdornment position="end">
                       <Accessibility />
-                    </InputAdornment>
+                    </SkrInputAdornment>
                   ),
                 }}
                 disabled
@@ -470,10 +469,10 @@ export const InputLabelPositionLeftList = () => {
 <InputLabelPositionLeft color="success" label="Label Text" defaultValue="Input" helperText="Alret Message." />
 
 // Unit
-<InputLabelPositionLeft label="Label Text" placeholder="Placeholder" defaultValue="Input" InputProps={{ endAdornment: ( <InputAdornment position="end">Unit</InputAdornment> ), }} />
+<InputLabelPositionLeft label="Label Text" placeholder="Placeholder" defaultValue="Input" InputProps={{ endAdornment: ( <SkrInputAdornment position="end">Unit</SkrInputAdornment> ), }} />
 
 // Icon
-<InputLabelPositionLeft label="Label Text" placeholder="Placeholder" defaultValue="Input" InputProps={{ endAdornment: ( <InputAdornment position="end"> <Accessibility /> </InputAdornment> ), }} />
+<InputLabelPositionLeft label="Label Text" placeholder="Placeholder" defaultValue="Input" InputProps={{ endAdornment: ( <SkrInputAdornment position="end"> <Accessibility /> </SkrInputAdornment> ), }} />
 `}</pre>
           </CodeBox>
         </SkrGrid>
@@ -593,7 +592,7 @@ export const InputLabelHiddenList = () => {
                 defaultValue="Input"
                 InputProps={{
                   endAdornment: (
-                    <InputAdornment position="end">Unit</InputAdornment>
+                    <SkrInputAdornment position="end">Unit</SkrInputAdornment>
                   ),
                 }}
               />
@@ -607,9 +606,9 @@ export const InputLabelHiddenList = () => {
                 defaultValue="Input"
                 InputProps={{
                   endAdornment: (
-                    <InputAdornment position="end">
+                    <SkrInputAdornment position="end">
                       <Accessibility />
-                    </InputAdornment>
+                    </SkrInputAdornment>
                   ),
                 }}
               />
@@ -625,7 +624,7 @@ export const InputLabelHiddenList = () => {
                 defaultValue="Input"
                 InputProps={{
                   endAdornment: (
-                    <InputAdornment position="end">Unit</InputAdornment>
+                    <SkrInputAdornment position="end">Unit</SkrInputAdornment>
                   ),
                 }}
                 disabled
@@ -640,9 +639,9 @@ export const InputLabelHiddenList = () => {
                 defaultValue="Input"
                 InputProps={{
                   endAdornment: (
-                    <InputAdornment position="end">
+                    <SkrInputAdornment position="end">
                       <Accessibility />
-                    </InputAdornment>
+                    </SkrInputAdornment>
                   ),
                 }}
                 disabled
