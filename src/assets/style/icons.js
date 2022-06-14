@@ -18,7 +18,8 @@ import { ReactComponent as IconStop } from "../images/icons/stop.svg";
 import { ReactComponent as IconSad } from "../images/icons/sad.svg";
 import { ReactComponent as IconHappy } from "../images/icons/happy.svg";
 import { ReactComponent as IconAlertCircle } from "../images/icons/alert-circle.svg";
-// import { ReactComponent as IconCheckmarkCircle } from "../images/icons/checkmark-circle.svg";
+import { ReactComponent as IconLoadItemDot } from "../images/icons/load-item-dot.svg";
+import { ReactComponent as IconLoadItemCar } from "../images/icons/load-item-car.svg";
 
 const BookmarkIcon = () => <IconBookmark className="icon" />;
 const ChevronForwardIcon = () => <IconChevron className="icon" />;
@@ -40,7 +41,8 @@ const StopIcon = () => <IconStop className="icon" />;
 const SadIcon = () => <IconSad className="icon" />;
 const HappyIcon = () => <IconHappy className="icon" />;
 const AlertCircleIcon = () => <IconAlertCircle className="icon" />;
-// const CheckmarkCircleIcon = () => <IconCheckmarkCircle className="icon" />;
+const LoadItemDotIcon = () => <IconLoadItemDot className="icon" />;
+const LoadItemCarIcon = () => <IconLoadItemCar className="icon" />;
 
 export {
   BookmarkIcon,
@@ -63,5 +65,6 @@ export {
   SadIcon,
   HappyIcon,
   AlertCircleIcon,
-  // CheckmarkCircleIcon,
+  LoadItemDotIcon,
+  LoadItemCarIcon,
 };
