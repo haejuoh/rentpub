@@ -1,6 +1,15 @@
 import React from "react";
 import { Snackbar, Button, IconButton } from "@mui/material";
-import { CloseIcon } from "../assets/style/icons";
+import {
+  CloseIcon,
+  SadIcon,
+  HappyIcon,
+  AlertCircleIcon,
+  CheckIcon,
+} from "../assets/style/icons";
+import SkrStack from "../components/skr/SkrStack";
+import StatusIndicator from "../components/customed/Status/StatusIndicator";
+import StatusCheck from "../components/customed/Status/StatusCheck";
 
 const SnackBar = () => {
   const [open, setOpen] = React.useState(false);
@@ -13,7 +22,6 @@ const SnackBar = () => {
     if (reason === "clickaway") {
       return;
     }
-
     setOpen(false);
   };
 
@@ -42,6 +50,14 @@ const SnackBar = () => {
         message="단기예약정보가 변경되었습니다"
         action={action}
       />
+      <SkrStack spacing={10} mt={20}>
+        <StatusIndicator status="success" />
+        <StatusIndicator status="danger" />
+        <StatusIndicator status="cancel" />
+        <StatusCheck status="success" />
+        <StatusCheck status="danger" />
+        <StatusCheck status="cancel" />
+      </SkrStack>
     </div>
   );
 };
