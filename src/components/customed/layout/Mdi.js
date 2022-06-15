@@ -1,12 +1,11 @@
 import React from "react";
 import { styled, makeStyles } from "@mui/styles";
-import { Button, IconButton, Typography } from "@mui/material";
-import { TabContext, TabList, TabPanel } from "@mui/lab";
-import { ReactComponent as IconHome } from "../assets/images/icons/home.svg";
-import { ReactComponent as IconClose } from "../assets/images/icons/close.svg";
-import { ReactComponent as IconLockClosed } from "../assets/images/icons/lock-closed.svg";
-import { ReactComponent as IconOption } from "../assets/images/icons/options.svg";
-import { ReactComponent as IconTime } from "../assets/images/icons/time.svg";
+import { Button, Typography } from "@mui/material";
+import { ReactComponent as IconHome } from "../../../assets/images/icons/home.svg";
+import { ReactComponent as IconClose } from "../../../assets/images/icons/close.svg";
+import { ReactComponent as IconLockClosed } from "../../../assets/images/icons/lock-closed.svg";
+import { ReactComponent as IconOption } from "../../../assets/images/icons/options.svg";
+import { ReactComponent as IconTime } from "../../../assets/images/icons/time.svg";
 const mdiStyle = makeStyles((theme) => ({
   wrap: {
     padding: "15px 50px 0",

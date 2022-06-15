@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { styled, makeStyles } from "@mui/styles";
-import { theme } from "../assets/style/customTheme";
+// import { theme } from "../assets/style/customTheme";
 import { Stack, IconButton, Avatar, Typography } from "@mui/material";
-import { ReactComponent as IconHelp } from "../assets/images/icons/help.svg";
-import { ReactComponent as IconMenu } from "../assets/images/icons/menu.svg";
-import { ReactComponent as IconBookmarks } from "../assets/images/icons/bookmarks.svg";
+import { ReactComponent as IconHelp } from "../../../assets/images/icons/help.svg";
+import { ReactComponent as IconMenu } from "../../../assets/images/icons/menu.svg";
+import { ReactComponent as IconBookmarks } from "../../../assets/images/icons/bookmarks.svg";
 const lnbStyle = makeStyles((theme) => ({
   wrap: {
     // color: `${theme.palette.grey[400]}`,

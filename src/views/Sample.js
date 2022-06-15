@@ -1,5 +1,5 @@
 import React from "react";
-import Mdi from "../components/Mdi";
+import Mdi from "../components/customed/layout/Mdi";
 import { theme } from "../assets/style/customTheme";
 import { LayoutStyle } from "../assets/style/common";
 
