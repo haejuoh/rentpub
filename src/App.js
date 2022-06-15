@@ -8,6 +8,8 @@ import Guide from "./views/Guide";
 import Sample from "./views/Sample";
 import { Container } from "@mui/material";
 import RentalFeeCheck from "./views/rentalFeeCheck";
+import WorkGroupManagement from "./views/WorkGroupManagement";
+import WorkGroupManagementRegist from "./views/WorkGroupManagement/Regist";
 
 const App = () => {
   const element = useRoutes([
@@ -32,6 +34,14 @@ const App = () => {
       path: "/rentalFeeCheck",
       element: <DefaultLayout />,
       children: [{ index: true, element: <RentalFeeCheck /> }],
+    },
+    {
+      path: "/WorkGroupManagement",
+      element: <DefaultLayout />,
+      children: [
+        { index: true, element: <WorkGroupManagement /> },
+        { path: "regist", element: <WorkGroupManagementRegist /> },
+      ],
     },
     // {
     //   // path 지정

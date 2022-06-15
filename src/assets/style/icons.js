@@ -23,6 +23,8 @@ import { ReactComponent as IconLoadItemDot } from "../images/icons/load-item-dot
 import { ReactComponent as IconLoadItemCar } from "../images/icons/load-item-car.svg";
 import { ReactComponent as IconHelp } from "../images/icons/help.svg";
 import { ReactComponent as IconSetting } from "../images/icons/settings.svg";
+import { ReactComponent as IconPencil } from "../images/icons/pencil.svg";
+import { ReactComponent as IconMore } from "../images/icons/ellipsis-vertical.svg";
 
 const BookmarkIcon = () => <IconBookmark className="icon" />;
 const ChevronForwardIcon = () => <IconChevron className="icon" />;
@@ -49,6 +51,8 @@ const LoadItemDotIcon = () => <IconLoadItemDot className="icon" />;
 const LoadItemCarIcon = () => <IconLoadItemCar className="icon" />;
 const HelpIcon = () => <IconHelp className="icon" />;
 const SettingIcon = () => <IconSetting className="icon" />;
+const PencilIcon = () => <IconPencil className="icon" />;
+const MoreIcon = () => <IconMore className="icon" />;
 
 export {
   BookmarkIcon,
@@ -76,4 +80,6 @@ export {
   LoadItemCarIcon,
   HelpIcon,
   SettingIcon,
+  PencilIcon,
+  MoreIcon,
 };
