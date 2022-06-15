@@ -5,15 +5,19 @@ import * as LayoutStyled from "../../assets/style/common";
 //component
 import SkrStack from "../../components/skr/SkrStack";
 import SkrButton from "../../components/skr/SkrButton";
+import SkrIconButton from "../../components/skr/SkrIconButton";
 import TitlePage from "../../components/customed/title/page/TitlePage";
+import TitleTable from "../../components/customed/title/table/TitleTable";
 import LySection from "./../../components/customed/layout/LySection";
 import SkrGrid from "../../components/skr/SkrGrid";
 import SelectLabelPositionTop from "../../components/customed/form/select/SelectLabelPositionTop";
 import { Section } from "../../components/customed/layout/Section";
 import SkrBox from "../../components/skr/SkrBox";
 import DataGrid from "../../components/customed/datagrid";
+import NoRows from "../../components/customed/datagrid/NoRows";
+import NoResults from "../../components/customed/datagrid/NoResults";
 //icons
-import { OptionIcon } from "../../assets/style/icons";
+import { OptionIcon, MoreIcon, ExcelIcon } from "../../assets/style/icons";
 
 const tabData = [
   { type: "home", label: "Home", active: false },
@@ -184,10 +188,17 @@ const rows = [
   },
 ];
 const columns = [
-  { field: "col1", headerName: "Header", flex: 1 },
-  { field: "col2", headerName: "Header", flex: 1 },
-  { field: "col3", headerName: "Header", flex: 1 },
-  { field: "col4", headerName: "Header", flex: 1 },
+  { field: "col1", headerName: "권역-지점", flex: 1 },
+  { field: "col2", headerName: "제조사", flex: 1 },
+  { field: "col3", headerName: "단기차정명", width: 260 },
+  { field: "col4", headerName: "대여료", flex: 1 },
+  { field: "col5", headerName: "일반자차", flex: 1 },
+  { field: "col6", headerName: "플러스자차", flex: 1 },
+  { field: "col7", headerName: "슈퍼자차", flex: 1 },
+  { field: "col8", headerName: "완전자차", flex: 1 },
+  { field: "col9", headerName: "시작일", width: 106 },
+  { field: "col10", headerName: "종료일", width: 106 },
+  { field: "col11", headerName: "상태", flex: 1 },
   {
     field: "actions",
     type: "actions",
@@ -204,7 +215,10 @@ const columns = [
     },
   },
 ];
-
+const tableTitleData = {
+  title: "고객정보",
+  desc: "12,340",
+};
 const index = () => {
   return (
     <>
@@ -235,13 +249,22 @@ const index = () => {
             </SkrGrid>
           </Section>
           <Section variant="data">
-            <SkrBox>
+            <TitleTable titleData={tableTitleData}>
+              <SkrButton
+                color="excel"
+                variant="outlined"
+                endIcon={<ExcelIcon />}
+              >
+                엑셀다운로드
+              </SkrButton>
+            </TitleTable>
+            <SkrBox sx={{ height: 284 }}>
               <DataGrid
                 columnData={columns}
                 rowData={rows}
                 customNoRowsOverlay={<NoRows message="데이터 없음" />}
                 customNoResultsOverlay={<NoResults message="결과 없음" />}
-                isCheckbox={false}
+                isCheckbox={true}
               />
             </SkrBox>
           </Section>
