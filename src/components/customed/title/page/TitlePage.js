@@ -12,7 +12,7 @@ import {
 // Style
 import * as TitlePageStyled from "./style";
 
-export const TitlePage = ({ titleData, children, ...rest }) => {
+const TitlePage = ({ titleData, children, ...rest }) => {
   const [selected, setSelected] = React.useState(true);
   return (
     <TitlePageStyled.Wrap>
@@ -66,3 +66,4 @@ export const TitlePage = ({ titleData, children, ...rest }) => {
     </TitlePageStyled.Wrap>
   );
 };
+export default TitlePage;

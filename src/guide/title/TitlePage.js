@@ -5,7 +5,7 @@ import SkrGrid from "./../../components/skr/SkrGrid";
 import SkrStack from "../../components/skr/SkrStack";
 import SkrButton from "../../components/skr/SkrButton";
 // Title Components
-import { TitlePage } from "../../components/customed/title/page/TitlePage";
+import TitlePage from "../../components/customed/title/page/TitlePage";
 // Guide
 import { CodeBox } from "../../assets/style/guideStyle";
 const titleData = [
