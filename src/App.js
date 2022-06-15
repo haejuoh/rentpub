@@ -7,7 +7,7 @@ import DefaultLayout from "./layouts/DefaultLayout";
 import Guide from "./views/Guide";
 import Sample from "./views/Sample";
 import { Container } from "@mui/material";
-import WorkGroupManagement from "./views/WorkGroupManagement/index";
+import RentalFeeCheck from "./views/rentalFeeCheck";
 
 const App = () => {
   const element = useRoutes([
@@ -19,7 +19,7 @@ const App = () => {
       // page 지정
       children: [
         { index: true, element: <Sample /> },
-        // { path: "about", element: <About /> },
+        { path: "rentalFeeCheck", element: <RentalFeeCheck /> },
       ],
     },
     {
@@ -28,10 +28,10 @@ const App = () => {
       //layout 지정
       element: <Guide />,
     },
-    {
-      path: "/WorkGroupManagement",
-      element: <WorkGroupManagement />,
-    },
+    // {
+    //   path: "/rentalFeeCheck",
+    //   element: <RentalFeeCheck />,
+    // },
     // {
     //   // path 지정
     //   path: "/*",

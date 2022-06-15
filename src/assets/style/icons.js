@@ -21,6 +21,8 @@ import { ReactComponent as IconHappy } from "../images/icons/happy.svg";
 import { ReactComponent as IconAlertCircle } from "../images/icons/alert-circle.svg";
 import { ReactComponent as IconLoadItemDot } from "../images/icons/load-item-dot.svg";
 import { ReactComponent as IconLoadItemCar } from "../images/icons/load-item-car.svg";
+import { ReactComponent as IconHelp } from "../images/icons/help.svg";
+import { ReactComponent as IconSetting } from "../images/icons/settings.svg";
 
 const BookmarkIcon = () => <IconBookmark className="icon" />;
 const ChevronForwardIcon = () => <IconChevron className="icon" />;
@@ -45,6 +47,8 @@ const HappyIcon = () => <IconHappy className="icon" />;
 const AlertCircleIcon = () => <IconAlertCircle className="icon" />;
 const LoadItemDotIcon = () => <IconLoadItemDot className="icon" />;
 const LoadItemCarIcon = () => <IconLoadItemCar className="icon" />;
+const HelpIcon = () => <IconHelp className="icon" />;
+const SettingIcon = () => <IconSetting className="icon" />;
 
 export {
   BookmarkIcon,
@@ -70,4 +74,6 @@ export {
   AlertCircleIcon,
   LoadItemDotIcon,
   LoadItemCarIcon,
+  HelpIcon,
+  SettingIcon,
 };
