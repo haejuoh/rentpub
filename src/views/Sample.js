@@ -1,7 +1,7 @@
 import React from "react";
 import Mdi from "../components/customed/layout/Mdi";
 import { theme } from "../assets/style/customTheme";
-import { LayoutStyle } from "../assets/style/common";
+import * as LayoutStyled from "../assets/style/common";
 
 const tabData = [
   { type: "home", label: "Home", active: false },
@@ -9,11 +9,10 @@ const tabData = [
   { label: "변경이력조회", active: false },
 ];
 const Sample = () => {
-  const layout = LayoutStyle({ theme });
   return (
     <>
       <Mdi tabData={tabData} />
-      <div className={layout.page}></div>
+      <LayoutStyled.Page></LayoutStyled.Page>
     </>
   );
 };

@@ -7,10 +7,9 @@ import DefaultLayout from "./layouts/DefaultLayout";
 import Guide from "./views/Guide";
 import Sample from "./views/Sample";
 import { Container } from "@mui/material";
-import { LayoutStyle } from "./assets/style/common";
+import WorkGroupManagement from "./views/WorkGroupManagement/index";
 
 const App = () => {
-  const layout = LayoutStyle();
   const element = useRoutes([
     {
       // path 지정
@@ -28,6 +27,10 @@ const App = () => {
       path: "/",
       //layout 지정
       element: <Guide />,
+    },
+    {
+      path: "/WorkGroupManagement",
+      element: <WorkGroupManagement />,
     },
     // {
     //   // path 지정

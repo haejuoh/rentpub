@@ -12,7 +12,7 @@ import {
 import { ReactComponent as Accessibility } from "../assets/images/icons/accessibility.svg";
 // import { DefaultTextField, FormContents } from "../assets/style/common";
 import { CodeBox, FlexBox } from "../assets/style/guideStyle";
-import { SelectField, DefaultSelectField } from "../components/Select";
+// import { SelectField, DefaultSelectField } from "../components/Select";
 // import Segment from "../components/Segment";
 // import Placeholder from "../assets/style/Placeholder";
 
