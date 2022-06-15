@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import { styled } from "@mui/material/styles";
 import { Paper, IconButton, Grid, Stack } from "@mui/material";
-import { ReactComponent as IconSearch } from "../assets/images/icons/search.svg";
-import { SubTitle } from "./Title";
+import { ReactComponent as IconSearch } from "../../../assets/images/icons/search.svg";
+import { SubTitle } from "../../Title";
 
 const SectionStyle = styled(Paper)(({ theme }) => ({
   position: "relative",

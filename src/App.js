@@ -19,7 +19,7 @@ const App = () => {
       // page 지정
       children: [
         { index: true, element: <Sample /> },
-        // { path: "/rentalFeeCheck", element: <RentalFeeCheck /> },
+        // { path: "about", element: <About /> },
       ],
     },
     {
