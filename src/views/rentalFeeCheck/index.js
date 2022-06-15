@@ -12,6 +12,20 @@ const tabData = [
   { label: "정보조회", active: true },
   { label: "변경이력조회", active: false },
 ];
+const titleData = [
+  {
+    path: "/",
+    menu: "단기렌탈정보",
+  },
+  {
+    path: "/",
+    menu: "단기차정관리",
+  },
+  {
+    type: "bookmark",
+    menu: "대여료조회",
+  },
+];
 
 const index = () => {
   return (

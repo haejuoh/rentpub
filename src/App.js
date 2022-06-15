@@ -19,7 +19,7 @@ const App = () => {
       // page 지정
       children: [
         { index: true, element: <Sample /> },
-        { path: "rentalFeeCheck", element: <RentalFeeCheck /> },
+        // { path: "/rentalFeeCheck", element: <RentalFeeCheck /> },
       ],
     },
     {
@@ -28,10 +28,11 @@ const App = () => {
       //layout 지정
       element: <Guide />,
     },
-    // {
-    //   path: "/rentalFeeCheck",
-    //   element: <RentalFeeCheck />,
-    // },
+    {
+      path: "/rentalFeeCheck",
+      element: <DefaultLayout />,
+      children: [{ index: true, element: <RentalFeeCheck /> }],
+    },
     // {
     //   // path 지정
     //   path: "/*",
