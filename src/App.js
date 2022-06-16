@@ -40,7 +40,7 @@ const App = () => {
       ],
     },
     {
-      path: "/WorkGroupManagement",
+      path: "/workGroupManagement",
       element: <DefaultLayout />,
       children: [
         { index: true, element: <WorkGroupManagement /> },

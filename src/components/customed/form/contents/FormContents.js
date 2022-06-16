@@ -10,7 +10,11 @@ const FormContents = ({ label, required, position, children, ...rest }) => {
       position={position}
       sx={{ width: "100%" }}
     >
-      <SkrInputLabel htmlFor={label} required={required}>
+      <SkrInputLabel
+        htmlFor={label}
+        required={required}
+        sx={{ lineHeight: "34px" }}
+      >
         {label}
       </SkrInputLabel>
       <SkrStack direction="row" spacing={15}>
