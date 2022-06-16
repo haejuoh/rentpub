@@ -27,7 +27,9 @@ const SelectLabelPositionTop = ({ selectData }) => {
   return (
     <>
       <SkrFormControl variant="standard" sx={{ width: "100%" }}>
-        <SkrInputLabel id="sample">{selectData.label}</SkrInputLabel>
+        <SkrInputLabel id="sample" required={selectData.required}>
+          {selectData.label}
+        </SkrInputLabel>
         <SkrSelect
           labelId="sample"
           value={selectItem}
