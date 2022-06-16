@@ -39,16 +39,18 @@ const index = () => {
         <TitlePage titleData={titleData}>
           <SkrStack direction="row" spacing={8}>
             <SkrButton color="excel" variant="outlined" endIcon={<ExcelIcon />}>
-              엑셀다운로드
+              엑셀 업로드
             </SkrButton>
           </SkrStack>
         </TitlePage>
         <SkrStack spacing={30}>
           <Search />
           <List />
-          {/* <SkrButton color="primary" variant="contained">
-            승인요청
-          </SkrButton> */}
+          <SkrStack direction="row" justifyContent="flex-end">
+            <SkrButton color="primary" variant="contained">
+              승인요청
+            </SkrButton>
+          </SkrStack>
         </SkrStack>
       </LayoutStyled.Page>
     </>
