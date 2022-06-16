@@ -36,7 +36,7 @@ const App = () => {
       children: [{ index: true, element: <RentalFeeCheck /> }],
     },
     {
-      path: "/WorkGroupManagement",
+      path: "/workGroupManagement",
       element: <DefaultLayout />,
       children: [
         { index: true, element: <WorkGroupManagement /> },
