@@ -15,7 +15,14 @@ const SelectAutoCompleteLabelPositionLeft = ({
 }) => {
   return (
     <SkrFormControl variant="standard" position="left" sx={{ width: "100%" }}>
-      <SkrInputLabel id="sample">{label}</SkrInputLabel>
+      <SkrInputLabel
+        id="sample"
+        sx={{
+          lineHeight: "34px",
+        }}
+      >
+        {label}
+      </SkrInputLabel>
       <SkrAutocomplete
         disablePortal
         options={autocompleteData.map((option) => option.optionLabel)}

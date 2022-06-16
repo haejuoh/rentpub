@@ -30,7 +30,9 @@ const SelectMultipleLabelLeft = ({ selectData }) => {
 
   return (
     <SkrFormControl variant="standard" position="left" sx={{ width: "100%" }}>
-      <SkrInputLabel id="sample">{selectData.label}</SkrInputLabel>
+      <SkrInputLabel id="sample" sx={{ lineHeight: "34px" }}>
+        {selectData.label}
+      </SkrInputLabel>
       <SkrSelect
         multiple={true}
         labelId="sample"
