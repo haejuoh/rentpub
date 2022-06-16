@@ -41,7 +41,10 @@ const Regist = () => {
         <SkrStack spacing={30}>
           <Form />
           <Table />
-          <SkrStack direction="row" justifyContent="flex-end">
+          <SkrStack direction="row" justifyContent="flex-end" spacing={8}>
+            <SkrButton color="cancel" variant="outlined">
+              취소
+            </SkrButton>
             <SkrButton color="primary" variant="contained">
               저장
             </SkrButton>

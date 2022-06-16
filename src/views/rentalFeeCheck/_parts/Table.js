@@ -36,14 +36,17 @@ const Table = () => {
           <SkrTable>
             <SkrTableHead>
               <SkrTableRow>
-                <SkrTableCell width="33.3%"></SkrTableCell>
-                <SkrTableCell width="33.3%">구분</SkrTableCell>
-                <SkrTableCell width="33.3%">금액</SkrTableCell>
+                <SkrTableCell colSpan={2} width="67%" align="center">
+                  구분
+                </SkrTableCell>
+                <SkrTableCell width="33%" align="center">
+                  금액
+                </SkrTableCell>
               </SkrTableRow>
             </SkrTableHead>
             <SkrTableBody>
               <SkrTableRow>
-                <SkrTableCell>
+                <SkrTableCell rowSpan={3}>
                   <SkrTypography variant="b1">정상대여료</SkrTypography>
                 </SkrTableCell>
                 <SkrTableCell></SkrTableCell>
@@ -61,9 +64,6 @@ const Table = () => {
               </SkrTableRow>
               <SkrTableRow>
                 <SkrTableCell>
-                  <SkrTypography variant="b1">정상대여료</SkrTypography>
-                </SkrTableCell>
-                <SkrTableCell>
                   <SkrTypography variant="b1">최대할인금액</SkrTypography>
                 </SkrTableCell>
 
@@ -80,9 +80,6 @@ const Table = () => {
                 </SkrTableCell>
               </SkrTableRow>
               <SkrTableRow>
-                <SkrTableCell>
-                  <SkrTypography variant="b1">정상대여료</SkrTypography>
-                </SkrTableCell>
                 <SkrTableCell>
                   <SkrTypography variant="b1">최소대여금액</SkrTypography>
                 </SkrTableCell>
@@ -108,8 +105,12 @@ const Table = () => {
           <SkrTable>
             <SkrTableHead>
               <SkrTableRow>
-                <SkrTableCell width="50%">구분</SkrTableCell>
-                <SkrTableCell width="50%">금액</SkrTableCell>
+                <SkrTableCell width="50%" align="center">
+                  구분
+                </SkrTableCell>
+                <SkrTableCell width="50%" align="center">
+                  금액
+                </SkrTableCell>
               </SkrTableRow>
             </SkrTableHead>
             <SkrTableBody>

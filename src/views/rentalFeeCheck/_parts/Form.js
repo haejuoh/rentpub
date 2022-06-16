@@ -82,6 +82,13 @@ const Form = () => {
         </SkrGrid>
       </SkrGrid>
       <SkrGrid container columnSpacing={15} pt={15}>
+        <SkrGrid item xs={6}>
+          <InputLabelPositionLeft
+            label="단기차정명"
+            placeholder="Placeholder"
+            defaultValue="2019 G70 2.2D[디젤]2WD"
+          />
+        </SkrGrid>
         <SkrGrid item xs={3}>
           <InputLabelPositionLeft
             label="요금시작일"
@@ -110,8 +117,6 @@ const Form = () => {
             }}
           />
         </SkrGrid>
-        <SkrGrid item xs={3}></SkrGrid>
-        <SkrGrid item xs={3}></SkrGrid>
       </SkrGrid>
     </Section>
   );
