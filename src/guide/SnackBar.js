@@ -8,8 +8,8 @@ import {
   CheckIcon,
 } from "../assets/style/icons";
 import SkrStack from "../components/skr/SkrStack";
-import StatusIndicator from "../components/customed/Status/StatusIndicator";
-import StatusCheck from "../components/customed/Status/StatusCheck";
+import StatusIndicator from "../components/customed/status/StatusIndicator";
+import StatusCheck from "../components/customed/status/StatusCheck";
 
 const SnackBar = () => {
   const [open, setOpen] = React.useState(false);

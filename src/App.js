@@ -9,8 +9,8 @@ import Guide from "./views/Guide";
 import Sample from "./views/Sample";
 import RentalFeeCheck from "./views/rentalFeeCheck";
 import RentalFeeCheckRegist from "./views/rentalFeeCheck/Regist";
-import WorkGroupManagement from "./views/WorkGroupManagement";
-import WorkGroupManagementRegist from "./views/WorkGroupManagement/Regist";
+import WorkGroupManagement from "./views/workGroupManagement";
+import WorkGroupManagementRegist from "./views/workGroupManagement/Regist";
 
 const App = () => {
   const element = useRoutes([
