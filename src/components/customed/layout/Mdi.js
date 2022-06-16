@@ -1,84 +1,48 @@
 import React from "react";
-import { styled, makeStyles } from "@mui/styles";
-import { Button, Typography } from "@mui/material";
-import { ReactComponent as IconHome } from "../../../assets/images/icons/home.svg";
-import { ReactComponent as IconClose } from "../../../assets/images/icons/close.svg";
-import { ReactComponent as IconLockClosed } from "../../../assets/images/icons/lock-closed.svg";
-import { ReactComponent as IconOption } from "../../../assets/images/icons/options.svg";
-import { ReactComponent as IconTime } from "../../../assets/images/icons/time.svg";
-const mdiStyle = makeStyles((theme) => ({
-  wrap: {
-    padding: "15px 50px 0",
-    width: "calc(100vw - 65px)",
-    height: "57px",
-    display: "flex",
-    boxSizing: "border-box",
-    borderBottom: `1px solid ${theme.palette.border[700]}`,
-  },
-  list: {
-    display: "flex",
-    flex: 1,
-    gap: "8px",
-  },
-  item: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "spaceBetween",
-    padding: "11px 12px",
-    minWidth: "42px",
-    height: "42px",
-    boxSizing: "border-box",
-    border: `1px solid ${theme.palette.border[700]}`,
-    borderBottom: "none",
-    borderRadius: "5px 5px 0 0",
-    gap: "20px ",
-    color: `${theme.palette.grey[400]}`,
-    cursor: "pointer",
-    "& $menu": {
-      display: "flex",
-      alignItems: "center",
-      gap: "6px",
-    },
-    "&:hover": {
-      backgroundColor: `${theme.palette.background[700]}`,
-      color: `${theme.palette.grey[900]}`,
-      "& $menu": {
-        "& $button": {
-          "& svg": {
-            "& path": {
-              fill: `${theme.palette.grey[900]}`,
-            },
-          },
-        },
-      },
-    },
-    "&.is-active": {
-      backgroundColor: `${theme.palette.background[700]}`,
-      color: `${theme.palette.grey[900]}`,
-      "& $menu": {
-        "& $button": {
-          "& svg": {
-            "& path": {
-              fill: `${theme.palette.grey[900]}`,
-            },
-          },
-        },
-      },
-    },
-  },
-  itemActive: {
+import { styled } from "@mui/styles";
+import {
+  HomeIcon,
+  CloseIcon,
+  LockClosedIcon,
+  OptionIcon,
+  TimeIcon,
+} from "../../../assets/style/icons";
+import SkrTypography from "../../skr/SkrTypography";
+import SkrButton from "../../skr/SkrButton";
+
+const MdiWrap = styled("div")((theme) => ({
+  padding: "15px 50px 0",
+  width: "calc(100vw - 65px)",
+  height: "57px",
+  display: "flex",
+  boxSizing: "border-box",
+  borderBottom: `1px solid ${theme.borderColor}`,
+}));
+const MdiList = styled("ul")((theme) => ({
+  display: "flex",
+  flex: 1,
+  gap: "8px",
+}));
+const MdiItem = styled("li")(({ theme, active }) => ({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "spaceBetween",
+  padding: "11px 12px",
+  minWidth: "42px",
+  height: "42px",
+  boxSizing: "border-box",
+  border: `1px solid ${theme.borderColor}`,
+  borderBottom: "none",
+  borderRadius: "5px 5px 0 0",
+  gap: "20px ",
+  color: `${theme.palette.grey[400]}`,
+  cursor: "pointer",
+  "& $menu": {
     display: "flex",
     alignItems: "center",
-    justifyContent: "spaceBetween",
-    padding: "11px 12px",
-    minWidth: "42px",
-    height: "42px",
-    boxSizing: "border-box",
-    border: `1px solid ${theme.palette.border[700]}`,
-    borderBottom: "none",
-    borderRadius: "5px 5px 0 0",
-    gap: "20px ",
-    cursor: "pointer",
+    gap: "6px",
+  },
+  "&:hover": {
     backgroundColor: `${theme.palette.background[700]}`,
     color: `${theme.palette.grey[900]}`,
     "& $menu": {
@@ -91,75 +55,103 @@ const mdiStyle = makeStyles((theme) => ({
       },
     },
   },
-  menu: {
-    display: "flex",
-    alignItems: "center",
-    gap: "6px",
-  },
-  option: {
-    display: "flex",
-    alignItems: "center",
-    gap: "10px",
-  },
+}));
 
-  button: {
-    border: "none",
-    width: "18px",
-    height: "18px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 0,
-    backgroundColor: "transparent",
-    cursor: "pointer",
+const MdiItemActive = styled("li")((theme) => ({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "spaceBetween",
+  padding: "11px 12px",
+  minWidth: "42px",
+  height: "42px",
+  boxSizing: "border-box",
+  border: `1px solid ${theme.borderColor}`,
+  borderBottom: "none",
+  borderRadius: "5px 5px 0 0",
+  gap: "20px ",
+  cursor: "pointer",
+  backgroundColor: `${theme.palette.background[700]}`,
+  color: `${theme.palette.grey[900]}`,
+  "& $menu": {
+    "& $button": {
+      "& svg": {
+        "& path": {
+          fill: `${theme.palette.grey[900]}`,
+        },
+      },
+    },
   },
 }));
+const MdiMenu = styled("div")((theme) => ({
+  display: "flex",
+  alignItems: "center",
+  gap: "6px",
+}));
+const MdiOption = styled("div")((theme) => ({
+  display: "flex",
+  alignItems: "center",
+  gap: "10px",
+}));
+const MdiButton = styled("button")((theme) => ({
+  border: "none",
+  width: "18px",
+  height: "18px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: 0,
+  backgroundColor: "transparent",
+  cursor: "pointer",
+}));
 const Mdi = ({ tabData }) => {
-  const mdi = mdiStyle();
   return (
-    <div className={mdi.wrap}>
-      <ul className={mdi.list}>
+    <MdiWrap>
+      <MdiList>
         {tabData.map((tab, idx) => {
           switch (tab.type) {
             case "home":
               return (
-                <li key={idx} className={mdi.item}>
-                  <button className={mdi.button}>
-                    <IconHome />
-                  </button>
-                </li>
+                <MdiItem>
+                  <MdiButton>
+                    <HomeIcon />
+                  </MdiButton>
+                </MdiItem>
               );
             default:
               return (
-                <li
+                <MdiItem
                   key={idx}
-                  className={tab.active === true ? mdi.itemActive : mdi.item}
+                  // className={tab.active === true ? mdi.itemActive : mdi.item}
                 >
-                  <div className={mdi.menu}>
-                    <button className={mdi.button}>
-                      <IconLockClosed />
-                    </button>
-                    <Typography variant="bt">{tab.label}</Typography>
-                  </div>
-                  <button className={mdi.button}>
-                    <IconClose />
-                  </button>
-                </li>
+                  <MdiMenu>
+                    <MdiButton>
+                      <LockClosedIcon />
+                    </MdiButton>
+                    <SkrTypography variant="bt">{tab.label}</SkrTypography>
+                  </MdiMenu>
+                  <MdiButton>
+                    <CloseIcon />
+                  </MdiButton>
+                </MdiItem>
               );
           }
         })}
-      </ul>
-      <div className={mdi.option}>
-        <Button color="function" variant="contained" startIcon={<IconTime />}>
+      </MdiList>
+      <MdiOption>
+        <SkrButton
+          color="function"
+          variant="contained"
+          startIcon={<TimeIcon />}
+        >
           최근 접속
-        </Button>
-        <div className={mdi.item}>
-          <button className={mdi.button}>
-            <IconOption />
-          </button>
-        </div>
-      </div>
-    </div>
+        </SkrButton>
+        <MdiItem>
+          <MdiButton>
+            <OptionIcon />
+          </MdiButton>
+        </MdiItem>
+      </MdiOption>
+    </MdiWrap>
   );
 };
 

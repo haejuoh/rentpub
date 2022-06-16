@@ -1,4 +1,5 @@
 import { ReactComponent as IconBookmark } from "../images/icons/bookmark.svg";
+import { ReactComponent as IconBookmarks } from "../images/icons/bookmarks.svg";
 import { ReactComponent as IconChevron } from "../images/icons/chevron-forward.svg";
 import { ReactComponent as IconChevronDown } from "../images/icons/chevron-down.svg";
 import { ReactComponent as IconInfo } from "../images/icons/information-circle.svg";
@@ -25,9 +26,14 @@ import { ReactComponent as IconHelp } from "../images/icons/help.svg";
 import { ReactComponent as IconSetting } from "../images/icons/settings.svg";
 import { ReactComponent as IconPencil } from "../images/icons/pencil.svg";
 import { ReactComponent as IconMore } from "../images/icons/ellipsis-vertical.svg";
+import { ReactComponent as IconMenu } from "../images/icons/menu.svg";
 import { ReactComponent as IconCalendar } from "../images/icons/calendar.svg";
+import { ReactComponent as IconHome } from "../images/icons/home.svg";
+import { ReactComponent as IconLockClosed } from "../images/icons/lock-closed.svg";
+import { ReactComponent as IconTime } from "../images/icons/time.svg";
 
 const BookmarkIcon = () => <IconBookmark className="icon" />;
+const BookmarksIcon = () => <IconBookmarks className="icon" />;
 const ChevronForwardIcon = () => <IconChevron className="icon" />;
 const ChevronDownIcon = () => <IconChevronDown className="icon" />;
 const InfoIcon = () => <IconInfo className="icon" />;
@@ -54,10 +60,15 @@ const HelpIcon = () => <IconHelp className="icon" />;
 const SettingIcon = () => <IconSetting className="icon" />;
 const PencilIcon = () => <IconPencil className="icon" />;
 const MoreIcon = () => <IconMore className="icon" />;
+const MenuIcon = () => <IconMenu className="icon" />;
 const CalendarIcon = () => <IconCalendar className="icon" />;
+const HomeIcon = () => <IconHome className="icon" />;
+const LockClosedIcon = () => <IconLockClosed className="icon" />;
+const TimeIcon = () => <IconTime className="icon" />;
 
 export {
   BookmarkIcon,
+  BookmarksIcon,
   ChevronForwardIcon,
   ChevronDownIcon,
   InfoIcon,
@@ -84,5 +95,9 @@ export {
   SettingIcon,
   PencilIcon,
   MoreIcon,
+  MenuIcon,
   CalendarIcon,
+  HomeIcon,
+  LockClosedIcon,
+  TimeIcon,
 };
