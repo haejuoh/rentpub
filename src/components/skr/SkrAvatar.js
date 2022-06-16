@@ -1,5 +1,6 @@
 import React from "react";
 import { Avatar } from "@mui/material";
+import { styled } from "@mui/styles";
 
 /**
  * @typedef {import('@mui/material').AvatarProps} AvatarProps
@@ -8,6 +9,16 @@ import { Avatar } from "@mui/material";
 /**
  * @type { React.FC<AvatarProps> }
  */
+
+const AvatarStyled = styled(Avatar)(({ theme }) => ({
+  "&.MuiAvatar-root": {
+    width: "24px",
+    height: "24px",
+    borderRadius: 2,
+    fontSize: "0.75rem",
+    backgroundColor: `${theme.palette.primary.main}`,
+  },
+}));
 
 const SkrAvatar = ({
   alt,
@@ -20,7 +31,7 @@ const SkrAvatar = ({
   children,
 }) => {
   return (
-    <Avatar
+    <AvatarStyled
       alt={alt}
       imgProps={imgProps}
       sizes={sizes}
@@ -30,7 +41,7 @@ const SkrAvatar = ({
       variant={variant}
     >
       {children}
-    </Avatar>
+    </AvatarStyled>
   );
 };
 
