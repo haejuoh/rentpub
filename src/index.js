@@ -7,16 +7,9 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 
-import { createStore } from "redux";
-import { Provider } from "react-redux";
-// import reducer from "./components/reducer";
-import reducer from "./components/customed/snackbar/reducer";
-
 ReactDOM.render(
   <BrowserRouter>
-    <Provider store={createStore(reducer)}>
       <App />
-    </Provider>
   </BrowserRouter>,
   document.getElementById("root")
 );

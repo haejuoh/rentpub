@@ -1,54 +1,57 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
-import { IconButton, Typography, Grid } from "@mui/material/";
+import { IconButton, Typography, Grid, Snackbar } from "@mui/material/";
 import { CodeBox } from "../../../assets/style/guideStyle";
 import IconSnackbarSuccessView from "../../../assets/images/icons/snackbar-success-view.svg";
 import IconSnackbarSuccessInfo from "../../../assets/images/icons/snackbar-success-info.svg";
-import IconSnackbarSuccessWaring from "../../../assets/images/icons/snackbar-success-warning.svg";
-
-import { useDispatch } from "react-redux";
-import { showSnackbar } from "./actions";
+import IconSnackbarSuccessWarning from "../../../assets/images/icons/snackbar-success-warning.svg";
 import Demo from "./Demo";
 
 export const SnackBarSample = () => {
-  const dispatch = useDispatch();
+  const [snackPack, setSnackPack] = React.useState([]);
+  const [open, setOpen] = React.useState(false);
+  const [messageInfo, setMessageInfo] = React.useState(undefined);
+  const [snackData, setSnackData] = React.useState({});
+
+  React.useEffect(() => {
+    if (snackPack.length && !messageInfo) {
+      // Set a new snack when we don't have an active one
+      setMessageInfo({ ...snackPack[0] });
+      setSnackPack((prev) => prev.slice(1));
+      setOpen(true);
+    } else if (snackPack.length && messageInfo && open) {
+      // Close an active snack when a new one is added
+      setOpen(false);
+    }
+  }, [snackPack, messageInfo, open]);
 
   function showSnack1() {
-    dispatch(
-      showSnackbar({
-        snackData: {
-          type: "success",
-          message: `단기예약정보가 변경되었습니다`,
-          icon: IconSnackbarSuccessView,
-          link: <Link href="#">상세보기</Link>,
-        },
-      })
-    );
+    setSnackData({
+      type: "success",
+      message: `단기예약정보가 변경되었습니다`,
+      icon: IconSnackbarSuccessView,
+      link: <Link href="#">상세보기</Link>,
+    });
+    setOpen(true);
   }
 
   function showSnack2() {
-    dispatch(
-      showSnackbar({
-        snackData: {
-          type: "info",
-          message: `단기예약정보가 변경되었습니다`,
-          icon: IconSnackbarSuccessInfo,
-        },
-      })
-    );
+    setSnackData({
+      type: "info",
+      message: `단기예약정보가 변경되었습니다`,
+      icon: IconSnackbarSuccessInfo,
+    });
+    setOpen(true);
   }
 
   function showSnack3() {
-    dispatch(
-      showSnackbar({
-        snackData: {
-          type: "warning",
-          message: `단기예약정보가 변경되었습니다`,
-          icon: IconSnackbarSuccessWaring,
-        },
-      })
-    );
+    setSnackData({
+      type: "warning",
+      message: `단기예약정보가 변경되었습니다`,
+      icon: IconSnackbarSuccessWarning,
+    });
+    setOpen(true);
   }
 
   return (
@@ -77,35 +80,40 @@ export const SnackBarSample = () => {
             >
               Warning Snackbar
             </Button>
-            <Demo />
+            <Demo
+              snackData={snackData}
+              showSnackbar={open}
+              onHideSnackbar={() => setOpen(false)}
+            />
           </div>
         </Grid>
         <Grid item xs={6}>
           <CodeBox>
             <pre>{`// Click Button
-<Button variant="outlined" onClick={handleClickOpen}>
-    Open Modal
+<Button
+  variant="outlined"
+  onClick={showSnack1}
+  style={{ margin: "0 10px 0 0" }}
+>
+  Success Snackbar2
+</Button>
+<Button
+  variant="outlined"
+  onClick={showSnack2}
+  style={{ margin: "0 10px 0 0" }}
+>
+  Info Snackbar
+</Button>
+<Button
+  variant="outlined"
+  onClick={showSnack3}
+  style={{ margin: "0 10px 0 0" }}
+>
+  Warning Snackbar
 </Button>
 
-// Modal 
-// * Default( size="sm" )
-// ** size property ( sm / md / lg / xl )
-<Modal onClose={handleClose} open={open}>
-    <ModalTitle id="customized-dialog-title" onClose={handleClose}>
-        Title
-    </ModalTitle>
-    <DialogContent>
-        <Typography gutterBottom>Contents</Typography>
-    </DialogContent>
-    <DialogActions>
-        <Button color="modal" onClick={handleClose}>
-            취소
-        </Button>
-        <Button color="sub" variant="contained" onClick={handleClose}>
-            확인
-        </Button>
-    </DialogActions>
-</Modal>
+// Snackbar
+<Demo snackData={snackData} showSnackbar={open} onHideSnackbar={()=>setOpen(false)} />
 `}</pre>
           </CodeBox>
         </Grid>

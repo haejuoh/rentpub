@@ -1,12 +1,9 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
 import Snackbar from "@mui/material/Snackbar";
 import Button from "@mui/material/Button";
 import Alert from "@mui/material/Alert";
 import AlertTitle from "@mui/material/AlertTitle";
 import Link from "@mui/material/Link";
-import * as actionCreators from "./actions";
 import { styled } from "@mui/material/styles";
 
 const SnackbarEx = styled(Snackbar)(({ theme }) => ({
@@ -66,10 +63,10 @@ const SnackbarEx = styled(Snackbar)(({ theme }) => ({
       },
     },
   },
-  "& .MuiAlert-filledSuccess": {},
 }));
 
 function Snackbars({ snackData, showSnackbar, onHideSnackbar }) {
+  console.log(snackData,showSnackbar)
   const handleCloseSuccessSnack = (event, reason) => {
     if (reason !== "clickaway") {
       onHideSnackbar();
@@ -113,34 +110,4 @@ function Snackbars({ snackData, showSnackbar, onHideSnackbar }) {
     </SnackbarEx>
   );
 }
-
-Snackbars.propTypes = {
-  snackData: PropTypes.exact({
-    type: PropTypes.string,
-    title: PropTypes.string,
-    message: PropTypes.string,
-    icon: PropTypes.string,
-    link: PropTypes.string,
-    action: PropTypes.exact({
-      text: PropTypes.string,
-      clicked: PropTypes.func,
-    }),
-  }).isRequired,
-  showSnackbar: PropTypes.bool.isRequired,
-  onHideSnackbar: PropTypes.func.isRequired,
-};
-
-const mapStateToProps = (state) => {
-  return {
-    showSnackbar: state.showSnackbar,
-    snackData: state.snackData,
-  };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    onHideSnackbar: () => dispatch(actionCreators.hideSnackbar()),
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Snackbars);
+export default Snackbars
