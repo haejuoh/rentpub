@@ -2,6 +2,7 @@ import React from "react";
 import SkrFormControl from "../../../skr/SkrFormControl";
 import SkrInputLabel from "../../../skr/SkrInputLabel";
 import SkrStack from "../../../skr/SkrStack";
+import * as FormStyled from "./style";
 
 const FormContents = ({ label, required, position, children, ...rest }) => {
   return (
@@ -17,9 +18,7 @@ const FormContents = ({ label, required, position, children, ...rest }) => {
       >
         {label}
       </SkrInputLabel>
-      <SkrStack direction="row" spacing={15}>
-        {children}
-      </SkrStack>
+      <FormStyled.Contents>{children}</FormStyled.Contents>
     </SkrFormControl>
   );
 };

@@ -8,7 +8,11 @@ import FormContents from "../../../components/customed/form/contents/FormContent
 import SelectMultipleLabelLeft from "../../../components/customed/form/select/SelectMultipleLabelLeft";
 import LySectionInfo from "../../../components/customed/layout/LySectionInfo";
 import Segment from "../../../components/customed/form/radio/Segment";
-
+import InputLabelPositionLeft from "../../../components/customed/form/input/InputLabelPositionLeft";
+import SkrIconButton from "../../../components/skr/SkrIconButton";
+import { CalendarIcon } from "../../../assets/style/icons";
+import InputLabelHidden from "./../../../components/customed/form/input/InputLabelHidden";
+import SkrTypography from "./../../../components/skr/SkrTypography";
 const TitleDefault = {
   title: "작업자 근무파트 정보",
   desc: "",
@@ -90,6 +94,29 @@ const Info = () => {
         <SkrGrid item xs>
           <FormContents label="유효일자" required={true} position="left">
             {/* datepicker */}
+            <InputLabelHidden
+              placeholder="Placeholder"
+              defaultValue="2022-06-06"
+              InputProps={{
+                endAdornment: (
+                  <SkrIconButton>
+                    <CalendarIcon />
+                  </SkrIconButton>
+                ),
+              }}
+            />
+            <SkrTypography variant="b1">~</SkrTypography>
+            <InputLabelHidden
+              placeholder="Placeholder"
+              defaultValue="2022-06-06"
+              InputProps={{
+                endAdornment: (
+                  <SkrIconButton>
+                    <CalendarIcon />
+                  </SkrIconButton>
+                ),
+              }}
+            />
           </FormContents>
         </SkrGrid>
         <SkrGrid item xs={12}>
