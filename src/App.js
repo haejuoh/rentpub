@@ -1,13 +1,14 @@
 import React from "react";
 import { useRoutes } from "react-router-dom";
-import { ThemeProvider, styled } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
 import { theme } from "./assets/style/customTheme";
 import DefaultLayout from "./layouts/DefaultLayout";
+import { Container } from "@mui/material";
 import Guide from "./views/Guide";
 import Sample from "./views/Sample";
-import { Container } from "@mui/material";
 import RentalFeeCheck from "./views/rentalFeeCheck";
+import RentalFeeCheckRegist from "./views/rentalFeeCheck/Regist";
 import WorkGroupManagement from "./views/WorkGroupManagement";
 import WorkGroupManagementRegist from "./views/WorkGroupManagement/Regist";
 
@@ -33,7 +34,10 @@ const App = () => {
     {
       path: "/rentalFeeCheck",
       element: <DefaultLayout />,
-      children: [{ index: true, element: <RentalFeeCheck /> }],
+      children: [
+        { index: true, element: <RentalFeeCheck /> },
+        { path: "regist", element: <RentalFeeCheckRegist /> },
+      ],
     },
     {
       path: "/WorkGroupManagement",

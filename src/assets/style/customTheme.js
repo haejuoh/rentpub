@@ -2007,6 +2007,7 @@ const theme = createTheme({
         },
       },
     },
+    //tooltip
     MuiTooltip: {
       styleOverrides: {
         popper: {
@@ -2014,6 +2015,7 @@ const theme = createTheme({
         },
       },
     },
+    //autocomplete
     MuiAutocomplete: {
       styleOverrides: {
         root: {
@@ -2070,6 +2072,7 @@ const theme = createTheme({
         },
       },
     },
+    //snackbar
     MuiSnackbar: {
       styleOverrides: {
         root: {
@@ -2100,6 +2103,35 @@ const theme = createTheme({
           right: "15px",
           top: "50%",
           transform: "translateY(-50%)",
+        },
+      },
+    },
+    //table
+    MuiTableCell: {
+      styleOverrides: {
+        root: {
+          padding: "0 8px",
+          height: "40px",
+        },
+        head: {
+          fontSize: fontSystem.sb1.fontSize,
+          fontWeight: fontSystem.sb1.fontWeight,
+          color: colorSystem.grey.b600,
+          "&:last-child": {
+            position: "relative",
+            "&:before": {
+              content: "''",
+              display: "inline-block",
+              width: "1px",
+              height: "14px",
+              backgroundColor: colorSystem.border.grid,
+              clear: "both",
+              position: "absolute",
+              left: 0,
+              top: "50%",
+              transform: "translateY(-50%)",
+            },
+          },
         },
       },
     },

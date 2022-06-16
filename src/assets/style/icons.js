@@ -25,6 +25,7 @@ import { ReactComponent as IconHelp } from "../images/icons/help.svg";
 import { ReactComponent as IconSetting } from "../images/icons/settings.svg";
 import { ReactComponent as IconPencil } from "../images/icons/pencil.svg";
 import { ReactComponent as IconMore } from "../images/icons/ellipsis-vertical.svg";
+import { ReactComponent as IconCalendar } from "../images/icons/calendar.svg";
 
 const BookmarkIcon = () => <IconBookmark className="icon" />;
 const ChevronForwardIcon = () => <IconChevron className="icon" />;
@@ -53,6 +54,7 @@ const HelpIcon = () => <IconHelp className="icon" />;
 const SettingIcon = () => <IconSetting className="icon" />;
 const PencilIcon = () => <IconPencil className="icon" />;
 const MoreIcon = () => <IconMore className="icon" />;
+const CalendarIcon = () => <IconCalendar className="icon" />;
 
 export {
   BookmarkIcon,
@@ -82,4 +84,5 @@ export {
   SettingIcon,
   PencilIcon,
   MoreIcon,
+  CalendarIcon,
 };
