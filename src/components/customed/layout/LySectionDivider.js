@@ -1,7 +1,5 @@
 import React, { Fragment } from "react";
 import { styled } from "@mui/styles";
-import { Box, Grid } from "@mui/material";
-import { style } from "@mui/system";
 
 const LySectionDivider = ({ children }) => {
   const LyContainer = styled("div")(() => ({

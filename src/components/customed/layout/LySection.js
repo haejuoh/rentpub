@@ -1,10 +1,10 @@
 import React from "react";
-import { Stack } from "@mui/material";
+import SkrStack from "../../skr/SkrStack";
 
 const LySection = ({ children, ...rest }) => {
   return (
     <>
-      <Stack spacing={30}>{children}</Stack>
+      <SkrStack spacing={30}>{children}</SkrStack>
     </>
   );
 };

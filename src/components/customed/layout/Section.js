@@ -1,14 +1,16 @@
 import PropTypes from "prop-types";
 import { styled } from "@mui/material/styles";
-import { Paper, IconButton, Grid, Stack } from "@mui/material";
-import { ReactComponent as IconSearch } from "../../../assets/images/icons/search.svg";
 import { SubTitle } from "../../Title";
+import SkrStack from "../../skr/SkrStack";
+import SkrIconButton from "../../skr/SkrIconButton";
+import { SearchIcon } from "../../../assets/style/icons";
 
-const SectionStyle = styled(Paper)(({ theme }) => ({
+const SectionStyle = styled("div")(({ theme }) => ({
   position: "relative",
   height: "auto",
   padding: "30px",
   margin: 0,
+  backgroundColor: `${theme.palette.background[500]}`,
   border: "none",
   borderRadius: `${theme.shape.borderRadius}px`,
   boxShadow: `${theme.shadows[2]}`,
@@ -34,11 +36,11 @@ export const Section = ({
       {variant === "toggle" && <SubTitle titleData={titleToggle} />}
       {children}
       {variant === "search" && (
-        <Stack direction="row" justifyContent="flex-end" pt={18}>
-          <IconButton color="primary">
-            <IconSearch />
-          </IconButton>
-        </Stack>
+        <SkrStack direction="row" justifyContent="flex-end" pt={18}>
+          <SkrIconButton color="primary">
+            <SearchIcon />
+          </SkrIconButton>
+        </SkrStack>
       )}
     </SectionStyle>
   );

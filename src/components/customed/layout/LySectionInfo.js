@@ -1,12 +1,12 @@
 import React from "react";
-import { Grid } from "@mui/material";
+import SkrGrid from "../../skr/SkrGrid";
 
 const LySectionInfo = ({ children, ...rest }) => {
   return (
     <>
-      <Grid container spacing={15} alignItems="center">
+      <SkrGrid container spacing={15} alignItems="center">
         {children}
-      </Grid>
+      </SkrGrid>
     </>
   );
 };
