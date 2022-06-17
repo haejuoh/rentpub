@@ -41,7 +41,7 @@ export const SnackBarSample = () => {
   function showSnack2() {
     setSnackData({
       type: "info",
-      message: `단기예약정보가 변경되었습니다`,
+      message: `단기예약정보가 변경되었습니다2`,
       icon: AlertCircleIcon,
     });
     setOpen(true);
@@ -50,7 +50,7 @@ export const SnackBarSample = () => {
   function showSnack3() {
     setSnackData({
       type: "warning",
-      message: `단기예약정보가 변경되었습니다`,
+      message: `단기예약정보가 변경되었습니다3`,
       icon: SadIcon,
     });
     setOpen(true);
