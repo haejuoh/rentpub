@@ -28,7 +28,7 @@ const titleData = [
   },
   {
     type: "bookmark",
-    menu: "대여료조회",
+    menu: "대여료등록",
   },
 ];
 
