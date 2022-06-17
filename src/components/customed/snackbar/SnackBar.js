@@ -8,7 +8,7 @@ import {
   HappyIcon,
   AlertCircleIcon,
 } from "../../../assets/style/icons";
-import Demo from "./Demo";
+import Snackbars from "./Snackbars";
 
 export const SnackBarSample = () => {
   const [snackPack, setSnackPack] = React.useState([]);
@@ -82,7 +82,7 @@ export const SnackBarSample = () => {
             >
               Warning Snackbar
             </Button>
-            <Demo
+            <Snackbars
               snackData={snackData}
               showSnackbar={open}
               onHideSnackbar={() => setOpen(false)}
@@ -115,7 +115,7 @@ export const SnackBarSample = () => {
 </Button>
 
 // Snackbar
-<Demo snackData={snackData} showSnackbar={open} onHideSnackbar={()=>setOpen(false)} />
+<Snackbars snackData={snackData} showSnackbar={open} onHideSnackbar={()=>setOpen(false)} />
 `}</pre>
           </CodeBox>
         </Grid>

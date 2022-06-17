@@ -1606,7 +1606,7 @@ export const SelectAutoCompleteLabelPositionLeftList = () => {
 };
 
 // checkbox
-const label = { inputProps: { "aria-label": "Checkbox demo" } };
+const label = { inputProps: { "aria-label": "Checkbox Snackbars" } };
 export const CheckboxLabelHiddenList = () => {
   return (
     <>

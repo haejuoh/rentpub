@@ -7,7 +7,7 @@ import * as LayoutStyled from "../../assets/style/common";
 import SkrStack from "../../components/skr/SkrStack";
 import SkrButton from "../../components/skr/SkrButton";
 import TitlePage from "../../components/customed/title/page/TitlePage";
-import Demo from "../../components/customed/snackbar/Demo";
+import Snackbars from "../../components/customed/snackbar/Snackbars";
 import {
   ExcelIcon,
   SadIcon,
@@ -100,7 +100,7 @@ const Index = () => {
             <SkrButton color="primary" variant="contained" onClick={showSnack1}>
               승인요청
             </SkrButton>
-            <Demo
+            <Snackbars
               snackData={snackData}
               showSnackbar={open}
               onHideSnackbar={() => setOpen(false)}
