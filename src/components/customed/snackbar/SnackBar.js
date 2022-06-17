@@ -6,7 +6,7 @@ import { CodeBox } from "../../../assets/style/guideStyle";
 import IconSnackbarSuccessView from "../../../assets/images/icons/snackbar-success-view.svg";
 import IconSnackbarSuccessInfo from "../../../assets/images/icons/snackbar-success-info.svg";
 import IconSnackbarSuccessWarning from "../../../assets/images/icons/snackbar-success-warning.svg";
-import Demo from "./Demo";
+import Snackbars from "./Snackbars";
 
 export const SnackBarSample = () => {
   const [snackPack, setSnackPack] = React.useState([]);
@@ -80,7 +80,7 @@ export const SnackBarSample = () => {
             >
               Warning Snackbar
             </Button>
-            <Demo
+            <Snackbars
               snackData={snackData}
               showSnackbar={open}
               onHideSnackbar={() => setOpen(false)}
