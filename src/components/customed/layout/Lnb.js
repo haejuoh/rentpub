@@ -48,13 +48,23 @@ const menuData = [
   },
   {
     type: "default",
-    name: "사용자",
-    link: "/user",
+    name: "대여료조회",
+    link: "/rentalFeeCheck",
   },
   {
     type: "default",
-    name: "직무관리",
-    link: "/task",
+    name: "대여료등록",
+    link: "/rentalFeeCheck/regist",
+  },
+  {
+    type: "default",
+    name: "작업자근무파트관리",
+    link: "/workGroupManagement",
+  },
+  {
+    type: "default",
+    name: "작업자근무파트등록",
+    link: "/workGroupManagement/regist",
   },
 ];
 
