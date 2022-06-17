@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { styled } from "@mui/material/styles";
-import { SubTitle } from "../../Title";
+// import { SubTitle } from "../../Title";
+import TitleSub from "../title/sub/TitleSub";
 import SkrStack from "../../skr/SkrStack";
 import SkrIconButton from "../../skr/SkrIconButton";
 import { SearchIcon } from "../../../assets/style/icons";
@@ -33,7 +34,7 @@ export const Section = ({
 }) => {
   return (
     <SectionStyle className={"section-" + variant} {...rest}>
-      {variant === "toggle" && <SubTitle titleData={titleToggle} />}
+      {variant === "toggle" && <TitleSub titleData={titleToggle} />}
       {children}
       {variant === "search" && (
         <SkrStack direction="row" justifyContent="flex-end" pt={18}>
