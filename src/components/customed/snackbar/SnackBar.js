@@ -3,11 +3,14 @@ import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
 import { IconButton, Typography, Grid, Snackbar } from "@mui/material/";
 import { CodeBox } from "../../../assets/style/guideStyle";
-import {
-  SadIcon,
-  HappyIcon,
-  AlertCircleIcon,
-} from "../../../assets/style/icons";
+// import {
+//   SadIcon,
+//   HappyIcon,
+//   AlertCircleIcon,
+// } from "../../../assets/style/icons";
+import IconSnackbarView from "../../../assets/images/icons/snackbar-view.svg";
+import IconSnackbarInfo from "../../../assets/images/icons/snackbar-info.svg";
+import IconSnackbarWarning from "../../../assets/images/icons/snackbar-warning.svg";
 import Snackbars from "./Snackbars";
 
 export const SnackBarSample = () => {
@@ -32,7 +35,8 @@ export const SnackBarSample = () => {
     setSnackData({
       type: "success",
       message: `단기예약정보가 변경되었습니다`,
-      icon: HappyIcon,
+      // icon: HappyIcon,
+      icon: IconSnackbarView,
       link: <Link href="#">상세보기</Link>,
     });
     setOpen(true);
@@ -42,7 +46,8 @@ export const SnackBarSample = () => {
     setSnackData({
       type: "info",
       message: `단기예약정보가 변경되었습니다2`,
-      icon: AlertCircleIcon,
+      // icon: AlertCircleIcon,
+      icon: IconSnackbarInfo,
     });
     setOpen(true);
   }
@@ -51,7 +56,8 @@ export const SnackBarSample = () => {
     setSnackData({
       type: "warning",
       message: `단기예약정보가 변경되었습니다3`,
-      icon: SadIcon,
+      // icon: SadIcon,
+      icon: IconSnackbarWarning,
     });
     setOpen(true);
   }
