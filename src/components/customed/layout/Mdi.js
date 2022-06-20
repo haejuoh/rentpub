@@ -23,65 +23,68 @@ const MdiList = styled("ul")((theme) => ({
   flex: 1,
   gap: "8px",
 }));
-const MdiItem = styled("li")(({ theme, active }) => ({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "spaceBetween",
-  padding: "11px 12px",
-  minWidth: "42px",
-  height: "42px",
-  boxSizing: "border-box",
-  border: `1px solid ${theme.borderColor}`,
-  borderBottom: "none",
-  borderRadius: "5px 5px 0 0",
-  gap: "20px ",
-  color: `${theme.palette.grey[400]}`,
-  cursor: "pointer",
-  "& $menu": {
-    display: "flex",
-    alignItems: "center",
-    gap: "6px",
-  },
-  "&:hover": {
-    backgroundColor: `${theme.palette.background[700]}`,
-    color: `${theme.palette.grey[900]}`,
-    "& $menu": {
-      "& $button": {
-        "& svg": {
-          "& path": {
-            fill: `${theme.palette.grey[900]}`,
+const MdiItem = styled("li")(({ theme, active }) =>
+  active
+    ? {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "spaceBetween",
+        padding: "11px 12px",
+        minWidth: "42px",
+        height: "42px",
+        boxSizing: "border-box",
+        border: `1px solid ${theme.borderColor}`,
+        borderBottom: "none",
+        borderRadius: "5px 5px 0 0",
+        gap: "20px ",
+        cursor: "pointer",
+        backgroundColor: `${theme.palette.background[700]}`,
+        color: `${theme.palette.grey[900]}`,
+        "& $menu": {
+          "& $button": {
+            "& svg": {
+              "& path": {
+                fill: `${theme.palette.grey[900]}`,
+              },
+            },
           },
         },
-      },
-    },
-  },
-}));
-
-const MdiItemActive = styled("li")((theme) => ({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "spaceBetween",
-  padding: "11px 12px",
-  minWidth: "42px",
-  height: "42px",
-  boxSizing: "border-box",
-  border: `1px solid ${theme.borderColor}`,
-  borderBottom: "none",
-  borderRadius: "5px 5px 0 0",
-  gap: "20px ",
-  cursor: "pointer",
-  backgroundColor: `${theme.palette.background[700]}`,
-  color: `${theme.palette.grey[900]}`,
-  "& $menu": {
-    "& $button": {
-      "& svg": {
-        "& path": {
-          fill: `${theme.palette.grey[900]}`,
+      }
+    : {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "spaceBetween",
+        padding: "11px 12px",
+        minWidth: "42px",
+        height: "42px",
+        boxSizing: "border-box",
+        border: `1px solid ${theme.borderColor}`,
+        borderBottom: "none",
+        borderRadius: "5px 5px 0 0",
+        gap: "20px ",
+        color: `${theme.palette.grey[400]}`,
+        cursor: "pointer",
+        "& $menu": {
+          display: "flex",
+          alignItems: "center",
+          gap: "6px",
         },
-      },
-    },
-  },
-}));
+        "&:hover": {
+          backgroundColor: `${theme.palette.background[700]}`,
+          color: `${theme.palette.grey[900]}`,
+          "& $menu": {
+            "& $button": {
+              "& svg": {
+                "& path": {
+                  fill: `${theme.palette.grey[900]}`,
+                },
+              },
+            },
+          },
+        },
+      }
+);
+
 const MdiMenu = styled("div")((theme) => ({
   display: "flex",
   alignItems: "center",
@@ -121,6 +124,7 @@ const Mdi = ({ tabData }) => {
               return (
                 <MdiItem
                   key={idx}
+                  active={tab.active}
                   // className={tab.active === true ? mdi.itemActive : mdi.item}
                 >
                   <MdiMenu>

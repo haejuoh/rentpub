@@ -164,8 +164,8 @@ const DataGridActionField = () => {
           <DataGrid
             columnData={columnsButton}
             rowData={rows}
-            customNoRowsOverlay={<NoRows message="데이터 없음" />}
-            customNoResultsOverlay={<NoResults message="결과 없음" />}
+            customNoRowsOverlay={() => <NoRows message="데이터 없음" />}
+            customNoResultsOverlay={() => <NoResults message="결과 없음" />}
             isCheckbox={true}
           />
         </SkrBox>
@@ -176,8 +176,8 @@ const DataGridActionField = () => {
           <DataGrid
             columnData={columnsSwitch}
             rowData={rows}
-            customNoRowsOverlay={<NoRows message="데이터 없음" />}
-            customNoResultsOverlay={<NoResults message="결과 없음" />}
+            ccustomNoRowsOverlay={() => <NoRows message="데이터 없음" />}
+            customNoResultsOverlay={() => <NoResults message="결과 없음" />}
             isCheckbox={true}
           />
         </SkrBox>

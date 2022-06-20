@@ -99,8 +99,8 @@ const DataGridDefault = () => {
           <DataGrid
             columnData={columns}
             rowData={rows}
-            customNoRowsOverlay={<NoRows message="데이터 없음" />}
-            customNoResultsOverlay={<NoResults message="결과 없음" />}
+            customNoRowsOverlay={() => <NoRows message="데이터 없음" />}
+            customNoResultsOverlay={() => <NoResults message="결과 없음" />}
             isCheckbox={false}
           />
         </SkrBox>
@@ -111,8 +111,8 @@ const DataGridDefault = () => {
           <DataGrid
             columnData={columns}
             rowData={rows}
-            customNoRowsOverlay={<NoRows message="데이터 없음" />}
-            customNoResultsOverlay={<NoResults message="결과 없음" />}
+            customNoRowsOverlay={() => <NoRows message="데이터 없음" />}
+            customNoResultsOverlay={() => <NoResults message="결과 없음" />}
             isCheckbox={true}
           />
         </SkrBox>
