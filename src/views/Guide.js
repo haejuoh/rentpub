@@ -109,7 +109,6 @@ const Guide = () => {
             <Tab label="Badge" value="2" />
             <Tab label="Button" value="3" />
             <Tab label="Form" value="4" />
-            <Tab label="List" value="5" />
             <Tab label="DataGrid" value="6" />
             <Tab label="Modal" value="7" />
             <Tab label="Legend" value="8" />
