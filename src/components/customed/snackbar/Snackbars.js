@@ -30,7 +30,7 @@ const SnackbarEx = styled(Snackbar)(({ theme }) => ({
         svg: {
           width: "17.56px",
           height: "17.56px",
-          margin: "10px 10px 0 0",
+          margin: "0 10px 0 0",
           lineHeight: "19px",
         },
         "& img": {
@@ -77,7 +77,7 @@ function Snackbars({ snackData, showSnackbar, onHideSnackbar }) {
   const snackTitle = snackData.title ? (
     <AlertTitle>{snackData.title}</AlertTitle>
   ) : null;
-  const snackIcon = snackData.icon ? <img src={snackData.icon} /> : null;
+  const snackIcon = snackData.icon ? snackData.icon() : null;
   const snackLink = snackData.link ? (
     <Link href="#">{snackData.link}</Link>
   ) : null;

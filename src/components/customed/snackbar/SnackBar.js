@@ -3,14 +3,11 @@ import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
 import { IconButton, Typography, Grid, Snackbar } from "@mui/material/";
 import { CodeBox } from "../../../assets/style/guideStyle";
-// import {
-//   SadIcon,
-//   HappyIcon,
-//   AlertCircleIcon,
-// } from "../../../assets/style/icons";
-import HappyIcon from "../../../assets/images/icons/happy.svg";
-import SadIcon from "../../../assets/images/icons/sad.svg";
-import AlertCircleIcon from "../../../assets/images/icons/alert-circle.svg";
+import {
+  SadIcon,
+  HappyIcon,
+  AlertCircleIcon,
+} from "../../../assets/style/icons";
 import Snackbars from "./Snackbars";
 
 export const SnackBarSample = () => {
