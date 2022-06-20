@@ -3,11 +3,14 @@ import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
 import { IconButton, Typography, Grid, Snackbar } from "@mui/material/";
 import { CodeBox } from "../../../assets/style/guideStyle";
-import {
-  SadIcon,
-  HappyIcon,
-  AlertCircleIcon,
-} from "../../../assets/style/icons";
+// import {
+//   SadIcon,
+//   HappyIcon,
+//   AlertCircleIcon,
+// } from "../../../assets/style/icons";
+import HappyIcon from "../../../assets/images/icons/happy.svg";
+import SadIcon from "../../../assets/images/icons/sad.svg";
+import AlertCircleIcon from "../../../assets/images/icons/alert-circle.svg";
 import Snackbars from "./Snackbars";
 
 export const SnackBarSample = () => {
@@ -42,7 +45,7 @@ export const SnackBarSample = () => {
     setSnackData({
       type: "info",
       message: `단기예약정보가 변경되었습니다2`,
-      icon: AlertCircleIcon,
+      icon: SadIcon,
     });
     setOpen(true);
   }
@@ -51,7 +54,7 @@ export const SnackBarSample = () => {
     setSnackData({
       type: "warning",
       message: `단기예약정보가 변경되었습니다3`,
-      icon: SadIcon,
+      icon: AlertCircleIcon,
     });
     setOpen(true);
   }
