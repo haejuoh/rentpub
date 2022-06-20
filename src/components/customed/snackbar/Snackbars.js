@@ -91,7 +91,7 @@ function Snackbars({ snackData, showSnackbar, onHideSnackbar }) {
   return (
     <SnackbarEx
       open={showSnackbar}
-      // autoHideDuration={6000}
+      autoHideDuration={6000}
       onClose={handleCloseSuccessSnack}
       anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
     >
