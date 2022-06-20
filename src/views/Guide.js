@@ -253,9 +253,6 @@ const Guide = () => {
           <GuideTitle mt={40}>WithFormContents</GuideTitle>
           <WithFormContents />
         </TabPanel>
-        <TabPanel value="5">
-          <List />
-        </TabPanel>
         <TabPanel value="6">
           <GuideTitle>Default</GuideTitle>
           <DataGridDefault />
