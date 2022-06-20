@@ -36,7 +36,6 @@ export const SnackBarSample = () => {
       type: "success",
       message: `단기예약정보가 변경되었습니다`,
       icon: HappyIcon,
-      // icon: IconSnackbarView,
       link: <Link href="#">상세보기</Link>,
     });
     setOpen(true);
@@ -47,7 +46,6 @@ export const SnackBarSample = () => {
       type: "info",
       message: `단기예약정보가 변경되었습니다2`,
       icon: SadIcon,
-      // icon: IconSnackbarInfo,
     });
     setOpen(true);
   }
@@ -57,7 +55,6 @@ export const SnackBarSample = () => {
       type: "warning",
       message: `단기예약정보가 변경되었습니다3`,
       icon: AlertCircleIcon,
-      // icon: IconSnackbarWarning,
     });
     setOpen(true);
   }
