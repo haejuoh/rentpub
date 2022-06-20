@@ -26,7 +26,6 @@ import {
   TitleSectionBadge,
   TitleSectionOption,
 } from "../guide/title/TitleSection";
-import List from "../guide/List";
 import {
   BtnSize,
   BtnIcon,
