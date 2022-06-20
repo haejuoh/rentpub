@@ -8,9 +8,9 @@ import { CodeBox } from "../../../assets/style/guideStyle";
 //   HappyIcon,
 //   AlertCircleIcon,
 // } from "../../../assets/style/icons";
-import IconSnackbarSuccessView from "../../../assets/images/icons/snackbar-success-view.svg";
-import IconSnackbarSuccessInfo from "../../../assets/images/icons/snackbar-success-info.svg";
-import IconSnackbarSuccessWarning from "../../../assets/images/icons/snackbar-success-warning.svg";
+import IconSnackbarView from "../../../assets/images/icons/snackbar-view.svg";
+import IconSnackbarInfo from "../../../assets/images/icons/snackbar-info.svg";
+import IconSnackbarWarning from "../../../assets/images/icons/snackbar-warning.svg";
 import Snackbars from "./Snackbars";
 
 export const SnackBarSample = () => {
@@ -36,7 +36,7 @@ export const SnackBarSample = () => {
       type: "success",
       message: `단기예약정보가 변경되었습니다`,
       // icon: HappyIcon,
-      icon: IconSnackbarSuccessView,
+      icon: IconSnackbarView,
       link: <Link href="#">상세보기</Link>,
     });
     setOpen(true);
@@ -45,9 +45,9 @@ export const SnackBarSample = () => {
   function showSnack2() {
     setSnackData({
       type: "info",
-      message: `단기예약정보가 변경되었습니다`,
+      message: `단기예약정보가 변경되었습니다2`,
       // icon: AlertCircleIcon,
-      icon: IconSnackbarSuccessInfo,
+      icon: IconSnackbarInfo,
     });
     setOpen(true);
   }
@@ -55,9 +55,9 @@ export const SnackBarSample = () => {
   function showSnack3() {
     setSnackData({
       type: "warning",
-      message: `단기예약정보가 변경되었습니다`,
+      message: `단기예약정보가 변경되었습니다3`,
       // icon: SadIcon,
-      icon: IconSnackbarSuccessWarning,
+      icon: IconSnackbarWarning,
     });
     setOpen(true);
   }
