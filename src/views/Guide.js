@@ -111,6 +111,7 @@ const Guide = () => {
             <Tab label="DataGrid" value="6" />
             <Tab label="Modal" value="7" />
             <Tab label="Legend" value="8" />
+            <Tab label="Snackbar" value="9" />
           </TabList>
         </Box>
         <TabPanel value="1">
@@ -266,12 +267,15 @@ const Guide = () => {
         <TabPanel value="7">
           <GuideTitle>Modal</GuideTitle>
           <ModalSample />
-          <SnackBarSample />
         </TabPanel>
         <TabPanel value="8">
           <GuideTitle mt={40}>Legend</GuideTitle>
           <LegendSingleGuide />
           <LegendGroupGuide />
+        </TabPanel>
+        <TabPanel value="9">
+          <GuideTitle mt={40}>Snackbar</GuideTitle>
+          <SnackBarSample />
         </TabPanel>
       </TabContext>
     </Box>
