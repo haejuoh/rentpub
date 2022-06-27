@@ -1,5 +1,5 @@
 import React from "react";
-import { Section } from "../../../components/customed/layout/Section";
+import Section from "../../../components/customed/layout/section";
 import SkrGrid from "../../../components/skr/SkrGrid";
 import SelectLabelPositionTop from "../../../components/customed/form/select/SelectLabelPositionTop";
 import InputLabelHidden from "../../../components/customed/form/input/InputLabelHidden";

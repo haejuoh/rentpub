@@ -1,7 +1,7 @@
 import React from "react";
 //component
 import SkrGrid from "../../../components/skr/SkrGrid";
-import { Section } from "../../../components/customed/layout/Section";
+import Section from "../../../components/customed/layout/section";
 import SelectLabelPositionTop from "../../../components/customed/form/select/SelectLabelPositionTop";
 
 //data

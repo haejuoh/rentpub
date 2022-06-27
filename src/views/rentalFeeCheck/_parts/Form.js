@@ -1,10 +1,13 @@
 import React from "react";
-import { Section } from "../../../components/customed/layout/Section";
+//skr
+import Section from "../../../components/customed/layout/section";
 import SkrGrid from "../../../components/skr/SkrGrid";
+//components
 import SelectLabelPositionLeft from "../../../components/customed/form/select/SelectLabelPositionLeft";
 import InputLabelPositionLeft from "../../../components/customed/form/input/InputLabelPositionLeft";
-import { CalendarIcon } from "../../../assets/style/icons";
 import SkrIconButton from "../../../components/skr/SkrIconButton";
+//icons
+import { CalendarIcon } from "../../../assets/style/icons";
 //data
 const select1 = {
   label: "권역-지점",

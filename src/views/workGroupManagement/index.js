@@ -5,13 +5,13 @@ import SkrStack from "../../components/skr/SkrStack";
 import SkrButton from "../../components/skr/SkrButton";
 import Mdi from "../../components/customed/layout/Mdi";
 import TitlePage from "../../components/customed/title/page/TitlePage";
-import LySection from "../../components/customed/layout/LySection";
 
 import Search from "./_parts/Search";
 import List from "./_parts/List";
 
 // img
 import { PencilIcon } from "../../assets/style/icons";
+import SectionContents from "./../../components/customed/layout/section/Contents";
 
 const tabData = [
   { type: "home", label: "Home", active: false },
@@ -44,10 +44,10 @@ const index = () => {
             </SkrButton>
           </SkrStack>
         </TitlePage>
-        <LySection>
+        <SectionContents>
           <Search />
           <List />
-        </LySection>
+        </SectionContents>
       </LayoutStyled.Page>
     </>
   );

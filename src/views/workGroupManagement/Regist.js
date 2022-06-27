@@ -5,7 +5,7 @@ import SkrStack from "../../components/skr/SkrStack";
 import SkrButton from "../../components/skr/SkrButton";
 import Mdi from "../../components/customed/layout/Mdi";
 import TitlePage from "../../components/customed/title/page/TitlePage";
-import LySection from "../../components/customed/layout/LySection";
+import SectionContents from "components/customed/layout/section/Contents";
 
 import Info from "./_parts/Info";
 import List from "./_parts/List";
@@ -35,14 +35,14 @@ const Regist = () => {
       <Mdi tabData={tabData} />
       <LayoutStyled.Page>
         <TitlePage titleData={titleData}></TitlePage>
-        <LySection>
+        <SectionContents>
           <Info />
           <SkrStack direction="row" justifyContent="flex-end">
             <SkrButton color="primary" variant="contained">
               저장
             </SkrButton>
           </SkrStack>
-        </LySection>
+        </SectionContents>
       </LayoutStyled.Page>
     </>
   );

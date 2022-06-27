@@ -1,14 +1,15 @@
 import React from "react";
 //skr
-
 import SkrButton from "../../../components/skr/SkrButton";
 import SkrIconButton from "../../../components/skr/SkrIconButton";
 import SkrBox from "../../../components/skr/SkrBox";
-import { Section } from "../../../components/customed/layout/Section";
+//components
+import Section from "../../../components/customed/layout/section";
 import TitleTable from "../../../components/customed/title/table/TitleTable";
 import DataGrid from "../../../components/customed/datagrid";
 import NoRows from "../../../components/customed/datagrid/NoRows";
 import NoResults from "../../../components/customed/datagrid/NoResults";
+//icons
 import { OptionIcon, MoreIcon, ExcelIcon } from "../../../assets/style/icons";
 //data
 const tableTitleData = {

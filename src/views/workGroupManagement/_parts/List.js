@@ -2,7 +2,7 @@ import React from "react";
 import SkrChip from "../../../components/skr/SkrChip";
 import SkrBox from "../../../components/skr/SkrBox";
 import SkrGridActionsCellItem from "../../../components/skr/SkrGridActionsCellItem";
-import { Section } from "../../../components/customed/layout/Section";
+import Section from "../../../components/customed/layout/section";
 import TitleSub from "../../../components/customed/title/sub/TitleSub";
 import DataGrid from "../../../components/customed/datagrid";
 import NoRows from "../../../components/customed/datagrid/NoRows";

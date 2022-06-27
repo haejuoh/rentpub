@@ -1,18 +1,17 @@
 import React from "react";
-import { Section } from "../../../components/customed/layout/Section";
+import Section from "../../../components/customed/layout/section";
 import SkrGrid from "../../../components/skr/SkrGrid";
 import TitleSub from "../../../components/customed/title/sub/TitleSub";
 import SelectLabelPositionLeft from "../../../components/customed/form/select/SelectLabelPositionLeft";
 import SkrDivider from "../../../components/skr/SkrDivider";
 import FormContents from "../../../components/customed/form/contents/FormContents";
 import SelectMultipleLabelLeft from "../../../components/customed/form/select/SelectMultipleLabelLeft";
-import LySectionInfo from "../../../components/customed/layout/LySectionInfo";
 import Segment from "../../../components/customed/form/radio/Segment";
-import InputLabelPositionLeft from "../../../components/customed/form/input/InputLabelPositionLeft";
 import SkrIconButton from "../../../components/skr/SkrIconButton";
 import { CalendarIcon } from "../../../assets/style/icons";
 import InputLabelHidden from "./../../../components/customed/form/input/InputLabelHidden";
 import SkrTypography from "./../../../components/skr/SkrTypography";
+import SectionInfo from "../../../components/customed/layout/section/Info";
 const TitleDefault = {
   title: "작업자 근무파트 정보",
   desc: "",
@@ -84,7 +83,7 @@ const Info = () => {
     <Section variant="default">
       <TitleSub titleData={TitleDefault} />
       <SkrDivider variant="section15" />
-      <LySectionInfo>
+      <SectionInfo>
         <SkrGrid item xs={3}>
           <SelectLabelPositionLeft selectData={defaultSelect01} />
         </SkrGrid>
@@ -127,7 +126,7 @@ const Info = () => {
             <Segment segmentData={SegmentData} />
           </FormContents>
         </SkrGrid>
-      </LySectionInfo>
+      </SectionInfo>
     </Section>
   );
 };

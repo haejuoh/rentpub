@@ -1,10 +1,8 @@
-import { TableHead } from "@mui/material";
 import React from "react";
-import TitleSub from "../../../components/customed/title/sub/TitleSub";
+//Skr
 import SkrDivider from "../../../components/skr/SkrDivider";
 import SkrGrid from "../../../components/skr/SkrGrid";
-import { Section } from "../../../components/customed/layout/Section";
-import SkrBox from "../../../components/skr/SkrBox";
+import Section from "../../../components/customed/layout/section";
 import SkrTable from "./../../../components/skr/SkrTable";
 import SkrTableHead from "../../../components/skr/SkrTableHead";
 import SkrTableBody from "../../../components/skr/SkrTableBody";
@@ -13,6 +11,8 @@ import SkrTableCell from "../../../components/skr/SkrTableCell";
 import InputLabelHidden from "./../../../components/customed/form/input/InputLabelHidden";
 import SkrInputAdornment from "../../../components/skr/SkrInputAdornment";
 import SkrTypography from "../../../components/skr/SkrTypography";
+//components
+import TitleSub from "../../../components/customed/title/sub/TitleSub";
 const TitleTable1 = {
   title: "대여료",
   desc: "",

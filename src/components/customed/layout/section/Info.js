@@ -1,7 +1,7 @@
 import React from "react";
-import SkrGrid from "../../skr/SkrGrid";
+import SkrGrid from "../../../skr/SkrGrid";
 
-const LySectionInfo = ({ children, ...rest }) => {
+const SectionInfo = ({ children, ...rest }) => {
   return (
     <>
       <SkrGrid container spacing={15} alignItems="center">
@@ -11,4 +11,4 @@ const LySectionInfo = ({ children, ...rest }) => {
   );
 };
 
-export default LySectionInfo;
+export default SectionInfo;
