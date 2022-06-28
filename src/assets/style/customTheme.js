@@ -1,7 +1,6 @@
 import { createTheme, experimental_sx as sx } from "@mui/material";
-import { grey } from "@mui/material/colors";
-import { color, fontSize, shape } from "@mui/system";
-import { makeStyles } from "@mui/material/styles";
+
+//related with form assets
 import DefaultCheckBox from "../images/icons/checkBox-default.svg";
 import DefaultThCheckBox from "../images/icons/checkBox-defaultTh.svg";
 import HoverCheckBox from "../images/icons/checkBox-hover.svg";
@@ -13,6 +12,7 @@ import HoverRadio from "../images/icons/radio-hover.svg";
 import DisabledRadio from "../images/icons/radio-disabled.svg";
 import CheckedRadio from "../images/icons/radio-selected.svg";
 import CheckedDisabledRadio from "../images/icons/radio-selectedDisabled.svg";
+
 const colorSystem = {
   ci: {
     red: "#EA002C",

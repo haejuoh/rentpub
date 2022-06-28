@@ -1,5 +1,6 @@
 import React from "react";
-//Skr
+
+//components
 import SkrDivider from "../../../components/skr/SkrDivider";
 import SkrGrid from "../../../components/skr/SkrGrid";
 import Section from "../../../components/customed/layout/section";
@@ -11,8 +12,8 @@ import SkrTableCell from "../../../components/skr/SkrTableCell";
 import InputLabelHidden from "./../../../components/customed/form/input/InputLabelHidden";
 import SkrInputAdornment from "../../../components/skr/SkrInputAdornment";
 import SkrTypography from "../../../components/skr/SkrTypography";
-//components
 import TitleSub from "../../../components/customed/title/sub/TitleSub";
+
 const TitleTable1 = {
   title: "대여료",
   desc: "",

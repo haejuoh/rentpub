@@ -1,17 +1,20 @@
 import React from "react";
-import { styled } from "@mui/styles";
-import * as LayoutStyled from "../../assets/style/common";
+
+//components
 import SkrStack from "../../components/skr/SkrStack";
 import SkrButton from "../../components/skr/SkrButton";
 import Mdi from "../../components/customed/layout/Mdi";
 import TitlePage from "../../components/customed/title/page/TitlePage";
 
+//parts
 import Search from "./_parts/Search";
 import List from "./_parts/List";
 
-// img
+//style
+import * as LayoutStyled from "../../assets/style/common";
+
+// icons
 import { PencilIcon } from "../../assets/style/icons";
-import SectionContents from "./../../components/customed/layout/section/Contents";
 
 const tabData = [
   { type: "home", label: "Home", active: false },
@@ -44,10 +47,10 @@ const index = () => {
             </SkrButton>
           </SkrStack>
         </TitlePage>
-        <SectionContents>
+        <SkrStack spacing={30}>
           <Search />
           <List />
-        </SectionContents>
+        </SkrStack>
       </LayoutStyled.Page>
     </>
   );

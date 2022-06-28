@@ -1,8 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "@mui/material";
-import Mdi from "../../components/customed/layout/Mdi";
-import * as LayoutStyled from "../../assets/style/common";
+
 //component
 import SkrStack from "../../components/skr/SkrStack";
 import SkrButton from "../../components/skr/SkrButton";
@@ -14,10 +13,14 @@ import {
   HappyIcon,
   AlertCircleIcon,
 } from "../../assets/style/icons";
+import Mdi from "../../components/customed/layout/Mdi";
 
 //parts
 import Search from "./_parts/Search";
 import List from "./_parts/List";
+
+//style
+import * as LayoutStyled from "../../assets/style/common";
 
 const tabData = [
   { type: "home", label: "Home", active: false },

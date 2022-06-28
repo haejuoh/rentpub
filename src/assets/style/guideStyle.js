@@ -1,6 +1,4 @@
-import React from "react";
 import { styled } from "@mui/material/styles";
-import { theme } from "./customTheme";
 import { Box, Typography } from "@mui/material";
 const CodeBox = styled(Box)(({ theme }) => ({
   backgroundColor: `${theme.palette.grey[900]}`,

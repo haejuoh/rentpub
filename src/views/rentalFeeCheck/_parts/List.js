@@ -1,16 +1,18 @@
 import React from "react";
-//skr
+
+//components
 import SkrButton from "../../../components/skr/SkrButton";
 import SkrIconButton from "../../../components/skr/SkrIconButton";
 import SkrBox from "../../../components/skr/SkrBox";
-//components
 import Section from "../../../components/customed/layout/section";
 import TitleTable from "../../../components/customed/title/table/TitleTable";
 import DataGrid from "../../../components/customed/datagrid";
 import NoRows from "../../../components/customed/datagrid/NoRows";
 import NoResults from "../../../components/customed/datagrid/NoResults";
+
 //icons
 import { OptionIcon, MoreIcon, ExcelIcon } from "../../../assets/style/icons";
+
 //data
 const tableTitleData = {
   title: "고객정보",
@@ -128,8 +130,8 @@ const List = () => {
         <DataGrid
           columnData={columns}
           rowData={rows}
-          customNoRowsOverlay={<NoRows message="데이터 없음" />}
-          customNoResultsOverlay={<NoResults message="결과 없음" />}
+          customNoRowsOverlay={() => <NoRows message="데이터 없음" />}
+          customNoResultsOverlay={() => <NoResults message="결과 없음" />}
           isCheckbox={true}
         />
       </SkrBox>

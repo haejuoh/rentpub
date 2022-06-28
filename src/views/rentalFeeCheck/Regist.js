@@ -1,9 +1,9 @@
 import React from "react";
-import Mdi from "../../components/customed/layout/Mdi";
-import * as LayoutStyled from "../../assets/style/common";
+
 //component
 import SkrStack from "../../components/skr/SkrStack";
 import SkrButton from "../../components/skr/SkrButton";
+import Mdi from "../../components/customed/layout/Mdi";
 import TitlePage from "../../components/customed/title/page/TitlePage";
 import { ExcelIcon } from "../../assets/style/icons";
 
@@ -11,6 +11,9 @@ import { ExcelIcon } from "../../assets/style/icons";
 import Form from "./_parts/Form";
 import List from "./_parts/List";
 import Table from "./_parts/Table";
+
+//style
+import * as LayoutStyled from "../../assets/style/common";
 
 const tabData = [
   { type: "home", label: "Home", active: false },

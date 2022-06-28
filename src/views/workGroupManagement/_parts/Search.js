@@ -1,9 +1,12 @@
 import React from "react";
-import Section from "../../../components/customed/layout/section";
+
+//components
 import SkrGrid from "../../../components/skr/SkrGrid";
+import Section from "../../../components/customed/layout/section";
 import SelectLabelPositionTop from "../../../components/customed/form/select/SelectLabelPositionTop";
 import InputLabelHidden from "../../../components/customed/form/input/InputLabelHidden";
 
+//data
 const defaultSelect01 = {
   label: "지점",
   style: { PaperProps: { style: { width: 288 } } },

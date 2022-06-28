@@ -1,7 +1,9 @@
 import React from "react";
+
+//components
 import SkrChip from "../../../components/skr/SkrChip";
 import SkrBox from "../../../components/skr/SkrBox";
-import SkrGridActionsCellItem from "../../../components/skr/SkrGridActionsCellItem";
+import SkrIconButton from "../../../components/skr/SkrIconButton";
 import Section from "../../../components/customed/layout/section";
 import TitleSub from "../../../components/customed/title/sub/TitleSub";
 import DataGrid from "../../../components/customed/datagrid";
@@ -9,8 +11,7 @@ import NoRows from "../../../components/customed/datagrid/NoRows";
 import NoResults from "../../../components/customed/datagrid/NoResults";
 
 //icons
-import { OptionIcon, DeleteIcon, MoreIcon } from "../../../assets/style/icons";
-import SkrIconButton from "../../../components/skr/SkrIconButton";
+import { OptionIcon, MoreIcon } from "../../../assets/style/icons";
 
 const TitleDefault = {
   title: "전체 작업자 근무파트 목록",
@@ -129,8 +130,8 @@ const List = () => {
         <DataGrid
           columnData={columns}
           rowData={rows}
-          customNoRowsOverlay={<NoRows message="데이터 없음" />}
-          customNoResultsOverlay={<NoResults message="결과 없음" />}
+          customNoRowsOverlay={() => <NoRows message="데이터 없음" />}
+          customNoResultsOverlay={() => <NoResults message="결과 없음" />}
           isCheckbox={false}
         />
       </SkrBox>
